@@ -37,7 +37,7 @@ endif()
 include_directories(../src/)
 
 # Link against gtest or gtest_main as needed
-add_executable(tests example/test.cpp)
+add_executable(tests example/test.cpp company/company_test.cpp)
 target_link_libraries(tests PRIVATE gtest_main feup-cal-proj)
 
 add_test(NAME tests COMMAND tests)

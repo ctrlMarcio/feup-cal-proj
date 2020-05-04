@@ -1,9 +1,11 @@
 # Algorithm Analysis and Design project
 
-[![GitHub license](https://img.shields.io/github/license/luist18/feup-cal-proj)](https://github.com/luist18/feup-cal-proj/blob/master/LICENSE)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/luist18/feup-cal-proj/C++%20CI%20Build?label=build%20%F0%9F%94%A8)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/luist18/feup-cal-proj/C++%20CI%20Documentation?label=documentation%20%F0%9F%93%84)
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/luist18/feup-cal-proj)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/luist18/feup-cal-proj/C++%20CI%20Build?label=build%20%F0%9F%94%A8&logo=github)](https://github.com/luist18/feup-cal-proj/actions?query=workflow%3A%22C%2B%2B+CI+Build%22)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/luist18/feup-cal-proj/C++%20CI%20Documentation?label=documentation%20%F0%9F%93%84&logo=github)](https://github.com/luist18/feup-cal-proj/actions?query=workflow%3A%22C%2B%2B+CI+Documentation%22)
+[![Travis (.com)](https://img.shields.io/travis/com/luist18/feup-cal-proj?logo=travis)](https://travis-ci.com/github/luist18/feup-cal-proj)
+[![Codecov](https://img.shields.io/codecov/c/github/luist18/feup-cal-proj?logo=codecov)](https://codecov.io/gh/luist18/feup-cal-proj)
+[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/luist18/feup-cal-proj?logo=codefactor)](https://www.codefactor.io/repository/github/luist18/feup-cal-proj)
+[![GitHub license](https://img.shields.io/github/license/luist18/feup-cal-proj?color=blue)](https://github.com/luist18/feup-cal-proj/blob/master/LICENSE)
 
 This repository comprises the second part of the [Algorithm Analysis and Design](https://sigarra.up.pt/feup/en/UCURR_GERAL.FICHA_UC_VIEW?pv_ocorrencia_id=436441) course unit project. The goal was to create a solution for a specific problem applying the object-oriented paradigm in C++ and algorithm design.
 
