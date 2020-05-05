@@ -14,7 +14,7 @@ TEST(vertex, add_edge_test) {
 	Vertex<string> vertex("a");
 	auto dest = make_shared<Vertex<string>>("aa");
 
-	auto edge = vertex.addEdge(dest, -1);
+	vertex.addEdge(dest, -1);
 
-	EXPECT_EQ(vertex.getAdj()[0]->getDest(), dest);
+	EXPECT_EQ((*vertex.getAdj().begin())->getDest(), dest);
 }

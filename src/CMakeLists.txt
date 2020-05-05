@@ -1,4 +1,4 @@
-add_library(feup-cal-proj main.cpp company/company.cpp company/company.h util/graph/graph.tpp util/graph/graph.h util/graph/vertex.tpp util/graph/vertex.h util/graph/edge.tpp util/graph/edge.h)
+add_library(feup-cal-proj main.cpp model/company/company.cpp model/company/company.h util/graph/graph.tpp util/graph/graph.h util/graph/vertex.tpp util/graph/vertex.h util/graph/edge.tpp util/graph/edge.h)
 
 add_executable(application main.cpp)
 

@@ -1,23 +1,23 @@
 template<class T>
-shared_ptr<Vertex<T>> Graph<T>::addVertex(const T &in) {
-	auto v = findVertex(in);
+shared_ptr<Vertex<T>> Graph<T>::addVertex(const T &content) {
+	auto v = findVertex(content);
 	if (v != nullptr)
 		return v;
-	v = make_shared<Vertex<T>>(in);
-	vertexSet.push_back(v);
+	v = make_shared<Vertex<T>>(content);
+	vertexSet.insert(v);
 	return v;
 }
 
 template<class T>
-shared_ptr<Vertex<T>> Graph<T>::findVertex(const T &inf) const {
+shared_ptr<Vertex<T>> Graph<T>::findVertex(const T &content) const {
 	for (auto v : vertexSet)
-		if (v->getInfo() == inf)
+		if (v->getInfo() == content)
 			return v;
 	return nullptr;
 }
 
 template<class T>
-vector<shared_ptr<Vertex<T>>> Graph<T>::getVertexSet() const {
+set<shared_ptr<Vertex<T>>> Graph<T>::getVertexSet() const {
 	return this->vertexSet;
 }
 

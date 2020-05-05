@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <company/company.h>
+#include <model/company/company.h>
 
 using testing::Eq;
 
