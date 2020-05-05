@@ -1,8 +1,6 @@
 #ifndef FEUP_CAL_PROJ_EDGE_H
 #define FEUP_CAL_PROJ_EDGE_H
 
-#include <memory>
-
 using namespace std;
 
 template<class T>
@@ -11,6 +9,7 @@ class Vertex;
 template<class T>
 class Edge {
 	shared_ptr<Vertex<T>> dest;
+
 	double weight;
 
 public:

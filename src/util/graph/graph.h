@@ -21,7 +21,6 @@ public:
 	shared_ptr<Vertex<T>> addVertex(const T &in);
 
 	shared_ptr<Edge<T>> addEdge(const T &source, const T &dest, double w);
-
 };
 
 #include "graph.tpp"

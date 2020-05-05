@@ -10,6 +10,7 @@ using namespace std;
 template<class T>
 class Vertex {
 	T info;
+
 	vector<shared_ptr<Edge<T>>> outgoing;  // adj
 
 public:
