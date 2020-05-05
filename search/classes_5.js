@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vertex',['Vertex',['../classVertex.html',1,'']]]
+  ['representative',['Representative',['../classRepresentative.html',1,'']]]
 ];

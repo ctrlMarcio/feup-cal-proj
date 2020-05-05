@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vertex',['Vertex',['../classVertex.html',1,'Vertex&lt; T &gt;'],['../classVertex.html#a932e5b1a1ac43d071025b654e4476113',1,'Vertex::Vertex()']]]
+  ['location',['Location',['../classLocation.html',1,'Location'],['../classLocation.html#a0eba1ccec3a326d9ccedb24ed342f326',1,'Location::Location()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['location',['Location',['../classLocation.html',1,'Location'],['../classLocation.html#a0eba1ccec3a326d9ccedb24ed342f326',1,'Location::Location()']]]
+  ['isvalid',['isValid',['../classAdministratorManager.html#acf048648d07e84c3f566df334bc2b1d6',1,'AdministratorManager::isValid()'],['../classCompanyClientManager.html#ac715fee48eed3c636e709415437decd1',1,'CompanyClientManager::isValid()']]]
 ];
