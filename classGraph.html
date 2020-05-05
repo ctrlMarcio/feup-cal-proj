@@ -66,19 +66,126 @@ $(function() {
 <div class="title">Graph&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="graph_8h_source.html">graph.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c1b5e270519c168c410e632fef8d7fe"><td class="memItemLeft" align="right" valign="top"><a id="a3c1b5e270519c168c410e632fef8d7fe"></a>
-vector&lt; shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getVertexSet</b> () const</td></tr>
-<tr class="separator:a3c1b5e270519c168c410e632fef8d7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7501f95abf8bce2443b3f6df5469e25a"><td class="memItemLeft" align="right" valign="top"><a id="a7501f95abf8bce2443b3f6df5469e25a"></a>
-shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>addVertex</b> (const T &amp;in)</td></tr>
-<tr class="separator:a7501f95abf8bce2443b3f6df5469e25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad81a2d9c20d27292d19728660fd4f622"><td class="memItemLeft" align="right" valign="top"><a id="ad81a2d9c20d27292d19728660fd4f622"></a>
-shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>addEdge</b> (const T &amp;source, const T &amp;dest, double w)</td></tr>
+<tr class="memitem:ab676121837045f14d2f0c3e6fad2c1c0"><td class="memItemLeft" align="right" valign="top">set&lt; shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ab676121837045f14d2f0c3e6fad2c1c0">getVertexSet</a> () const</td></tr>
+<tr class="separator:ab676121837045f14d2f0c3e6fad2c1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef75fe9d9bfa5f072a12dde98d7604b7"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aef75fe9d9bfa5f072a12dde98d7604b7">addVertex</a> (const T &amp;content)</td></tr>
+<tr class="separator:aef75fe9d9bfa5f072a12dde98d7604b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81a2d9c20d27292d19728660fd4f622"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad81a2d9c20d27292d19728660fd4f622">addEdge</a> (const T &amp;source, const T &amp;dest, double w)</td></tr>
 <tr class="separator:ad81a2d9c20d27292d19728660fd4f622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class T&gt;<br />
+class Graph&lt; T &gt;</h3>
+
+<p>Represents a graph. A graph is a structure that contains vertexes and their connections. This graph has a container with all its vertexes, and their edges are managed by them.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type that the vertex holds </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad81a2d9c20d27292d19728660fd4f622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81a2d9c20d27292d19728660fd4f622">&#9670;&nbsp;</a></span>addEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; &gt; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::addEdge </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds an edge to the graph.</p>
+<dl class="section warning"><dt>Warning</dt><dd>returns <em>nullptr</em> if one of the vertexes doesn't exist </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>the content of the source vertex </td></tr>
+    <tr><td class="paramname">dest</td><td>the content of the destination vertex </td></tr>
+    <tr><td class="paramname">w</td><td>the weight of the edge </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the pointer to the created edge </dd></dl>
+
+</div>
+</div>
+<a id="aef75fe9d9bfa5f072a12dde98d7604b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef75fe9d9bfa5f072a12dde98d7604b7">&#9670;&nbsp;</a></span>addVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;<a class="el" href="classVertex.html">Vertex</a>&lt;T&gt; &gt; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::addVertex </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a vertex to the graph.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the content of the vertex </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the pointer to the vertex added </dd></dl>
+
+</div>
+</div>
+<a id="ab676121837045f14d2f0c3e6fad2c1c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab676121837045f14d2f0c3e6fad2c1c0">&#9670;&nbsp;</a></span>getVertexSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">set&lt;shared_ptr&lt;<a class="el" href="classVertex.html">Vertex</a>&lt;T&gt; &gt; &gt; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::getVertexSet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the vertex container.</p>
+<dl class="section return"><dt>Returns</dt><dd>the vertex container </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/util/graph/<a class="el" href="graph_8h_source.html">graph.h</a></li>
 </ul>
