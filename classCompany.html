@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -43,6 +50,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classCompany.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,7 +79,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -66,32 +87,150 @@ $(function() {
 <div class="title">Company Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a company.  
+ <a href="classCompany.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="company_8h_source.html">company.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a56e2c9b85ed2d584414881881fa2d701"><td class="memItemLeft" align="right" valign="top"><a id="a56e2c9b85ed2d584414881881fa2d701"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Company</b> (string name)</td></tr>
-<tr class="separator:a56e2c9b85ed2d584414881881fa2d701"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a45565d61c119cb590383553bc327d1"><td class="memItemLeft" align="right" valign="top"><a id="a4a45565d61c119cb590383553bc327d1"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
-<tr class="separator:a4a45565d61c119cb590383553bc327d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56e2c9b85ed2d584414881881fa2d701"><td class="memItemLeft" align="right" valign="top"><a id="a56e2c9b85ed2d584414881881fa2d701"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Company</b> (string name)</td></tr>
-<tr class="separator:a56e2c9b85ed2d584414881881fa2d701"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a45565d61c119cb590383553bc327d1"><td class="memItemLeft" align="right" valign="top"><a id="a4a45565d61c119cb590383553bc327d1"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
-<tr class="separator:a4a45565d61c119cb590383553bc327d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8404b48053ad905a4a41f9d161ce505"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#ae8404b48053ad905a4a41f9d161ce505">Company</a> (std::string name, <a class="el" href="classLocation.html">Location</a> garageLocation, long vehicleNumber)</td></tr>
+<tr class="memdesc:ae8404b48053ad905a4a41f9d161ce505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes an instance of a <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> given a name and a number of vehicles.  <a href="#ae8404b48053ad905a4a41f9d161ce505">More...</a><br /></td></tr>
+<tr class="separator:ae8404b48053ad905a4a41f9d161ce505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f6c13dd059f834a0f35ed8faeded64"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a64f6c13dd059f834a0f35ed8faeded64">getName</a> () const</td></tr>
+<tr class="memdesc:a64f6c13dd059f834a0f35ed8faeded64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of the company.  <a href="#a64f6c13dd059f834a0f35ed8faeded64">More...</a><br /></td></tr>
+<tr class="separator:a64f6c13dd059f834a0f35ed8faeded64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64bb76579224279daa80ac264850365"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#ab64bb76579224279daa80ac264850365">getVehicleNumber</a> () const</td></tr>
+<tr class="memdesc:ab64bb76579224279daa80ac264850365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of vehicles of the company.  <a href="#ab64bb76579224279daa80ac264850365">More...</a><br /></td></tr>
+<tr class="separator:ab64bb76579224279daa80ac264850365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41325b2fc0e371641aa3ab125f46ed98"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a41325b2fc0e371641aa3ab125f46ed98">getGarageLocation</a> () const</td></tr>
+<tr class="memdesc:a41325b2fc0e371641aa3ab125f46ed98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the garage location of the company.  <a href="#a41325b2fc0e371641aa3ab125f46ed98">More...</a><br /></td></tr>
+<tr class="separator:a41325b2fc0e371641aa3ab125f46ed98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a company. </p>
+<p>The company is responsible for managing its locations, administrators and company clients. Also holds the company's vehicles and garage location. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae8404b48053ad905a4a41f9d161ce505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8404b48053ad905a4a41f9d161ce505">&#9670;&nbsp;</a></span>Company()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Company::Company </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLocation.html">Location</a>&#160;</td>
+          <td class="paramname"><em>garageLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>vehicleNumber</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Establishes an instance of a <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> given a name and a number of vehicles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name </td></tr>
+    <tr><td class="paramname">garageLocation</td><td>the garage location </td></tr>
+    <tr><td class="paramname">vehicleNumber</td><td>the number of vehicles </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a41325b2fc0e371641aa3ab125f46ed98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41325b2fc0e371641aa3ab125f46ed98">&#9670;&nbsp;</a></span>getGarageLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classLocation.html">Location</a> &amp; Company::getGarageLocation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the garage location of the company. </p>
+<dl class="section return"><dt>Returns</dt><dd>the garage location </dd></dl>
+
+</div>
+</div>
+<a id="a64f6c13dd059f834a0f35ed8faeded64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f6c13dd059f834a0f35ed8faeded64">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Company::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the name of the company. </p>
+<dl class="section return"><dt>Returns</dt><dd>the name of the company </dd></dl>
+
+</div>
+</div>
+<a id="ab64bb76579224279daa80ac264850365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64bb76579224279daa80ac264850365">&#9670;&nbsp;</a></span>getVehicleNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Company::getVehicleNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the number of vehicles of the company. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of vehicles of the company </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/company/<a class="el" href="company_2company_8h_source.html">company.h</a></li>
-<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/company/company.cpp</li>
+<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/model/company/<a class="el" href="company_8h_source.html">company.h</a></li>
+<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/model/company/company.cpp</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCompany.html">Company</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

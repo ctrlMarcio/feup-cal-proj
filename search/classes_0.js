@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['company',['Company',['../classCompany.html',1,'']]]
+  ['authuser',['AuthUser',['../classAuthUser.html',1,'']]]
 ];
