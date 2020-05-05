@@ -1,6 +1,6 @@
-add_library(feup-cal-proj main.cpp company/company.cpp company/company.h)
+add_library(feup-cal-proj main.cpp company/company.cpp company/company.h util/graph/graph.tpp util/graph/graph.h util/graph/vertex.tpp util/graph/vertex.h util/graph/edge.tpp util/graph/edge.h)
 
-add_executable(application main.cpp company/company.cpp company/company.h)
+add_executable(application main.cpp)
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
