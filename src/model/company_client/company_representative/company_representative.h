@@ -1,5 +1,5 @@
-#ifndef FEUP_CAL_PROJ_REPRESENTATIVE_H
-#define FEUP_CAL_PROJ_REPRESENTATIVE_H
+#ifndef FEUP_CAL_PROJ_COMPANY_REPRESENTATIVE_H
+#define FEUP_CAL_PROJ_COMPANY_REPRESENTATIVE_H
 
 
 #include <string>
@@ -7,7 +7,7 @@
 /**
  * @brief   Represents the company's representative.
  */
-class Representative {
+class CompanyRepresentative {
 public:
     /**
      * @brief Constructs the company's representative.
@@ -15,7 +15,7 @@ public:
      * @param name                  the company's representative name
      * @param email                 the company's representative email
      */
-    Representative(std::string name, std::string email);
+    CompanyRepresentative(std::string name, std::string email);
 
     /**
      * @brief Gets the company's representative name.
@@ -43,4 +43,4 @@ private:
 };
 
 
-#endif //FEUP_CAL_PROJ_REPRESENTATIVE_H
+#endif //FEUP_CAL_PROJ_COMPANY_REPRESENTATIVE_H

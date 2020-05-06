@@ -4,22 +4,21 @@
 #include <string>
 #include <vector>
 #include <model/location/location.h>
-#include <model/company client/company representative/representative.h>
+#include <model/company_client/company_representative/company_representative.h>
 
 /**
  * @brief   Represents a company that might benefit from BosHbus services.
  */
 class CompanyClient {
-
 public:
     /**
      * @brief Constructs the company with all its attributes.
      *
      * @param name                  the company name
-     * @param representative        the company representative
+     * @param representative        the company_representative
      * @param headquarters          the company headquarters location
      */
-    CompanyClient(std::string name, Representative representative, Location headquarters);
+    CompanyClient(std::string name, CompanyRepresentative representative, Location headquarters);
 
     /**
      * @brief Gets the UUID.
@@ -36,11 +35,11 @@ public:
     std::string getName() const;
 
     /**
-     * @brief Gets the company representative.
+     * @brief Gets the company_representative.
      *
-     * @return          the company representative
+     * @return          the company_representative
      */
-    Representative getRepresentative() const;
+    CompanyRepresentative getRepresentative() const;
 
     /**
      * @brief Gets the headquarters location.
@@ -84,6 +83,9 @@ public:
      */
     void setVehicleNumber(int vehicleNumber);
 
+    // TODO subst long
+    long getUUID() const;
+
 private:
     /**
 	 * @brief The company name.
@@ -93,7 +95,7 @@ private:
     /**
      * @brief The Company Representative.
      */
-    Representative representative;
+    CompanyRepresentative representative;
 
     /**
      * @brief The Company's headquarters location.
@@ -113,8 +115,7 @@ private:
     /**
      * @brief The Company's identifier.
      */
-    //UUID uuid;
-
+    long uuid; // TODO UUID
 };
 
 

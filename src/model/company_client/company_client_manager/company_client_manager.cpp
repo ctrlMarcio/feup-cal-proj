@@ -6,7 +6,7 @@ bool CompanyClientManager::isValid(CompanyClient companyClient)
 {
     for (auto i : companyClientSet)
     {
-        if (i.getUuid()==companyClient.getUuid())
+        if (i.getUUID() == companyClient.getUUID())
         {
             return false;
         }
@@ -30,7 +30,7 @@ bool CompanyClientManager::remove(CompanyClient companyClient)
     it = companyClientSet.begin();
     for (auto i: companyClientSet)
     {
-        if (i.getUuid()==companyClient.getId())
+        if (i.getUUID() == companyClient.getUUID())
         {
             companyClientSet.erase(it);
             return true;

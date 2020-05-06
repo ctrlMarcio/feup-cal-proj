@@ -3,7 +3,7 @@
 
 
 #include <vector>
-#include <model/company client/company_client.h>
+#include <model/company_client/company_client.h>
 
 /**
  * @brief   Represents the Company Client's Manager.

@@ -1,13 +1,13 @@
 #include "company_client.h"
 
-CompanyClient::CompanyClient(std::string name, Representative representative, Location headquarters)
-        : name(name), representative(representative), headquarters(headquarters), vehicleNumber(0) {}
+CompanyClient::CompanyClient(std::string name, CompanyRepresentative representative, Location headquarters)
+        : name(name), representative(representative), headquarters(headquarters), vehicleNumber(0), uuid(1) {}
 
 std::string CompanyClient::getName() const {
     return this->name;
 }
 
-Representative CompanyClient::getRepresentative() const {
+CompanyRepresentative CompanyClient::getRepresentative() const {
     return this->representative;
 }
 
@@ -51,4 +51,8 @@ int CompanyClient::getVehicleNumber() const
 
 void CompanyClient::setVehicleNumber(int vehicleNumber) {
     this->vehicleNumber = vehicleNumber;
+}
+
+long CompanyClient::getUUID() const {
+    return uuid;
 }

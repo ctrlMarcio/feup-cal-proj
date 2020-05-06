@@ -95,7 +95,6 @@ private:
 	 * @brief The longitude.
 	 */
 	double longitude;
-
 };
 
 

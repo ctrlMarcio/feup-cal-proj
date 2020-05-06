@@ -7,7 +7,7 @@ template<class T>
 class Vertex;
 
 /**
- * Represents a directed edge of a graph.
+ * @brief Represents a directed edge of a graph.
  * An edge represents a connection to a vertex with a given weight.
  *
  * @tparam T	the type that the vertex holds
@@ -16,7 +16,7 @@ template<class T>
 class Edge {
 public:
 	/**
-	 * Constructs an edge with all its parameters.
+	 * @brief Constructs an edge with all its parameters.
 	 *
 	 * @param d		the destination vertex
 	 * @param w		the weight
@@ -24,14 +24,14 @@ public:
 	Edge(shared_ptr<Vertex<T>> d, double w);
 
 	/**
-	 * Gets the destination vertex.
+	 * @brief Gets the destination vertex.
 	 *
 	 * @return		the pointer to the destination vertex
 	 */
 	shared_ptr<Vertex<T>> getDest() const;
 
 	/**
-	 * Gets the weight.
+	 * @brief Gets the weight.
 	 *
 	 * @return		the weight
 	 */
@@ -39,12 +39,12 @@ public:
 
 private:
 	/**
-	 * The destination vertex of the edge.
+	 * @brief The destination vertex of the edge.
 	 */
 	shared_ptr<Vertex<T>> dest;
 
 	/**
-	 * The weight of the edge.
+	 * @brief The weight of the edge.
 	 */
 	double weight;
 };

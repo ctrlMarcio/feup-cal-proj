@@ -17,7 +17,7 @@ public:
     static const std::string ADMINISTRATOR;
 
     /**
-     * @brief The company representative role.
+     * @brief The company_representative role.
      */
     static const std::string COMPANY_REPRESENTATIVE;
 

@@ -57,7 +57,6 @@ private:
      * @brief The garage location of the company.
      */
     Location garageLocation;
-
 };
 
 #endif //FEUP_CAL_PROJ_COMPANY_H

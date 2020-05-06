@@ -10,7 +10,7 @@
 using namespace std;
 
 /**
- * Represents a graph.
+ * @brief Represents a graph.
  * A graph is a structure that contains vertexes and their connections.
  * This graph has a container with all its vertexes, and their edges are managed by them.
  *
@@ -20,14 +20,14 @@ template<class T>
 class Graph {
 public:
 	/**
-	 * Gets the vertex container.
+	 * @brief Gets the vertex container.
 	 *
 	 * @return		the vertex container
 	 */
 	set<shared_ptr<Vertex<T>>> getVertexSet() const;
 
 	/**
-	 * Adds a vertex to the graph.
+	 * @brief Adds a vertex to the graph.
 	 *
 	 * @param content	the content of the vertex
 	 * @return			the pointer to the vertex added
@@ -35,7 +35,7 @@ public:
 	shared_ptr<Vertex<T>> addVertex(const T &content);
 
 	/**
-	 * Adds an edge to the graph.
+	 * @brief Adds an edge to the graph.
 	 *
 	 * @warning			returns \e nullptr if one of the vertexes doesn't exist
 	 * @param source	the content of the source vertex
@@ -47,12 +47,12 @@ public:
 
 private:
 	/**
-	 * The container of vertexes.
+	 * @brief The container of vertexes.
 	 */
 	set<shared_ptr<Vertex<T>>> vertexSet;
 
 	/**
-	 * Gets the pointer to a vertex, given its content.
+	 * @brief Gets the pointer to a vertex, given its content.
 	 *
 	 * @param content	the given content
 	 * @return			the pointer to the vertex
