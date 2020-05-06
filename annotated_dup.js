@@ -6,9 +6,9 @@ var annotated_dup =
     [ "Company", "classCompany.html", "classCompany" ],
     [ "CompanyClient", "classCompanyClient.html", "classCompanyClient" ],
     [ "CompanyClientManager", "classCompanyClientManager.html", "classCompanyClientManager" ],
+    [ "CompanyRepresentative", "classCompanyRepresentative.html", "classCompanyRepresentative" ],
     [ "Edge", "classEdge.html", "classEdge" ],
     [ "Graph", "classGraph.html", "classGraph" ],
     [ "Location", "classLocation.html", "classLocation" ],
-    [ "Representative", "classRepresentative.html", "classRepresentative" ],
     [ "Vertex", "classVertex.html", "classVertex" ]
 ];
