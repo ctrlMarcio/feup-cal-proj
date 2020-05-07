@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('classAuthUser.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acedd0af27b6de385bff78c1d01fb3932"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthUser.html#acedd0af27b6de385bff78c1d01fb3932">AuthUser</a> (std::string email, std::string password, std::string userRole)</td></tr>
+<tr class="memdesc:acedd0af27b6de385bff78c1d01fb3932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a new instance of an Auth User.  <a href="#acedd0af27b6de385bff78c1d01fb3932">More...</a><br /></td></tr>
 <tr class="separator:acedd0af27b6de385bff78c1d01fb3932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53aa8e3e148ff66e9a293c07c342b3e2"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthUser.html#a53aa8e3e148ff66e9a293c07c342b3e2">getEmail</a> () const</td></tr>
 <tr class="memdesc:a53aa8e3e148ff66e9a293c07c342b3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the email of the user.  <a href="#a53aa8e3e148ff66e9a293c07c342b3e2">More...</a><br /></td></tr>
@@ -107,15 +108,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d32b1a9a5905a85b91683c22dedbdbc"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthUser.html#a8d32b1a9a5905a85b91683c22dedbdbc">getUserRole</a> () const</td></tr>
 <tr class="memdesc:a8d32b1a9a5905a85b91683c22dedbdbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the role of the user.  <a href="#a8d32b1a9a5905a85b91683c22dedbdbc">More...</a><br /></td></tr>
 <tr class="separator:a8d32b1a9a5905a85b91683c22dedbdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580d31c02d0b2dc434229fa24d6d4456"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthUser.html#a580d31c02d0b2dc434229fa24d6d4456">operator==</a> (const <a class="el" href="classAuthUser.html">AuthUser</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a580d31c02d0b2dc434229fa24d6d4456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator. Check if two instance of the class are equal.  <a href="#a580d31c02d0b2dc434229fa24d6d4456">More...</a><br /></td></tr>
+<tr class="separator:a580d31c02d0b2dc434229fa24d6d4456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c53caff203f9f7ab21faf6ac321d016"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthUser.html#a3c53caff203f9f7ab21faf6ac321d016">operator!=</a> (const <a class="el" href="classAuthUser.html">AuthUser</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a3c53caff203f9f7ab21faf6ac321d016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality operator. Check if two instance of the class are different.  <a href="#a3c53caff203f9f7ab21faf6ac321d016">More...</a><br /></td></tr>
+<tr class="separator:a3c53caff203f9f7ab21faf6ac321d016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a599b4ae52a2da2b46ac55a25c6970aea"><td class="memItemLeft" align="right" valign="top"><a id="a599b4ae52a2da2b46ac55a25c6970aea"></a>
-static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthUser.html#a599b4ae52a2da2b46ac55a25c6970aea">ADMINISTRATOR</a></td></tr>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthUser.html#a599b4ae52a2da2b46ac55a25c6970aea">ADMINISTRATOR</a> = &quot;adm&quot;</td></tr>
 <tr class="memdesc:a599b4ae52a2da2b46ac55a25c6970aea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The administrator role. <br /></td></tr>
 <tr class="separator:a599b4ae52a2da2b46ac55a25c6970aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b70a461cd3e85938afefc817bceaae2"><td class="memItemLeft" align="right" valign="top"><a id="a0b70a461cd3e85938afefc817bceaae2"></a>
-static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthUser.html#a0b70a461cd3e85938afefc817bceaae2">COMPANY_REPRESENTATIVE</a></td></tr>
+static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthUser.html#a0b70a461cd3e85938afefc817bceaae2">COMPANY_REPRESENTATIVE</a> = &quot;cpn_repres&quot;</td></tr>
 <tr class="memdesc:a0b70a461cd3e85938afefc817bceaae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The company_representative role. <br /></td></tr>
 <tr class="separator:a0b70a461cd3e85938afefc817bceaae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -154,11 +161,13 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a c
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Establishes a new instance of an Auth User. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">email</td><td></td></tr>
-    <tr><td class="paramname">password</td><td></td></tr>
-    <tr><td class="paramname">userRole</td><td></td></tr>
+    <tr><td class="paramname">email</td><td>the user email </td></tr>
+    <tr><td class="paramname">password</td><td>the user password </td></tr>
+    <tr><td class="paramname">userRole</td><td>the user role </td></tr>
   </table>
   </dd>
 </dl>
@@ -223,6 +232,60 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a c
 
 <p>Gets the role of the user. </p>
 <dl class="section return"><dt>Returns</dt><dd>the role of the user </dd></dl>
+
+</div>
+</div>
+<a id="a3c53caff203f9f7ab21faf6ac321d016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c53caff203f9f7ab21faf6ac321d016">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AuthUser::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAuthUser.html">AuthUser</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inequality operator. Check if two instance of the class are different. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>the other instance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the instances are not equal. false, otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a580d31c02d0b2dc434229fa24d6d4456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580d31c02d0b2dc434229fa24d6d4456">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AuthUser::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAuthUser.html">AuthUser</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Equality operator. Check if two instance of the class are equal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>the other instance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the instances are equal. false, otherwise </dd></dl>
 
 </div>
 </div>

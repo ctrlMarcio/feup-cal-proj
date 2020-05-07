@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vertex',['Vertex',['../classVertex.html',1,'']]]
+  ['invalidloginexception',['InvalidLoginException',['../classInvalidLoginException.html',1,'']]]
 ];

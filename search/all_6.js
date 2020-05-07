@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['operator_21_3d',['operator!=',['../classLocation.html#a7b55f95a3e3d671089a206557fa2b202',1,'Location']]],
-  ['operator_3d_3d',['operator==',['../classLocation.html#afdb3b154b40c33188883b62abafb6343',1,'Location']]]
+  ['location',['Location',['../classLocation.html',1,'Location'],['../classLocation.html#a0eba1ccec3a326d9ccedb24ed342f326',1,'Location::Location()']]],
+  ['login',['login',['../classCurrentSession.html#a2a1fa14ed5f4040985dac212e71e92ed',1,'CurrentSession']]],
+  ['logout',['logout',['../classCurrentSession.html#a7f5c52f1a5ef349a910eb9d76dfbf7bb',1,'CurrentSession']]]
 ];
