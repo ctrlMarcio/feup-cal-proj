@@ -1,0 +1,6 @@
+codecov:
+  max_report_age: off
+
+ignore:
+  - "test/*"
+  - "test/**/*"

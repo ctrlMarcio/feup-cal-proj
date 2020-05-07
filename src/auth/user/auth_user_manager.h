@@ -16,7 +16,6 @@ struct auth_users_hash {
             v = 37 * v + (int) element;
 
         return v;
-
     }
 
     bool operator()(const AuthUser &user1, const AuthUser &user2) const {
