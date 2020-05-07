@@ -37,7 +37,10 @@ endif()
 include_directories(../src/)
 
 # Link against gtest or gtest_main as needed
-add_executable(tests util/graph/vertex_test.cpp util/graph/edge_test.cpp util/graph/graph_test.cpp model/location/location_test.cpp util/string/util_string_test.cpp)
+add_executable(tests
+        util/graph/vertex_test.cpp util/graph/edge_test.cpp
+        util/graph/graph_test.cpp model/location/location_test.cpp
+        util/string/util_string_test.cpp auth/session/current_session_test.cpp)
 target_link_libraries(tests PRIVATE gtest_main feup-cal-proj)
 
 add_test(NAME tests COMMAND tests)

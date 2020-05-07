@@ -9,8 +9,11 @@ add_library(feup-cal-proj main.cpp
         model/company/administrator/administrator.cpp model/company/administrator/administrator.h
         model/company_client/company_representative/company_representative.cpp model/company_client/company_representative/company_representative.h
         model/company_client/company_client_manager/company_client_manager.cpp model/company_client/company_client_manager/company_client_manager.h
-        model/company/AdministratorManager/administrator_manager.cpp model/company/AdministratorManager/administrator_manager.h
-        util/string/util_string.cpp util/string/util_string.h)
+        model/company/administrator/administrator_manager.cpp model/company/administrator/administrator_manager.h
+        util/string/util_string.cpp util/string/util_string.h
+        auth/user/auth_user_manager.cpp auth/user/auth_user_manager.h
+        auth/session/current_session.cpp auth/session/current_session.h
+        exception/invalid_login_exception.cpp exception/invalid_login_exception.h)
 
 add_executable(application main.cpp
         model/company/company.cpp model/company/company.h
@@ -23,8 +26,11 @@ add_executable(application main.cpp
         model/company/administrator/administrator.cpp model/company/administrator/administrator.h
         model/company_client/company_representative/company_representative.cpp model/company_client/company_representative/company_representative.h
         model/company_client/company_client_manager/company_client_manager.cpp model/company_client/company_client_manager/company_client_manager.h
-        model/company/AdministratorManager/administrator_manager.cpp model/company/AdministratorManager/administrator_manager.h
-        util/string/util_string.cpp util/string/util_string.h)
+        model/company/administrator/administrator_manager.cpp model/company/administrator/administrator_manager.h
+        util/string/util_string.cpp util/string/util_string.h
+        auth/user/auth_user_manager.cpp auth/user/auth_user_manager.h
+        auth/session/current_session.cpp auth/session/current_session.h
+        exception/invalid_login_exception.cpp exception/invalid_login_exception.h)
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

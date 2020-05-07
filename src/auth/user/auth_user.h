@@ -22,10 +22,11 @@ public:
     static const std::string COMPANY_REPRESENTATIVE;
 
     /**
-     * @brief
-     * @param email
-     * @param password
-     * @param userRole
+     * @brief Establishes a new instance of an Auth User.
+     *
+     * @param email     the user email
+     * @param password  the user password
+     * @param userRole  the user role
      */
     AuthUser(std::string email, std::string password, std::string userRole);
 
@@ -49,6 +50,22 @@ public:
      * @return the role of the user
      */
     const std::string &getUserRole() const;
+
+    /**
+     * @brief Equality operator. Check if two instance of the class are equal.
+     *
+     * @param rhs   the other instance
+     * @return true, if the instances are equal. false, otherwise
+     */
+    bool operator==(const AuthUser &rhs) const;
+
+    /**
+     * @brief Inequality operator. Check if two instance of the class are different.
+     *
+     * @param rhs   the other instance
+     * @return true, if the instances are not equal. false, otherwise
+     */
+    bool operator!=(const AuthUser &rhs) const;
 
 private:
     /**

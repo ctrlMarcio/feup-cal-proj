@@ -1,9 +1,8 @@
 #ifndef FEUP_CAL_PROJ_ADMINISTRATOR_MANAGER_H
 #define FEUP_CAL_PROJ_ADMINISTRATOR_MANAGER_H
 
-
 #include <vector>
-#include "../administrator/administrator.h"
+#include "administrator.h"
 
 /**
  * @brief   Represents the Administrator Manager.
