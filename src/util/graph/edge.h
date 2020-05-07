@@ -8,6 +8,7 @@ class Vertex;
 
 /**
  * @brief Represents a directed edge of a graph.
+ *
  * An edge represents a connection to a vertex with a given weight.
  *
  * @tparam T	the type that the vertex holds

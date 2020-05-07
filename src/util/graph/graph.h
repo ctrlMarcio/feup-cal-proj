@@ -11,6 +11,7 @@ using namespace std;
 
 /**
  * @brief Represents a graph.
+ *
  * A graph is a structure that contains vertexes and their connections.
  * This graph has a container with all its vertexes, and their edges are managed by them.
  *
@@ -24,7 +25,7 @@ public:
      *
      * @return		the vertex container
      */
-    set<shared_ptr<Vertex<T>>> getVertexSet() const;
+    vector<shared_ptr<Vertex<T>>> getVertexSet() const;
 
     /**
      * @brief Adds a vertex to the graph.
@@ -48,21 +49,33 @@ public:
     /**
      * @brief Appends locations to the graph from a file.
      *
+     * @warning         Only available for \e Location graphs.
      * @param fileName  the name of the file containing the locations
      * @param city      the name of the city described in the files
      */
-    void read(std::string &fileName, const std::string &city);
+    void readNodes(const std::string &fileName, const std::string &city);
+
+    /**
+     * @brief Reads the edges between locations to the graph from a file.
+     *
+     * If an edge has an ID non existent, returns false but adds the other edges anyway.
+     *
+     * @warning         only available for \e Location graphs
+     * @param fileName  the name of the file containing the edges
+     * @return          true if the edges were successfully read, false otherwise
+     */
+    bool readEdges(const std::string &fileName);
 
 private:
-    /**
-     * @brief The container of vertexes.
-     */
-    set<shared_ptr<Vertex<T>>> vertexSet;
-
     /**
      * @brief The regular delimiter of the files.
      */
     static const char DELIMITER = ',';
+
+    /**
+     * @brief The container of vertexes.
+     */
+    vector<shared_ptr<Vertex<T>>> vertexSet;
 
     /**
      * @brief Gets the pointer to a vertex, given its content.

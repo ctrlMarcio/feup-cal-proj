@@ -34,7 +34,7 @@ public:
 	 *
 	 * @return			the container for the outgoing edges
 	 */
-	set<shared_ptr<Edge<T>>> getAdj() const;
+	vector<shared_ptr<Edge<T>>> getAdj() const;
 
 	/**
 	 * @brief Creates and adds an outgoing edge to the vertex.
@@ -54,7 +54,7 @@ private:
 	/**
 	 * @brief The container of outgoing edges.
 	 */
-	set<shared_ptr<Edge<T>>> outgoing;  // adj
+	vector<shared_ptr<Edge<T>>> outgoing;  // adj
 };
 
 #include "vertex.tpp"
