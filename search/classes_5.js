@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['invalidloginexception',['InvalidLoginException',['../classInvalidLoginException.html',1,'']]]
+  ['location',['Location',['../classLocation.html',1,'']]]
 ];

@@ -1,10 +1,8 @@
 var annotated_dup =
 [
-    [ "std", null, [
-      [ "hash< AuthUser >", "structstd_1_1hash_3_01AuthUser_01_4.html", "structstd_1_1hash_3_01AuthUser_01_4" ]
-    ] ],
     [ "Administrator", "classAdministrator.html", "classAdministrator" ],
     [ "AdministratorManager", "classAdministratorManager.html", "classAdministratorManager" ],
+    [ "auth_users_hash", "structauth__users__hash.html", "structauth__users__hash" ],
     [ "AuthUser", "classAuthUser.html", "classAuthUser" ],
     [ "AuthUserManager", "classAuthUserManager.html", "classAuthUserManager" ],
     [ "Company", "classCompany.html", "classCompany" ],
