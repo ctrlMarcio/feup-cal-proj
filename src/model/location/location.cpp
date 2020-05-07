@@ -26,3 +26,11 @@ double Location::getLatitude() const {
 double Location::getLongitude() const {
     return longitude;
 }
+
+bool Location::operator==(const Location &rhs) const {
+    return id == rhs.id;
+}
+
+bool Location::operator!=(const Location &rhs) const {
+    return !(rhs == *this);
+}

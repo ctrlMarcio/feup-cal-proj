@@ -2,7 +2,7 @@
 #define FEUP_CAL_PROJ_COMPANY_H
 
 #include <string>
-#include <model/location/location.h>
+#include "../../model/location/location.h"
 
 /**
  * @brief Represents a company.

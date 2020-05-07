@@ -3,8 +3,8 @@
 
 #include <string>
 #include <vector>
-#include <model/location/location.h>
-#include <model/company_client/company_representative/company_representative.h>
+#include "../../model/location/location.h"
+#include "../../model/company_client/company_representative/company_representative.h"
 
 /**
  * @brief   Represents a company that might benefit from BosHbus services.

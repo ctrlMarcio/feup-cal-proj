@@ -3,7 +3,7 @@
 
 
 #include <vector>
-#include <model/company/administrator/administrator.h>
+#include "../administrator/administrator.h"
 
 /**
  * @brief   Represents the Administrator Manager.

@@ -65,6 +65,22 @@ public:
      */
     double getLongitude() const;
 
+    /**
+     * @brief Verifies if other given location is equal to this one.
+     *
+     * @param rhs   the other location
+     * @return      true if they are equal, false otherwise
+     */
+    bool operator==(const Location &rhs) const;
+
+    /**
+     * @brief Verifies if other given location is different from this one.
+     *
+     * @param rhs   the other location
+     * @return      true if they are equal, false otherwise
+     */
+    bool operator!=(const Location &rhs) const;
+
 private:
 	/**
 	 * @brief The location unique identifier.

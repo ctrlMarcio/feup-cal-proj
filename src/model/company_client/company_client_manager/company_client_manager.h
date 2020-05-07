@@ -1,9 +1,8 @@
 #ifndef FEUP_CAL_PROJ_COMPANY_CLIENT_MANAGER_H
 #define FEUP_CAL_PROJ_COMPANY_CLIENT_MANAGER_H
 
-
 #include <vector>
-#include <model/company_client/company_client.h>
+#include "../company_client.h"
 
 /**
  * @brief   Represents the Company Client's Manager.
