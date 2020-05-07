@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Route Planner: Member List</title>
+<title>Route Planner: util_string Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classGraph.html','');});
+$(document).ready(function(){initNavTree('namespaceutil__string.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -80,22 +80,69 @@ $(document).ready(function(){initNavTree('classGraph.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Graph&lt; T &gt; Member List</div>  </div>
+<div class="title">util_string Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classGraph.html">Graph&lt; T &gt;</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classGraph.html#ad81a2d9c20d27292d19728660fd4f622">addEdge</a>(const T &amp;source, const T &amp;dest, double w)</td><td class="entry"><a class="el" href="classGraph.html">Graph&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classGraph.html#aef75fe9d9bfa5f072a12dde98d7604b7">addVertex</a>(const T &amp;content)</td><td class="entry"><a class="el" href="classGraph.html">Graph&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classGraph.html#ab676121837045f14d2f0c3e6fad2c1c0">getVertexSet</a>() const</td><td class="entry"><a class="el" href="classGraph.html">Graph&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classGraph.html#a4a52169e64ae83945cd7145163a4d267">read</a>(std::string &amp;fileName, const std::string &amp;city)</td><td class="entry"><a class="el" href="classGraph.html">Graph&lt; T &gt;</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>Contains useful functions and utilities to deal with strings.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2b17e2398ebf2c2fc86197ac24e62d36"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutil__string.html#a2b17e2398ebf2c2fc86197ac24e62d36">split</a> (std::string &amp;string, char delimiter)</td></tr>
+<tr class="memdesc:a2b17e2398ebf2c2fc86197ac24e62d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into a vector.  <a href="#a2b17e2398ebf2c2fc86197ac24e62d36">More...</a><br /></td></tr>
+<tr class="separator:a2b17e2398ebf2c2fc86197ac24e62d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains useful functions and utilities to deal with strings. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a2b17e2398ebf2c2fc86197ac24e62d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b17e2398ebf2c2fc86197ac24e62d36">&#9670;&nbsp;</a></span>split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; util_string::split </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Splits a string into a vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>the string to split </td></tr>
+    <tr><td class="paramname">delimiter</td><td>the delimiter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the created vector </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="namespaceutil__string.html">util_string</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

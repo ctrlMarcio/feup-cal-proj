@@ -104,6 +104,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad81a2d9c20d27292d19728660fd4f622"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad81a2d9c20d27292d19728660fd4f622">addEdge</a> (const T &amp;source, const T &amp;dest, double w)</td></tr>
 <tr class="memdesc:ad81a2d9c20d27292d19728660fd4f622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an edge to the graph.  <a href="#ad81a2d9c20d27292d19728660fd4f622">More...</a><br /></td></tr>
 <tr class="separator:ad81a2d9c20d27292d19728660fd4f622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a52169e64ae83945cd7145163a4d267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a4a52169e64ae83945cd7145163a4d267">read</a> (std::string &amp;fileName, const std::string &amp;city)</td></tr>
+<tr class="memdesc:a4a52169e64ae83945cd7145163a4d267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends locations to the graph from a file.  <a href="#a4a52169e64ae83945cd7145163a4d267">More...</a><br /></td></tr>
+<tr class="separator:a4a52169e64ae83945cd7145163a4d267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
@@ -213,6 +216,45 @@ template&lt;class T &gt; </div>
 
 <p>Gets the vertex container. </p>
 <dl class="section return"><dt>Returns</dt><dd>the vertex container </dd></dl>
+
+</div>
+</div>
+<a id="a4a52169e64ae83945cd7145163a4d267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a52169e64ae83945cd7145163a4d267">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::read </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>city</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Appends locations to the graph from a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>the name of the file containing the locations </td></tr>
+    <tr><td class="paramname">city</td><td>the name of the city described in the files </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

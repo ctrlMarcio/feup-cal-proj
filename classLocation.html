@@ -116,6 +116,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4f6d4ef756b78d33b322fd83f3ed18fa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#a4f6d4ef756b78d33b322fd83f3ed18fa">getLongitude</a> () const</td></tr>
 <tr class="memdesc:a4f6d4ef756b78d33b322fd83f3ed18fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the longitude.  <a href="#a4f6d4ef756b78d33b322fd83f3ed18fa">More...</a><br /></td></tr>
 <tr class="separator:a4f6d4ef756b78d33b322fd83f3ed18fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb3b154b40c33188883b62abafb6343"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#afdb3b154b40c33188883b62abafb6343">operator==</a> (const <a class="el" href="classLocation.html">Location</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:afdb3b154b40c33188883b62abafb6343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if other given location is equal to this one.  <a href="#afdb3b154b40c33188883b62abafb6343">More...</a><br /></td></tr>
+<tr class="separator:afdb3b154b40c33188883b62abafb6343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b55f95a3e3d671089a206557fa2b202"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLocation.html#a7b55f95a3e3d671089a206557fa2b202">operator!=</a> (const <a class="el" href="classLocation.html">Location</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a7b55f95a3e3d671089a206557fa2b202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if other given location is different from this one.  <a href="#a7b55f95a3e3d671089a206557fa2b202">More...</a><br /></td></tr>
+<tr class="separator:a7b55f95a3e3d671089a206557fa2b202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a real world location. </p>
@@ -304,6 +310,60 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the <em>y</em> coordinate. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <em>y</em> coordinate </dd></dl>
+
+</div>
+</div>
+<a id="a7b55f95a3e3d671089a206557fa2b202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b55f95a3e3d671089a206557fa2b202">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Location::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies if other given location is different from this one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>the other location </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if they are equal, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="afdb3b154b40c33188883b62abafb6343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb3b154b40c33188883b62abafb6343">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Location::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies if other given location is equal to this one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>the other location </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if they are equal, false otherwise </dd></dl>
 
 </div>
 </div>
