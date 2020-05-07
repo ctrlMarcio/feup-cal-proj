@@ -2,16 +2,25 @@
 #define FEUP_CAL_PROJ_AUTH_USER_MANAGER_H
 
 #include <unordered_set>
+#include <numeric>
 #include "auth_user.h"
 
 /**
- * @brief Redefinition of the default hash function for the AuthUser class.
+ * @brief Redefinition of the default hash and equal function for the AuthUser class.
  */
-template<>
-struct std::hash<AuthUser> {
-    size_t
-    operator()(const AuthUser &obj) const {
-        return hash<string>()(obj.getEmail());
+struct auth_users_hash {
+    int operator()(const AuthUser &obj) const {
+        int v = 0;
+
+        for (const char &element : obj.getEmail())
+            v = 37 * v + (int) element;
+
+        return v;
+
+    }
+
+    bool operator()(const AuthUser &user1, const AuthUser &user2) const {
+        return user1 == user2;
     }
 };
 
@@ -66,7 +75,7 @@ private:
     /*!
      * The list of users.
      */
-    std::unordered_set<AuthUser> users;
+    std::unordered_set<AuthUser, auth_users_hash> users;
 };
 
 #endif //FEUP_CAL_PROJ_AUTH_USER_MANAGER_H
