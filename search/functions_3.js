@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getadj',['getAdj',['../classVertex.html#a8440059db87c887f9f900bdb5cd41013',1,'Vertex']]],
+  ['getadj',['getAdj',['../classVertex.html#a5187638c566beb3830f5656c64f62faa',1,'Vertex']]],
   ['getcity',['getCity',['../classLocation.html#a9df397894c42fae4c5297443e883efa6',1,'Location']]],
   ['getdest',['getDest',['../classEdge.html#a29f8741fd300c40d3996c16853b6e509',1,'Edge']]],
   ['getemail',['getEmail',['../classAuthUser.html#a53aa8e3e148ff66e9a293c07c342b3e2',1,'AuthUser::getEmail()'],['../classAdministrator.html#a4b8c71a27f245761336b5892c8509055',1,'Administrator::getEmail()'],['../classCompanyRepresentative.html#adf263de5159ab0089836ba0644ae9e4e',1,'CompanyRepresentative::getEmail()']]],
@@ -16,7 +16,7 @@ var searchData=
   ['getrepresentative',['getRepresentative',['../classCompanyClient.html#aefd0ec72d7695fc7ff19c5d43091f4dc',1,'CompanyClient']]],
   ['getuserrole',['getUserRole',['../classAuthUser.html#a8d32b1a9a5905a85b91683c22dedbdbc',1,'AuthUser']]],
   ['getvehiclenumber',['getVehicleNumber',['../classCompany.html#ab64bb76579224279daa80ac264850365',1,'Company::getVehicleNumber()'],['../classCompanyClient.html#a07208784406b3726b4f18a515c9fd68e',1,'CompanyClient::getVehicleNumber()']]],
-  ['getvertexset',['getVertexSet',['../classGraph.html#ab676121837045f14d2f0c3e6fad2c1c0',1,'Graph']]],
+  ['getvertexset',['getVertexSet',['../classGraph.html#a3c1b5e270519c168c410e632fef8d7fe',1,'Graph']]],
   ['getweight',['getWeight',['../classEdge.html#a3df378e283d6c8be5be4170ac8d7f4e8',1,'Edge']]],
   ['getx',['getX',['../classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7',1,'Location']]],
   ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]]
