@@ -16,5 +16,8 @@ var hierarchy =
       [ "InvalidLoginException", "classInvalidLoginException.html", null ]
     ] ],
     [ "Location", "classLocation.html", null ],
+    [ "runtime_error", null, [
+      [ "InvalidFileExtension", "classInvalidFileExtension.html", null ]
+    ] ],
     [ "Vertex< T >", "classVertex.html", null ]
 ];

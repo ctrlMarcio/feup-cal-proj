@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Route Planner: InvalidLoginException Class Reference</title>
+<title>Route Planner: InvalidFileExtension Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classInvalidLoginException.html','');});
+$(document).ready(function(){initNavTree('classInvalidFileExtension.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -82,42 +82,42 @@ $(document).ready(function(){initNavTree('classInvalidLoginException.html','');}
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classInvalidLoginException-members.html">List of all members</a>  </div>
+<a href="classInvalidFileExtension-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">InvalidLoginException Class Reference</div>  </div>
+<div class="title">InvalidFileExtension Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents an exception thrown then a bad login is executed.  
- <a href="classInvalidLoginException.html#details">More...</a></p>
+<p>Represents an exception thrown whenever an attempt to work with an invalid file (e.g. non-existent) is made.  
+ <a href="classInvalidFileExtension.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="invalid__login__exception_8h_source.html">invalid_login_exception.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="invalid__file__extension_8h_source.html">invalid_file_extension.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for InvalidLoginException:</div>
+Inheritance diagram for InvalidFileExtension:</div>
 <div class="dyncontent">
-<div class="center"><img src="classInvalidLoginException__inherit__graph.png" border="0" usemap="#InvalidLoginException_inherit__map" alt="Inheritance graph"/></div>
-<!-- MAP 0 -->
+<div class="center"><img src="classInvalidFileExtension__inherit__graph.png" border="0" usemap="#InvalidFileExtension_inherit__map" alt="Inheritance graph"/></div>
+<map name="InvalidFileExtension_inherit__map" id="InvalidFileExtension_inherit__map">
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for InvalidLoginException:</div>
+Collaboration diagram for InvalidFileExtension:</div>
 <div class="dyncontent">
-<div class="center"><img src="classInvalidLoginException__coll__graph.png" border="0" usemap="#InvalidLoginException_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 1 -->
+<div class="center"><img src="classInvalidFileExtension__coll__graph.png" border="0" usemap="#InvalidFileExtension_coll__map" alt="Collaboration graph"/></div>
+<map name="InvalidFileExtension_coll__map" id="InvalidFileExtension_coll__map">
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adb87d171bf6bcbf73bed47517622c6d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvalidLoginException.html#adb87d171bf6bcbf73bed47517622c6d6">InvalidLoginException</a> (const std::string &amp;arg)</td></tr>
-<tr class="memdesc:adb87d171bf6bcbf73bed47517622c6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a new instance of an <a class="el" href="classInvalidLoginException.html" title="Represents an exception thrown then a bad login is executed. ">InvalidLoginException</a>.  <a href="#adb87d171bf6bcbf73bed47517622c6d6">More...</a><br /></td></tr>
-<tr class="separator:adb87d171bf6bcbf73bed47517622c6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7ebc1632926d553ebfe4a30c5e61741"><td class="memItemLeft" align="right" valign="top">std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvalidLoginException.html#ae7ebc1632926d553ebfe4a30c5e61741">getMessage</a> ()</td></tr>
-<tr class="separator:ae7ebc1632926d553ebfe4a30c5e61741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf78a1b891bc2063cabec24703e7c130"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvalidFileExtension.html#aaf78a1b891bc2063cabec24703e7c130">InvalidFileExtension</a> (std::string filePath, const std::string &amp;arg=&quot;The file is invalid&quot;)</td></tr>
+<tr class="memdesc:aaf78a1b891bc2063cabec24703e7c130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the exception with its message and file.  <a href="#aaf78a1b891bc2063cabec24703e7c130">More...</a><br /></td></tr>
+<tr class="separator:aaf78a1b891bc2063cabec24703e7c130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents an exception thrown then a bad login is executed. </p>
+<div class="textblock"><p>Represents an exception thrown whenever an attempt to work with an invalid file (e.g. non-existent) is made. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adb87d171bf6bcbf73bed47517622c6d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb87d171bf6bcbf73bed47517622c6d6">&#9670;&nbsp;</a></span>InvalidLoginException()</h2>
+<a id="aaf78a1b891bc2063cabec24703e7c130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf78a1b891bc2063cabec24703e7c130">&#9670;&nbsp;</a></span>InvalidFileExtension()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,11 +126,21 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">InvalidLoginException::InvalidLoginException </td>
+          <td class="memname">InvalidFileExtension::InvalidFileExtension </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>arg</em> = <code>&quot;The&#160;file&#160;is&#160;invalid&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -140,46 +150,27 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Establishes a new instance of an <a class="el" href="classInvalidLoginException.html" title="Represents an exception thrown then a bad login is executed. ">InvalidLoginException</a>. </p>
+<p>Constructs the exception with its message and file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arg</td><td>the arguments </td></tr>
+    <tr><td class="paramname">arg</td><td>the message </td></tr>
+    <tr><td class="paramname">filePath</td><td>the file that caused the exception </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae7ebc1632926d553ebfe4a30c5e61741"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7ebc1632926d553ebfe4a30c5e61741">&#9670;&nbsp;</a></span>getMessage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string &amp; InvalidLoginException::getMessage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Gets the error message.</p>
-<dl class="section return"><dt>Returns</dt><dd>the message </dd></dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/exception/<a class="el" href="invalid__login__exception_8h_source.html">invalid_login_exception.h</a></li>
-<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/exception/invalid_login_exception.cpp</li>
+<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/exception/<a class="el" href="invalid__file__extension_8h_source.html">invalid_file_extension.h</a></li>
+<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/exception/invalid_file_extension.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="classInvalidLoginException.html">InvalidLoginException</a></li>
+    <li class="navelem"><a class="el" href="classInvalidFileExtension.html">InvalidFileExtension</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Vertex\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVertex.html",tooltip="Represents a graph&#39;s vertex, holding its content and outgoing edges. "];
+  Node0 [label="Location",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLocation.html",tooltip="Represents a real world location. "];
 }
