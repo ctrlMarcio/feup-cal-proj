@@ -1,7 +1,7 @@
 # Algorithm Analysis and Design project
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/luist18/feup-cal-proj/C++%20CI%20Build?label=build%20%F0%9F%94%A8&logo=github)](https://github.com/luist18/feup-cal-proj/actions?query=workflow%3A%22C%2B%2B+CI+Build%22)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/luist18/feup-cal-proj/C++%20CI%20Documentation?label=docs%20%F0%9F%93%84&logo=github)](https://github.com/luist18/feup-cal-proj/actions?query=workflow%3A%22C%2B%2B+CI+Documentation%22)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/luist18/feup-cal-proj/C++%20CI%20Documentation?label=docs%20%F0%9F%93%84&logo=github)](https://luist18.github.io/feup-cal-proj/)
 [![Travis (.com)](https://img.shields.io/travis/com/luist18/feup-cal-proj?logo=travis)](https://travis-ci.com/github/luist18/feup-cal-proj)
 [![Codecov](https://img.shields.io/codecov/c/github/luist18/feup-cal-proj?logo=codecov)](https://codecov.io/gh/luist18/feup-cal-proj)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/68db8149cebd48528e58d0fdcad36f78)](https://app.codacy.com/manual/luistavares10/feup-cal-proj?utm_source=github.com&utm_medium=referral&utm_content=luist18/feup-cal-proj&utm_campaign=Badge_Grade_Dashboard)

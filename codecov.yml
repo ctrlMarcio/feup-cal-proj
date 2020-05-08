@@ -1,6 +1,12 @@
 codecov:
   max_report_age: off
-
+  ci:
+    - "travis.org"
+  disable_default_path_fixes: yes
+  range: 80..100
+  round: down
+  precision: 2
+  
 ignore:
-  - "test/*"
+  - "test/"
   - "test/**/*"

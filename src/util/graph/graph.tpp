@@ -4,6 +4,7 @@
 #include "../string/util_string.h"
 #include "../../model/location/location.h"
 #include "graph.h"
+#include "../../exception/invalid_file_extension.h"
 
 
 template<class T>
@@ -46,7 +47,7 @@ void Graph<Location>::readNodes(const std::string &fileName, const std::string &
 
     if (!file.is_open()) {
         cerr << "Error opening " << fileName << endl;
-        exit(1);
+        throw InvalidFileExtension(fileName);
     }
 
     std::string line;
@@ -89,7 +90,7 @@ bool Graph<Location>::readEdges(const string &fileName) {
 
     if (!file.is_open()) {
         cerr << "Error opening " << fileName << endl;
-        exit(1);
+        throw InvalidFileExtension(fileName);
     }
 
     std::string line;

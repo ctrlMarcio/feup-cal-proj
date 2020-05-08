@@ -50,6 +50,7 @@ public:
      * @brief Appends locations to the graph from a file.
      *
      * @warning         Only available for \e Location graphs.
+     * @throws          InvalidFileException
      * @param fileName  the name of the file containing the locations
      * @param city      the name of the city described in the files
      */
@@ -61,6 +62,7 @@ public:
      * If an edge has an ID non existent, returns false but adds the other edges anyway.
      *
      * @warning         only available for \e Location graphs
+     * @throws          InvalidFileException
      * @param fileName  the name of the file containing the edges
      * @return          true if the edges were successfully read, false otherwise
      */
