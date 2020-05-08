@@ -244,6 +244,12 @@ template&lt;class T &gt; </div>
 <p>Reads the edges between locations to the graph from a file. </p>
 <p>If an edge has an ID non existent, returns false but adds the other edges anyway.</p>
 <dl class="section warning"><dt>Warning</dt><dd>only available for <em><a class="el" href="classLocation.html" title="Represents a real world location. ">Location</a></em> graphs </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidFileException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fileName</td><td>the name of the file containing the edges </td></tr>
@@ -284,6 +290,12 @@ template&lt;class T &gt; </div>
 
 <p>Appends locations to the graph from a file. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Only available for <em><a class="el" href="classLocation.html" title="Represents a real world location. ">Location</a></em> graphs. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidFileException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fileName</td><td>the name of the file containing the locations </td></tr>
