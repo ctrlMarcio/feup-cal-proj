@@ -12,7 +12,6 @@ var annotated_dup =
     [ "CurrentSession", "classCurrentSession.html", "classCurrentSession" ],
     [ "Edge", "classEdge.html", "classEdge" ],
     [ "Graph", "classGraph.html", "classGraph" ],
-    [ "InvalidFileExtension", "classInvalidFileExtension.html", "classInvalidFileExtension" ],
     [ "InvalidLoginException", "classInvalidLoginException.html", "classInvalidLoginException" ],
     [ "Location", "classLocation.html", "classLocation" ],
     [ "Vertex", "classVertex.html", "classVertex" ]
