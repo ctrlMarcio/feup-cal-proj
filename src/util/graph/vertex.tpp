@@ -19,3 +19,18 @@ template<class T>
 vector<shared_ptr<Edge<T>>> Vertex<T>::getAdj() const {
 	return this->outgoing;
 }
+
+template<class T>
+bool Vertex<T>::operator==(const Vertex &rhs) const {
+    return info == rhs.info;
+}
+
+template<class T>
+bool Vertex<T>::operator!=(const Vertex &rhs) const {
+    return !(rhs == *this);
+}
+
+template<class T>
+int Vertex<T>::hash() {
+    return info.hash();
+}

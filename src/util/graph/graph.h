@@ -2,12 +2,29 @@
 #define GRAPH_H_
 
 #include <limits>
-#include <set>
+#include <vector>
 #include <memory>
+#include <unordered_set>
 
+#include "pointer_wrapper.h"
 #include "vertex.h"
 
 using namespace std;
+
+/**
+ * @brief Redefinition of the default hash and equal function for the PointerWrapper class.
+ */
+struct pointer_wrapper_hash {
+    template<class T>
+    int operator()(const PointerWrapper<Vertex<T>> &obj) const {
+        return obj.pointer->hash();
+    }
+
+    template<class T>
+    bool operator()(const PointerWrapper<Vertex<T>> &ptr1, const PointerWrapper<Vertex<T>> &ptr2) const {
+        return *ptr1.pointer == *ptr2.pointer;
+    }
+};
 
 /**
  * @brief Represents a graph.
@@ -21,19 +38,12 @@ template<class T>
 class Graph {
 public:
     /**
-     * @brief Gets the vertex container.
-     *
-     * @return		the vertex container
-     */
-    vector<shared_ptr<Vertex<T>>> getVertexSet() const;
-
-    /**
      * @brief Adds a vertex to the graph.
      *
      * @param content	the content of the vertex
      * @return			the pointer to the vertex added
      */
-    shared_ptr<Vertex<T>> addVertex(const T &content);
+    bool addVertex(const T &content);
 
     /**
      * @brief Adds an edge to the graph.
@@ -45,6 +55,15 @@ public:
      * @return			the pointer to the created edge
      */
     shared_ptr<Edge<T>> addEdge(const T &source, const T &dest, double w);
+
+    /**
+     * @brief Appends nodes and edges from files to the graph
+     *
+     * @param nodesFile         the name of the nodes' file
+     * @param edgesFile         the name of the edges' file
+     * @param city              the name of the city to append
+     */
+    void append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city);
 
     /**
      * @brief Appends locations to the graph from a file.
@@ -68,6 +87,23 @@ public:
      */
     bool readEdges(const std::string &fileName);
 
+    const unordered_set<PointerWrapper<Vertex<T>> , pointer_wrapper_hash> &getVertexSet() const;
+
+    /**
+     * @brief Gets the pointer to a vertex, given its content.
+     *
+     * @param content	the given content
+     * @return			the pointer to the vertex
+     */
+    std::shared_ptr<Vertex<T>> findVertex(const T &content) const;
+
+    /**
+     * @brief Gets the number of nodes.
+     *
+     * @return the number of nodes
+     */
+    long nodesAmount();
+
 private:
     /**
      * @brief The regular delimiter of the files.
@@ -77,15 +113,7 @@ private:
     /**
      * @brief The container of vertexes.
      */
-    vector<shared_ptr<Vertex<T>>> vertexSet;
-
-    /**
-     * @brief Gets the pointer to a vertex, given its content.
-     *
-     * @param content	the given content
-     * @return			the pointer to the vertex
-     */
-    shared_ptr<Vertex<T>> findVertex(const T &content) const;
+    unordered_set<PointerWrapper<Vertex<T>>, pointer_wrapper_hash> vertexSet;
 };
 
 #include "graph.tpp"

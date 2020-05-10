@@ -1,5 +1,5 @@
-#ifndef FEUP_CAL_PROJ_INVALID_FILE_EXTENSION_H
-#define FEUP_CAL_PROJ_INVALID_FILE_EXTENSION_H
+#ifndef FEUP_CAL_PROJ_INVALID_FILE_EXCEPTION_H
+#define FEUP_CAL_PROJ_INVALID_FILE_EXCEPTION_H
 
 
 #include <stdexcept>
@@ -7,7 +7,7 @@
 /**
  * @brief Represents an exception thrown whenever an attempt to work with an invalid file (e.g. non-existent) is made
  */
-class InvalidFileExtension : std::runtime_error {
+class InvalidFileException : std::runtime_error {
 public:
     /**
      * @brief Constructs the exception with its message and file
@@ -15,7 +15,7 @@ public:
      * @param arg       the message
      * @param filePath  the file that caused the exception
      */
-    explicit InvalidFileExtension(std::string filePath, const std::string &arg = "The file is invalid");
+    explicit InvalidFileException(std::string filePath, const std::string &arg = "The file is invalid");
 
 private:
     /**
@@ -30,4 +30,4 @@ private:
 };
 
 
-#endif //FEUP_CAL_PROJ_INVALID_FILE_EXTENSION_H
+#endif //FEUP_CAL_PROJ_INVALID_FILE_EXCEPTION_H

@@ -45,6 +45,12 @@ public:
 	 */
 	shared_ptr<Edge<T>> addEdge(shared_ptr<Vertex<T>> dest, double w);
 
+	int hash();
+
+    bool operator==(const Vertex &rhs) const;
+
+    bool operator!=(const Vertex &rhs) const;
+
 private:
 	/**
 	 * @brief The content of the vertex.

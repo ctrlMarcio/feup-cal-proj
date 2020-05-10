@@ -14,8 +14,8 @@ add_library(feup-cal-proj main.cpp
         auth/user/auth_user_manager.cpp auth/user/auth_user_manager.h
         auth/session/current_session.cpp auth/session/current_session.h
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h
-        exception/invalid_file_extension.cpp exception/invalid_file_extension.h
-        )
+        exception/invalid_file_exception.cpp exception/invalid_file_exception.h
+        application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h exception/invalid_location_exception.cpp exception/invalid_location_exception.h util/graph/pointer_wrapper.h)
 
 add_executable(application main.cpp
         model/company/company.cpp model/company/company.h
@@ -33,8 +33,8 @@ add_executable(application main.cpp
         auth/user/auth_user_manager.cpp auth/user/auth_user_manager.h
         auth/session/current_session.cpp auth/session/current_session.h
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h
-        exception/invalid_file_extension.cpp exception/invalid_file_extension.h
-        )
+        exception/invalid_file_exception.cpp exception/invalid_file_exception.h
+        application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h exception/invalid_location_exception.cpp exception/invalid_location_exception.h util/graph/pointer_wrapper.h)
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

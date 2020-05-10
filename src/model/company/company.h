@@ -3,6 +3,7 @@
 
 #include <string>
 #include "../../model/location/location.h"
+#include "../../util/graph/graph.h"
 
 /**
  * @brief Represents a company.
@@ -18,8 +19,9 @@ public:
      * @param name              the name
      * @param garageLocation    the garage location
      * @param vehicleNumber     the number of vehicles
+     * @param graph             the world graph
      */
-    Company(std::string name, Location garageLocation, long vehicleNumber);
+    Company(std::string name, Location garageLocation, Graph<Location> graph, long vehicleNumber);
 
     /**
      * @brief Gets the name of the company.
@@ -42,6 +44,13 @@ public:
      */
     const Location &getGarageLocation() const;
 
+    /**
+     * @brief Gets the world graph
+     *
+     * @return  the world graph
+     */
+    const Graph<Location> &getGraph() const;
+
 private:
     /**
      * @brief The name of the company.
@@ -57,6 +66,11 @@ private:
      * @brief The garage location of the company.
      */
     Location garageLocation;
+
+    /**
+     * @brief The world graph
+     */
+    Graph<Location> graph{};
 };
 
 #endif //FEUP_CAL_PROJ_COMPANY_H

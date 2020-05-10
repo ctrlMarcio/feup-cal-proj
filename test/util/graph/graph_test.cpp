@@ -4,29 +4,30 @@
 using testing::Eq;
 
 TEST(graph, add_vertex_test) {
-	Graph<int> graph;
+	Graph<Location> graph;
 
-	auto vertex = graph.addVertex(20);
+	Location a(20, "", 0,0);
+	bool add = graph.addVertex(a);
 
-	EXPECT_EQ((*graph.getVertexSet().begin())->getInfo(), 20);
-	EXPECT_EQ((*graph.getVertexSet().begin()), vertex);
+	EXPECT_EQ((*graph.getVertexSet().begin()).pointer->getInfo(), Location(20, "ads", 0, 0));
+	EXPECT_TRUE(add);
 
-	graph.addVertex(20);
+	graph.addVertex(a);
 
 	EXPECT_EQ(graph.getVertexSet().size(), 1);
 }
 
 TEST(graph, add_edge_test) {
-	Graph<int> graph;
+	Graph<Location> graph;
 
-	auto e1 = graph.addEdge(1, 2, 20);
+    Location a(1, "", 0, 0);
+    Location b(2, "", 0, 0);
+
+	auto e1 = graph.addEdge(a, b, 20);
 	EXPECT_EQ(e1, nullptr);
 
-	auto v1 = graph.addVertex(1);
-	auto e2 = graph.addEdge(1, 2, 20);
+	bool v1 = graph.addVertex(a);
+	auto e2 = graph.addEdge(a, b, 20);
 	EXPECT_EQ(e2, nullptr);
-
-	graph.addVertex(2);
-	graph.addEdge(1, 2, 20);
-	EXPECT_EQ(v1->getAdj().size(), 1);
+	EXPECT_TRUE(v1);
 }

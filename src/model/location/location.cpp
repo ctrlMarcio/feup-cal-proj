@@ -34,3 +34,9 @@ bool Location::operator==(const Location &rhs) const {
 bool Location::operator!=(const Location &rhs) const {
     return !(rhs == *this);
 }
+
+int Location::hash() {
+    std::string tmp = std::to_string(id);
+    std::hash<std::string> hasher;
+    return hasher(tmp);
+}

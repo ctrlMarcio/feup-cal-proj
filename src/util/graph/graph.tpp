@@ -1,33 +1,29 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <iostream>
 #include "../string/util_string.h"
 #include "../../model/location/location.h"
 #include "graph.h"
-#include "../../exception/invalid_file_extension.h"
+#include "../../exception/invalid_file_exception.h"
 
 
 template<class T>
-shared_ptr<Vertex<T>> Graph<T>::addVertex(const T &content) {
-    auto v = findVertex(content);
-    if (v != nullptr)
-        return v;
-    v = make_shared<Vertex<T>>(content);
-    vertexSet.push_back(v);
-    return v;
+bool Graph<T>::addVertex(const T &content) {
+    PointerWrapper<Vertex<T>> pointer(std::make_shared<Vertex<T>>(content));
+    return vertexSet.insert(pointer).second;
 }
 
 template<class T>
 shared_ptr<Vertex<T>> Graph<T>::findVertex(const T &content) const {
-    for (auto v : vertexSet)
-        if (v->getInfo() == content)
-            return v;
-    return nullptr;
-}
+    Vertex<T> tmp(content);
+    PointerWrapper<Vertex<T>> pw(tmp);
+    auto it = vertexSet.find(pw);
 
-template<class T>
-vector<shared_ptr<Vertex<T>>> Graph<T>::getVertexSet() const {
-    return this->vertexSet;
+    if (it == vertexSet.end())
+        return nullptr;
+
+    return (*it).pointer;
 }
 
 template<class T>
@@ -40,14 +36,13 @@ shared_ptr<Edge<T>> Graph<T>::addEdge(const T &source, const T &dest, double w) 
         return s->addEdge(d, w);
 }
 
-template<>
+template<class Location>
 void Graph<Location>::readNodes(const std::string &fileName, const std::string &city) {
     std::ifstream file;
     file.open(fileName);
 
     if (!file.is_open()) {
-        cerr << "Error opening " << fileName << endl;
-        throw InvalidFileExtension(fileName);
+        throw InvalidFileException(fileName);
     }
 
     std::string line;
@@ -81,7 +76,7 @@ void Graph<Location>::readNodes(const std::string &fileName, const std::string &
     file.close();
 }
 
-template<>
+template<class Location>
 bool Graph<Location>::readEdges(const string &fileName) {
     bool allOk = true;
 
@@ -89,8 +84,7 @@ bool Graph<Location>::readEdges(const string &fileName) {
     file.open(fileName);
 
     if (!file.is_open()) {
-        cerr << "Error opening " << fileName << endl;
-        throw InvalidFileExtension(fileName);
+        throw InvalidFileException(fileName);
     }
 
     std::string line;
@@ -129,9 +123,36 @@ bool Graph<Location>::readEdges(const string &fileName) {
 
         // adds the edge
         this->addEdge(src->getInfo(), dst->getInfo(), 1);
+
     }
 
     file.close();
 
     return allOk;
 }
+
+template<class Location>
+void Graph<Location>::append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city) {
+    try {
+        this->readNodes(nodesFile, city);
+    } catch (InvalidFileException &e) {
+        return;
+    }
+    try {
+        this->readEdges(edgesFile);
+    } catch (InvalidFileException &e) {
+        cerr << "Invalid edges file " << edgesFile << " after reading the nodes. Aborting." << endl;
+        throw e;
+    }
+}
+
+template<class T>
+long Graph<T>::nodesAmount() {
+    return this->vertexSet.size();
+}
+
+template<class T>
+const unordered_set<PointerWrapper<Vertex<T>>, pointer_wrapper_hash> &Graph<T>::getVertexSet() const {
+    return this->vertexSet;
+}
+
