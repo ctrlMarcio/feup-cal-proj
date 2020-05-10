@@ -95,9 +95,9 @@ $(document).ready(function(){initNavTree('classCompany.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae8404b48053ad905a4a41f9d161ce505"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#ae8404b48053ad905a4a41f9d161ce505">Company</a> (std::string name, <a class="el" href="classLocation.html">Location</a> garageLocation, long vehicleNumber)</td></tr>
-<tr class="memdesc:ae8404b48053ad905a4a41f9d161ce505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes an instance of a <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> given a name and a number of vehicles.  <a href="#ae8404b48053ad905a4a41f9d161ce505">More...</a><br /></td></tr>
-<tr class="separator:ae8404b48053ad905a4a41f9d161ce505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0079757c631a1183723fcfd389d973c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a0079757c631a1183723fcfd389d973c0">Company</a> (std::string name, <a class="el" href="classLocation.html">Location</a> garageLocation, <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; graph, long vehicleNumber)</td></tr>
+<tr class="memdesc:a0079757c631a1183723fcfd389d973c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes an instance of a <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> given a name and a number of vehicles.  <a href="#a0079757c631a1183723fcfd389d973c0">More...</a><br /></td></tr>
+<tr class="separator:a0079757c631a1183723fcfd389d973c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64f6c13dd059f834a0f35ed8faeded64"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a64f6c13dd059f834a0f35ed8faeded64">getName</a> () const</td></tr>
 <tr class="memdesc:a64f6c13dd059f834a0f35ed8faeded64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of the company.  <a href="#a64f6c13dd059f834a0f35ed8faeded64">More...</a><br /></td></tr>
 <tr class="separator:a64f6c13dd059f834a0f35ed8faeded64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,13 +107,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a41325b2fc0e371641aa3ab125f46ed98"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a41325b2fc0e371641aa3ab125f46ed98">getGarageLocation</a> () const</td></tr>
 <tr class="memdesc:a41325b2fc0e371641aa3ab125f46ed98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the garage location of the company.  <a href="#a41325b2fc0e371641aa3ab125f46ed98">More...</a><br /></td></tr>
 <tr class="separator:a41325b2fc0e371641aa3ab125f46ed98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aada174439bd4bdf8841a3307dd26c1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a2aada174439bd4bdf8841a3307dd26c1">getGraph</a> () const</td></tr>
+<tr class="memdesc:a2aada174439bd4bdf8841a3307dd26c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the world graph.  <a href="#a2aada174439bd4bdf8841a3307dd26c1">More...</a><br /></td></tr>
+<tr class="separator:a2aada174439bd4bdf8841a3307dd26c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a company. </p>
 <p>The company is responsible for managing its locations, administrators and company clients. Also holds the company's vehicles and garage location. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae8404b48053ad905a4a41f9d161ce505"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8404b48053ad905a4a41f9d161ce505">&#9670;&nbsp;</a></span>Company()</h2>
+<a id="a0079757c631a1183723fcfd389d973c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0079757c631a1183723fcfd389d973c0">&#9670;&nbsp;</a></span>Company()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,6 +132,12 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype"><a class="el" href="classLocation.html">Location</a>&#160;</td>
           <td class="paramname"><em>garageLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -150,6 +159,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">name</td><td>the name </td></tr>
     <tr><td class="paramname">garageLocation</td><td>the garage location </td></tr>
     <tr><td class="paramname">vehicleNumber</td><td>the number of vehicles </td></tr>
+    <tr><td class="paramname">graph</td><td>the world graph </td></tr>
   </table>
   </dd>
 </dl>
@@ -174,6 +184,26 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the garage location of the company. </p>
 <dl class="section return"><dt>Returns</dt><dd>the garage location </dd></dl>
+
+</div>
+</div>
+<a id="a2aada174439bd4bdf8841a3307dd26c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aada174439bd4bdf8841a3307dd26c1">&#9670;&nbsp;</a></span>getGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp; Company::getGraph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the world graph. </p>
+<dl class="section return"><dt>Returns</dt><dd>the world graph </dd></dl>
 
 </div>
 </div>

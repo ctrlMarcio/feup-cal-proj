@@ -5,6 +5,7 @@ var annotated_dup =
     [ "auth_users_hash", "structauth__users__hash.html", "structauth__users__hash" ],
     [ "AuthUser", "classAuthUser.html", "classAuthUser" ],
     [ "AuthUserManager", "classAuthUserManager.html", "classAuthUserManager" ],
+    [ "Bootstrap", "classBootstrap.html", "classBootstrap" ],
     [ "Company", "classCompany.html", "classCompany" ],
     [ "CompanyClient", "classCompanyClient.html", "classCompanyClient" ],
     [ "CompanyClientManager", "classCompanyClientManager.html", "classCompanyClientManager" ],
@@ -12,8 +13,12 @@ var annotated_dup =
     [ "CurrentSession", "classCurrentSession.html", "classCurrentSession" ],
     [ "Edge", "classEdge.html", "classEdge" ],
     [ "Graph", "classGraph.html", "classGraph" ],
-    [ "InvalidFileExtension", "classInvalidFileExtension.html", "classInvalidFileExtension" ],
+    [ "InvalidDirectoryException", "classInvalidDirectoryException.html", "classInvalidDirectoryException" ],
+    [ "InvalidFileException", "classInvalidFileException.html", "classInvalidFileException" ],
+    [ "InvalidLocationException", "classInvalidLocationException.html", "classInvalidLocationException" ],
     [ "InvalidLoginException", "classInvalidLoginException.html", "classInvalidLoginException" ],
     [ "Location", "classLocation.html", "classLocation" ],
+    [ "pointer_wrapper_hash", "structpointer__wrapper__hash.html", "structpointer__wrapper__hash" ],
+    [ "PointerWrapper", "classPointerWrapper.html", "classPointerWrapper" ],
     [ "Vertex", "classVertex.html", "classVertex" ]
 ];

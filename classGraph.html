@@ -95,21 +95,30 @@ $(document).ready(function(){initNavTree('classGraph.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c1b5e270519c168c410e632fef8d7fe"><td class="memItemLeft" align="right" valign="top">vector&lt; shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a3c1b5e270519c168c410e632fef8d7fe">getVertexSet</a> () const</td></tr>
-<tr class="memdesc:a3c1b5e270519c168c410e632fef8d7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the vertex container.  <a href="#a3c1b5e270519c168c410e632fef8d7fe">More...</a><br /></td></tr>
-<tr class="separator:a3c1b5e270519c168c410e632fef8d7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef75fe9d9bfa5f072a12dde98d7604b7"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aef75fe9d9bfa5f072a12dde98d7604b7">addVertex</a> (const T &amp;content)</td></tr>
-<tr class="memdesc:aef75fe9d9bfa5f072a12dde98d7604b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a vertex to the graph.  <a href="#aef75fe9d9bfa5f072a12dde98d7604b7">More...</a><br /></td></tr>
-<tr class="separator:aef75fe9d9bfa5f072a12dde98d7604b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d74bf755b4bd96bb36278340b2ac650"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a3d74bf755b4bd96bb36278340b2ac650">addVertex</a> (const T &amp;content)</td></tr>
+<tr class="memdesc:a3d74bf755b4bd96bb36278340b2ac650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a vertex to the graph.  <a href="#a3d74bf755b4bd96bb36278340b2ac650">More...</a><br /></td></tr>
+<tr class="separator:a3d74bf755b4bd96bb36278340b2ac650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad81a2d9c20d27292d19728660fd4f622"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad81a2d9c20d27292d19728660fd4f622">addEdge</a> (const T &amp;source, const T &amp;dest, double w)</td></tr>
 <tr class="memdesc:ad81a2d9c20d27292d19728660fd4f622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an edge to the graph.  <a href="#ad81a2d9c20d27292d19728660fd4f622">More...</a><br /></td></tr>
 <tr class="separator:ad81a2d9c20d27292d19728660fd4f622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50316fc664e8efa89ed8a395d73660a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#af50316fc664e8efa89ed8a395d73660a">append</a> (const std::string &amp;nodesFile, const std::string &amp;edgesFile, const std::string &amp;city)</td></tr>
+<tr class="memdesc:af50316fc664e8efa89ed8a395d73660a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends nodes and edges from files to the graph.  <a href="#af50316fc664e8efa89ed8a395d73660a">More...</a><br /></td></tr>
+<tr class="separator:af50316fc664e8efa89ed8a395d73660a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecea3aa46ffe97263771d4cf7e4709eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aecea3aa46ffe97263771d4cf7e4709eb">readNodes</a> (const std::string &amp;fileName, const std::string &amp;city)</td></tr>
 <tr class="memdesc:aecea3aa46ffe97263771d4cf7e4709eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends locations to the graph from a file.  <a href="#aecea3aa46ffe97263771d4cf7e4709eb">More...</a><br /></td></tr>
 <tr class="separator:aecea3aa46ffe97263771d4cf7e4709eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a395bbfc4bfd2d15082f81e0f5d8dead9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a395bbfc4bfd2d15082f81e0f5d8dead9">readEdges</a> (const std::string &amp;fileName)</td></tr>
 <tr class="memdesc:a395bbfc4bfd2d15082f81e0f5d8dead9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the edges between locations to the graph from a file.  <a href="#a395bbfc4bfd2d15082f81e0f5d8dead9">More...</a><br /></td></tr>
 <tr class="separator:a395bbfc4bfd2d15082f81e0f5d8dead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70748a372a65e6b789d806c6a1b2005"><td class="memItemLeft" align="right" valign="top"><a id="af70748a372a65e6b789d806c6a1b2005"></a>
+const unordered_set&lt; <a class="el" href="classPointerWrapper.html">PointerWrapper</a>&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt;, <a class="el" href="structpointer__wrapper__hash.html">pointer_wrapper_hash</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVertexSet</b> () const</td></tr>
+<tr class="separator:af70748a372a65e6b789d806c6a1b2005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845506c537b0ca33900ff7c44d20b717"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a845506c537b0ca33900ff7c44d20b717">findVertex</a> (const T &amp;content) const</td></tr>
+<tr class="memdesc:a845506c537b0ca33900ff7c44d20b717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pointer to a vertex, given its content.  <a href="#a845506c537b0ca33900ff7c44d20b717">More...</a><br /></td></tr>
+<tr class="separator:a845506c537b0ca33900ff7c44d20b717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a473f395dbc4a364fd288b6c6b99565a6"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a473f395dbc4a364fd288b6c6b99565a6">nodesAmount</a> ()</td></tr>
+<tr class="memdesc:a473f395dbc4a364fd288b6c6b99565a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of nodes.  <a href="#a473f395dbc4a364fd288b6c6b99565a6">More...</a><br /></td></tr>
+<tr class="separator:a473f395dbc4a364fd288b6c6b99565a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
@@ -130,7 +139,7 @@ class Graph&lt; T &gt;</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">shared_ptr&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; &gt; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::addEdge </td>
@@ -172,16 +181,16 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="aef75fe9d9bfa5f072a12dde98d7604b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef75fe9d9bfa5f072a12dde98d7604b7">&#9670;&nbsp;</a></span>addVertex()</h2>
+<a id="a3d74bf755b4bd96bb36278340b2ac650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d74bf755b4bd96bb36278340b2ac650">&#9670;&nbsp;</a></span>addVertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">shared_ptr&lt;<a class="el" href="classVertex.html">Vertex</a>&lt;T&gt; &gt; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::addVertex </td>
+          <td class="memname">bool <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::addVertex </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>content</em></td><td>)</td>
@@ -201,25 +210,100 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a3c1b5e270519c168c410e632fef8d7fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c1b5e270519c168c410e632fef8d7fe">&#9670;&nbsp;</a></span>getVertexSet()</h2>
+<a id="af50316fc664e8efa89ed8a395d73660a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af50316fc664e8efa89ed8a395d73660a">&#9670;&nbsp;</a></span>append()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt;shared_ptr&lt;<a class="el" href="classVertex.html">Vertex</a>&lt;T&gt; &gt; &gt; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::getVertexSet </td>
+          <td class="memname">void <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::append </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>nodesFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>edgesFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>city</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Appends nodes and edges from files to the graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodesFile</td><td>the name of the nodes' file </td></tr>
+    <tr><td class="paramname">edgesFile</td><td>the name of the edges' file </td></tr>
+    <tr><td class="paramname">city</td><td>the name of the city to append </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a845506c537b0ca33900ff7c44d20b717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845506c537b0ca33900ff7c44d20b717">&#9670;&nbsp;</a></span>findVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classVertex.html">Vertex</a>&lt;T&gt; &gt; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::findVertex </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the vertex container. </p>
-<dl class="section return"><dt>Returns</dt><dd>the vertex container </dd></dl>
+<p>Gets the pointer to a vertex, given its content. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>the given content </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the pointer to the vertex </dd></dl>
+
+</div>
+</div>
+<a id="a473f395dbc4a364fd288b6c6b99565a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a473f395dbc4a364fd288b6c6b99565a6">&#9670;&nbsp;</a></span>nodesAmount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">long <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::nodesAmount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the number of nodes. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of nodes </dd></dl>
 
 </div>
 </div>
@@ -229,7 +313,7 @@ template&lt;class T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::readEdges </td>
@@ -246,7 +330,7 @@ template&lt;class T &gt; </div>
 <dl class="section warning"><dt>Warning</dt><dd>only available for <em><a class="el" href="classLocation.html" title="Represents a real world location. ">Location</a></em> graphs </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">InvalidFileException</td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="classInvalidFileException.html" title="Represents an exception thrown whenever an attempt to work with an invalid file (e.g. non-existent) is made. ">InvalidFileException</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -266,7 +350,7 @@ template&lt;class T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::readNodes </td>
@@ -292,7 +376,7 @@ template&lt;class T &gt; </div>
 <dl class="section warning"><dt>Warning</dt><dd>Only available for <em><a class="el" href="classLocation.html" title="Represents a real world location. ">Location</a></em> graphs. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">InvalidFileException</td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="classInvalidFileException.html" title="Represents an exception thrown whenever an attempt to work with an invalid file (e.g. non-existent) is made. ">InvalidFileException</a></td><td></td></tr>
   </table>
   </dd>
 </dl>

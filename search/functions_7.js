@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['operator_21_3d',['operator!=',['../classAuthUser.html#a3c53caff203f9f7ab21faf6ac321d016',1,'AuthUser::operator!=()'],['../classLocation.html#a7b55f95a3e3d671089a206557fa2b202',1,'Location::operator!=()']]],
-  ['operator_3d_3d',['operator==',['../classAuthUser.html#a580d31c02d0b2dc434229fa24d6d4456',1,'AuthUser::operator==()'],['../classLocation.html#afdb3b154b40c33188883b62abafb6343',1,'Location::operator==()']]]
+  ['invaliddirectoryexception',['InvalidDirectoryException',['../classInvalidDirectoryException.html#a6958af71d0de0ce248a345dc5d86a269',1,'InvalidDirectoryException']]],
+  ['invalidfileexception',['InvalidFileException',['../classInvalidFileException.html#a035e3431f5a5f5e7e9cd80fdfcfe8ca0',1,'InvalidFileException']]],
+  ['invalidloginexception',['InvalidLoginException',['../classInvalidLoginException.html#adb87d171bf6bcbf73bed47517622c6d6',1,'InvalidLoginException']]],
+  ['islogged',['isLogged',['../classCurrentSession.html#ae8c9a46c464e2e51278625b7de0c9ed4',1,'CurrentSession']]],
+  ['isvalid',['isValid',['../classAdministratorManager.html#acf048648d07e84c3f566df334bc2b1d6',1,'AdministratorManager::isValid()'],['../classCompanyClientManager.html#ac715fee48eed3c636e709415437decd1',1,'CompanyClientManager::isValid()']]]
 ];

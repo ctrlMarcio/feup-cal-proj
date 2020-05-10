@@ -7,6 +7,7 @@ var classLocation =
     [ "getLongitude", "classLocation.html#a4f6d4ef756b78d33b322fd83f3ed18fa", null ],
     [ "getX", "classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7", null ],
     [ "getY", "classLocation.html#a2223613f9dee0209c7f0378ce79045de", null ],
+    [ "hash", "classLocation.html#a55949866603a8ee2ca6265c4f671b29d", null ],
     [ "operator!=", "classLocation.html#a7b55f95a3e3d671089a206557fa2b202", null ],
     [ "operator==", "classLocation.html#afdb3b154b40c33188883b62abafb6343", null ]
 ];

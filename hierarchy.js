@@ -5,6 +5,7 @@ var hierarchy =
     [ "auth_users_hash", "structauth__users__hash.html", null ],
     [ "AuthUser", "classAuthUser.html", null ],
     [ "AuthUserManager", "classAuthUserManager.html", null ],
+    [ "Bootstrap", "classBootstrap.html", null ],
     [ "Company", "classCompany.html", null ],
     [ "CompanyClient", "classCompanyClient.html", null ],
     [ "CompanyClientManager", "classCompanyClientManager.html", null ],
@@ -12,12 +13,17 @@ var hierarchy =
     [ "CurrentSession", "classCurrentSession.html", null ],
     [ "Edge< T >", "classEdge.html", null ],
     [ "Graph< T >", "classGraph.html", null ],
+    [ "Graph< Location >", "classGraph.html", null ],
     [ "invalid_argument", null, [
+      [ "InvalidLocationException", "classInvalidLocationException.html", null ],
       [ "InvalidLoginException", "classInvalidLoginException.html", null ]
     ] ],
     [ "Location", "classLocation.html", null ],
+    [ "pointer_wrapper_hash", "structpointer__wrapper__hash.html", null ],
+    [ "PointerWrapper< T >", "classPointerWrapper.html", null ],
     [ "runtime_error", null, [
-      [ "InvalidFileExtension", "classInvalidFileExtension.html", null ]
+      [ "InvalidDirectoryException", "classInvalidDirectoryException.html", null ],
+      [ "InvalidFileException", "classInvalidFileException.html", null ]
     ] ],
     [ "Vertex< T >", "classVertex.html", null ]
 ];
