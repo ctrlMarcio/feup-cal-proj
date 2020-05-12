@@ -101,12 +101,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48eae2f7af2362634adab02b7b2dbec6"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a48eae2f7af2362634adab02b7b2dbec6">getInfo</a> () const</td></tr>
 <tr class="memdesc:a48eae2f7af2362634adab02b7b2dbec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the content of the vertex.  <a href="#a48eae2f7af2362634adab02b7b2dbec6">More...</a><br /></td></tr>
 <tr class="separator:a48eae2f7af2362634adab02b7b2dbec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5187638c566beb3830f5656c64f62faa"><td class="memItemLeft" align="right" valign="top">vector&lt; shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a5187638c566beb3830f5656c64f62faa">getAdj</a> () const</td></tr>
-<tr class="memdesc:a5187638c566beb3830f5656c64f62faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the container for the outgoing edges.  <a href="#a5187638c566beb3830f5656c64f62faa">More...</a><br /></td></tr>
-<tr class="separator:a5187638c566beb3830f5656c64f62faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d97b63a7f6ba302da220418c965e5bd"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a1d97b63a7f6ba302da220418c965e5bd">addEdge</a> (shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt; dest, double w)</td></tr>
-<tr class="memdesc:a1d97b63a7f6ba302da220418c965e5bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds an outgoing edge to the vertex.  <a href="#a1d97b63a7f6ba302da220418c965e5bd">More...</a><br /></td></tr>
-<tr class="separator:a1d97b63a7f6ba302da220418c965e5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e63016691fe3ab47fb30bd200ef81c5"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a4e63016691fe3ab47fb30bd200ef81c5">getAdj</a> () const</td></tr>
+<tr class="memdesc:a4e63016691fe3ab47fb30bd200ef81c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the container for the outgoing edges.  <a href="#a4e63016691fe3ab47fb30bd200ef81c5">More...</a><br /></td></tr>
+<tr class="separator:a4e63016691fe3ab47fb30bd200ef81c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a24d4693d540a7bb25338c2f9276425"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEdge.html">Edge</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a3a24d4693d540a7bb25338c2f9276425">addEdge</a> (<a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; *dest, double w)</td></tr>
+<tr class="memdesc:a3a24d4693d540a7bb25338c2f9276425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds an outgoing edge to the vertex.  <a href="#a3a24d4693d540a7bb25338c2f9276425">More...</a><br /></td></tr>
+<tr class="separator:a3a24d4693d540a7bb25338c2f9276425"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69ce2b544e91f7454fce21fa5cde93b0"><td class="memItemLeft" align="right" valign="top"><a id="a69ce2b544e91f7454fce21fa5cde93b0"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>hash</b> ()</td></tr>
 <tr class="separator:a69ce2b544e91f7454fce21fa5cde93b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +135,7 @@ class Vertex&lt; T &gt;</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -166,18 +166,18 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1d97b63a7f6ba302da220418c965e5bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d97b63a7f6ba302da220418c965e5bd">&#9670;&nbsp;</a></span>addEdge()</h2>
+<a id="a3a24d4693d540a7bb25338c2f9276425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a24d4693d540a7bb25338c2f9276425">&#9670;&nbsp;</a></span>addEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">shared_ptr&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; &gt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::addEdge </td>
+          <td class="memname"><a class="el" href="classEdge.html">Edge</a>&lt;T&gt;* <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::addEdge </td>
           <td>(</td>
-          <td class="paramtype">shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>dest</em>, </td>
         </tr>
         <tr>
@@ -206,16 +206,16 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a5187638c566beb3830f5656c64f62faa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5187638c566beb3830f5656c64f62faa">&#9670;&nbsp;</a></span>getAdj()</h2>
+<a id="a4e63016691fe3ab47fb30bd200ef81c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e63016691fe3ab47fb30bd200ef81c5">&#9670;&nbsp;</a></span>getAdj()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt;shared_ptr&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; &gt; &gt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::getAdj </td>
+          <td class="memname">vector&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; *&gt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::getAdj </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -234,7 +234,7 @@ template&lt;class T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">T <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::getInfo </td>
