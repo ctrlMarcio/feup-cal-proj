@@ -34,6 +34,12 @@ public:
      * @return          true upon success, false otherwise
      */
     bool remove(Administrator administrator);
+    /**
+    * @brief Gets Administrator Manager set.
+    *
+    * @return          Administrator Manager set
+    */
+    std::vector<Administrator> getAdministratorSet() const;
 
 private:
     /**

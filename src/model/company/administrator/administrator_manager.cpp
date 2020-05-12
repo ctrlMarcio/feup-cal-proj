@@ -39,3 +39,7 @@ bool AdministratorManager::remove(Administrator administrator)
     }
     return false;
 }
+
+std::vector<Administrator> AdministratorManager::getAdministratorSet() const {
+    return administratorSet;
+}

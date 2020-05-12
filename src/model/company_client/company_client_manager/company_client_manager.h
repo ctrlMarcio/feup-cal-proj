@@ -35,6 +35,13 @@ public:
      */
     bool remove(CompanyClient companyClient);
 
+    /**
+     * @brief Gets company client's set.
+     *
+     * @return          company client's set
+     */
+    std::vector<CompanyClient> getCompanyClientSet() const;
+
 private:
     /**
      * @brief Company Client's set.

@@ -39,3 +39,7 @@ bool CompanyClientManager::remove(CompanyClient companyClient)
     }
     return false;
 }
+
+std::vector<CompanyClient> CompanyClientManager::getCompanyClientSet() const {
+    return companyClientSet;
+}
