@@ -11,14 +11,13 @@ CompanyClient createCompanyClientToAdd()
     return companyClient;
 }
 
-TEST(company_client_manager, is_valid_test) {
+TEST(company_client_manager, has_test) {
     CompanyClientManager companyClientManager;
     CompanyClient companyClient = createCompanyClientToAdd();
     companyClientManager.add(companyClient);
 
-    EXPECT_EQ(companyClientManager.getCompanyClientSet().size(), 1);
-    EXPECT_EQ(companyClientManager.getCompanyClientSet().at(0).getName(),"company");
-    EXPECT_FALSE(companyClientManager.isValid(companyClient));
+    EXPECT_EQ(companyClientManager.getCompaniesClient().size(), 1);
+    EXPECT_TRUE(companyClientManager.has(companyClient));
 }
 
 TEST(company_client_manager, remove_test) {
@@ -27,5 +26,5 @@ TEST(company_client_manager, remove_test) {
     companyClientManager.add(companyClient);
     companyClientManager.remove(companyClient);
 
-    EXPECT_EQ(companyClientManager.getCompanyClientSet().size(), 0);
+    EXPECT_EQ(companyClientManager.getCompaniesClient().size(), 0);
 }

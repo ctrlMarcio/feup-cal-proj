@@ -31,6 +31,10 @@ public:
      */
     std::string getEmail() const;
 
+    bool operator==(const Administrator &rhs) const;
+
+    bool operator!=(const Administrator &rhs) const;
+
 private:
     /**
 	 * @brief The administrator name.

@@ -86,6 +86,10 @@ public:
     // TODO subst long
     long getUUID() const;
 
+    bool operator==(const CompanyClient &rhs) const;
+
+    bool operator!=(const CompanyClient &rhs) const;
+
 private:
     /**
 	 * @brief The company name.

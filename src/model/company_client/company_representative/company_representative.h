@@ -1,7 +1,6 @@
 #ifndef FEUP_CAL_PROJ_COMPANY_REPRESENTATIVE_H
 #define FEUP_CAL_PROJ_COMPANY_REPRESENTATIVE_H
 
-
 #include <string>
 
 /**
@@ -30,6 +29,10 @@ public:
      * @return          the email
      */
     std::string getEmail() const;
+
+    bool operator==(const CompanyRepresentative &rhs) const;
+
+    bool operator!=(const CompanyRepresentative &rhs) const;
 
 private:
     /**

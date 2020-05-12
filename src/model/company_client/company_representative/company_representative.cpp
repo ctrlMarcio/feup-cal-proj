@@ -9,3 +9,11 @@ std::string CompanyRepresentative::getName() const {
 std::string CompanyRepresentative::getEmail() const {
     return this->email;
 }
+
+bool CompanyRepresentative::operator==(const CompanyRepresentative &rhs) const {
+    return email == rhs.email;
+}
+
+bool CompanyRepresentative::operator!=(const CompanyRepresentative &rhs) const {
+    return !(rhs == *this);
+}

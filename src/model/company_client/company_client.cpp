@@ -56,3 +56,11 @@ void CompanyClient::setVehicleNumber(int vehicleNumber) {
 long CompanyClient::getUUID() const {
     return uuid;
 }
+
+bool CompanyClient::operator==(const CompanyClient &rhs) const {
+    return uuid == rhs.uuid;
+}
+
+bool CompanyClient::operator!=(const CompanyClient &rhs) const {
+    return !(rhs == *this);
+}

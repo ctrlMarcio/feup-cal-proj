@@ -1,45 +1,34 @@
+#include <algorithm>
 #include "company_client_manager.h"
 
 CompanyClientManager::CompanyClientManager() {}
 
-bool CompanyClientManager::isValid(CompanyClient companyClient)
-{
-    for (auto i : companyClientSet)
-    {
-        if (i.getUUID() == companyClient.getUUID())
-        {
-            return false;
-        }
-    }
-    return true;
+bool CompanyClientManager::isValid(const CompanyClient &companyClient) const {
+    return companyClient.getUUID() != 0 && !companyClient.getName().empty();
 }
 
-bool CompanyClientManager::add(CompanyClient companyClient)
-{
-    if (isValid(companyClient))
-    {
-        companyClientSet.push_back(companyClient);
-        return true;
-    }
-    return false;
+bool CompanyClientManager::add(CompanyClient companyClient) {
+    if (!isValid(companyClient)) return false;
+    if (has(companyClient)) return false;
+    return companiesClient.insert(companyClient).second;
 }
 
-bool CompanyClientManager::remove(CompanyClient companyClient)
-{
-    std::vector<CompanyClient>::iterator it;
-    it = companyClientSet.begin();
-    for (auto i: companyClientSet)
-    {
-        if (i.getUUID() == companyClient.getUUID())
-        {
-            companyClientSet.erase(it);
-            return true;
-        }
-        it++;
-    }
-    return false;
+bool CompanyClientManager::remove(CompanyClient companyClient) {
+    if (!has(companyClient)) return false;
+    return companiesClient.erase(companyClient) > 0;
 }
 
-std::vector<CompanyClient> CompanyClientManager::getCompanyClientSet() const {
-    return companyClientSet;
+bool CompanyClientManager::has(CompanyClient &companyClient) const {
+    return std::find(companiesClient.begin(), companiesClient.end(), companyClient) != companiesClient.end();
 }
+
+bool CompanyClientManager::has(const long uuid) const {
+    return std::find_if(companiesClient.begin(), companiesClient.end(), [&uuid](const CompanyClient &companyClient) {
+        return companyClient.getUUID() == uuid;
+    }) != companiesClient.end();
+}
+
+std::unordered_set<CompanyClient, companies_client_hash> CompanyClientManager::getCompaniesClient() const {
+    return companiesClient;
+}
+

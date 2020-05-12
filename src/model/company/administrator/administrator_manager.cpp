@@ -1,45 +1,36 @@
+#include <algorithm>
 #include "administrator_manager.h"
 
 AdministratorManager::AdministratorManager() {}
 
-bool AdministratorManager::isValid(Administrator administrator)
+bool AdministratorManager::isValid(const Administrator &administrator) const
 {
-    for (auto i : administratorSet)
-    {
-        if (i.getEmail()==administrator.getEmail())
-        {
-            return false;
-        }
-    }
-    return true;
+    return !administrator.getName().empty() && !administrator.getEmail().empty();
 }
 
 bool AdministratorManager::add(Administrator administrator)
 {
-    if (isValid(administrator))
-    {
-        administratorSet.push_back(administrator);
-        return true;
-    }
-    return false;
+    if (!isValid(administrator)) return false;
+    if (has(administrator)) return false;
+    return administrators.insert(administrator).second;
 }
 
 bool AdministratorManager::remove(Administrator administrator)
 {
-    std::vector<Administrator>::iterator it;
-    it = administratorSet.begin();
-    for (auto i: administratorSet)
-    {
-        if (i.getEmail()==administrator.getEmail())
-        {
-            administratorSet.erase(it);
-            return true;
-        }
-        it++;
-    }
-    return false;
+    if (!has(administrator)) return false;
+    return administrators.erase(administrator) > 0;
 }
 
-std::vector<Administrator> AdministratorManager::getAdministratorSet() const {
-    return administratorSet;
+std::unordered_set<Administrator, administrator_hash> AdministratorManager::getAdministrators() const {
+    return administrators;
+}
+
+bool AdministratorManager::has(Administrator &administrator) const {
+    return std::find(administrators.begin(), administrators.end(), administrator) != administrators.end();
+}
+
+bool AdministratorManager::has(const std::string &email) const {
+    return std::find_if(administrators.begin(), administrators.end(), [&email](const Administrator &user) {
+        return user.getEmail() == email;
+    }) != administrators.end();
 }
