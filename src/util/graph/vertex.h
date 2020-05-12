@@ -34,7 +34,7 @@ public:
 	 *
 	 * @return			the container for the outgoing edges
 	 */
-	vector<shared_ptr<Edge<T>>> getAdj() const;
+	vector<Edge<T> *> getAdj() const;
 
 	/**
 	 * @brief Creates and adds an outgoing edge to the vertex.
@@ -43,7 +43,7 @@ public:
 	 * @param w 		the weight of the edge
 	 * @return			the pointer to the created edge
 	 */
-	shared_ptr<Edge<T>> addEdge(shared_ptr<Vertex<T>> dest, double w);
+	Edge<T> *addEdge(Vertex<T> *dest, double w);
 
 	int hash();
 
@@ -60,7 +60,7 @@ private:
 	/**
 	 * @brief The container of outgoing edges.
 	 */
-	vector<shared_ptr<Edge<T>>> outgoing;  // adj
+	vector<Edge<T> *> outgoing;  // adj
 };
 
 #include "vertex.tpp"

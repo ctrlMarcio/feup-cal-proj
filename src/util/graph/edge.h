@@ -22,14 +22,14 @@ public:
 	 * @param d		the destination vertex
 	 * @param w		the weight
 	 */
-	Edge(shared_ptr<Vertex<T>> d, double w);
+	Edge(Vertex<T> *d, double w);
 
 	/**
 	 * @brief Gets the destination vertex.
 	 *
 	 * @return		the pointer to the destination vertex
 	 */
-	shared_ptr<Vertex<T>> getDest() const;
+	Vertex<T> *getDest() const;
 
 	/**
 	 * @brief Gets the weight.
@@ -42,7 +42,7 @@ private:
 	/**
 	 * @brief The destination vertex of the edge.
 	 */
-	shared_ptr<Vertex<T>> dest;
+	Vertex<T> *dest;
 
 	/**
 	 * @brief The weight of the edge.

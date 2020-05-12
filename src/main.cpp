@@ -11,5 +11,6 @@ int main() {
     auto ptr = company.getGraph().findVertex(tmp);
 
     std::cout << ptr->getInfo().getCity() << endl;
+
     return EXIT_SUCCESS;
 }

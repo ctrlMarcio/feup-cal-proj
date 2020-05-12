@@ -12,7 +12,7 @@ TEST(vertex, simple_construction_test) {
 
 TEST(vertex, add_edge_test) {
 	Vertex<string> vertex("a");
-	auto dest = make_shared<Vertex<string>>("aa");
+	auto dest = new Vertex<string>("aa");
 
 	vertex.addEdge(dest, -1);
 

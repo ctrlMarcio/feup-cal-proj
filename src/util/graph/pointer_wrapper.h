@@ -7,11 +7,9 @@
 template<class T>
 class PointerWrapper {
 public:
-    std::shared_ptr<T> pointer;
+    T *pointer;
 
-    explicit PointerWrapper(const std::shared_ptr<T> &pointer) : pointer(pointer) {}
-
-    explicit PointerWrapper(T &content) : pointer(std::make_shared<T>(content)) {}
+    explicit PointerWrapper(T *pointer) : pointer(pointer) {}
 
     bool operator==(const PointerWrapper &rhs) const;
 

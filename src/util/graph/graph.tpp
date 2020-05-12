@@ -10,16 +10,18 @@
 
 template<class T>
 bool Graph<T>::addVertex(const T &content) {
-    PointerWrapper<Vertex<T>> pointer(std::make_shared<Vertex<T>>(content));
-    return vertexSet.insert(pointer).second;
+    Vertex<T> *vertex = new Vertex<T>(content);
+    PointerWrapper<Vertex<T>> pointer(vertex);
+    bool inserted = vertexSet.insert(pointer).second;
+    return inserted;
 }
 
 template<class T>
-shared_ptr<Vertex<T>> Graph<T>::findVertex(const T &content) const {
-    Vertex<T> tmp(content);
+Vertex<T> *Graph<T>::findVertex(const T &content) const {
+    Vertex<T> *tmp = new Vertex<T>(content);
     PointerWrapper<Vertex<T>> pw(tmp);
     auto it = vertexSet.find(pw);
-
+    delete tmp;
     if (it == vertexSet.end())
         return nullptr;
 
@@ -27,7 +29,7 @@ shared_ptr<Vertex<T>> Graph<T>::findVertex(const T &content) const {
 }
 
 template<class T>
-shared_ptr<Edge<T>> Graph<T>::addEdge(const T &source, const T &dest, double w) {
+Edge<T> *Graph<T>::addEdge(const T &source, const T &dest, double w) {
     auto s = findVertex(source);
     auto d = findVertex(dest);
     if (s == nullptr || d == nullptr)
@@ -37,7 +39,7 @@ shared_ptr<Edge<T>> Graph<T>::addEdge(const T &source, const T &dest, double w) 
 }
 
 template<class Location>
-void Graph<Location>::readNodes(const std::string &fileName, const std::string &city) {
+void Graph<Location>::readNodes(const std::string &fileName, const std::string &city, std::mutex *mutex) {
     std::ifstream file;
     file.open(fileName);
 
@@ -70,14 +72,16 @@ void Graph<Location>::readNodes(const std::string &fileName, const std::string &
         Location location(id, city, x, y);
 
         // add to the graph
+        if (mutex) mutex->lock();
         this->addVertex(location);
+        if (mutex) mutex->unlock();
     }
 
     file.close();
 }
 
 template<class Location>
-bool Graph<Location>::readEdges(const string &fileName) {
+bool Graph<Location>::readEdges(const string &fileName, std::mutex *mutex) {
     bool allOk = true;
 
     std::ifstream file;
@@ -122,8 +126,9 @@ bool Graph<Location>::readEdges(const string &fileName) {
         }
 
         // adds the edge
+        if(mutex) mutex->lock();
         this->addEdge(src->getInfo(), dst->getInfo(), 1);
-
+        if(mutex) mutex->unlock();
     }
 
     file.close();
@@ -132,14 +137,15 @@ bool Graph<Location>::readEdges(const string &fileName) {
 }
 
 template<class Location>
-void Graph<Location>::append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city) {
+void Graph<Location>::append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city, std::mutex *mutex) {
     try {
-        this->readNodes(nodesFile, city);
+        this->readNodes(nodesFile, city, mutex);
     } catch (InvalidFileException &e) {
+        cout << "Can't append from " << city << "." << endl;
         return;
     }
     try {
-        this->readEdges(edgesFile);
+        this->readEdges(edgesFile, mutex);
     } catch (InvalidFileException &e) {
         cerr << "Invalid edges file " << edgesFile << " after reading the nodes. Aborting." << endl;
         throw e;
@@ -155,4 +161,3 @@ template<class T>
 const unordered_set<PointerWrapper<Vertex<T>>, pointer_wrapper_hash> &Graph<T>::getVertexSet() const {
     return this->vertexSet;
 }
-

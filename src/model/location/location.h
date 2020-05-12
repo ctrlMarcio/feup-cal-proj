@@ -81,7 +81,13 @@ public:
      */
     bool operator!=(const Location &rhs) const;
 
+    /**
+     * @brief Calculates a hash for the location
+     *
+     * @return      the hash
+     */
     int hash();
+
 private:
 	/**
 	 * @brief The location unique identifier.

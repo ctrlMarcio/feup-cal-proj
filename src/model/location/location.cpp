@@ -36,7 +36,5 @@ bool Location::operator!=(const Location &rhs) const {
 }
 
 int Location::hash() {
-    std::string tmp = std::to_string(id);
-    std::hash<std::string> hasher;
-    return hasher(tmp);
+    return 37 * id;
 }

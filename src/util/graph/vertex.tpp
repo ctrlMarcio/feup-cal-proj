@@ -9,14 +9,14 @@ T Vertex<T>::getInfo() const {
 }
 
 template<class T>
-shared_ptr<Edge<T>> Vertex<T>::addEdge(shared_ptr<Vertex<T>> dest, double w) {
-	auto e = make_shared<Edge<T>>(dest, w);
+Edge<T> *Vertex<T>::addEdge(Vertex<T> *dest, double w) {
+	auto e = new Edge<T>(dest, w);
 	this->outgoing.push_back(e);
 	return e;
 }
 
 template<class T>
-vector<shared_ptr<Edge<T>>> Vertex<T>::getAdj() const {
+vector<Edge<T>*> Vertex<T>::getAdj() const {
 	return this->outgoing;
 }
 

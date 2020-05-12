@@ -5,6 +5,7 @@
 #include <vector>
 #include <memory>
 #include <unordered_set>
+#include <mutex>
 
 #include "pointer_wrapper.h"
 #include "vertex.h"
@@ -54,7 +55,7 @@ public:
      * @param w			the weight of the edge
      * @return			the pointer to the created edge
      */
-    shared_ptr<Edge<T>> addEdge(const T &source, const T &dest, double w);
+     Edge<T> *addEdge(const T &source, const T &dest, double w);
 
     /**
      * @brief Appends nodes and edges from files to the graph
@@ -62,8 +63,9 @@ public:
      * @param nodesFile         the name of the nodes' file
      * @param edgesFile         the name of the edges' file
      * @param city              the name of the city to append
+     * @param mutex     the mutex to ensure thread safety
      */
-    void append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city);
+    void append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city, std::mutex *mutex=nullptr);
 
     /**
      * @brief Appends locations to the graph from a file.
@@ -72,8 +74,9 @@ public:
      * @throws          InvalidFileException
      * @param fileName  the name of the file containing the locations
      * @param city      the name of the city described in the files
+     * @param mutex     the mutex to assure safety
      */
-    void readNodes(const std::string &fileName, const std::string &city);
+    void readNodes(const std::string &fileName, const std::string &city, std::mutex *mutex=nullptr);
 
     /**
      * @brief Reads the edges between locations to the graph from a file.
@@ -83,10 +86,16 @@ public:
      * @warning         only available for \e Location graphs
      * @throws          InvalidFileException
      * @param fileName  the name of the file containing the edges
+     * @param mutex     the mutex to assure safety
      * @return          true if the edges were successfully read, false otherwise
      */
-    bool readEdges(const std::string &fileName);
+    bool readEdges(const std::string &fileName, std::mutex *mutex=nullptr);
 
+    /**
+     * @brief Gets the vertex set
+     *
+     * @return  the vertex set
+     */
     const unordered_set<PointerWrapper<Vertex<T>> , pointer_wrapper_hash> &getVertexSet() const;
 
     /**
@@ -95,7 +104,7 @@ public:
      * @param content	the given content
      * @return			the pointer to the vertex
      */
-    std::shared_ptr<Vertex<T>> findVertex(const T &content) const;
+    Vertex<T> *findVertex(const T &content) const;
 
     /**
      * @brief Gets the number of nodes.
