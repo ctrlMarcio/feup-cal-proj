@@ -110,12 +110,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3fce923f3e183e7689f506e6157d3a48"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classLocation.html">Location</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#a3fce923f3e183e7689f506e6157d3a48">getPickupPoints</a> () const</td></tr>
 <tr class="memdesc:a3fce923f3e183e7689f506e6157d3a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pickup points location vector.  <a href="#a3fce923f3e183e7689f506e6157d3a48">More...</a><br /></td></tr>
 <tr class="separator:a3fce923f3e183e7689f506e6157d3a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c76b1cff75b0a9c0babc2820a5ab4c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#a8c76b1cff75b0a9c0babc2820a5ab4c4">addPickupPoint</a> (<a class="el" href="classLocation.html">Location</a> location)</td></tr>
-<tr class="memdesc:a8c76b1cff75b0a9c0babc2820a5ab4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a location to the pickup points vector.  <a href="#a8c76b1cff75b0a9c0babc2820a5ab4c4">More...</a><br /></td></tr>
-<tr class="separator:a8c76b1cff75b0a9c0babc2820a5ab4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bdeebaf39edcaa2ed5cede9904b9c95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#a9bdeebaf39edcaa2ed5cede9904b9c95">removePickupPoint</a> (<a class="el" href="classLocation.html">Location</a> location)</td></tr>
-<tr class="memdesc:a9bdeebaf39edcaa2ed5cede9904b9c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a location from the pickup points vector.  <a href="#a9bdeebaf39edcaa2ed5cede9904b9c95">More...</a><br /></td></tr>
-<tr class="separator:a9bdeebaf39edcaa2ed5cede9904b9c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab812d080c55975f8e6a1211452d3838"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#aab812d080c55975f8e6a1211452d3838">addPickupPoint</a> (const <a class="el" href="classLocation.html">Location</a> &amp;location)</td></tr>
+<tr class="memdesc:aab812d080c55975f8e6a1211452d3838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a location to the pickup points vector.  <a href="#aab812d080c55975f8e6a1211452d3838">More...</a><br /></td></tr>
+<tr class="separator:aab812d080c55975f8e6a1211452d3838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2a1ed717acc21678589a883f4ee268"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#afb2a1ed717acc21678589a883f4ee268">removePickupPoint</a> (const <a class="el" href="classLocation.html">Location</a> &amp;location)</td></tr>
+<tr class="memdesc:afb2a1ed717acc21678589a883f4ee268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a location from the pickup points vector.  <a href="#afb2a1ed717acc21678589a883f4ee268">More...</a><br /></td></tr>
+<tr class="separator:afb2a1ed717acc21678589a883f4ee268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07208784406b3726b4f18a515c9fd68e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#a07208784406b3726b4f18a515c9fd68e">getVehicleNumber</a> () const</td></tr>
 <tr class="memdesc:a07208784406b3726b4f18a515c9fd68e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of used vehicles by the company.  <a href="#a07208784406b3726b4f18a515c9fd68e">More...</a><br /></td></tr>
 <tr class="separator:a07208784406b3726b4f18a515c9fd68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,8 +180,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8c76b1cff75b0a9c0babc2820a5ab4c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c76b1cff75b0a9c0babc2820a5ab4c4">&#9670;&nbsp;</a></span>addPickupPoint()</h2>
+<a id="aab812d080c55975f8e6a1211452d3838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab812d080c55975f8e6a1211452d3838">&#9670;&nbsp;</a></span>addPickupPoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +189,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
         <tr>
           <td class="memname">bool CompanyClient::addPickupPoint </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classLocation.html">Location</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
           <td class="paramname"><em>location</em></td><td>)</td>
           <td></td>
         </tr>
@@ -308,8 +308,8 @@ the company name </dd></dl>
 
 </div>
 </div>
-<a id="a9bdeebaf39edcaa2ed5cede9904b9c95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bdeebaf39edcaa2ed5cede9904b9c95">&#9670;&nbsp;</a></span>removePickupPoint()</h2>
+<a id="afb2a1ed717acc21678589a883f4ee268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb2a1ed717acc21678589a883f4ee268">&#9670;&nbsp;</a></span>removePickupPoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,7 +317,7 @@ the company name </dd></dl>
         <tr>
           <td class="memname">bool CompanyClient::removePickupPoint </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classLocation.html">Location</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
           <td class="paramname"><em>location</em></td><td>)</td>
           <td></td>
         </tr>

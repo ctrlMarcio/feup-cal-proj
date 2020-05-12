@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getadj',['getAdj',['../classVertex.html#a4e63016691fe3ab47fb30bd200ef81c5',1,'Vertex']]],
+  ['getadj',['getAdj',['../classVertex.html#a1121b7bc0782b059946e8ea4549b465b',1,'Vertex']]],
   ['getadministrators',['getAdministrators',['../classAdministratorManager.html#a5eab8a83dcd7f27195419e1d96cf1c0b',1,'AdministratorManager']]],
   ['getcity',['getCity',['../classLocation.html#a9df397894c42fae4c5297443e883efa6',1,'Location']]],
   ['getcompaniesclient',['getCompaniesClient',['../classCompanyClientManager.html#a956411c09caf44c68aa128294e8fd952',1,'CompanyClientManager']]],
