@@ -98,24 +98,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d74bf755b4bd96bb36278340b2ac650"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a3d74bf755b4bd96bb36278340b2ac650">addVertex</a> (const T &amp;content)</td></tr>
 <tr class="memdesc:a3d74bf755b4bd96bb36278340b2ac650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a vertex to the graph.  <a href="#a3d74bf755b4bd96bb36278340b2ac650">More...</a><br /></td></tr>
 <tr class="separator:a3d74bf755b4bd96bb36278340b2ac650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f4e3551bdd752b6c6680590c15685d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEdge.html">Edge</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a3f4e3551bdd752b6c6680590c15685d3">addEdge</a> (const T &amp;source, const T &amp;dest, double w)</td></tr>
-<tr class="memdesc:a3f4e3551bdd752b6c6680590c15685d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an edge to the graph.  <a href="#a3f4e3551bdd752b6c6680590c15685d3">More...</a><br /></td></tr>
-<tr class="separator:a3f4e3551bdd752b6c6680590c15685d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8d1608ef1ac704a313b390539458fea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ac8d1608ef1ac704a313b390539458fea">append</a> (const std::string &amp;nodesFile, const std::string &amp;edgesFile, const std::string &amp;city, std::mutex *mutex=nullptr)</td></tr>
-<tr class="memdesc:ac8d1608ef1ac704a313b390539458fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends nodes and edges from files to the graph.  <a href="#ac8d1608ef1ac704a313b390539458fea">More...</a><br /></td></tr>
-<tr class="separator:ac8d1608ef1ac704a313b390539458fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9afb0fc1cf5635c8bfcce5c16fa5dcd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a9afb0fc1cf5635c8bfcce5c16fa5dcd2">readNodes</a> (const std::string &amp;fileName, const std::string &amp;city, std::mutex *mutex=nullptr)</td></tr>
-<tr class="memdesc:a9afb0fc1cf5635c8bfcce5c16fa5dcd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends locations to the graph from a file.  <a href="#a9afb0fc1cf5635c8bfcce5c16fa5dcd2">More...</a><br /></td></tr>
-<tr class="separator:a9afb0fc1cf5635c8bfcce5c16fa5dcd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d81d257703a7fb11523acf966011e83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a0d81d257703a7fb11523acf966011e83">readEdges</a> (const std::string &amp;fileName, std::mutex *mutex=nullptr)</td></tr>
-<tr class="memdesc:a0d81d257703a7fb11523acf966011e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the edges between locations to the graph from a file.  <a href="#a0d81d257703a7fb11523acf966011e83">More...</a><br /></td></tr>
-<tr class="separator:a0d81d257703a7fb11523acf966011e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af70748a372a65e6b789d806c6a1b2005"><td class="memItemLeft" align="right" valign="top">const unordered_set&lt; <a class="el" href="classPointerWrapper.html">PointerWrapper</a>&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt;, <a class="el" href="structpointer__wrapper__hash.html">pointer_wrapper_hash</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#af70748a372a65e6b789d806c6a1b2005">getVertexSet</a> () const</td></tr>
-<tr class="memdesc:af70748a372a65e6b789d806c6a1b2005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the vertex set.  <a href="#af70748a372a65e6b789d806c6a1b2005">More...</a><br /></td></tr>
+<tr class="memitem:ad81a2d9c20d27292d19728660fd4f622"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad81a2d9c20d27292d19728660fd4f622">addEdge</a> (const T &amp;source, const T &amp;dest, double w)</td></tr>
+<tr class="memdesc:ad81a2d9c20d27292d19728660fd4f622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an edge to the graph.  <a href="#ad81a2d9c20d27292d19728660fd4f622">More...</a><br /></td></tr>
+<tr class="separator:ad81a2d9c20d27292d19728660fd4f622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50316fc664e8efa89ed8a395d73660a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#af50316fc664e8efa89ed8a395d73660a">append</a> (const std::string &amp;nodesFile, const std::string &amp;edgesFile, const std::string &amp;city)</td></tr>
+<tr class="memdesc:af50316fc664e8efa89ed8a395d73660a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends nodes and edges from files to the graph.  <a href="#af50316fc664e8efa89ed8a395d73660a">More...</a><br /></td></tr>
+<tr class="separator:af50316fc664e8efa89ed8a395d73660a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecea3aa46ffe97263771d4cf7e4709eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aecea3aa46ffe97263771d4cf7e4709eb">readNodes</a> (const std::string &amp;fileName, const std::string &amp;city)</td></tr>
+<tr class="memdesc:aecea3aa46ffe97263771d4cf7e4709eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends locations to the graph from a file.  <a href="#aecea3aa46ffe97263771d4cf7e4709eb">More...</a><br /></td></tr>
+<tr class="separator:aecea3aa46ffe97263771d4cf7e4709eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a395bbfc4bfd2d15082f81e0f5d8dead9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a395bbfc4bfd2d15082f81e0f5d8dead9">readEdges</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a395bbfc4bfd2d15082f81e0f5d8dead9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the edges between locations to the graph from a file.  <a href="#a395bbfc4bfd2d15082f81e0f5d8dead9">More...</a><br /></td></tr>
+<tr class="separator:a395bbfc4bfd2d15082f81e0f5d8dead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70748a372a65e6b789d806c6a1b2005"><td class="memItemLeft" align="right" valign="top"><a id="af70748a372a65e6b789d806c6a1b2005"></a>
+const unordered_set&lt; <a class="el" href="classPointerWrapper.html">PointerWrapper</a>&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt;, <a class="el" href="structpointer__wrapper__hash.html">pointer_wrapper_hash</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVertexSet</b> () const</td></tr>
 <tr class="separator:af70748a372a65e6b789d806c6a1b2005"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e120253e5c3e42ac0697bf6edd26d1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a0e120253e5c3e42ac0697bf6edd26d1d">findVertex</a> (const T &amp;content) const</td></tr>
-<tr class="memdesc:a0e120253e5c3e42ac0697bf6edd26d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pointer to a vertex, given its content.  <a href="#a0e120253e5c3e42ac0697bf6edd26d1d">More...</a><br /></td></tr>
-<tr class="separator:a0e120253e5c3e42ac0697bf6edd26d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845506c537b0ca33900ff7c44d20b717"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a845506c537b0ca33900ff7c44d20b717">findVertex</a> (const T &amp;content) const</td></tr>
+<tr class="memdesc:a845506c537b0ca33900ff7c44d20b717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pointer to a vertex, given its content.  <a href="#a845506c537b0ca33900ff7c44d20b717">More...</a><br /></td></tr>
+<tr class="separator:a845506c537b0ca33900ff7c44d20b717"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a473f395dbc4a364fd288b6c6b99565a6"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a473f395dbc4a364fd288b6c6b99565a6">nodesAmount</a> ()</td></tr>
 <tr class="memdesc:a473f395dbc4a364fd288b6c6b99565a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of nodes.  <a href="#a473f395dbc4a364fd288b6c6b99565a6">More...</a><br /></td></tr>
 <tr class="separator:a473f395dbc4a364fd288b6c6b99565a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,8 +133,8 @@ class Graph&lt; T &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3f4e3551bdd752b6c6680590c15685d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f4e3551bdd752b6c6680590c15685d3">&#9670;&nbsp;</a></span>addEdge()</h2>
+<a id="ad81a2d9c20d27292d19728660fd4f622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81a2d9c20d27292d19728660fd4f622">&#9670;&nbsp;</a></span>addEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +142,7 @@ class Graph&lt; T &gt;</h3>
 template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classEdge.html">Edge</a>&lt;T&gt;* <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::addEdge </td>
+          <td class="memname">shared_ptr&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; &gt; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::addEdge </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>source</em>, </td>
@@ -210,8 +210,8 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="ac8d1608ef1ac704a313b390539458fea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8d1608ef1ac704a313b390539458fea">&#9670;&nbsp;</a></span>append()</h2>
+<a id="af50316fc664e8efa89ed8a395d73660a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af50316fc664e8efa89ed8a395d73660a">&#9670;&nbsp;</a></span>append()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,13 +234,7 @@ template&lt;class T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>city</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::mutex *&#160;</td>
-          <td class="paramname"><em>mutex</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>city</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -256,15 +250,14 @@ template&lt;class T&gt; </div>
     <tr><td class="paramname">nodesFile</td><td>the name of the nodes' file </td></tr>
     <tr><td class="paramname">edgesFile</td><td>the name of the edges' file </td></tr>
     <tr><td class="paramname">city</td><td>the name of the city to append </td></tr>
-    <tr><td class="paramname">mutex</td><td>the mutex to ensure thread safety </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a0e120253e5c3e42ac0697bf6edd26d1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e120253e5c3e42ac0697bf6edd26d1d">&#9670;&nbsp;</a></span>findVertex()</h2>
+<a id="a845506c537b0ca33900ff7c44d20b717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845506c537b0ca33900ff7c44d20b717">&#9670;&nbsp;</a></span>findVertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +265,7 @@ template&lt;class T&gt; </div>
 template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classVertex.html">Vertex</a>&lt;T&gt;* <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::findVertex </td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classVertex.html">Vertex</a>&lt;T&gt; &gt; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::findVertex </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>content</em></td><td>)</td>
@@ -289,28 +282,6 @@ template&lt;class T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the pointer to the vertex </dd></dl>
-
-</div>
-</div>
-<a id="af70748a372a65e6b789d806c6a1b2005"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af70748a372a65e6b789d806c6a1b2005">&#9670;&nbsp;</a></span>getVertexSet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const unordered_set&lt;<a class="el" href="classPointerWrapper.html">PointerWrapper</a>&lt;<a class="el" href="classVertex.html">Vertex</a>&lt;T&gt; &gt; , <a class="el" href="structpointer__wrapper__hash.html">pointer_wrapper_hash</a>&gt;&amp; <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::getVertexSet </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the vertex set. </p>
-<dl class="section return"><dt>Returns</dt><dd>the vertex set </dd></dl>
 
 </div>
 </div>
@@ -336,8 +307,8 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="a0d81d257703a7fb11523acf966011e83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d81d257703a7fb11523acf966011e83">&#9670;&nbsp;</a></span>readEdges()</h2>
+<a id="a395bbfc4bfd2d15082f81e0f5d8dead9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a395bbfc4bfd2d15082f81e0f5d8dead9">&#9670;&nbsp;</a></span>readEdges()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -348,18 +319,8 @@ template&lt;class T&gt; </div>
           <td class="memname">bool <a class="el" href="classGraph.html">Graph</a>&lt; T &gt;::readEdges </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::mutex *&#160;</td>
-          <td class="paramname"><em>mutex</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -376,7 +337,6 @@ template&lt;class T&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fileName</td><td>the name of the file containing the edges </td></tr>
-    <tr><td class="paramname">mutex</td><td>the mutex to assure safety </td></tr>
   </table>
   </dd>
 </dl>
@@ -384,8 +344,8 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="a9afb0fc1cf5635c8bfcce5c16fa5dcd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9afb0fc1cf5635c8bfcce5c16fa5dcd2">&#9670;&nbsp;</a></span>readNodes()</h2>
+<a id="aecea3aa46ffe97263771d4cf7e4709eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecea3aa46ffe97263771d4cf7e4709eb">&#9670;&nbsp;</a></span>readNodes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,13 +362,7 @@ template&lt;class T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>city</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::mutex *&#160;</td>
-          <td class="paramname"><em>mutex</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>city</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -430,7 +384,6 @@ template&lt;class T&gt; </div>
   <table class="params">
     <tr><td class="paramname">fileName</td><td>the name of the file containing the locations </td></tr>
     <tr><td class="paramname">city</td><td>the name of the city described in the files </td></tr>
-    <tr><td class="paramname">mutex</td><td>the mutex to assure safety </td></tr>
   </table>
   </dd>
 </dl>
