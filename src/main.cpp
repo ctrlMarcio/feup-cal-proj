@@ -12,5 +12,8 @@ int main() {
 
     std::cout << ptr->getInfo().getCity() << endl;
 
+    for (auto vertex : company.getGraph().getVertexSet()) // TODO marcio proper destructor
+        delete vertex.pointer;
+
     return EXIT_SUCCESS;
 }

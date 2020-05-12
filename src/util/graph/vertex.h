@@ -23,6 +23,15 @@ public:
 	explicit Vertex(T content);
 
 	/**
+	 * @brief Copy constructor
+	 *
+	 * Copies whats inside the edges, not just their pointers.
+	 *
+	 * @param v			the vertex to copy from
+	 */
+	Vertex(const Vertex<T> &v);
+
+	/**
 	 * @brief Gets the content of the vertex.
 	 *
 	 * @return 			the content of the vertex
@@ -34,7 +43,7 @@ public:
 	 *
 	 * @return			the container for the outgoing edges
 	 */
-	vector<Edge<T> *> getAdj() const;
+	vector<std::shared_ptr<Edge<T>>> getAdj() const;
 
 	/**
 	 * @brief Creates and adds an outgoing edge to the vertex.
@@ -60,7 +69,7 @@ private:
 	/**
 	 * @brief The container of outgoing edges.
 	 */
-	vector<Edge<T> *> outgoing;  // adj
+	vector<std::shared_ptr<Edge<T>>> outgoing;  // adj
 };
 
 #include "vertex.tpp"

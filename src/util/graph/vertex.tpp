@@ -11,12 +11,13 @@ T Vertex<T>::getInfo() const {
 template<class T>
 Edge<T> *Vertex<T>::addEdge(Vertex<T> *dest, double w) {
 	auto e = new Edge<T>(dest, w);
-	this->outgoing.push_back(e);
+	std::shared_ptr<Edge<T>> ptr(e);
+	this->outgoing.push_back(std::move(ptr));
 	return e;
 }
 
 template<class T>
-vector<Edge<T>*> Vertex<T>::getAdj() const {
+vector<std::shared_ptr<Edge<T>>> Vertex<T>::getAdj() const {
 	return this->outgoing;
 }
 
@@ -33,4 +34,10 @@ bool Vertex<T>::operator!=(const Vertex &rhs) const {
 template<class T>
 int Vertex<T>::hash() {
     return info.hash();
+}
+
+template<class T>
+Vertex<T>::Vertex(const Vertex<T> &v) {
+    for (auto e : v.outgoing)
+        this->addEdge(e->getDest(), e->getWeight());
 }

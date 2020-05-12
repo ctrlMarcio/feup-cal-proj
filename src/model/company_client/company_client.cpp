@@ -1,7 +1,9 @@
 #include "company_client.h"
 
+#include <utility>
+
 CompanyClient::CompanyClient(std::string name, CompanyRepresentative representative, Location headquarters)
-        : name(name), representative(representative), headquarters(headquarters), vehicleNumber(0), uuid(1) {}
+        : name(std::move(name)), representative(std::move(representative)), headquarters(std::move(headquarters)), vehicleNumber(0), uuid(1) {}
 
 std::string CompanyClient::getName() const {
     return this->name;
@@ -19,7 +21,7 @@ std::vector<Location> CompanyClient::getPickupPoints() const {
     return this->pickupPoints;
 }
 
-bool CompanyClient::addPickupPoint(Location location) {
+bool CompanyClient::addPickupPoint(const Location& location) {
     for (auto i: pickupPoints)
     {
         if (i.getId()==location.getId())
@@ -29,7 +31,7 @@ bool CompanyClient::addPickupPoint(Location location) {
     return true;
 }
 
-bool CompanyClient::removePickupPoint(Location location) {
+bool CompanyClient::removePickupPoint(const Location& location) {
     std::vector<Location>::iterator it;
     it = pickupPoints.begin();
     for (auto i: pickupPoints)
@@ -39,7 +41,7 @@ bool CompanyClient::removePickupPoint(Location location) {
             pickupPoints.erase(it);
             return true;
         }
-        it++;
+        ++it;
     }
     return false;
 }

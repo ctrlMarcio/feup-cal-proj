@@ -60,14 +60,14 @@ public:
      *
      * @param location              the location wanted to be added to the pickup points vector
      */
-    bool addPickupPoint(Location location);
+    bool addPickupPoint(const Location& location);
 
     /**
      * @brief Removes a location from the pickup points vector.
      *
      * @param location              the location wanted to be removed from the pickup points vector
      */
-    bool removePickupPoint(Location location);
+    bool removePickupPoint(const Location& location);
 
     /**
      * @brief Gets the number of used vehicles by the company.

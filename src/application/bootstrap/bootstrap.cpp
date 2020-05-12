@@ -15,10 +15,9 @@ Bootstrap::Bootstrap(const std::string& directory) {
 
 void Bootstrap::appendToGraph(const std::string &directory, const std::string &country) {
     DIR *dir;
-    struct dirent *ent;
 
     if ((dir = opendir (directory.c_str())) != nullptr) {
-
+        struct dirent *ent;
         long before = graph.nodesAmount();
 
         std::vector<std::thread> threads;
@@ -34,7 +33,6 @@ void Bootstrap::appendToGraph(const std::string &directory, const std::string &c
             std::string path = directory + "/" + city;
 
             if (opendir (path.c_str()) != nullptr) {
-
                 std::thread t(&Bootstrap::readDir, this, city, path, &mutex);
                 threads.push_back(std::move(t));
 
