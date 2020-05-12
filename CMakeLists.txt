@@ -8,6 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Don't use e.g. GNU extension (like -std=gnu++11) for portability
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+SET(CMAKE_CXX_FLAGS -pthread)
+
 # Code Coverage Configuration
 add_library(coverage_config INTERFACE)
 
@@ -15,7 +17,6 @@ option(CODE_COVERAGE "Enable coverage reporting" OFF)
 if(CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     # Add required flags (GCC & LLVM/Clang)
     target_compile_options(coverage_config INTERFACE
-            -pthread   # threads
             -O0        # no optimization
             -g         # generate debug info
             --coverage # sets all required flags
