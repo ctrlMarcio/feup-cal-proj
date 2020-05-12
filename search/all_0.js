@@ -5,6 +5,7 @@ var searchData=
   ['addpickuppoint',['addPickupPoint',['../classCompanyClient.html#a8c76b1cff75b0a9c0babc2820a5ab4c4',1,'CompanyClient']]],
   ['addvertex',['addVertex',['../classGraph.html#a3d74bf755b4bd96bb36278340b2ac650',1,'Graph']]],
   ['administrator',['Administrator',['../classAdministrator.html',1,'Administrator'],['../classAuthUser.html#a599b4ae52a2da2b46ac55a25c6970aea',1,'AuthUser::ADMINISTRATOR()'],['../classAdministrator.html#a5cdcf84fbb63ad2413a82a5a3ab0dd3d',1,'Administrator::Administrator()']]],
+  ['administrator_5fhash',['administrator_hash',['../structadministrator__hash.html',1,'']]],
   ['administratormanager',['AdministratorManager',['../classAdministratorManager.html',1,'AdministratorManager'],['../classAdministratorManager.html#a172ee105335c3a95eae921f7b399190b',1,'AdministratorManager::AdministratorManager()']]],
   ['append',['append',['../classGraph.html#ac8d1608ef1ac704a313b390539458fea',1,'Graph']]],
   ['appendtograph',['appendToGraph',['../classBootstrap.html#a6195560df85d10fb45578dcae0cda13c',1,'Bootstrap']]],

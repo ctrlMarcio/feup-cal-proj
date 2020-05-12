@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Vertex\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVertex.html",tooltip="Represents a graph&#39;s vertex, holding its content and outgoing edges. "];
+  Node0 [label="pointer_wrapper_hash",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpointer__wrapper__hash.html",tooltip="Redefinition of the default hash and equal function for the PointerWrapper class. ..."];
 }

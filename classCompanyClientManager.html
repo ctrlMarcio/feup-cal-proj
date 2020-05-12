@@ -99,18 +99,22 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#a607c18a5e2033dad0fb4be216965fa0e">CompanyClientManager</a> ()</td></tr>
 <tr class="memdesc:a607c18a5e2033dad0fb4be216965fa0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> Client's Manager. <br /></td></tr>
 <tr class="separator:a607c18a5e2033dad0fb4be216965fa0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac715fee48eed3c636e709415437decd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#ac715fee48eed3c636e709415437decd1">isValid</a> (<a class="el" href="classCompanyClient.html">CompanyClient</a> companyClient)</td></tr>
-<tr class="memdesc:ac715fee48eed3c636e709415437decd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if the company is valid.  <a href="#ac715fee48eed3c636e709415437decd1">More...</a><br /></td></tr>
-<tr class="separator:ac715fee48eed3c636e709415437decd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7b770728019775f8829f14c69cb67c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#a1c7b770728019775f8829f14c69cb67c">isValid</a> (const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;companyClient) const</td></tr>
+<tr class="memdesc:a1c7b770728019775f8829f14c69cb67c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if the company is valid.  <a href="#a1c7b770728019775f8829f14c69cb67c">More...</a><br /></td></tr>
+<tr class="separator:a1c7b770728019775f8829f14c69cb67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebc66a2763845de374825ab529a2e60d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#aebc66a2763845de374825ab529a2e60d">add</a> (<a class="el" href="classCompanyClient.html">CompanyClient</a> companyClient)</td></tr>
 <tr class="memdesc:aebc66a2763845de374825ab529a2e60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds company to companyClientSet vector.  <a href="#aebc66a2763845de374825ab529a2e60d">More...</a><br /></td></tr>
 <tr class="separator:aebc66a2763845de374825ab529a2e60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4428f8a9b8d2e632596a14ecdf5ecc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#a9a4428f8a9b8d2e632596a14ecdf5ecc">has</a> (<a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;companyClient) const</td></tr>
+<tr class="separator:a9a4428f8a9b8d2e632596a14ecdf5ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee41f39ca747671fb8def64e453125e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#aee41f39ca747671fb8def64e453125e5">has</a> (const long uuid) const</td></tr>
+<tr class="separator:aee41f39ca747671fb8def64e453125e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a613d5b950cc2724326a5facb689a7f36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#a613d5b950cc2724326a5facb689a7f36">remove</a> (<a class="el" href="classCompanyClient.html">CompanyClient</a> companyClient)</td></tr>
 <tr class="memdesc:a613d5b950cc2724326a5facb689a7f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes company from companyClientSet vector.  <a href="#a613d5b950cc2724326a5facb689a7f36">More...</a><br /></td></tr>
 <tr class="separator:a613d5b950cc2724326a5facb689a7f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd489d99314809f1b225cc2da2dfa5a6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCompanyClient.html">CompanyClient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#acd489d99314809f1b225cc2da2dfa5a6">getCompanyClientSet</a> () const</td></tr>
-<tr class="memdesc:acd489d99314809f1b225cc2da2dfa5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets company client's set.  <a href="#acd489d99314809f1b225cc2da2dfa5a6">More...</a><br /></td></tr>
-<tr class="separator:acd489d99314809f1b225cc2da2dfa5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956411c09caf44c68aa128294e8fd952"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="classCompanyClient.html">CompanyClient</a>, <a class="el" href="structcompanies__client__hash.html">companies_client_hash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#a956411c09caf44c68aa128294e8fd952">getCompaniesClient</a> () const</td></tr>
+<tr class="memdesc:a956411c09caf44c68aa128294e8fd952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets company client's set.  <a href="#a956411c09caf44c68aa128294e8fd952">More...</a><br /></td></tr>
+<tr class="separator:a956411c09caf44c68aa128294e8fd952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> Client's Manager. </p>
@@ -136,14 +140,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acd489d99314809f1b225cc2da2dfa5a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd489d99314809f1b225cc2da2dfa5a6">&#9670;&nbsp;</a></span>getCompanyClientSet()</h2>
+<a id="a956411c09caf44c68aa128294e8fd952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a956411c09caf44c68aa128294e8fd952">&#9670;&nbsp;</a></span>getCompaniesClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="classCompanyClient.html">CompanyClient</a> &gt; CompanyClientManager::getCompanyClientSet </td>
+          <td class="memname">std::unordered_set&lt; <a class="el" href="classCompanyClient.html">CompanyClient</a>, <a class="el" href="structcompanies__client__hash.html">companies_client_hash</a> &gt; CompanyClientManager::getCompaniesClient </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -156,8 +160,60 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac715fee48eed3c636e709415437decd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac715fee48eed3c636e709415437decd1">&#9670;&nbsp;</a></span>isValid()</h2>
+<a id="a9a4428f8a9b8d2e632596a14ecdf5ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4428f8a9b8d2e632596a14ecdf5ecc">&#9670;&nbsp;</a></span>has() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CompanyClientManager::has </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;&#160;</td>
+          <td class="paramname"><em>companyClient</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Verifies if a company client is in the set or not.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">companyClient</td><td>reference to a company client </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the company client is in the set. false, otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aee41f39ca747671fb8def64e453125e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee41f39ca747671fb8def64e453125e5">&#9670;&nbsp;</a></span>has() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CompanyClientManager::has </td>
+          <td>(</td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>uuid</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Verifies if a company client is in the set or not.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>the uuid of the company client to verify </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the company client is in the set. false, otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a1c7b770728019775f8829f14c69cb67c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7b770728019775f8829f14c69cb67c">&#9670;&nbsp;</a></span>isValid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,9 +221,9 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool CompanyClientManager::isValid </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classCompanyClient.html">CompanyClient</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;&#160;</td>
           <td class="paramname"><em>companyClient</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

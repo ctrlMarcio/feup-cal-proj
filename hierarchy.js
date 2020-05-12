@@ -1,11 +1,13 @@
 var hierarchy =
 [
     [ "Administrator", "classAdministrator.html", null ],
+    [ "administrator_hash", "structadministrator__hash.html", null ],
     [ "AdministratorManager", "classAdministratorManager.html", null ],
     [ "auth_users_hash", "structauth__users__hash.html", null ],
     [ "AuthUser", "classAuthUser.html", null ],
     [ "AuthUserManager", "classAuthUserManager.html", null ],
     [ "Bootstrap", "classBootstrap.html", null ],
+    [ "companies_client_hash", "structcompanies__client__hash.html", null ],
     [ "Company", "classCompany.html", null ],
     [ "CompanyClient", "classCompanyClient.html", null ],
     [ "CompanyClientManager", "classCompanyClientManager.html", null ],

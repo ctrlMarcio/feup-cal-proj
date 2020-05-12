@@ -1,9 +1,9 @@
 var searchData=
 [
   ['getadj',['getAdj',['../classVertex.html#a4e63016691fe3ab47fb30bd200ef81c5',1,'Vertex']]],
-  ['getadministratorset',['getAdministratorSet',['../classAdministratorManager.html#a1ed1b75504a4120fa63971d573bd5104',1,'AdministratorManager']]],
+  ['getadministrators',['getAdministrators',['../classAdministratorManager.html#a5eab8a83dcd7f27195419e1d96cf1c0b',1,'AdministratorManager']]],
   ['getcity',['getCity',['../classLocation.html#a9df397894c42fae4c5297443e883efa6',1,'Location']]],
-  ['getcompanyclientset',['getCompanyClientSet',['../classCompanyClientManager.html#acd489d99314809f1b225cc2da2dfa5a6',1,'CompanyClientManager']]],
+  ['getcompaniesclient',['getCompaniesClient',['../classCompanyClientManager.html#a956411c09caf44c68aa128294e8fd952',1,'CompanyClientManager']]],
   ['getdest',['getDest',['../classEdge.html#a860880b431c6112862909344a8b1f4bf',1,'Edge']]],
   ['getemail',['getEmail',['../classAuthUser.html#a53aa8e3e148ff66e9a293c07c342b3e2',1,'AuthUser::getEmail()'],['../classAdministrator.html#a4b8c71a27f245761336b5892c8509055',1,'Administrator::getEmail()'],['../classCompanyRepresentative.html#adf263de5159ab0089836ba0644ae9e4e',1,'CompanyRepresentative::getEmail()']]],
   ['getgaragelocation',['getGarageLocation',['../classCompany.html#a41325b2fc0e371641aa3ab125f46ed98',1,'Company']]],

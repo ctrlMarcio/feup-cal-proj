@@ -8,6 +8,8 @@ var classCompanyClient =
     [ "getRepresentative", "classCompanyClient.html#aefd0ec72d7695fc7ff19c5d43091f4dc", null ],
     [ "getUUID", "classCompanyClient.html#ad0097f429b0c03ad83a56efc31f6b729", null ],
     [ "getVehicleNumber", "classCompanyClient.html#a07208784406b3726b4f18a515c9fd68e", null ],
+    [ "operator!=", "classCompanyClient.html#a91e7f4be71ff4e89fdb3cd6cd3e1703d", null ],
+    [ "operator==", "classCompanyClient.html#a37008f9275da11b15522162bd7114426", null ],
     [ "removePickupPoint", "classCompanyClient.html#a9bdeebaf39edcaa2ed5cede9904b9c95", null ],
     [ "setVehicleNumber", "classCompanyClient.html#aae21eda7068020bf806f4f18baf46391", null ]
 ];
