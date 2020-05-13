@@ -24,5 +24,6 @@ var searchData=
   ['getvertexset',['getVertexSet',['../classGraph.html#af70748a372a65e6b789d806c6a1b2005',1,'Graph']]],
   ['getweight',['getWeight',['../classEdge.html#a3df378e283d6c8be5be4170ac8d7f4e8',1,'Edge']]],
   ['getx',['getX',['../classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7',1,'Location']]],
-  ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]]
+  ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]],
+  ['graph',['Graph',['../classGraph.html#a8c626ac04708ae490bba05e1e713cda2',1,'Graph::Graph()'],['../classGraph.html#a8ad9c8c3990991036eccdd7ece2994eb',1,'Graph::Graph(const Graph&lt; T &gt; &amp;graph)']]]
 ];

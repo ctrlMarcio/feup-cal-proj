@@ -1,5 +1,8 @@
 var classGraph =
 [
+    [ "~Graph", "classGraph.html#abed0ed996798032aa7dca0069a59b9d6", null ],
+    [ "Graph", "classGraph.html#a8c626ac04708ae490bba05e1e713cda2", null ],
+    [ "Graph", "classGraph.html#a8ad9c8c3990991036eccdd7ece2994eb", null ],
     [ "addEdge", "classGraph.html#a3f4e3551bdd752b6c6680590c15685d3", null ],
     [ "addVertex", "classGraph.html#a3d74bf755b4bd96bb36278340b2ac650", null ],
     [ "append", "classGraph.html#ac8d1608ef1ac704a313b390539458fea", null ],
