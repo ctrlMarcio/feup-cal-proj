@@ -2,6 +2,7 @@
 #include <sstream>
 #include <string>
 #include <iostream>
+#include <iomanip>
 #include "../string/util_string.h"
 #include "../../model/location/location.h"
 #include "graph.h"
@@ -48,28 +49,30 @@ void Graph<Location>::readNodes(const std::string &fileName, const std::string &
     }
 
     std::string line;
-    std::getline(file, line); // reads the first, useless line
-
     while (std::getline(file, line)) {
-        // example: (1284635486, 529773.8435496966, 4497624.344113585)
+        // example: (301415137, 546146.1558010778, 4601058.475980306, 41.5598669, -8.446596)
 
         // gets all elements
         std::vector<std::string> elements = util_string::split(line, DELIMITER);
-        std::string idStr = elements[0];    // (1284635486
-        std::string xStr = elements[1];     //  529773.8435496966
-        std::string yStr = elements[2];     //  4497624.344113585)
+        std::string idStr = elements[0];    // (301415137
+        std::string xStr = elements[1];     //  546146.1558010778
+        std::string yStr = elements[2];     //  4601058.475980306
+        std::string latStr = elements[3];   //  41.5598669
+        std::string lonStr = elements[4];   //  -8.446596)
 
         // removes the clutter in the strings
-        idStr = idStr.substr(1, idStr.size() - 1);  // 1284635486
-        yStr = yStr.substr(0, yStr.size() - 1);     // 4497624.344113585
+        idStr = idStr.substr(1, idStr.size() - 1);  // 301415137
+        lonStr = lonStr.substr(0, lonStr.size() - 1); // -8.44659
 
         // casts to numbers
         long id = stol(idStr);
         double x = stod(xStr);
         double y = stod(yStr);
+        double lat = stod(latStr);
+        double lon = stod(lonStr);
 
         // creates a location
-        Location location(id, city, x, y);
+        Location location(id, city, x, y, lat, lon);
 
         // add to the graph
         if (mutex) mutex->lock();
@@ -161,3 +164,22 @@ template<class T>
 const unordered_set<PointerWrapper<Vertex<T>>, pointer_wrapper_hash> &Graph<T>::getVertexSet() const {
     return this->vertexSet;
 }
+
+template<class T>
+Graph<T>::~Graph() {
+    for (auto vertex : vertexSet)
+        delete vertex.pointer;
+}
+
+template<class T>
+Graph<T>::Graph(const Graph<T> &graph) {
+    for (auto vertex : graph.getVertexSet())
+        this->addVertex(vertex.pointer->getInfo());
+
+    for (auto vertex : graph.getVertexSet())
+        for (auto edge : vertex.pointer->getAdj())
+            this->addEdge(vertex.pointer->getInfo(), edge->getDest()->getInfo(), edge->getWeight());
+}
+
+template<class T>
+Graph<T>::Graph() = default;

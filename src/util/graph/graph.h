@@ -39,6 +39,27 @@ template<class T>
 class Graph {
 public:
     /**
+     * @brief The destructor
+     *
+     * Deletes all pointers.
+     */
+    virtual ~Graph();
+
+    /**
+     * @brief Default constructor
+     */
+    Graph();
+
+    /**
+     * @brief Copy constructor
+     *
+     * @warning Heavy operation
+     *
+     * @param graph     the graph to copy
+     */
+    Graph(const Graph<T> &graph);
+
+    /**
      * @brief Adds a vertex to the graph.
      *
      * @param content	the content of the vertex
