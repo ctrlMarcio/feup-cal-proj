@@ -18,12 +18,12 @@ using namespace std;
 struct pointer_wrapper_hash {
     template<class T>
     int operator()(const PointerWrapper<Vertex<T>> &obj) const {
-        return obj.pointer->hash();
+        return obj.getPointer()->hash();
     }
 
     template<class T>
     bool operator()(const PointerWrapper<Vertex<T>> &ptr1, const PointerWrapper<Vertex<T>> &ptr2) const {
-        return *ptr1.pointer == *ptr2.pointer;
+        return *ptr1.getPointer() == *ptr2.getPointer();
     }
 };
 

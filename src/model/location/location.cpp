@@ -1,7 +1,20 @@
 #include "location.h"
 
+#include <cmath>
+
 Location::Location(long id, const std::string &city, double x, double y, double latitude, double longitude) :
         id(id), city(city), x(x), y(y), latitude(latitude), longitude(longitude) {}
+
+Location::Location(const Location &location) {
+    this->id = location.getId();
+    this->city = location.getCity();
+    this->x = location.getX();
+    this->y = location.getY();
+    this->latitude = location.getLatitude();
+    this->longitude = location.getLongitude();
+}
+
+Location::Location() = default;
 
 long Location::getId() const {
     return id;
@@ -37,4 +50,8 @@ bool Location::operator!=(const Location &rhs) const {
 
 int Location::hash() {
     return 37 * id;
+}
+
+double Location::euclideanDistanceTo(double x, double y) {
+    return sqrt(pow(x - this->x, 2) + pow(y - this->y, 2));
 }

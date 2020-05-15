@@ -54,10 +54,35 @@ public:
 	 */
 	Edge<T> *addEdge(Vertex<T> *dest, double w);
 
+	/**
+	 * @brief Calculates the weight to a given vertex
+	 *
+	 * @param dest  the destination vertex
+	 * @return      the weight to the vertex
+	 */
+    double weightTo(Vertex<T> *dest);
+
+    /**
+     * @brief Gets an hash for the vertex
+     *
+     * @return      the hash
+     */
 	int hash();
 
+	/**
+	 * @brief Verifies if this vertex is equal to another one
+	 *
+	 * @param rhs   the other vertex
+	 * @return      true if they are equal, false otherwise
+	 */
     bool operator==(const Vertex &rhs) const;
 
+    /**
+     * @brief Verifies if this vertex is different of another
+     *
+     * @param rhs   the other vertex
+     * @return      true if they are different, false otherwise
+     */
     bool operator!=(const Vertex &rhs) const;
 
 private:

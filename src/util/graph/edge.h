@@ -1,6 +1,10 @@
 #ifndef FEUP_CAL_PROJ_EDGE_H
 #define FEUP_CAL_PROJ_EDGE_H
 
+#include <limits>
+
+#define INF std::numeric_limits<double>::max()
+
 using namespace std;
 
 template<class T>

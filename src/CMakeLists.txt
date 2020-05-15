@@ -15,7 +15,12 @@ add_library(feup-cal-proj main.cpp
         auth/session/current_session.cpp auth/session/current_session.h
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h
         exception/invalid_file_exception.cpp exception/invalid_file_exception.h
-        application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h exception/invalid_location_exception.cpp exception/invalid_location_exception.h util/graph/pointer_wrapper.h)
+        application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h
+        exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h
+        exception/invalid_location_exception.cpp exception/invalid_location_exception.h
+        util/graph/pointer_wrapper.h util/graph/pointer_wrapper.tpp
+        util/algorithm/algorithm.cpp util/algorithm/algorithm.h
+        util/graph/cluster.cpp util/graph/cluster.h)
 
 add_executable(application main.cpp
         model/company/company.cpp model/company/company.h
@@ -34,7 +39,12 @@ add_executable(application main.cpp
         auth/session/current_session.cpp auth/session/current_session.h
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h
         exception/invalid_file_exception.cpp exception/invalid_file_exception.h
-        application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h exception/invalid_location_exception.cpp exception/invalid_location_exception.h util/graph/pointer_wrapper.h)
+        application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h
+        exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h
+        exception/invalid_location_exception.cpp exception/invalid_location_exception.h
+        util/graph/pointer_wrapper.h util/graph/pointer_wrapper.tpp
+        util/algorithm/algorithm.cpp util/algorithm/algorithm.h
+        util/graph/cluster.cpp util/graph/cluster.h)
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

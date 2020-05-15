@@ -9,7 +9,7 @@ TEST(graph, add_vertex_test) {
 	Location a(20, "", 0,0);
 	bool add = graph.addVertex(a);
 
-	EXPECT_EQ((*graph.getVertexSet().begin()).pointer->getInfo(), Location(20, "ads", 0, 0));
+	EXPECT_EQ((*graph.getVertexSet().begin()).getPointer()->getInfo(), Location(20, "", 0,0));
 	EXPECT_TRUE(add);
 
 	graph.addVertex(a);

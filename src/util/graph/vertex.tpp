@@ -41,3 +41,15 @@ Vertex<T>::Vertex(const Vertex<T> &v) {
     for (auto e : v.outgoing)
         this->addEdge(e->getDest(), e->getWeight());
 }
+
+template<class T>
+double Vertex<T>::weightTo(Vertex<T> *dest) {
+    for (Edge<T> &edge : this->adj)
+        if (edge.dest == dest)
+            return edge.weight;
+
+    if (this == dest)
+        return 0;
+
+    return INF;
+}

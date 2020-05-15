@@ -13,16 +13,18 @@ template<class T>
 class PointerWrapper {
 public:
     /**
-     * @brief The wrapped pointer
-     */
-    T *pointer;
-
-    /**
      * @brief The constructor that receives the pointer
      *
      * @param pointer   the pointer to wrap
      */
-    explicit PointerWrapper(T *pointer) : pointer(pointer) {}
+    explicit PointerWrapper(T *pointer);
+
+    /**
+     * @brief Gets the pointer
+     *
+     * @return  the pointer
+     */
+    T *getPointer() const;
 
     /**
      * @brief Compares to another wrapper
@@ -43,17 +45,14 @@ public:
      * @return      true if they are different, false otherwise
      */
     bool operator!=(const PointerWrapper &rhs) const;
+
+private:
+    /**
+     * @brief The wrapped pointer
+     */
+    T *pointer;
 };
 
-template<class T>
-bool PointerWrapper<T>::operator==(const PointerWrapper &rhs) const {
-    return *pointer == *rhs.pointer;
-}
-
-template<class T>
-bool PointerWrapper<T>::operator!=(const PointerWrapper &rhs) const {
-    return !(rhs == *this);
-}
-
+#include "pointer_wrapper.tpp"
 
 #endif //FEUP_CAL_PROJ_POINTER_WRAPPER_H

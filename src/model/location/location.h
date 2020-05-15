@@ -24,6 +24,27 @@ public:
     Location(long id, const std::string &city, double x, double y, double latitude=DBL_MAX, double longitude=DBL_MAX);
 
     /**
+     * @brief Copy constructor
+     *
+     * @param location  the location to copy from
+     */
+    Location(const Location &location);
+
+    /**
+     * @brief The default constructor
+     */
+    Location();
+
+    /**
+     * @brief Calculates the euclidean distance to a given point
+     *
+     * @param x the x of the point
+     * @param y the y of the point
+     * @return  the euclidean distance
+     */
+    double euclideanDistanceTo(double x, double  y);
+
+    /**
      * @brief Gets the ID.
      *
      * @return          the ID

@@ -26,7 +26,7 @@ Vertex<T> *Graph<T>::findVertex(const T &content) const {
     if (it == vertexSet.end())
         return nullptr;
 
-    return (*it).pointer;
+    return (*it).getPointer();
 }
 
 template<class T>
@@ -168,17 +168,17 @@ const unordered_set<PointerWrapper<Vertex<T>>, pointer_wrapper_hash> &Graph<T>::
 template<class T>
 Graph<T>::~Graph() {
     for (auto vertex : vertexSet)
-        delete vertex.pointer;
+        delete vertex.getPointer();
 }
 
 template<class T>
 Graph<T>::Graph(const Graph<T> &graph) {
     for (auto vertex : graph.getVertexSet())
-        this->addVertex(vertex.pointer->getInfo());
+        this->addVertex(vertex.getPointer()->getInfo());
 
     for (auto vertex : graph.getVertexSet())
-        for (auto edge : vertex.pointer->getAdj())
-            this->addEdge(vertex.pointer->getInfo(), edge->getDest()->getInfo(), edge->getWeight());
+        for (auto edge : vertex.getPointer()->getAdj())
+            this->addEdge(vertex.getPointer()->getInfo(), edge->getDest()->getInfo(), edge->getWeight());
 }
 
 template<class T>
