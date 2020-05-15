@@ -7,6 +7,7 @@ var hierarchy =
     [ "AuthUser", "classAuthUser.html", null ],
     [ "AuthUserManager", "classAuthUserManager.html", null ],
     [ "Bootstrap", "classBootstrap.html", null ],
+    [ "Cluster", "classCluster.html", null ],
     [ "companies_client_hash", "structcompanies__client__hash.html", null ],
     [ "Company", "classCompany.html", null ],
     [ "CompanyClient", "classCompanyClient.html", null ],

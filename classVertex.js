@@ -7,5 +7,6 @@ var classVertex =
     [ "getInfo", "classVertex.html#a48eae2f7af2362634adab02b7b2dbec6", null ],
     [ "hash", "classVertex.html#a69ce2b544e91f7454fce21fa5cde93b0", null ],
     [ "operator!=", "classVertex.html#aa9987a1eb63aadc990543b93ef0da656", null ],
-    [ "operator==", "classVertex.html#ac9ccb7420302655fb2680745094680cd", null ]
+    [ "operator==", "classVertex.html#ac9ccb7420302655fb2680745094680cd", null ],
+    [ "weightTo", "classVertex.html#a845daede1a422d1ac3109a1903efca3a", null ]
 ];

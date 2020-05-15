@@ -2,6 +2,7 @@ var searchData=
 [
   ['getadj',['getAdj',['../classVertex.html#a1121b7bc0782b059946e8ea4549b465b',1,'Vertex']]],
   ['getadministrators',['getAdministrators',['../classAdministratorManager.html#a5eab8a83dcd7f27195419e1d96cf1c0b',1,'AdministratorManager']]],
+  ['getcentroid',['getCentroid',['../classCluster.html#a5fb64fba5a5d9f71aa3a66ea9e32af16',1,'Cluster']]],
   ['getcity',['getCity',['../classLocation.html#a9df397894c42fae4c5297443e883efa6',1,'Location']]],
   ['getcompaniesclient',['getCompaniesClient',['../classCompanyClientManager.html#a956411c09caf44c68aa128294e8fd952',1,'CompanyClientManager']]],
   ['getdest',['getDest',['../classEdge.html#a860880b431c6112862909344a8b1f4bf',1,'Edge']]],
@@ -17,6 +18,7 @@ var searchData=
   ['getname',['getName',['../classAdministrator.html#a56b9c9a934ad4453dd6ee9218de0f9fa',1,'Administrator::getName()'],['../classCompany.html#a64f6c13dd059f834a0f35ed8faeded64',1,'Company::getName()'],['../classCompanyClient.html#a84f94c6f43feca7fbb73331d3fa21e1b',1,'CompanyClient::getName()'],['../classCompanyRepresentative.html#ad0e144e205435de7b1dc9c1129cbdd45',1,'CompanyRepresentative::getName()']]],
   ['getpassword',['getPassword',['../classAuthUser.html#a8f3e829513009e1e1cc0111f9fd9f91f',1,'AuthUser']]],
   ['getpickuppoints',['getPickupPoints',['../classCompanyClient.html#a3fce923f3e183e7689f506e6157d3a48',1,'CompanyClient']]],
+  ['getpointer',['getPointer',['../classPointerWrapper.html#a99d63b9bf09a2d6a763016abe677baee',1,'PointerWrapper']]],
   ['getrepresentative',['getRepresentative',['../classCompanyClient.html#aefd0ec72d7695fc7ff19c5d43091f4dc',1,'CompanyClient']]],
   ['getuser',['getUser',['../classCurrentSession.html#a2e473205432101890679f4ce34bd588b',1,'CurrentSession::getUser()'],['../classAuthUserManager.html#a46dbbd9ea30f89a2607e9f8eaade3815',1,'AuthUserManager::getUser()']]],
   ['getuserrole',['getUserRole',['../classAuthUser.html#a8d32b1a9a5905a85b91683c22dedbdbc',1,'AuthUser']]],

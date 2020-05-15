@@ -82,7 +82,6 @@ $(document).ready(function(){initNavTree('classPointerWrapper.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classPointerWrapper-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PointerWrapper&lt; T &gt; Class Template Reference</div>  </div>
@@ -96,22 +95,18 @@ $(document).ready(function(){initNavTree('classPointerWrapper.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c9cb37899edfab1bf16d79c64f3b634"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPointerWrapper.html#a3c9cb37899edfab1bf16d79c64f3b634">PointerWrapper</a> (T *<a class="el" href="classPointerWrapper.html#a4866798d33eed0a9aeaa3bcda53c4a0d">pointer</a>)</td></tr>
+<tr class="memitem:a3c9cb37899edfab1bf16d79c64f3b634"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPointerWrapper.html#a3c9cb37899edfab1bf16d79c64f3b634">PointerWrapper</a> (T *pointer)</td></tr>
 <tr class="memdesc:a3c9cb37899edfab1bf16d79c64f3b634"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor that receives the pointer.  <a href="#a3c9cb37899edfab1bf16d79c64f3b634">More...</a><br /></td></tr>
 <tr class="separator:a3c9cb37899edfab1bf16d79c64f3b634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d63b9bf09a2d6a763016abe677baee"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPointerWrapper.html#a99d63b9bf09a2d6a763016abe677baee">getPointer</a> () const</td></tr>
+<tr class="memdesc:a99d63b9bf09a2d6a763016abe677baee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pointer.  <a href="#a99d63b9bf09a2d6a763016abe677baee">More...</a><br /></td></tr>
+<tr class="separator:a99d63b9bf09a2d6a763016abe677baee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c5666cde2490176976661a8f60bd1dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPointerWrapper.html#a4c5666cde2490176976661a8f60bd1dc">operator==</a> (const <a class="el" href="classPointerWrapper.html">PointerWrapper</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:a4c5666cde2490176976661a8f60bd1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares to another wrapper.  <a href="#a4c5666cde2490176976661a8f60bd1dc">More...</a><br /></td></tr>
 <tr class="separator:a4c5666cde2490176976661a8f60bd1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac31dc97a171437726445757fe60392b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPointerWrapper.html#ac31dc97a171437726445757fe60392b6">operator!=</a> (const <a class="el" href="classPointerWrapper.html">PointerWrapper</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:ac31dc97a171437726445757fe60392b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares to another wrapper.  <a href="#ac31dc97a171437726445757fe60392b6">More...</a><br /></td></tr>
 <tr class="separator:ac31dc97a171437726445757fe60392b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a4866798d33eed0a9aeaa3bcda53c4a0d"><td class="memItemLeft" align="right" valign="top"><a id="a4866798d33eed0a9aeaa3bcda53c4a0d"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPointerWrapper.html#a4866798d33eed0a9aeaa3bcda53c4a0d">pointer</a></td></tr>
-<tr class="memdesc:a4866798d33eed0a9aeaa3bcda53c4a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wrapped pointer. <br /></td></tr>
-<tr class="separator:a4866798d33eed0a9aeaa3bcda53c4a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
@@ -146,7 +141,7 @@ template&lt;class T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -162,6 +157,28 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a99d63b9bf09a2d6a763016abe677baee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d63b9bf09a2d6a763016abe677baee">&#9670;&nbsp;</a></span>getPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classPointerWrapper.html">PointerWrapper</a>&lt; T &gt;::getPointer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd>the pointer </dd></dl>
+
+</div>
+</div>
 <a id="ac31dc97a171437726445757fe60392b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac31dc97a171437726445757fe60392b6">&#9670;&nbsp;</a></span>operator!=()</h2>
 

@@ -7,6 +7,7 @@ var annotated_dup =
     [ "AuthUser", "classAuthUser.html", "classAuthUser" ],
     [ "AuthUserManager", "classAuthUserManager.html", "classAuthUserManager" ],
     [ "Bootstrap", "classBootstrap.html", "classBootstrap" ],
+    [ "Cluster", "classCluster.html", "classCluster" ],
     [ "companies_client_hash", "structcompanies__client__hash.html", "structcompanies__client__hash" ],
     [ "Company", "classCompany.html", "classCompany" ],
     [ "CompanyClient", "classCompanyClient.html", "classCompanyClient" ],
