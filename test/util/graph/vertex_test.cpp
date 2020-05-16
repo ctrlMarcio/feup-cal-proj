@@ -16,5 +16,5 @@ TEST(vertex, add_edge_test) {
 
 	vertex.addEdge(dest, -1);
 
-	EXPECT_EQ((*vertex.getAdj().begin())->getDest(), dest);
+	EXPECT_EQ((*vertex.getOutgoing().begin())->getDest(), dest);
 }

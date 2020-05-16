@@ -8,7 +8,6 @@
 #include "graph.h"
 #include "../../exception/invalid_file_exception.h"
 
-
 template<class T>
 bool Graph<T>::addVertex(const T &content) {
     Vertex<T> *vertex = new Vertex<T>(content);
@@ -177,7 +176,7 @@ Graph<T>::Graph(const Graph<T> &graph) {
         this->addVertex(vertex.getPointer()->getInfo());
 
     for (auto vertex : graph.getVertexSet())
-        for (auto edge : vertex.getPointer()->getAdj())
+        for (auto edge : vertex.getPointer()->getOutgoing())
             this->addEdge(vertex.getPointer()->getInfo(), edge->getDest()->getInfo(), edge->getWeight());
 }
 

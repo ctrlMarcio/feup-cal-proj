@@ -43,7 +43,14 @@ public:
 	 *
 	 * @return			the container for the outgoing edges
 	 */
-	vector<std::shared_ptr<Edge<T>>> getAdj() const;
+	vector<std::shared_ptr<Edge<T>>> getOutgoing() const;
+
+    /**
+     * @brief Gets the container for the incoming edges.
+     *
+     * @return			the container for the incoming edges
+     */
+    vector<std::shared_ptr<Edge<T>>> getIncoming() const;
 
 	/**
 	 * @brief Creates and adds an outgoing edge to the vertex.
@@ -87,14 +94,19 @@ public:
 
 private:
 	/**
-	 * @brief The content of the vertex.
+	 * @brief The content of the vertex
 	 */
 	T info;
 
 	/**
-	 * @brief The container of outgoing edges.
+	 * @brief The container of outgoing edges
 	 */
-	vector<std::shared_ptr<Edge<T>>> outgoing;  // adj
+	vector<std::shared_ptr<Edge<T>>> outgoing;
+
+    /**
+     * @brief The container of incoming edges
+     */
+    vector<std::shared_ptr<Edge<T>>> incoming;
 };
 
 #include "vertex.tpp"

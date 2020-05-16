@@ -10,15 +10,25 @@ T Vertex<T>::getInfo() const {
 
 template<class T>
 Edge<T> *Vertex<T>::addEdge(Vertex<T> *dest, double w) {
-	auto e = new Edge<T>(dest, w);
-	std::shared_ptr<Edge<T>> ptr(e);
-	this->outgoing.push_back(std::move(ptr));
-	return e;
+	auto outgoingEdge = new Edge<T>(dest, w);
+	auto incomingEdge = new Edge<T>(this, w);
+
+	std::shared_ptr<Edge<T>> ptrOut(outgoingEdge);
+    std::shared_ptr<Edge<T>> ptrIn(incomingEdge);
+	this->outgoing.push_back(std::move(ptrOut));
+    dest->incoming.push_back(std::move(ptrIn));
+
+	return outgoingEdge;
 }
 
 template<class T>
-vector<std::shared_ptr<Edge<T>>> Vertex<T>::getAdj() const {
-	return this->outgoing;
+vector<std::shared_ptr<Edge<T>>> Vertex<T>::getOutgoing() const {
+	return outgoing;
+}
+
+template<class T>
+vector<std::shared_ptr<Edge<T>>> Vertex<T>::getIncoming() const {
+    return incoming;
 }
 
 template<class T>
