@@ -28,5 +28,6 @@ var hierarchy =
       [ "InvalidDirectoryException", "classInvalidDirectoryException.html", null ],
       [ "InvalidFileException", "classInvalidFileException.html", null ]
     ] ],
+    [ "Trio< T >", "classTrio.html", null ],
     [ "Vertex< T >", "classVertex.html", null ]
 ];

@@ -23,5 +23,6 @@ var annotated_dup =
     [ "Location", "classLocation.html", "classLocation" ],
     [ "pointer_wrapper_hash", "structpointer__wrapper__hash.html", "structpointer__wrapper__hash" ],
     [ "PointerWrapper", "classPointerWrapper.html", "classPointerWrapper" ],
+    [ "Trio", "classTrio.html", "classTrio" ],
     [ "Vertex", "classVertex.html", "classVertex" ]
 ];

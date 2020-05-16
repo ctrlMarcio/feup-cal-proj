@@ -104,9 +104,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48eae2f7af2362634adab02b7b2dbec6"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a48eae2f7af2362634adab02b7b2dbec6">getInfo</a> () const</td></tr>
 <tr class="memdesc:a48eae2f7af2362634adab02b7b2dbec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the content of the vertex.  <a href="#a48eae2f7af2362634adab02b7b2dbec6">More...</a><br /></td></tr>
 <tr class="separator:a48eae2f7af2362634adab02b7b2dbec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1121b7bc0782b059946e8ea4549b465b"><td class="memItemLeft" align="right" valign="top">vector&lt; std::shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a1121b7bc0782b059946e8ea4549b465b">getAdj</a> () const</td></tr>
-<tr class="memdesc:a1121b7bc0782b059946e8ea4549b465b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the container for the outgoing edges.  <a href="#a1121b7bc0782b059946e8ea4549b465b">More...</a><br /></td></tr>
-<tr class="separator:a1121b7bc0782b059946e8ea4549b465b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e8b7454baffda3860384eb39b0c245"><td class="memItemLeft" align="right" valign="top">vector&lt; std::shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#ac9e8b7454baffda3860384eb39b0c245">getOutgoing</a> () const</td></tr>
+<tr class="memdesc:ac9e8b7454baffda3860384eb39b0c245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the container for the outgoing edges.  <a href="#ac9e8b7454baffda3860384eb39b0c245">More...</a><br /></td></tr>
+<tr class="separator:ac9e8b7454baffda3860384eb39b0c245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a975acf7bd3fc21280d999254b075f"><td class="memItemLeft" align="right" valign="top">vector&lt; std::shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#ae2a975acf7bd3fc21280d999254b075f">getIncoming</a> () const</td></tr>
+<tr class="memdesc:ae2a975acf7bd3fc21280d999254b075f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the container for the incoming edges.  <a href="#ae2a975acf7bd3fc21280d999254b075f">More...</a><br /></td></tr>
+<tr class="separator:ae2a975acf7bd3fc21280d999254b075f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a24d4693d540a7bb25338c2f9276425"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEdge.html">Edge</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a3a24d4693d540a7bb25338c2f9276425">addEdge</a> (<a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; *dest, double w)</td></tr>
 <tr class="memdesc:a3a24d4693d540a7bb25338c2f9276425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds an outgoing edge to the vertex.  <a href="#a3a24d4693d540a7bb25338c2f9276425">More...</a><br /></td></tr>
 <tr class="separator:a3a24d4693d540a7bb25338c2f9276425"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,8 +244,8 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="a1121b7bc0782b059946e8ea4549b465b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1121b7bc0782b059946e8ea4549b465b">&#9670;&nbsp;</a></span>getAdj()</h2>
+<a id="ae2a975acf7bd3fc21280d999254b075f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a975acf7bd3fc21280d999254b075f">&#9670;&nbsp;</a></span>getIncoming()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +253,7 @@ template&lt;class T&gt; </div>
 template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt;std::shared_ptr&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; &gt; &gt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::getAdj </td>
+          <td class="memname">vector&lt;std::shared_ptr&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; &gt; &gt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::getIncoming </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -258,8 +261,8 @@ template&lt;class T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the container for the outgoing edges. </p>
-<dl class="section return"><dt>Returns</dt><dd>the container for the outgoing edges </dd></dl>
+<p>Gets the container for the incoming edges. </p>
+<dl class="section return"><dt>Returns</dt><dd>the container for the incoming edges </dd></dl>
 
 </div>
 </div>
@@ -282,6 +285,28 @@ template&lt;class T&gt; </div>
 
 <p>Gets the content of the vertex. </p>
 <dl class="section return"><dt>Returns</dt><dd>the content of the vertex </dd></dl>
+
+</div>
+</div>
+<a id="ac9e8b7454baffda3860384eb39b0c245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e8b7454baffda3860384eb39b0c245">&#9670;&nbsp;</a></span>getOutgoing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;std::shared_ptr&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; &gt; &gt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::getOutgoing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the container for the outgoing edges. </p>
+<dl class="section return"><dt>Returns</dt><dd>the container for the outgoing edges </dd></dl>
 
 </div>
 </div>

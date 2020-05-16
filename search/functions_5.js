@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['getadj',['getAdj',['../classVertex.html#a1121b7bc0782b059946e8ea4549b465b',1,'Vertex']]],
   ['getadministrators',['getAdministrators',['../classAdministratorManager.html#a5eab8a83dcd7f27195419e1d96cf1c0b',1,'AdministratorManager']]],
   ['getcentroid',['getCentroid',['../classCluster.html#a5fb64fba5a5d9f71aa3a66ea9e32af16',1,'Cluster']]],
   ['getcity',['getCity',['../classLocation.html#a9df397894c42fae4c5297443e883efa6',1,'Location']]],
@@ -11,11 +10,13 @@ var searchData=
   ['getgraph',['getGraph',['../classCompany.html#a2aada174439bd4bdf8841a3307dd26c1',1,'Company']]],
   ['getheadquarters',['getHeadquarters',['../classCompanyClient.html#aed43ca390468cf2356678981aab9e990',1,'CompanyClient']]],
   ['getid',['getId',['../classLocation.html#ae001ec7701c615fbebb7fe9621805b36',1,'Location']]],
+  ['getincoming',['getIncoming',['../classVertex.html#ae2a975acf7bd3fc21280d999254b075f',1,'Vertex']]],
   ['getinfo',['getInfo',['../classVertex.html#a48eae2f7af2362634adab02b7b2dbec6',1,'Vertex']]],
   ['getlatitude',['getLatitude',['../classLocation.html#ae84e2a75e0a29c625f38dd2ac9fe8117',1,'Location']]],
   ['getlongitude',['getLongitude',['../classLocation.html#a4f6d4ef756b78d33b322fd83f3ed18fa',1,'Location']]],
   ['getmessage',['getMessage',['../classInvalidLoginException.html#ae7ebc1632926d553ebfe4a30c5e61741',1,'InvalidLoginException']]],
   ['getname',['getName',['../classAdministrator.html#a56b9c9a934ad4453dd6ee9218de0f9fa',1,'Administrator::getName()'],['../classCompany.html#a64f6c13dd059f834a0f35ed8faeded64',1,'Company::getName()'],['../classCompanyClient.html#a84f94c6f43feca7fbb73331d3fa21e1b',1,'CompanyClient::getName()'],['../classCompanyRepresentative.html#ad0e144e205435de7b1dc9c1129cbdd45',1,'CompanyRepresentative::getName()']]],
+  ['getoutgoing',['getOutgoing',['../classVertex.html#ac9e8b7454baffda3860384eb39b0c245',1,'Vertex']]],
   ['getpassword',['getPassword',['../classAuthUser.html#a8f3e829513009e1e1cc0111f9fd9f91f',1,'AuthUser']]],
   ['getpickuppoints',['getPickupPoints',['../classCompanyClient.html#a3fce923f3e183e7689f506e6157d3a48',1,'CompanyClient']]],
   ['getpointer',['getPointer',['../classPointerWrapper.html#a99d63b9bf09a2d6a763016abe677baee',1,'PointerWrapper']]],
