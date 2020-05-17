@@ -33,7 +33,7 @@ public:
     /**
      * @brief Removes all the vertexes from the cluster
      */
-    void clearCluster();
+    void clear();
 
     /**
     * @brief Returns the centroid
@@ -41,6 +41,13 @@ public:
     * @return the centroid as a pair x, y
     */
     const pair<double, double> &getCentroid() const;
+
+    /**
+     * @brief Gets the vertexes that the cluster holds
+     *
+     * @return the vertexes
+     */
+    const unordered_set<PointerWrapper<Vertex<Location>>, pointer_wrapper_hash> &getVertexes() const;
 
 private:
     /**

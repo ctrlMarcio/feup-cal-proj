@@ -4,7 +4,7 @@
 std::vector<Cluster> algorithm::kMeans(const Graph<Location> &graph, int clusterAmount, int iterations) {
     // initialize clusters
     auto set = graph.getVertexSet();
-    std::vector<Cluster> clusters(clusterAmount);
+    std::vector<Cluster> clusters;
     unsigned long increment = set.size() / clusterAmount;
 
     if (clusterAmount <= 0 || iterations <= 0)
@@ -23,24 +23,24 @@ std::vector<Cluster> algorithm::kMeans(const Graph<Location> &graph, int cluster
         // compute centroids and clear the clusters
         for (Cluster &cluster : clusters) {
             cluster.updateCentroid();
-            clusters.clear();
+            cluster.clear();
         }
 
         // assign point to nearest cluster
         for (const PointerWrapper<Vertex<Location>> &ptr : set) {
             double min = INF;
-            Cluster chosen = clusters[0];
+            Cluster *chosen = &clusters[0];
 
-            for (const Cluster &cluster : clusters) {
+            for (Cluster &cluster : clusters) {
                 double distance = ptr.getPointer()->getInfo().euclideanDistanceTo(cluster.getCentroid().first,
                                                                                   cluster.getCentroid().second);
                 if (distance < min) {
                     min = distance;
-                    chosen = cluster;
+                    chosen = &cluster;
                 }
             }
 
-            chosen.addVertex(ptr);
+            chosen->addVertex(ptr);
         }
     }
 

@@ -11,8 +11,14 @@
  * @brief Contains useful and required graph-related algorithms
  */
 namespace algorithm {
-    std::vector<std::vector<double>> floydWarshallMatrix(const Graph<Location> &graph);
-
+    /**
+     * @brief Calculates clusters of vertexes in a graph of locations.
+     *
+     * @param graph         the graph
+     * @param clusterAmount the number of clusters to calculate
+     * @param iterations    the number of iterations to run
+     * @return              the vector of formed clusters
+     */
     std::vector<Cluster> kMeans(const Graph<Location> &graph, int clusterAmount, int iterations);
 
     template <class T>

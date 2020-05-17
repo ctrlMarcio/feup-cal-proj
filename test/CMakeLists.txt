@@ -45,7 +45,9 @@ add_executable(tests
         model/companyClient/company_client_test.cpp
         model/companyClient/company_representative/company_representative_test.cpp
         model/company/administrator/administrator_test.cpp
-        model/company/administrator/administrator_manager_test.cpp)
+        model/company/administrator/administrator_manager_test.cpp
+        util/algorithm/algorithm_test.cpp
+        util/graph/cluster_test.cpp)
 target_link_libraries(tests PRIVATE gtest_main feup-cal-proj)
 
 add_test(NAME tests COMMAND tests)

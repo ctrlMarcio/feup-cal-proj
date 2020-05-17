@@ -24,10 +24,14 @@ bool Cluster::addVertex(const PointerWrapper<Vertex<Location>> &vertex) {
     return this->vertexes.insert(vertex).second;
 }
 
-void Cluster::clearCluster() {
+void Cluster::clear() {
     this->vertexes.clear();
 }
 
 const pair<double, double> &Cluster::getCentroid() const {
     return centroid;
+}
+
+const unordered_set<PointerWrapper<Vertex<Location>>, pointer_wrapper_hash> &Cluster::getVertexes() const {
+    return vertexes;
 }
