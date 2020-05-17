@@ -101,13 +101,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a17c5de0dc873a0bd56d5120dead8b771"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCluster.html#a17c5de0dc873a0bd56d5120dead8b771">addVertex</a> (const <a class="el" href="classPointerWrapper.html">PointerWrapper</a>&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&gt; &amp;vertex)</td></tr>
 <tr class="memdesc:a17c5de0dc873a0bd56d5120dead8b771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a vertex to the cluster.  <a href="#a17c5de0dc873a0bd56d5120dead8b771">More...</a><br /></td></tr>
 <tr class="separator:a17c5de0dc873a0bd56d5120dead8b771"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5b4e5cc290c829baf2761e83bcf392"><td class="memItemLeft" align="right" valign="top"><a id="a7e5b4e5cc290c829baf2761e83bcf392"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCluster.html#a7e5b4e5cc290c829baf2761e83bcf392">clearCluster</a> ()</td></tr>
-<tr class="memdesc:a7e5b4e5cc290c829baf2761e83bcf392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all the vertexes from the cluster. <br /></td></tr>
-<tr class="separator:a7e5b4e5cc290c829baf2761e83bcf392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dee8527d699a26165f7ca7d6913fe19"><td class="memItemLeft" align="right" valign="top"><a id="a3dee8527d699a26165f7ca7d6913fe19"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCluster.html#a3dee8527d699a26165f7ca7d6913fe19">clear</a> ()</td></tr>
+<tr class="memdesc:a3dee8527d699a26165f7ca7d6913fe19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all the vertexes from the cluster. <br /></td></tr>
+<tr class="separator:a3dee8527d699a26165f7ca7d6913fe19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fb64fba5a5d9f71aa3a66ea9e32af16"><td class="memItemLeft" align="right" valign="top">const pair&lt; double, double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCluster.html#a5fb64fba5a5d9f71aa3a66ea9e32af16">getCentroid</a> () const</td></tr>
 <tr class="memdesc:a5fb64fba5a5d9f71aa3a66ea9e32af16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the centroid.  <a href="#a5fb64fba5a5d9f71aa3a66ea9e32af16">More...</a><br /></td></tr>
 <tr class="separator:a5fb64fba5a5d9f71aa3a66ea9e32af16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd285c433ed6bf9f769deaccd5e8701"><td class="memItemLeft" align="right" valign="top">const unordered_set&lt; <a class="el" href="classPointerWrapper.html">PointerWrapper</a>&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;, <a class="el" href="structpointer__wrapper__hash.html">pointer_wrapper_hash</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCluster.html#aecd285c433ed6bf9f769deaccd5e8701">getVertexes</a> () const</td></tr>
+<tr class="memdesc:aecd285c433ed6bf9f769deaccd5e8701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the vertexes that the cluster holds.  <a href="#aecd285c433ed6bf9f769deaccd5e8701">More...</a><br /></td></tr>
+<tr class="separator:aecd285c433ed6bf9f769deaccd5e8701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a coherent agglomerate of a location graph's vertexes, given their position. </p>
@@ -156,6 +159,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Returns the centroid. </p>
 <dl class="section return"><dt>Returns</dt><dd>the centroid as a pair x, y </dd></dl>
+
+</div>
+</div>
+<a id="aecd285c433ed6bf9f769deaccd5e8701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecd285c433ed6bf9f769deaccd5e8701">&#9670;&nbsp;</a></span>getVertexes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unordered_set&lt; <a class="el" href="classPointerWrapper.html">PointerWrapper</a>&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;, <a class="el" href="structpointer__wrapper__hash.html">pointer_wrapper_hash</a> &gt; &amp; Cluster::getVertexes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the vertexes that the cluster holds. </p>
+<dl class="section return"><dt>Returns</dt><dd>the vertexes </dd></dl>
 
 </div>
 </div>

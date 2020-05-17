@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['clearcluster',['clearCluster',['../classCluster.html#a7e5b4e5cc290c829baf2761e83bcf392',1,'Cluster']]],
+  ['clear',['clear',['../classCluster.html#a3dee8527d699a26165f7ca7d6913fe19',1,'Cluster']]],
   ['cluster',['Cluster',['../classCluster.html',1,'']]],
   ['companies_5fclient_5fhash',['companies_client_hash',['../structcompanies__client__hash.html',1,'']]],
   ['company',['Company',['../classCompany.html',1,'Company'],['../classCompany.html#a0079757c631a1183723fcfd389d973c0',1,'Company::Company()']]],

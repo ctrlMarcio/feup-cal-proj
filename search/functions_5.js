@@ -24,6 +24,7 @@ var searchData=
   ['getuser',['getUser',['../classCurrentSession.html#a2e473205432101890679f4ce34bd588b',1,'CurrentSession::getUser()'],['../classAuthUserManager.html#a46dbbd9ea30f89a2607e9f8eaade3815',1,'AuthUserManager::getUser()']]],
   ['getuserrole',['getUserRole',['../classAuthUser.html#a8d32b1a9a5905a85b91683c22dedbdbc',1,'AuthUser']]],
   ['getvehiclenumber',['getVehicleNumber',['../classCompany.html#ab64bb76579224279daa80ac264850365',1,'Company::getVehicleNumber()'],['../classCompanyClient.html#a07208784406b3726b4f18a515c9fd68e',1,'CompanyClient::getVehicleNumber()']]],
+  ['getvertexes',['getVertexes',['../classCluster.html#aecd285c433ed6bf9f769deaccd5e8701',1,'Cluster']]],
   ['getvertexset',['getVertexSet',['../classGraph.html#af70748a372a65e6b789d806c6a1b2005',1,'Graph']]],
   ['getweight',['getWeight',['../classEdge.html#a3df378e283d6c8be5be4170ac8d7f4e8',1,'Edge']]],
   ['getx',['getX',['../classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7',1,'Location']]],

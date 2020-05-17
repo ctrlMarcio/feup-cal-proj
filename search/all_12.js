@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7egraph',['~Graph',['../classGraph.html#abed0ed996798032aa7dca0069a59b9d6',1,'Graph']]]
+  ['weightto',['weightTo',['../classVertex.html#a845daede1a422d1ac3109a1903efca3a',1,'Vertex']]]
 ];
