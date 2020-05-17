@@ -3,9 +3,8 @@
 
 using testing::Eq;
 
-bool addVertex(Cluster &cluster, const Location &location) {
-    Vertex<Location> vertex(location);
-    PointerWrapper<Vertex<Location>> ptr(&vertex);
+bool addVertex(Cluster &cluster, Vertex<Location> *vertex) {
+    PointerWrapper<Vertex<Location>> ptr(vertex);
     return cluster.addVertex(ptr);
 }
 
@@ -15,35 +14,41 @@ TEST(cluster, update_centroid_test) {
     std::pair<double, double> centroid = cluster.updateCentroid();
     std::pair<double, double> res(-1, -1);
 
-    EXPECT_EQ(centroid, res);
+    EXPECT_NEAR(centroid.first, res.first, 0.0001);
+    EXPECT_NEAR(centroid.second, res.second, 0.0001);
 
     Location location(1, "", 10, 10);
-    addVertex(cluster, location);
+    Vertex<Location> vertex(location);
+    addVertex(cluster, &vertex);
 
     centroid = cluster.updateCentroid();
     res = std::pair<double, double>(10, 10);
     EXPECT_NEAR(centroid.first, res.first, 0.0001);
     EXPECT_NEAR(centroid.second, res.second, 0.0001);
-    EXPECT_EQ(centroid, cluster.getCentroid());
+    EXPECT_NEAR(centroid.first, cluster.getCentroid().first, 0.0001);
+    EXPECT_NEAR(centroid.second, cluster.getCentroid().second, 0.0001);
 }
 
 TEST(cluster, add_vertex_test) {
     Cluster cluster;
 
     Location l1(1, "", 5, 5);
-    bool added = addVertex(cluster, l1);
+    Vertex<Location> vertex(l1);
+    bool added = addVertex(cluster, &vertex);
 
     ASSERT_TRUE(added);
     ASSERT_EQ(cluster.getVertexes().size(), 1);
 
     Location l2(1, "", 5, 5);
-    added = addVertex(cluster, l2);
+    vertex = Vertex<Location>(l2);
+    added = addVertex(cluster, &vertex);
 
     ASSERT_FALSE(added);
     ASSERT_EQ(cluster.getVertexes().size(), 1);
 
     Location l3(2, "", 10, 10);
-    added = addVertex(cluster, l3);
+    vertex = Vertex<Location>(l3);
+    added = addVertex(cluster, &vertex);
 
     ASSERT_TRUE(added);
     ASSERT_EQ(cluster.getVertexes().size(), 2);
@@ -55,8 +60,11 @@ TEST(cluster, clear_test) {
     Location l1(1, "", 5, 5);
     Location l2(2, "", 10, 10);
 
-    addVertex(cluster, l1);
-    addVertex(cluster, l2);
+    Vertex<Location> v1(l1);
+    Vertex<Location> v2(l2);
+
+    addVertex(cluster, &v1);
+    addVertex(cluster, &v2);
 
     ASSERT_FALSE(cluster.getVertexes().empty());
 
