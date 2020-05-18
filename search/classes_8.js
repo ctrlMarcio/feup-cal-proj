@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trio',['Trio',['../classTrio.html',1,'']]]
+  ['mutablepriorityqueue',['MutablePriorityQueue',['../classMutablePriorityQueue.html',1,'']]]
 ];

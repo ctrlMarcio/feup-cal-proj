@@ -23,6 +23,7 @@ var hierarchy =
       [ "InvalidVertexException", "classInvalidVertexException.html", null ]
     ] ],
     [ "Location", "classLocation.html", null ],
+    [ "MutablePriorityQueue< T >", "classMutablePriorityQueue.html", null ],
     [ "runtime_error", null, [
       [ "InvalidDirectoryException", "classInvalidDirectoryException.html", null ],
       [ "InvalidFileException", "classInvalidFileException.html", null ]
