@@ -1,5 +1,4 @@
 #include "algorithm.h"
-#include "trio.h"
 
 std::vector<Cluster> algorithm::kMeans(const Graph<Location> &graph, int clusterAmount, int iterations) {
     // initialize clusters
