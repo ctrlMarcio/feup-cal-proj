@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="auth_users_hash",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structauth__users__hash.html",tooltip="Redefinition of the default hash and equal function for the AuthUser class. "];
+  Node0 [label="AuthUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAuthUser.html",tooltip="Represents an authentication user. "];
 }

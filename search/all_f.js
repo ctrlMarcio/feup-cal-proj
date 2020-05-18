@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['updatecentroid',['updateCentroid',['../classCluster.html#ac27ba45e3da4e9f150b1114abc1b342f',1,'Cluster']]],
-  ['util_5fstring',['util_string',['../namespaceutil__string.html',1,'']]]
+  ['vertex',['Vertex',['../classVertex.html',1,'Vertex&lt; T &gt;'],['../classVertex.html#a932e5b1a1ac43d071025b654e4476113',1,'Vertex::Vertex()']]],
+  ['vertex_5fhash',['vertex_hash',['../structvertex__hash.html',1,'']]],
+  ['verticescount',['verticesCount',['../classGraph.html#a8c6816310fb5b3e349b7d62dfc47efd7',1,'Graph']]]
 ];

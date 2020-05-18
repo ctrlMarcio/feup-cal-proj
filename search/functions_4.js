@@ -18,6 +18,7 @@ var searchData=
   ['getname',['getName',['../classAdministrator.html#a56b9c9a934ad4453dd6ee9218de0f9fa',1,'Administrator::getName()'],['../classCompany.html#a64f6c13dd059f834a0f35ed8faeded64',1,'Company::getName()'],['../classCompanyClient.html#a84f94c6f43feca7fbb73331d3fa21e1b',1,'CompanyClient::getName()'],['../classCompanyRepresentative.html#ad0e144e205435de7b1dc9c1129cbdd45',1,'CompanyRepresentative::getName()']]],
   ['getoutgoing',['getOutgoing',['../classVertex.html#ac9e8b7454baffda3860384eb39b0c245',1,'Vertex']]],
   ['getpassword',['getPassword',['../classAuthUser.html#a8f3e829513009e1e1cc0111f9fd9f91f',1,'AuthUser']]],
+  ['getpath',['getPath',['../namespacealgorithm.html#a85aa3cf2e6f98c745bc9f864b3c63b7b',1,'algorithm']]],
   ['getpickuppoints',['getPickupPoints',['../classCompanyClient.html#a3fce923f3e183e7689f506e6157d3a48',1,'CompanyClient']]],
   ['getrepresentative',['getRepresentative',['../classCompanyClient.html#aefd0ec72d7695fc7ff19c5d43091f4dc',1,'CompanyClient']]],
   ['getsource',['getSource',['../classEdge.html#af838c04cba20ee06e6d42bee09530b50',1,'Edge']]],

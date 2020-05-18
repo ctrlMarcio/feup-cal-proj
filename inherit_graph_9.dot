@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="companies_client_hash",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcompanies__client__hash.html",tooltip="Redefinition of the default hash and equal function for the CompanyClient class. "];
+  Node0 [label="Company",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCompany.html",tooltip="Represents a company. "];
 }

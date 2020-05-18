@@ -5,6 +5,7 @@ var searchData=
   ['invalidlocationexception',['InvalidLocationException',['../classInvalidLocationException.html',1,'']]],
   ['invalidloginexception',['InvalidLoginException',['../classInvalidLoginException.html',1,'InvalidLoginException'],['../classInvalidLoginException.html#adb87d171bf6bcbf73bed47517622c6d6',1,'InvalidLoginException::InvalidLoginException()']]],
   ['invalidvertexexception',['InvalidVertexException',['../classInvalidVertexException.html',1,'InvalidVertexException'],['../classInvalidVertexException.html#a33b44c3108cf333b6b9a91b07e0afb69',1,'InvalidVertexException::InvalidVertexException()']]],
+  ['iscomplete',['isComplete',['../namespacealgorithm.html#a86c8a8b8872027ca48d7561b72b83408',1,'algorithm']]],
   ['islogged',['isLogged',['../classCurrentSession.html#ae8c9a46c464e2e51278625b7de0c9ed4',1,'CurrentSession']]],
   ['isvalid',['isValid',['../classAdministratorManager.html#aadb0bc50c5b8bc95ee1edc750d39ab1f',1,'AdministratorManager::isValid()'],['../classCompanyClientManager.html#a1c7b770728019775f8829f14c69cb67c',1,'CompanyClientManager::isValid()']]]
 ];

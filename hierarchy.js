@@ -23,12 +23,15 @@ var hierarchy =
       [ "InvalidVertexException", "classInvalidVertexException.html", null ]
     ] ],
     [ "Location", "classLocation.html", null ],
-    [ "algorithm::my_comparator", "structalgorithm_1_1my__comparator.html", null ],
     [ "runtime_error", null, [
       [ "InvalidDirectoryException", "classInvalidDirectoryException.html", null ],
       [ "InvalidFileException", "classInvalidFileException.html", null ]
     ] ],
     [ "Trio< T >", "classTrio.html", null ],
+    [ "UI", "classUI.html", [
+      [ "HomeUI", "classHomeUI.html", null ]
+    ] ],
+    [ "UIManager", "classUIManager.html", null ],
     [ "Vertex< T >", "classVertex.html", null ],
     [ "vertex_hash", "structvertex__hash.html", null ]
 ];

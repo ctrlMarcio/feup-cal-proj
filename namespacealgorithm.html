@@ -81,7 +81,6 @@ $(document).ready(function(){initNavTree('namespacealgorithm.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">algorithm Namespace Reference</div>  </div>
@@ -91,28 +90,122 @@ $(document).ready(function(){initNavTree('namespacealgorithm.html','');});
 <p>Contains useful and required graph-related algorithms.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structalgorithm_1_1my__comparator.html">my_comparator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a36e37d4367c6ac7a126b18c036f3f2ac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a36e37d4367c6ac7a126b18c036f3f2ac">kMeans</a> (const <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, int clusterAmount, int iterations)</td></tr>
 <tr class="memdesc:a36e37d4367c6ac7a126b18c036f3f2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates clusters of vertexes in a graph of locations.  <a href="#a36e37d4367c6ac7a126b18c036f3f2ac">More...</a><br /></td></tr>
 <tr class="separator:a36e37d4367c6ac7a126b18c036f3f2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86c8a8b8872027ca48d7561b72b83408"><td class="memTemplParams" colspan="2"><a id="a86c8a8b8872027ca48d7561b72b83408"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a86c8a8b8872027ca48d7561b72b83408"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isComplete</b> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;simplifiedGraph, const std::list&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt; &amp;path)</td></tr>
+<tr class="memitem:a86c8a8b8872027ca48d7561b72b83408"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a86c8a8b8872027ca48d7561b72b83408"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a86c8a8b8872027ca48d7561b72b83408">isComplete</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;simplifiedGraph, const std::list&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt; &amp;path)</td></tr>
+<tr class="memdesc:a86c8a8b8872027ca48d7561b72b83408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if the path is complete.  <a href="#a86c8a8b8872027ca48d7561b72b83408">More...</a><br /></td></tr>
 <tr class="separator:a86c8a8b8872027ca48d7561b72b83408"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85aa3cf2e6f98c745bc9f864b3c63b7b"><td class="memTemplParams" colspan="2"><a id="a85aa3cf2e6f98c745bc9f864b3c63b7b"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a85aa3cf2e6f98c745bc9f864b3c63b7b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classTrio.html">Trio</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getPath</b> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;simplifiedGraph, const T &amp;source, const T &amp;destination)</td></tr>
+<tr class="memitem:a85aa3cf2e6f98c745bc9f864b3c63b7b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a85aa3cf2e6f98c745bc9f864b3c63b7b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classTrio.html">Trio</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a85aa3cf2e6f98c745bc9f864b3c63b7b">getPath</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;simplifiedGraph, const T &amp;source, const T &amp;destination)</td></tr>
+<tr class="memdesc:a85aa3cf2e6f98c745bc9f864b3c63b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the path for a simplified graph, a garage and an headquarters location.  <a href="#a85aa3cf2e6f98c745bc9f864b3c63b7b">More...</a><br /></td></tr>
 <tr class="separator:a85aa3cf2e6f98c745bc9f864b3c63b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains useful and required graph-related algorithms. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a85aa3cf2e6f98c745bc9f864b3c63b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85aa3cf2e6f98c745bc9f864b3c63b7b">&#9670;&nbsp;</a></span>getPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTrio.html">Trio</a>&lt;T&gt; algorithm::getPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>simplifiedGraph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>destination</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the path for a simplified graph, a garage and an headquarters location. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type of the vertices </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">simplifiedGraph</td><td>the simplified graph </td></tr>
+    <tr><td class="paramname">source</td><td>the source vertex </td></tr>
+    <tr><td class="paramname">destination</td><td>the destination vertex </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the path </dd></dl>
+
+</div>
+</div>
+<a id="a86c8a8b8872027ca48d7561b72b83408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c8a8b8872027ca48d7561b72b83408">&#9670;&nbsp;</a></span>isComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algorithm::isComplete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>simplifiedGraph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::list&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies if the path is complete. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type of the vertices </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">simplifiedGraph</td><td>the simplified graph </td></tr>
+    <tr><td class="paramname">path</td><td>the hypothetical path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the path is complete. false, otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a36e37d4367c6ac7a126b18c036f3f2ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36e37d4367c6ac7a126b18c036f3f2ac">&#9670;&nbsp;</a></span>kMeans()</h2>
 
