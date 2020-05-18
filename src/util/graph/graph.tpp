@@ -8,6 +8,7 @@
 #include "../../model/location/location.h"
 #include "../../exception/invalid_file_exception.h"
 #include "../../exception/invalid_vertex_exception.h"
+#include "mutable_priority_queue.h"
 
 template<class T>
 bool Graph<T>::add(const T &content) {
@@ -51,4 +52,45 @@ bool Graph<T>::has(const T &content) const {
     return std::find_if(vertices.begin(), vertices.end(), [&content](const Vertex<T> &vertex) {
         return vertex.get() == content;
     }) != vertices.end();
+}
+
+template<class T>
+Vertex<T> * Graph<T>::initSingleSource(const T &origin) {
+    for(auto v : getVertices()) {
+        v.dist = INF;
+        v.path = nullptr;
+    }
+    Vertex<T> *s = &getVertex(origin);
+    s->dist = 0;
+    return s;
+}
+
+template<class T>
+inline bool Graph<T>::relax(Vertex<T> *v, Vertex<T> *w, double weight) {
+    if (v->dist + weight < w->dist) {
+        w->dist = v->dist + weight;
+        w->path = v;
+        return true;
+    }
+    else
+        return false;
+}
+
+template<class T>
+void Graph<T>::dijkstra(const T &origin) {
+    auto s = initSingleSource(origin);
+    MutablePriorityQueue<Vertex<T>> q;
+    q.insert(s);
+    while( ! q.empty() ) {
+        auto v = q.extractMin();
+        for(auto e : v->getOutgoing()) {
+            auto oldDist = e->getDestination()->dist;
+            if (relax(v, e->getDestination(), e->getWeight())) {
+                if (oldDist == INF)
+                    q.insert(e->getDestination());
+                else
+                    q.decreaseKey(e->getDestination());
+            }
+        }
+    }
 }

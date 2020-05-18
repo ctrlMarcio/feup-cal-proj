@@ -76,6 +76,37 @@ public:
      */
     bool operator!=(const Vertex &rhs) const;
 
+    /**
+     * @brief Verifies if this vertex distance is lower than another
+     *
+     * @param rhs   the other vertex
+     * @return      true if lower, false otherwise
+     */
+    bool operator<(Vertex<T> & vertex) const;
+
+    /**
+     * @brief Calculates the weight to a given vertex
+     *
+     * @param dest  the destination vertex
+     * @return      the weight to the vertex
+     */
+    double weightTo(Vertex<T> *dest);
+
+    /**
+	 * @brief The distance to the initial vertex in dijkstra algorithm
+	 */
+    double dist = 0;
+
+    /**
+	 * @brief The following vertex in the path
+	 */
+    Vertex<T> *path = nullptr;
+
+    /**
+	 * @brief The mutable queue index of the vertex
+	 */
+    int queueIndex = 0;
+
 private:
 	/**
 	 * @brief The content of the vertex

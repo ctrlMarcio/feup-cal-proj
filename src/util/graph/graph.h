@@ -71,6 +71,16 @@ public:
      */
     long verticesCount() const;
 
+    void dijkstra(const T &s);
+
+    Vertex<T> * initSingleSource(const T &orig);
+
+    bool relax(Vertex<T> *v, Vertex<T> *w, double weight);
+
+    double ** W = nullptr;   // dist
+
+    int **P = nullptr;   // path
+
 private:
     /**
      * @brief The container of vertexes.

@@ -38,7 +38,24 @@ bool Vertex<T>::operator!=(const Vertex &rhs) const {
     return !(rhs == *this);
 }
 
+template <class T>
+bool Vertex<T>::operator<(Vertex<T> & vertex) const {
+    return this->dist < vertex.dist;
+}
+
 template<class T>
 int Vertex<T>::hash() const {
     return info.hash();
+}
+
+template<class T>
+double Vertex<T>::weightTo(Vertex<T> *dest) {
+    for (auto edge : this->outgoing)
+        if (edge->getDestination() == dest)
+            return edge->getWeight();
+
+    if (this == dest)
+        return 0;
+
+    return INF;
 }
