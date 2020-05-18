@@ -7,7 +7,6 @@
 #include <unordered_set>
 #include <mutex>
 
-#include "pointer_wrapper.h"
 #include "vertex.h"
 
 /**
@@ -25,9 +24,17 @@ public:
      * @brief Adds a vertex to the graph.
      *
      * @param content	the content of the vertex
-     * @return			the pointer to the vertex added
+     * @return			true, if the vertex is successfully added. false, otherwise
      */
-    void add(const T &content);
+    bool add(const T &content);
+
+    /**
+     * @brief Verifies if a vertex is in the graph.
+     *
+     * @param content   the content of the vertex
+     * @return true, if the vertex is in the graph. false, otherwise
+     */
+    bool has(const T &content) const;
 
     /**
      * @brief Adds an edge to the graph.

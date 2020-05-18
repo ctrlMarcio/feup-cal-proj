@@ -6,8 +6,8 @@ Trio<T>::Trio(const Vertex<T> &vertex) : vertex(vertex), pathCost(0) {
 }
 
 template<class T>
-Trio<T>::Trio(const Trio<T> &source, const Edge<T> &edge) : vertex(*edge.getDest()), path(source.path) {
-    path.push_back(*edge.getDest());
+Trio<T>::Trio(const Trio<T> &source, const Edge<T> &edge) : vertex(*edge.getDestination()), path(source.path) {
+    path.push_back(*edge.getDestination());
     pathCost = source.pathCost + edge.getWeight();
 }
 
@@ -17,7 +17,7 @@ const Vertex<T> &Trio<T>::getVertex() const {
 }
 
 template<class T>
-list<Vertex<T>> &Trio<T>::getPath() const {
+list<Vertex<T>> &Trio<T>::getPath() {
     return path;
 }
 

@@ -18,7 +18,6 @@ add_library(feup-cal-proj main.cpp
         application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h
         exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h
         exception/invalid_location_exception.cpp exception/invalid_location_exception.h
-        util/graph/pointer_wrapper.h util/graph/pointer_wrapper.tpp
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/graph/cluster.cpp util/graph/cluster.h
         util/algorithm/trio.h util/algorithm/trio.tpp
@@ -44,7 +43,6 @@ add_executable(application main.cpp
         application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h
         exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h
         exception/invalid_location_exception.cpp exception/invalid_location_exception.h
-        util/graph/pointer_wrapper.h util/graph/pointer_wrapper.tpp
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/graph/cluster.cpp util/graph/cluster.h
         util/algorithm/trio.h util/algorithm/trio.tpp

@@ -10,9 +10,11 @@
 #include "../../exception/invalid_vertex_exception.h"
 
 template<class T>
-void Graph<T>::add(const T &content) {
+bool Graph<T>::add(const T &content) {
+    if (has(content)) return false;
     Vertex<T> vertex(content);
     vertices.push_back(vertex);
+    return true;
 }
 
 template<class T>
@@ -42,4 +44,11 @@ long Graph<T>::verticesCount() const {
 template<class T>
 const std::vector<Vertex<T>> &Graph<T>::getVertices() const {
     return this->vertices;
+}
+
+template<class T>
+bool Graph<T>::has(const T &content) const {
+    return std::find_if(vertices.begin(), vertices.end(), [&content](const Vertex<T> &vertex) {
+        return vertex.get() == content;
+    }) != vertices.end();
 }

@@ -13,7 +13,7 @@ public:
 
     const Vertex<T> &getVertex() const;
 
-    std::list<Vertex<T>> &getPath() const;
+    std::list<Vertex<T>> &getPath();
 
     double getPathCost() const;
 

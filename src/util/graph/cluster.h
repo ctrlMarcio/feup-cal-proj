@@ -6,7 +6,6 @@
 #include <unordered_set>
 
 #include "../../model/location/location.h"
-#include "pointer_wrapper.h"
 #include "vertex.h"
 #include "graph.h"
 

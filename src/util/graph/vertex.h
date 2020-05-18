@@ -1,6 +1,7 @@
 #ifndef FEUP_CAL_PROJ_VERTEX_H
 #define FEUP_CAL_PROJ_VERTEX_H
 
+#include <memory>
 #include <set>
 
 #include "edge.h"
