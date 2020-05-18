@@ -22,51 +22,32 @@ namespace algorithm {
      */
     std::vector<Cluster> kMeans(const Graph<Location> &graph, int clusterAmount, int iterations);
 
-    struct my_comparator
-    {
-        template<typename T>
-        int operator() (const Trio<T>& p1, const Trio<T>& p2)
-        {
-            return p1 > p2;
-        }
-    };
-
+    /**
+     * @brief  Verifies if the path is complete.
+     *
+     * @tparam T                the type of the vertices
+     * @param simplifiedGraph   the simplified graph
+     * @param path              the hypothetical path
+     * @return                  true, if the path is complete. false, otherwise
+     */
     template<class T>
-    bool isComplete(Graph<T> &simplifiedGraph, const std::list<Vertex<T>> &path) {
-        bool complete = true;
+    bool isComplete(Graph<T> &simplifiedGraph, const std::list<Vertex<T>> &path);
 
-        for (const auto &elem : simplifiedGraph.getVertices())
-            if (find(path.begin(), path.end(), elem) == path.end()) return false;
-
-        return complete;
-    }
-
+    /**
+     * @brief Gets the path for a simplified graph, a garage and an headquarters location.
+     *
+     * @tparam T                the type of the vertices
+     * @param simplifiedGraph   the simplified graph
+     * @param source            the source vertex
+     * @param destination       the destination vertex
+     * @return                  the path
+     */
     template<class T>
     Trio<T> getPath(Graph<T> &simplifiedGraph, const T &source,
-                            const T &destination) {
-        std::priority_queue<Trio<T>, std::vector<Trio<T>>, my_comparator> queue;
-
-        const Vertex<T> &sourceVertex = simplifiedGraph.getVertex(source);
-        const Vertex<T> &destinationVertex = simplifiedGraph.getVertex(destination);
-
-        Trio<T> current(sourceVertex);
-
-        queue.push(current);
-
-        while (!(current.getVertex() == destinationVertex && isComplete(simplifiedGraph, current.getPath()))) {
-            Trio<T> min = queue.top();
-            queue.pop();
-
-            for (const std::shared_ptr<Edge<T>> &child : min.getVertex().getOutgoing())
-                queue.push(Trio<T>(min, *child));
-
-            current = min;
-        }
-
-        return current;
-    }
+                    const T &destination);
 
 };
 
+#include "algorithm.tpp"
 
 #endif //FEUP_CAL_PROJ_ALGORITHM_H

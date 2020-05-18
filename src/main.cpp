@@ -1,19 +1,21 @@
 #include <iostream>
+#include "application/ui/ui/ui_manager.h"
+#include "auth/session/current_session.h"
 #include "application/bootstrap/bootstrap.h"
 #include "model/company/company.h"
+#include "application/ui/home/home_ui.h"
 
 int main() {
-    // test
-    Bootstrap bs("../../PortugalMaps");
+    AuthUserManager userManager;
+    CurrentSession session(userManager);
 
-    Company company = bs.buildCompany("boshhhhhhhh", 90379359, 2);
-    Location tmp(90379359, "", 0, 0);
-    Vertex<Location> v = company.getGraph().getVertex(tmp);
+    Bootstrap bs("../../maps");
 
-    printf("%f\n", v.get().getX());
-    std::cout << v.get().getY() << endl;
-    std::cout << v.get().getLatitude() << endl;
-    std::cout << v.get().getLongitude() << endl;
+    Company company = bs.buildCompany("BoshHBus", 90379359, 2);
+
+    UIManager uiManager(userManager, session, company);
+
+    uiManager.set(new HomeUI(uiManager));
 
     return EXIT_SUCCESS;
 }

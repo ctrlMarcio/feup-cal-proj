@@ -21,7 +21,7 @@ add_library(feup-cal-proj main.cpp
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/graph/cluster.cpp util/graph/cluster.h
         util/algorithm/trio.h util/algorithm/trio.tpp
-        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp)
+        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp application/ui/ui/ui_manager.cpp application/ui/ui/ui_manager.h application/ui/ui/ui.h application/ui/home/home_ui.cpp application/ui/home/home_ui.h util/algorithm/algorithm.tpp)
 
 add_executable(application main.cpp
         model/company/company.cpp model/company/company.h
@@ -46,7 +46,7 @@ add_executable(application main.cpp
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/graph/cluster.cpp util/graph/cluster.h
         util/algorithm/trio.h util/algorithm/trio.tpp
-        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp)
+        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp application/ui/ui/ui_manager.cpp application/ui/ui/ui_manager.h application/ui/ui/ui.h application/ui/home/home_ui.cpp application/ui/home/home_ui.h util/algorithm/algorithm.tpp)
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
