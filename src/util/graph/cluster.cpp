@@ -8,9 +8,9 @@ std::pair<double, double> Cluster::updateCentroid() {
 
     double xAvg = 0, yAvg = 0;
 
-    for (auto ptr : vertexes) {
-        xAvg += ptr.getPointer()->getInfo().getX();
-        yAvg += ptr.getPointer()->getInfo().getY();
+    for (auto &v : vertexes) {
+        xAvg += v.get().getX();
+        yAvg += v.get().getY();
     }
 
     xAvg /= this->vertexes.size();
@@ -20,7 +20,7 @@ std::pair<double, double> Cluster::updateCentroid() {
     return this->centroid;
 }
 
-bool Cluster::addVertex(const PointerWrapper<Vertex<Location>> &vertex) {
+bool Cluster::addVertex(const Vertex<Location> &vertex) {
     return this->vertexes.insert(vertex).second;
 }
 
@@ -32,6 +32,6 @@ const pair<double, double> &Cluster::getCentroid() const {
     return centroid;
 }
 
-const unordered_set<PointerWrapper<Vertex<Location>>, pointer_wrapper_hash> &Cluster::getVertexes() const {
+const unordered_set<Vertex<Location>, vertex_hash> &Cluster::getVertexes() const {
     return vertexes;
 }

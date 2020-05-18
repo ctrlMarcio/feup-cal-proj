@@ -3,7 +3,7 @@
 
 std::vector<Cluster> algorithm::kMeans(const Graph<Location> &graph, int clusterAmount, int iterations) {
     // initialize clusters
-    auto set = graph.getVertexSet();
+    auto set = graph.getVertices();
     std::vector<Cluster> clusters;
     unsigned long increment = set.size() / clusterAmount;
 
@@ -27,20 +27,20 @@ std::vector<Cluster> algorithm::kMeans(const Graph<Location> &graph, int cluster
         }
 
         // assign point to nearest cluster
-        for (const PointerWrapper<Vertex<Location>> &ptr : set) {
+        for (const Vertex<Location> &v : set) {
             double min = INF;
             Cluster *chosen = &clusters[0];
 
             for (Cluster &cluster : clusters) {
-                double distance = ptr.getPointer()->getInfo().euclideanDistanceTo(cluster.getCentroid().first,
-                                                                                  cluster.getCentroid().second);
+                double distance = v.get().euclideanDistanceTo(cluster.getCentroid().first,
+                                                              cluster.getCentroid().second);
                 if (distance < min) {
                     min = distance;
                     chosen = &cluster;
                 }
             }
 
-            chosen->addVertex(ptr);
+            chosen->addVertex(v);
         }
     }
 
@@ -52,7 +52,7 @@ template<class T>
 bool isComplete(const Graph<T> &simplifiedGraph, std::list<Vertex<T>> path) {
     bool complete = true;
 
-    for (const auto &elem : simplifiedGraph.getVertexSet())
+    for (const auto &elem : simplifiedGraph.getVertices())
         if (find(path.begin(), path.end(), *elem.getPointer()) == path.end()) return false;
 
     return complete;

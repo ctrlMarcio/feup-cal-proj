@@ -21,7 +21,8 @@ add_library(feup-cal-proj main.cpp
         util/graph/pointer_wrapper.h util/graph/pointer_wrapper.tpp
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/graph/cluster.cpp util/graph/cluster.h
-        util/algorithm/trio.h util/algorithm/trio.tpp)
+        util/algorithm/trio.h util/algorithm/trio.tpp
+        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp)
 
 add_executable(application main.cpp
         model/company/company.cpp model/company/company.h
@@ -46,7 +47,8 @@ add_executable(application main.cpp
         util/graph/pointer_wrapper.h util/graph/pointer_wrapper.tpp
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/graph/cluster.cpp util/graph/cluster.h
-        util/algorithm/trio.h util/algorithm/trio.tpp)
+        util/algorithm/trio.h util/algorithm/trio.tpp
+        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp)
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

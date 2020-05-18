@@ -22,21 +22,21 @@ public:
 	 */
 	explicit Vertex(T content);
 
-	/**
-	 * @brief Copy constructor
-	 *
-	 * Copies whats inside the edges, not just their pointers.
-	 *
-	 * @param v			the vertex to copy from
-	 */
-	Vertex(const Vertex<T> &v);
+    /**
+     * @brief Creates and adds an outgoing edge to the vertex.
+     *
+     * @param dest		the pointer to the destination vertex
+     * @param w 		the weight of the edge
+     * @return			the pointer to the created edge
+     */
+    std::shared_ptr<Edge<T>> add(Vertex<T> *dest, double w);
 
-	/**
-	 * @brief Gets the content of the vertex.
-	 *
-	 * @return 			the content of the vertex
-	 */
-	T getInfo() const;
+    /**
+     * @brief Gets the content of the vertex.
+     *
+     * @return 			the content of the vertex
+     */
+    T get() const;
 
 	/**
 	 * @brief Gets the container for the outgoing edges.
@@ -52,29 +52,12 @@ public:
      */
     vector<std::shared_ptr<Edge<T>>> getIncoming() const;
 
-	/**
-	 * @brief Creates and adds an outgoing edge to the vertex.
-	 *
-	 * @param dest		the pointer to the destination vertex
-	 * @param w 		the weight of the edge
-	 * @return			the pointer to the created edge
-	 */
-	Edge<T> *addEdge(Vertex<T> *dest, double w);
-
-	/**
-	 * @brief Calculates the weight to a given vertex
-	 *
-	 * @param dest  the destination vertex
-	 * @return      the weight to the vertex
-	 */
-    double weightTo(Vertex<T> *dest);
-
     /**
      * @brief Gets an hash for the vertex
      *
      * @return      the hash
      */
-	int hash();
+	int hash() const;
 
 	/**
 	 * @brief Verifies if this vertex is equal to another one

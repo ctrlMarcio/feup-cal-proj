@@ -11,6 +11,21 @@
 #include "graph.h"
 
 /**
+ * @brief Redefinition of the default hash and equal function for the Vertex class.
+ */
+struct vertex_hash {
+    template<class T>
+    int operator()(const Vertex<T> &v) const {
+        return v.hash();
+    }
+
+    template<class T>
+    bool operator()(const Vertex<T> &v1, const Vertex<T> &v2) const {
+        return v1 == v2;
+    }
+};
+
+/**
  * @brief Represents a coherent agglomerate of a location graph's vertexes, given their position
  */
 class Cluster {
@@ -28,7 +43,7 @@ public:
      * @param vertex    the pointer wrapper of the vertex to add
      * @return          true if successful, false otherwise
      */
-    bool addVertex(const PointerWrapper<Vertex<Location>> &vertex);
+    bool addVertex(const Vertex<Location> &vertex);
 
     /**
      * @brief Removes all the vertexes from the cluster
@@ -47,13 +62,13 @@ public:
      *
      * @return the vertexes
      */
-    const unordered_set<PointerWrapper<Vertex<Location>>, pointer_wrapper_hash> &getVertexes() const;
+    const unordered_set<Vertex<Location>, vertex_hash> &getVertexes() const;
 
 private:
     /**
      * @brief The set of vertex pointers
      */
-    std::unordered_set<PointerWrapper<Vertex<Location>>, pointer_wrapper_hash> vertexes;
+    std::unordered_set<Vertex<Location>, vertex_hash> vertexes;
 
     /**
      * @brief The centroid (or center of mass) of the cluster

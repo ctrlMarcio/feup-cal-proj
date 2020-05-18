@@ -107,7 +107,7 @@ public:
      *
      * @return      the hash
      */
-    int hash();
+    int hash() const;
 
 private:
 	/**

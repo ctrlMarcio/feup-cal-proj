@@ -3,11 +3,6 @@
 
 using testing::Eq;
 
-bool addVertex(Cluster &cluster, Vertex<Location> *vertex) {
-    PointerWrapper<Vertex<Location>> ptr(vertex);
-    return cluster.addVertex(ptr);
-}
-
 TEST(cluster, update_centroid_test) {
     Cluster cluster;
 
@@ -19,7 +14,7 @@ TEST(cluster, update_centroid_test) {
 
     Location location(1, "", 10, 10);
     Vertex<Location> vertex(location);
-    addVertex(cluster, &vertex);
+    cluster.addVertex(vertex);
 
     centroid = cluster.updateCentroid();
     res = std::pair<double, double>(10, 10);
@@ -34,21 +29,21 @@ TEST(cluster, add_vertex_test) {
 
     Location l1(1, "", 5, 5);
     Vertex<Location> vertex(l1);
-    bool added = addVertex(cluster, &vertex);
+    bool added = cluster.addVertex(vertex);
 
     ASSERT_TRUE(added);
     ASSERT_EQ(cluster.getVertexes().size(), 1);
 
     Location l2(1, "", 5, 5);
     vertex = Vertex<Location>(l2);
-    added = addVertex(cluster, &vertex);
+    added = cluster.addVertex(vertex);
 
     ASSERT_FALSE(added);
     ASSERT_EQ(cluster.getVertexes().size(), 1);
 
     Location l3(2, "", 10, 10);
     vertex = Vertex<Location>(l3);
-    added = addVertex(cluster, &vertex);
+    added = cluster.addVertex(vertex);
 
     ASSERT_TRUE(added);
     ASSERT_EQ(cluster.getVertexes().size(), 2);
@@ -63,8 +58,8 @@ TEST(cluster, clear_test) {
     Vertex<Location> v1(l1);
     Vertex<Location> v2(l2);
 
-    addVertex(cluster, &v1);
-    addVertex(cluster, &v2);
+    cluster.addVertex(v1);
+    cluster.addVertex(v2);
 
     ASSERT_FALSE(cluster.getVertexes().empty());
 

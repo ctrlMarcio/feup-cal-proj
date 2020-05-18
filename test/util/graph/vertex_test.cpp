@@ -6,15 +6,15 @@ using testing::Eq;
 TEST(vertex, simple_construction_test) {
 	Vertex<int> vertex(1);
 
-	EXPECT_EQ(vertex.getInfo(), 1);
-	EXPECT_NE(vertex.getInfo(), 2);
+	EXPECT_EQ(vertex.get(), 1);
+	EXPECT_NE(vertex.get(), 2);
 }
 
 TEST(vertex, add_edge_test) {
 	Vertex<string> vertex("a");
 	auto dest = new Vertex<string>("aa");
 
-	vertex.addEdge(dest, -1);
+    vertex.add(dest, -1);
 
-	EXPECT_EQ((*vertex.getOutgoing().begin())->getDest(), dest);
+    EXPECT_EQ(vertex.getOutgoing()[0]->getDestination(), dest);
 }

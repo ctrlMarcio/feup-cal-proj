@@ -49,7 +49,7 @@ public:
      *
      * @return  the world graph
      */
-    const Graph<Location> &getGraph() const;
+    Graph<Location> &getGraph();
 
 private:
     /**

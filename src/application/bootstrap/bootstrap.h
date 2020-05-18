@@ -53,6 +53,11 @@ public:
 
 private:
     /**
+     * @brief The regular delimiter of the files.
+     */
+    static const char DELIMITER = ',';
+
+    /**
      * @brief The graph
      */
     Graph<Location> graph;
@@ -65,6 +70,40 @@ private:
      * @param mutex     the mutex to ensure thread safety
      */
     void readDir(const string &city, const string &path, std::mutex *mutex);
+
+    /**
+     * @brief Appends nodes and edges from files to the graph
+     *
+     * @param nodesFile         the name of the nodes' file
+     * @param edgesFile         the name of the edges' file
+     * @param city              the name of the city to append
+     * @param mutex     the mutex to ensure thread safety
+     */
+    void append(Graph<Location> &graph, const std::string &nodesFile, const std::string &edgesFile, const std::string &city, std::mutex *mutex=nullptr);
+
+    /**
+     * @brief Appends locations to the graph from a file.
+     *
+     * @warning         Only available for \e Location graphs.
+     * @throws          InvalidFileException
+     * @param fileName  the name of the file containing the locations
+     * @param city      the name of the city described in the files
+     * @param mutex     the mutex to assure safety
+     */
+    void readNodes(Graph<Location> &graph, const std::string &fileName, const std::string &city, std::mutex *mutex=nullptr);
+
+    /**
+     * @brief Reads the edges between locations to the graph from a file.
+     *
+     * If an edge has an ID non existent, returns false but adds the other edges anyway.
+     *
+     * @warning         only available for \e Location graphs
+     * @throws          InvalidFileException
+     * @param fileName  the name of the file containing the edges
+     * @param mutex     the mutex to assure safety
+     * @return          true if the edges were successfully read, false otherwise
+     */
+    bool readEdges(Graph<Location> &graph, const std::string &fileName, std::mutex *mutex=nullptr);
 };
 
 

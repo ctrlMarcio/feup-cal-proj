@@ -48,8 +48,8 @@ bool Location::operator!=(const Location &rhs) const {
     return !(rhs == *this);
 }
 
-int Location::hash() {
-    return 37 * id;
+int Location::hash() const {
+    return id;
 }
 
 double Location::euclideanDistanceTo(double x, double y) {

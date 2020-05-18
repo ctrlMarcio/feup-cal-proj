@@ -23,17 +23,25 @@ public:
 	/**
 	 * @brief Constructs an edge with all its parameters.
 	 *
-	 * @param d		the destination vertex
-	 * @param w		the weight
+	 * @param source        the source vertex
+	 * @param destination   the destination vertex
+	 * @param weight		the weight
 	 */
-	Edge(Vertex<T> *d, double w);
+	Edge(Vertex<T> *source, Vertex<T> *destination, double weight);
 
-	/**
-	 * @brief Gets the destination vertex.
-	 *
-	 * @return		the pointer to the destination vertex
-	 */
-	Vertex<T> *getDest() const;
+    /**
+     * @brief Gets the source vertex.
+     *
+     * @return		the pointer to the source vertex
+     */
+    Vertex<T> *getSource() const;
+
+    /**
+     * @brief Gets the destination vertex.
+     *
+     * @return		the pointer to the destination vertex
+     */
+	Vertex<T> *getDestination() const;
 
 	/**
 	 * @brief Gets the weight.
@@ -43,10 +51,15 @@ public:
 	double getWeight() const;
 
 private:
+    /**
+     * @brief The source vertex of the edge.
+     */
+    Vertex<T> *source;
+
 	/**
 	 * @brief The destination vertex of the edge.
 	 */
-	Vertex<T> *dest;
+	Vertex<T> *destination;
 
 	/**
 	 * @brief The weight of the edge.

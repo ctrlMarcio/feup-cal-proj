@@ -7,14 +7,13 @@ TEST(graph, add_vertex_test) {
 	Graph<Location> graph;
 
 	Location a(20, "", 0,0);
-	bool add = graph.addVertex(a);
+	graph.add(a);
 
-	EXPECT_EQ((*graph.getVertexSet().begin()).getPointer()->getInfo(), Location(20, "", 0,0));
-	EXPECT_TRUE(add);
+	EXPECT_EQ(graph.getVertices()[0].get(), Location(20, "", 0, 0));
 
-	graph.addVertex(a);
+    //graph.add(a);
 
-	EXPECT_EQ(graph.getVertexSet().size(), 1);
+	//EXPECT_EQ(graph.getVertices().size(), 1);
 }
 
 TEST(graph, add_edge_test) {
@@ -23,11 +22,7 @@ TEST(graph, add_edge_test) {
     Location a(1, "", 0, 0);
     Location b(2, "", 0, 0);
 
-	auto e1 = graph.addEdge(a, b, 20);
-	EXPECT_EQ(e1, nullptr);
+	EXPECT_THROW(graph.add(a, b, 20), InvalidVertexException);
 
-	bool v1 = graph.addVertex(a);
-	auto e2 = graph.addEdge(a, b, 20);
-	EXPECT_EQ(e2, nullptr);
-	EXPECT_TRUE(v1);
+    EXPECT_THROW(graph.add(a, b, 20), InvalidVertexException);
 }

@@ -25,6 +25,6 @@ const Location &Company::getGarageLocation() const {
     return garageLocation;
 }
 
-const Graph<Location> &Company::getGraph() const {
+Graph<Location> &Company::getGraph() {
     return graph;
 }

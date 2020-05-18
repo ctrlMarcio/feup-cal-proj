@@ -7,13 +7,13 @@ int main() {
     Bootstrap bs("../../PortugalMaps");
 
     Company company = bs.buildCompany("boshhhhhhhh", 90379359, 2);
-    Location tmp(25449719, "", 0, 0);
-    auto ptr = company.getGraph().findVertex(tmp);
+    Location tmp(90379359, "", 0, 0);
+    Vertex<Location> v = company.getGraph().getVertex(tmp);
 
-    printf("%f\n", ptr->getInfo().getX());
-    std::cout << ptr->getInfo().getY() << endl;
-    std::cout << ptr->getInfo().getLatitude() << endl;
-    std::cout << ptr->getInfo().getLongitude() << endl;
+    printf("%f\n", v.get().getX());
+    std::cout << v.get().getY() << endl;
+    std::cout << v.get().getLatitude() << endl;
+    std::cout << v.get().getLongitude() << endl;
 
     return EXIT_SUCCESS;
 }

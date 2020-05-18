@@ -4,21 +4,18 @@ template<class T>
 Vertex<T>::Vertex(T content): info(content) {}
 
 template<class T>
-T Vertex<T>::getInfo() const {
+T Vertex<T>::get() const {
 	return this->info;
 }
 
 template<class T>
-Edge<T> *Vertex<T>::addEdge(Vertex<T> *dest, double w) {
-	auto outgoingEdge = new Edge<T>(dest, w);
-	auto incomingEdge = new Edge<T>(this, w);
+std::shared_ptr<Edge<T>> Vertex<T>::add(Vertex<T> *dest, double w) {
+	std::shared_ptr<Edge<T>> edge = std::make_shared<Edge<T>>(this, dest, w);
 
-	std::shared_ptr<Edge<T>> ptrOut(outgoingEdge);
-    std::shared_ptr<Edge<T>> ptrIn(incomingEdge);
-	this->outgoing.push_back(std::move(ptrOut));
-    dest->incoming.push_back(std::move(ptrIn));
+	this->outgoing.push_back(edge);
+    dest->incoming.push_back(edge);
 
-	return outgoingEdge;
+	return edge;
 }
 
 template<class T>
@@ -42,24 +39,6 @@ bool Vertex<T>::operator!=(const Vertex &rhs) const {
 }
 
 template<class T>
-int Vertex<T>::hash() {
+int Vertex<T>::hash() const {
     return info.hash();
-}
-
-template<class T>
-Vertex<T>::Vertex(const Vertex<T> &v) {
-    for (auto e : v.outgoing)
-        this->addEdge(e->getDest(), e->getWeight());
-}
-
-template<class T>
-double Vertex<T>::weightTo(Vertex<T> *dest) {
-    for (Edge<T> &edge : this->adj)
-        if (edge.dest == dest)
-            return edge.weight;
-
-    if (this == dest)
-        return 0;
-
-    return INF;
 }
