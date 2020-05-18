@@ -2,7 +2,7 @@ var classTrio =
 [
     [ "Trio", "classTrio.html#ab4045dd860a265897b234c30fd5afabf", null ],
     [ "Trio", "classTrio.html#a9e9a5df96332f6f2a883cc4fa7323287", null ],
-    [ "getPath", "classTrio.html#adc8e69614ffb388a3f4071f56f73ee52", null ],
+    [ "getPath", "classTrio.html#ab14b61fc95321bf6288955f57f96c9ed", null ],
     [ "getPathCost", "classTrio.html#a8423ec4ed429d7e6e02991c6f969ade0", null ],
     [ "getVertex", "classTrio.html#aa3d10dddca96c6dc2c3f2ecfd1c6bade", null ],
     [ "operator<", "classTrio.html#a0b5e7027dfc9e686f0242db86bf777a0", null ],

@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "algorithm", "namespacealgorithm.html", "namespacealgorithm" ],
     [ "Administrator", "classAdministrator.html", "classAdministrator" ],
     [ "administrator_hash", "structadministrator__hash.html", "structadministrator__hash" ],
     [ "AdministratorManager", "classAdministratorManager.html", "classAdministratorManager" ],
@@ -22,7 +23,6 @@ var annotated_dup =
     [ "InvalidLoginException", "classInvalidLoginException.html", "classInvalidLoginException" ],
     [ "InvalidVertexException", "classInvalidVertexException.html", "classInvalidVertexException" ],
     [ "Location", "classLocation.html", "classLocation" ],
-    [ "PointerWrapper", "classPointerWrapper.html", "classPointerWrapper" ],
     [ "Trio", "classTrio.html", "classTrio" ],
     [ "Vertex", "classVertex.html", "classVertex" ],
     [ "vertex_hash", "structvertex__hash.html", "structvertex__hash" ]

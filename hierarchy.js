@@ -23,7 +23,7 @@ var hierarchy =
       [ "InvalidVertexException", "classInvalidVertexException.html", null ]
     ] ],
     [ "Location", "classLocation.html", null ],
-    [ "PointerWrapper< T >", "classPointerWrapper.html", null ],
+    [ "algorithm::my_comparator", "structalgorithm_1_1my__comparator.html", null ],
     [ "runtime_error", null, [
       [ "InvalidDirectoryException", "classInvalidDirectoryException.html", null ],
       [ "InvalidFileException", "classInvalidFileException.html", null ]

@@ -19,7 +19,6 @@ var searchData=
   ['getoutgoing',['getOutgoing',['../classVertex.html#ac9e8b7454baffda3860384eb39b0c245',1,'Vertex']]],
   ['getpassword',['getPassword',['../classAuthUser.html#a8f3e829513009e1e1cc0111f9fd9f91f',1,'AuthUser']]],
   ['getpickuppoints',['getPickupPoints',['../classCompanyClient.html#a3fce923f3e183e7689f506e6157d3a48',1,'CompanyClient']]],
-  ['getpointer',['getPointer',['../classPointerWrapper.html#a99d63b9bf09a2d6a763016abe677baee',1,'PointerWrapper']]],
   ['getrepresentative',['getRepresentative',['../classCompanyClient.html#aefd0ec72d7695fc7ff19c5d43091f4dc',1,'CompanyClient']]],
   ['getsource',['getSource',['../classEdge.html#af838c04cba20ee06e6d42bee09530b50',1,'Edge']]],
   ['getuser',['getUser',['../classCurrentSession.html#a2e473205432101890679f4ce34bd588b',1,'CurrentSession::getUser()'],['../classAuthUserManager.html#a46dbbd9ea30f89a2607e9f8eaade3815',1,'AuthUserManager::getUser()']]],
