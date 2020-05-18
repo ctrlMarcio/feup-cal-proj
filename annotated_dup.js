@@ -20,9 +20,10 @@ var annotated_dup =
     [ "InvalidFileException", "classInvalidFileException.html", "classInvalidFileException" ],
     [ "InvalidLocationException", "classInvalidLocationException.html", "classInvalidLocationException" ],
     [ "InvalidLoginException", "classInvalidLoginException.html", "classInvalidLoginException" ],
+    [ "InvalidVertexException", "classInvalidVertexException.html", "classInvalidVertexException" ],
     [ "Location", "classLocation.html", "classLocation" ],
-    [ "pointer_wrapper_hash", "structpointer__wrapper__hash.html", "structpointer__wrapper__hash" ],
     [ "PointerWrapper", "classPointerWrapper.html", "classPointerWrapper" ],
     [ "Trio", "classTrio.html", "classTrio" ],
-    [ "Vertex", "classVertex.html", "classVertex" ]
+    [ "Vertex", "classVertex.html", "classVertex" ],
+    [ "vertex_hash", "structvertex__hash.html", "structvertex__hash" ]
 ];

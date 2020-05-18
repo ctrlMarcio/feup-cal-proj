@@ -19,15 +19,16 @@ var hierarchy =
     [ "Graph< Location >", "classGraph.html", null ],
     [ "invalid_argument", null, [
       [ "InvalidLocationException", "classInvalidLocationException.html", null ],
-      [ "InvalidLoginException", "classInvalidLoginException.html", null ]
+      [ "InvalidLoginException", "classInvalidLoginException.html", null ],
+      [ "InvalidVertexException", "classInvalidVertexException.html", null ]
     ] ],
     [ "Location", "classLocation.html", null ],
-    [ "pointer_wrapper_hash", "structpointer__wrapper__hash.html", null ],
     [ "PointerWrapper< T >", "classPointerWrapper.html", null ],
     [ "runtime_error", null, [
       [ "InvalidDirectoryException", "classInvalidDirectoryException.html", null ],
       [ "InvalidFileException", "classInvalidFileException.html", null ]
     ] ],
     [ "Trio< T >", "classTrio.html", null ],
-    [ "Vertex< T >", "classVertex.html", null ]
+    [ "Vertex< T >", "classVertex.html", null ],
+    [ "vertex_hash", "structvertex__hash.html", null ]
 ];

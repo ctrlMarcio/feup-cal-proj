@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['trio',['Trio',['../classTrio.html',1,'']]]
+  ['updatecentroid',['updateCentroid',['../classCluster.html#ac27ba45e3da4e9f150b1114abc1b342f',1,'Cluster']]],
+  ['util_5fstring',['util_string',['../namespaceutil__string.html',1,'']]]
 ];

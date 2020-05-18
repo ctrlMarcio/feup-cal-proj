@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setvehiclenumber',['setVehicleNumber',['../classCompanyClient.html#aae21eda7068020bf806f4f18baf46391',1,'CompanyClient']]],
-  ['split',['split',['../namespaceutil__string.html#a2b17e2398ebf2c2fc86197ac24e62d36',1,'util_string']]]
+  ['vertex',['Vertex',['../classVertex.html#a932e5b1a1ac43d071025b654e4476113',1,'Vertex']]],
+  ['verticescount',['verticesCount',['../classGraph.html#a8c6816310fb5b3e349b7d62dfc47efd7',1,'Graph']]]
 ];

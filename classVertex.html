@@ -98,27 +98,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a932e5b1a1ac43d071025b654e4476113"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a932e5b1a1ac43d071025b654e4476113">Vertex</a> (T content)</td></tr>
 <tr class="memdesc:a932e5b1a1ac43d071025b654e4476113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the vertex given only its content.  <a href="#a932e5b1a1ac43d071025b654e4476113">More...</a><br /></td></tr>
 <tr class="separator:a932e5b1a1ac43d071025b654e4476113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac448049f4475361f2c0c12d16deee66a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#ac448049f4475361f2c0c12d16deee66a">Vertex</a> (const <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &amp;v)</td></tr>
-<tr class="memdesc:ac448049f4475361f2c0c12d16deee66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#ac448049f4475361f2c0c12d16deee66a">More...</a><br /></td></tr>
-<tr class="separator:ac448049f4475361f2c0c12d16deee66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48eae2f7af2362634adab02b7b2dbec6"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a48eae2f7af2362634adab02b7b2dbec6">getInfo</a> () const</td></tr>
-<tr class="memdesc:a48eae2f7af2362634adab02b7b2dbec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the content of the vertex.  <a href="#a48eae2f7af2362634adab02b7b2dbec6">More...</a><br /></td></tr>
-<tr class="separator:a48eae2f7af2362634adab02b7b2dbec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37aa079342a46a23de1de85b7713886e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a37aa079342a46a23de1de85b7713886e">add</a> (<a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; *dest, double w)</td></tr>
+<tr class="memdesc:a37aa079342a46a23de1de85b7713886e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds an outgoing edge to the vertex.  <a href="#a37aa079342a46a23de1de85b7713886e">More...</a><br /></td></tr>
+<tr class="separator:a37aa079342a46a23de1de85b7713886e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab0256be37ad483f3a301c237b715c2"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a3ab0256be37ad483f3a301c237b715c2">get</a> () const</td></tr>
+<tr class="memdesc:a3ab0256be37ad483f3a301c237b715c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the content of the vertex.  <a href="#a3ab0256be37ad483f3a301c237b715c2">More...</a><br /></td></tr>
+<tr class="separator:a3ab0256be37ad483f3a301c237b715c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9e8b7454baffda3860384eb39b0c245"><td class="memItemLeft" align="right" valign="top">vector&lt; std::shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#ac9e8b7454baffda3860384eb39b0c245">getOutgoing</a> () const</td></tr>
 <tr class="memdesc:ac9e8b7454baffda3860384eb39b0c245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the container for the outgoing edges.  <a href="#ac9e8b7454baffda3860384eb39b0c245">More...</a><br /></td></tr>
 <tr class="separator:ac9e8b7454baffda3860384eb39b0c245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2a975acf7bd3fc21280d999254b075f"><td class="memItemLeft" align="right" valign="top">vector&lt; std::shared_ptr&lt; <a class="el" href="classEdge.html">Edge</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#ae2a975acf7bd3fc21280d999254b075f">getIncoming</a> () const</td></tr>
 <tr class="memdesc:ae2a975acf7bd3fc21280d999254b075f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the container for the incoming edges.  <a href="#ae2a975acf7bd3fc21280d999254b075f">More...</a><br /></td></tr>
 <tr class="separator:ae2a975acf7bd3fc21280d999254b075f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a24d4693d540a7bb25338c2f9276425"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEdge.html">Edge</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a3a24d4693d540a7bb25338c2f9276425">addEdge</a> (<a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; *dest, double w)</td></tr>
-<tr class="memdesc:a3a24d4693d540a7bb25338c2f9276425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds an outgoing edge to the vertex.  <a href="#a3a24d4693d540a7bb25338c2f9276425">More...</a><br /></td></tr>
-<tr class="separator:a3a24d4693d540a7bb25338c2f9276425"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a845daede1a422d1ac3109a1903efca3a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a845daede1a422d1ac3109a1903efca3a">weightTo</a> (<a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; *dest)</td></tr>
-<tr class="memdesc:a845daede1a422d1ac3109a1903efca3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the weight to a given vertex.  <a href="#a845daede1a422d1ac3109a1903efca3a">More...</a><br /></td></tr>
-<tr class="separator:a845daede1a422d1ac3109a1903efca3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69ce2b544e91f7454fce21fa5cde93b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a69ce2b544e91f7454fce21fa5cde93b0">hash</a> ()</td></tr>
-<tr class="memdesc:a69ce2b544e91f7454fce21fa5cde93b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an hash for the vertex.  <a href="#a69ce2b544e91f7454fce21fa5cde93b0">More...</a><br /></td></tr>
-<tr class="separator:a69ce2b544e91f7454fce21fa5cde93b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d789748292f3abeca8d6e9e37ca7752"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a4d789748292f3abeca8d6e9e37ca7752">hash</a> () const</td></tr>
+<tr class="memdesc:a4d789748292f3abeca8d6e9e37ca7752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an hash for the vertex.  <a href="#a4d789748292f3abeca8d6e9e37ca7752">More...</a><br /></td></tr>
+<tr class="separator:a4d789748292f3abeca8d6e9e37ca7752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9ccb7420302655fb2680745094680cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#ac9ccb7420302655fb2680745094680cd">operator==</a> (const <a class="el" href="classVertex.html">Vertex</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:ac9ccb7420302655fb2680745094680cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if this vertex is equal to another one.  <a href="#ac9ccb7420302655fb2680745094680cd">More...</a><br /></td></tr>
 <tr class="separator:ac9ccb7420302655fb2680745094680cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,7 +133,7 @@ class Vertex&lt; T &gt;</h3>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a932e5b1a1ac43d071025b654e4476113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a932e5b1a1ac43d071025b654e4476113">&#9670;&nbsp;</a></span>Vertex() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a932e5b1a1ac43d071025b654e4476113">&#9670;&nbsp;</a></span>Vertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,38 +168,9 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="ac448049f4475361f2c0c12d16deee66a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac448049f4475361f2c0c12d16deee66a">&#9670;&nbsp;</a></span>Vertex() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::<a class="el" href="classVertex.html">Vertex</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copy constructor. </p>
-<p>Copies whats inside the edges, not just their pointers.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v</td><td>the vertex to copy from </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3a24d4693d540a7bb25338c2f9276425"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a24d4693d540a7bb25338c2f9276425">&#9670;&nbsp;</a></span>addEdge()</h2>
+<a id="a37aa079342a46a23de1de85b7713886e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37aa079342a46a23de1de85b7713886e">&#9670;&nbsp;</a></span>add()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +178,7 @@ template&lt;class T&gt; </div>
 template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classEdge.html">Edge</a>&lt;T&gt;* <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::addEdge </td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classEdge.html">Edge</a>&lt;T&gt; &gt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::add </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>dest</em>, </td>
@@ -244,6 +209,28 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
+<a id="a3ab0256be37ad483f3a301c237b715c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab0256be37ad483f3a301c237b715c2">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the content of the vertex. </p>
+<dl class="section return"><dt>Returns</dt><dd>the content of the vertex </dd></dl>
+
+</div>
+</div>
 <a id="ae2a975acf7bd3fc21280d999254b075f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2a975acf7bd3fc21280d999254b075f">&#9670;&nbsp;</a></span>getIncoming()</h2>
 
@@ -263,28 +250,6 @@ template&lt;class T&gt; </div>
 
 <p>Gets the container for the incoming edges. </p>
 <dl class="section return"><dt>Returns</dt><dd>the container for the incoming edges </dd></dl>
-
-</div>
-</div>
-<a id="a48eae2f7af2362634adab02b7b2dbec6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48eae2f7af2362634adab02b7b2dbec6">&#9670;&nbsp;</a></span>getInfo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::getInfo </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the content of the vertex. </p>
-<dl class="section return"><dt>Returns</dt><dd>the content of the vertex </dd></dl>
 
 </div>
 </div>
@@ -310,8 +275,8 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="a69ce2b544e91f7454fce21fa5cde93b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69ce2b544e91f7454fce21fa5cde93b0">&#9670;&nbsp;</a></span>hash()</h2>
+<a id="a4d789748292f3abeca8d6e9e37ca7752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d789748292f3abeca8d6e9e37ca7752">&#9670;&nbsp;</a></span>hash()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,7 +287,7 @@ template&lt;class T&gt; </div>
           <td class="memname">int <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::hash </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -387,35 +352,6 @@ template&lt;class T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if they are equal, false otherwise </dd></dl>
-
-</div>
-</div>
-<a id="a845daede1a422d1ac3109a1903efca3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a845daede1a422d1ac3109a1903efca3a">&#9670;&nbsp;</a></span>weightTo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;::weightTo </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>dest</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculates the weight to a given vertex. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dest</td><td>the destination vertex </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the weight to the vertex </dd></dl>
 
 </div>
 </div>
