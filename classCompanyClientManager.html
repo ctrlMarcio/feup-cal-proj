@@ -110,14 +110,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1c7b770728019775f8829f14c69cb67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a4428f8a9b8d2e632596a14ecdf5ecc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#a9a4428f8a9b8d2e632596a14ecdf5ecc">has</a> (<a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;companyClient) const</td></tr>
 <tr class="separator:a9a4428f8a9b8d2e632596a14ecdf5ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee41f39ca747671fb8def64e453125e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#aee41f39ca747671fb8def64e453125e5">has</a> (const long uuid) const</td></tr>
-<tr class="separator:aee41f39ca747671fb8def64e453125e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a956411c09caf44c68aa128294e8fd952"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="classCompanyClient.html">CompanyClient</a>, <a class="el" href="structcompanies__client__hash.html">companies_client_hash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#a956411c09caf44c68aa128294e8fd952">getCompaniesClient</a> () const</td></tr>
-<tr class="memdesc:a956411c09caf44c68aa128294e8fd952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets company client's set.  <a href="#a956411c09caf44c68aa128294e8fd952">More...</a><br /></td></tr>
-<tr class="separator:a956411c09caf44c68aa128294e8fd952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0790cc37ec00dc5bc3a3141caf7edb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#a8a0790cc37ec00dc5bc3a3141caf7edb">has</a> (long uuid) const</td></tr>
+<tr class="separator:a8a0790cc37ec00dc5bc3a3141caf7edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d23957b4baff8cac2b24d25267dc82d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCompanyClient.html">CompanyClient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#a0d23957b4baff8cac2b24d25267dc82d">getCompanies</a> () const</td></tr>
+<tr class="memdesc:a0d23957b4baff8cac2b24d25267dc82d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets company client's set.  <a href="#a0d23957b4baff8cac2b24d25267dc82d">More...</a><br /></td></tr>
+<tr class="separator:a0d23957b4baff8cac2b24d25267dc82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7d4525955925c7f42836bfb982289a9"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClientManager.html#ae7d4525955925c7f42836bfb982289a9">getUsedVehiclesNumber</a> () const</td></tr>
 <tr class="memdesc:ae7d4525955925c7f42836bfb982289a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of vehicles already in use.  <a href="#ae7d4525955925c7f42836bfb982289a9">More...</a><br /></td></tr>
 <tr class="separator:ae7d4525955925c7f42836bfb982289a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e39a1d8e55d4d3ab824f5dc31260cb"><td class="memItemLeft" align="right" valign="top"><a id="ac5e39a1d8e55d4d3ab824f5dc31260cb"></a>
+<a class="el" href="classCompanyClient.html">CompanyClient</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getCompany</b> (long uuid)</td></tr>
+<tr class="separator:ac5e39a1d8e55d4d3ab824f5dc31260cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> Client's Manager. </p>
@@ -143,14 +146,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a956411c09caf44c68aa128294e8fd952"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a956411c09caf44c68aa128294e8fd952">&#9670;&nbsp;</a></span>getCompaniesClient()</h2>
+<a id="a0d23957b4baff8cac2b24d25267dc82d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d23957b4baff8cac2b24d25267dc82d">&#9670;&nbsp;</a></span>getCompanies()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_set&lt; <a class="el" href="classCompanyClient.html">CompanyClient</a>, <a class="el" href="structcompanies__client__hash.html">companies_client_hash</a> &gt; CompanyClientManager::getCompaniesClient </td>
+          <td class="memname">std::vector&lt; <a class="el" href="classCompanyClient.html">CompanyClient</a> &gt; CompanyClientManager::getCompanies </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -209,8 +212,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aee41f39ca747671fb8def64e453125e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee41f39ca747671fb8def64e453125e5">&#9670;&nbsp;</a></span>has() <span class="overload">[2/2]</span></h2>
+<a id="a8a0790cc37ec00dc5bc3a3141caf7edb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a0790cc37ec00dc5bc3a3141caf7edb">&#9670;&nbsp;</a></span>has() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +221,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool CompanyClientManager::has </td>
           <td>(</td>
-          <td class="paramtype">const long&#160;</td>
+          <td class="paramtype">long&#160;</td>
           <td class="paramname"><em>uuid</em></td><td>)</td>
           <td> const</td>
         </tr>

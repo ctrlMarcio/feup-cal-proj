@@ -98,8 +98,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac7e08bfb605642b62f9ed1288ecbe0f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#ac7e08bfb605642b62f9ed1288ecbe0f1">CompanyClient</a> (std::string name, <a class="el" href="classCompanyRepresentative.html">CompanyRepresentative</a> representative, <a class="el" href="classLocation.html">Location</a> headquarters)</td></tr>
 <tr class="memdesc:ac7e08bfb605642b62f9ed1288ecbe0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the company with all its attributes.  <a href="#ac7e08bfb605642b62f9ed1288ecbe0f1">More...</a><br /></td></tr>
 <tr class="separator:ac7e08bfb605642b62f9ed1288ecbe0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0097f429b0c03ad83a56efc31f6b729"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#ad0097f429b0c03ad83a56efc31f6b729">getUUID</a> () const</td></tr>
+<tr class="memdesc:ad0097f429b0c03ad83a56efc31f6b729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the UUID.  <a href="#ad0097f429b0c03ad83a56efc31f6b729">More...</a><br /></td></tr>
+<tr class="separator:ad0097f429b0c03ad83a56efc31f6b729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84f94c6f43feca7fbb73331d3fa21e1b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#a84f94c6f43feca7fbb73331d3fa21e1b">getName</a> () const</td></tr>
-<tr class="memdesc:a84f94c6f43feca7fbb73331d3fa21e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the UUID.  <a href="#a84f94c6f43feca7fbb73331d3fa21e1b">More...</a><br /></td></tr>
+<tr class="memdesc:a84f94c6f43feca7fbb73331d3fa21e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the company's name.  <a href="#a84f94c6f43feca7fbb73331d3fa21e1b">More...</a><br /></td></tr>
 <tr class="separator:a84f94c6f43feca7fbb73331d3fa21e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefd0ec72d7695fc7ff19c5d43091f4dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCompanyRepresentative.html">CompanyRepresentative</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#aefd0ec72d7695fc7ff19c5d43091f4dc">getRepresentative</a> () const</td></tr>
 <tr class="memdesc:aefd0ec72d7695fc7ff19c5d43091f4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the company_representative.  <a href="#aefd0ec72d7695fc7ff19c5d43091f4dc">More...</a><br /></td></tr>
@@ -122,9 +125,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae21eda7068020bf806f4f18baf46391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#aae21eda7068020bf806f4f18baf46391">setVehicleNumber</a> (int vehicleNumber)</td></tr>
 <tr class="memdesc:aae21eda7068020bf806f4f18baf46391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of used vehicles by the company.  <a href="#aae21eda7068020bf806f4f18baf46391">More...</a><br /></td></tr>
 <tr class="separator:aae21eda7068020bf806f4f18baf46391"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0097f429b0c03ad83a56efc31f6b729"><td class="memItemLeft" align="right" valign="top"><a id="ad0097f429b0c03ad83a56efc31f6b729"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>getUUID</b> () const</td></tr>
-<tr class="separator:ad0097f429b0c03ad83a56efc31f6b729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37008f9275da11b15522162bd7114426"><td class="memItemLeft" align="right" valign="top"><a id="a37008f9275da11b15522162bd7114426"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;rhs) const</td></tr>
 <tr class="separator:a37008f9275da11b15522162bd7114426"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,10 +241,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
       </table>
 </div><div class="memdoc">
 
-<p>Gets the UUID. </p>
-<dl class="section return"><dt>Returns</dt><dd>the UUID Gets the company's name.</dd>
-<dd>
-the company name </dd></dl>
+<p>Gets the company's name. </p>
+<dl class="section return"><dt>Returns</dt><dd>the company name </dd></dl>
 
 </div>
 </div>
@@ -285,6 +283,26 @@ the company name </dd></dl>
 
 <p>Gets the company_representative. </p>
 <dl class="section return"><dt>Returns</dt><dd>the company_representative </dd></dl>
+
+</div>
+</div>
+<a id="ad0097f429b0c03ad83a56efc31f6b729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0097f429b0c03ad83a56efc31f6b729">&#9670;&nbsp;</a></span>getUUID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long CompanyClient::getUUID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the UUID. </p>
+<dl class="section return"><dt>Returns</dt><dd>the UUID </dd></dl>
 
 </div>
 </div>

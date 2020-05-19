@@ -8,7 +8,6 @@ var hierarchy =
     [ "AuthUserManager", "classAuthUserManager.html", null ],
     [ "Bootstrap", "classBootstrap.html", null ],
     [ "Cluster", "classCluster.html", null ],
-    [ "companies_client_hash", "structcompanies__client__hash.html", null ],
     [ "Company", "classCompany.html", null ],
     [ "CompanyClient", "classCompanyClient.html", null ],
     [ "CompanyClientManager", "classCompanyClientManager.html", null ],
@@ -34,6 +33,7 @@ var hierarchy =
       [ "AdministratorUI", "classAdministratorUI.html", null ],
       [ "HomeUI", "classHomeUI.html", null ],
       [ "LoginUI", "classLoginUI.html", null ],
+      [ "ModifyCompanyVehiclesUI", "classModifyCompanyVehiclesUI.html", null ],
       [ "ModifyVehiclesUI", "classModifyVehiclesUI.html", null ]
     ] ],
     [ "UIManager", "classUIManager.html", null ],

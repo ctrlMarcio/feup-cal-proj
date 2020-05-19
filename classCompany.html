@@ -95,12 +95,9 @@ $(document).ready(function(){initNavTree('classCompany.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0079757c631a1183723fcfd389d973c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a0079757c631a1183723fcfd389d973c0">Company</a> (std::string name, <a class="el" href="classLocation.html">Location</a> garageLocation, <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; graph, long vehicleNumber)</td></tr>
-<tr class="memdesc:a0079757c631a1183723fcfd389d973c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes an instance of a <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> given a name and a number of vehicles.  <a href="#a0079757c631a1183723fcfd389d973c0">More...</a><br /></td></tr>
-<tr class="separator:a0079757c631a1183723fcfd389d973c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96d893970b44ae285bb7d2d356bbfcbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a96d893970b44ae285bb7d2d356bbfcbf">updateVehicleNumber</a> (long vehicleNumber)</td></tr>
-<tr class="memdesc:a96d893970b44ae285bb7d2d356bbfcbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies and updates the vehicle number.  <a href="#a96d893970b44ae285bb7d2d356bbfcbf">More...</a><br /></td></tr>
-<tr class="separator:a96d893970b44ae285bb7d2d356bbfcbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c73cdfbfc0eba73da6281d20138bfc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a5c73cdfbfc0eba73da6281d20138bfc6">Company</a> (std::string name, const <a class="el" href="classLocation.html">Location</a> &amp;garageLocation, <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; graph, long vehicleNumber)</td></tr>
+<tr class="memdesc:a5c73cdfbfc0eba73da6281d20138bfc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes an instance of a <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> given a name and a number of vehicles.  <a href="#a5c73cdfbfc0eba73da6281d20138bfc6">More...</a><br /></td></tr>
+<tr class="separator:a5c73cdfbfc0eba73da6281d20138bfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6df439e6a9aa92a4042bcbf6fc3a34a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCompanyClientManager.html">CompanyClientManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a6df439e6a9aa92a4042bcbf6fc3a34a6">getCompanyClientManager</a> ()</td></tr>
 <tr class="memdesc:a6df439e6a9aa92a4042bcbf6fc3a34a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the company client manager.  <a href="#a6df439e6a9aa92a4042bcbf6fc3a34a6">More...</a><br /></td></tr>
 <tr class="separator:a6df439e6a9aa92a4042bcbf6fc3a34a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,6 +113,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a41325b2fc0e371641aa3ab125f46ed98"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a41325b2fc0e371641aa3ab125f46ed98">getGarageLocation</a> () const</td></tr>
 <tr class="memdesc:a41325b2fc0e371641aa3ab125f46ed98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the garage location of the company.  <a href="#a41325b2fc0e371641aa3ab125f46ed98">More...</a><br /></td></tr>
 <tr class="separator:a41325b2fc0e371641aa3ab125f46ed98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604b3cd7c6b73ccb6833387f88fe4d93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a604b3cd7c6b73ccb6833387f88fe4d93">setVehicleNumber</a> (long vehicleNumber)</td></tr>
+<tr class="memdesc:a604b3cd7c6b73ccb6833387f88fe4d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies and updates the vehicle number.  <a href="#a604b3cd7c6b73ccb6833387f88fe4d93">More...</a><br /></td></tr>
+<tr class="separator:a604b3cd7c6b73ccb6833387f88fe4d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2139ddee925f0c83925c3ce18274d91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#ab2139ddee925f0c83925c3ce18274d91">setVehicleNumber</a> (<a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;companyClient, long companyVehicleNumber)</td></tr>
+<tr class="memdesc:ab2139ddee925f0c83925c3ce18274d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies and updates the vehicle number for a specific company.  <a href="#ab2139ddee925f0c83925c3ce18274d91">More...</a><br /></td></tr>
+<tr class="separator:ab2139ddee925f0c83925c3ce18274d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78ae1e1bcab98d79d8c9c7748c83ae4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a78ae1e1bcab98d79d8c9c7748c83ae4c">getGraph</a> ()</td></tr>
 <tr class="memdesc:a78ae1e1bcab98d79d8c9c7748c83ae4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the world graph.  <a href="#a78ae1e1bcab98d79d8c9c7748c83ae4c">More...</a><br /></td></tr>
 <tr class="separator:a78ae1e1bcab98d79d8c9c7748c83ae4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,8 +127,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Represents a company. </p>
 <p>The company is responsible for managing its locations, administrators and company clients. Also holds the company's vehicles and garage location. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0079757c631a1183723fcfd389d973c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0079757c631a1183723fcfd389d973c0">&#9670;&nbsp;</a></span>Company()</h2>
+<a id="a5c73cdfbfc0eba73da6281d20138bfc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c73cdfbfc0eba73da6281d20138bfc6">&#9670;&nbsp;</a></span>Company()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,7 +142,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classLocation.html">Location</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
           <td class="paramname"><em>garageLocation</em>, </td>
         </tr>
         <tr>
@@ -296,14 +299,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a96d893970b44ae285bb7d2d356bbfcbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96d893970b44ae285bb7d2d356bbfcbf">&#9670;&nbsp;</a></span>updateVehicleNumber()</h2>
+<a id="a604b3cd7c6b73ccb6833387f88fe4d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a604b3cd7c6b73ccb6833387f88fe4d93">&#9670;&nbsp;</a></span>setVehicleNumber() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Company::updateVehicleNumber </td>
+          <td class="memname">bool Company::setVehicleNumber </td>
           <td>(</td>
           <td class="paramtype">long&#160;</td>
           <td class="paramname"><em>vehicleNumber</em></td><td>)</td>
@@ -319,7 +322,45 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true, if the vechile number was successful updated. false, otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the vehicle number was successful updated. false, otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ab2139ddee925f0c83925c3ce18274d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2139ddee925f0c83925c3ce18274d91">&#9670;&nbsp;</a></span>setVehicleNumber() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Company::setVehicleNumber </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;&#160;</td>
+          <td class="paramname"><em>companyClient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>companyVehicleNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies and updates the vehicle number for a specific company. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">companyClient</td><td>the company </td></tr>
+    <tr><td class="paramname">companyVehicleNumber</td><td>the new vehicle number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the vehicle number was successful updated. false, otherwise </dd></dl>
 
 </div>
 </div>

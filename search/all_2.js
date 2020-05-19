@@ -2,8 +2,7 @@ var searchData=
 [
   ['clear',['clear',['../classCluster.html#a3dee8527d699a26165f7ca7d6913fe19',1,'Cluster']]],
   ['cluster',['Cluster',['../classCluster.html',1,'']]],
-  ['companies_5fclient_5fhash',['companies_client_hash',['../structcompanies__client__hash.html',1,'']]],
-  ['company',['Company',['../classCompany.html',1,'Company'],['../classCompany.html#a0079757c631a1183723fcfd389d973c0',1,'Company::Company()']]],
+  ['company',['Company',['../classCompany.html',1,'Company'],['../classCompany.html#a5c73cdfbfc0eba73da6281d20138bfc6',1,'Company::Company()']]],
   ['company_5frepresentative',['COMPANY_REPRESENTATIVE',['../classAuthUser.html#a0b70a461cd3e85938afefc817bceaae2',1,'AuthUser']]],
   ['companyclient',['CompanyClient',['../classCompanyClient.html',1,'CompanyClient'],['../classCompanyClient.html#ac7e08bfb605642b62f9ed1288ecbe0f1',1,'CompanyClient::CompanyClient()']]],
   ['companyclientmanager',['CompanyClientManager',['../classCompanyClientManager.html',1,'CompanyClientManager'],['../classCompanyClientManager.html#a607c18a5e2033dad0fb4be216965fa0e',1,'CompanyClientManager::CompanyClientManager()']]],

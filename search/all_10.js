@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['setvehiclenumber',['setVehicleNumber',['../classCompanyClient.html#aae21eda7068020bf806f4f18baf46391',1,'CompanyClient']]],
+  ['setvehiclenumber',['setVehicleNumber',['../classCompany.html#a604b3cd7c6b73ccb6833387f88fe4d93',1,'Company::setVehicleNumber(long vehicleNumber)'],['../classCompany.html#ab2139ddee925f0c83925c3ce18274d91',1,'Company::setVehicleNumber(CompanyClient &amp;companyClient, long companyVehicleNumber)'],['../classCompanyClient.html#aae21eda7068020bf806f4f18baf46391',1,'CompanyClient::setVehicleNumber()']]],
   ['split',['split',['../namespacestring__util.html#a82fbf5aa0c2027c285bb89f011e59a89',1,'string_util']]],
   ['string_5futil',['string_util',['../namespacestring__util.html',1,'']]]
 ];

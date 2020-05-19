@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="CompanyClient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCompanyClient.html",tooltip="Represents a company that might benefit from BosHbus services. "];
+  Node0 [label="CompanyClientManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCompanyClientManager.html",tooltip="Represents the Company Client&#39;s Manager. "];
 }
