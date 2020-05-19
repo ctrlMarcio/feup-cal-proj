@@ -6,9 +6,9 @@ int main() {
     AuthUserManager userManager;
     CurrentSession session(userManager);
 
-    Bootstrap bs("../../maps");
+    Bootstrap bs("../../resources/GridGraphs");
 
-    Company company = bs.buildCompany("BosHBus", 90379359, 2);
+    Company company = bs.buildCompany("BosHBus", 0, 2);
 
     UIManager uiManager(userManager, session, company);
 

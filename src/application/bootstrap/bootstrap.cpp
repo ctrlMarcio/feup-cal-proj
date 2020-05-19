@@ -10,7 +10,7 @@ const std::string Bootstrap::NODES_FILE = "nodes.txt";
 const std::string Bootstrap::EDGES_FILE = "edges.txt";
 
 Bootstrap::Bootstrap(const std::string& directory) {
-    this->appendToGraph(directory, "Portugal");
+    this->appendToGraph(directory, "Grid graphs");
 }
 
 void Bootstrap::appendToGraph(const std::string &directory, const std::string &country) {
@@ -55,13 +55,11 @@ void Bootstrap::appendToGraph(const std::string &directory, const std::string &c
             cout << "Reading remaining from " << country << "." << endl;
             this->append(this->graph, nodesFile, edgesFile, country);
             cout << "Read remaining " << graph.verticesCount() - old << " nodes from " << country << "." << endl;
-        } else {
-            cout << "Can't append remaining from " << countryDir << "." << endl;
         }
 
         closedir(dir);
 
-        cout << "\rRead a total of " << graph.verticesCount() - before << " from " << country << "." << endl;
+        cout << "\rRead a total of " << graph.verticesCount() - before << " nodes from " << country << "." << endl;
     } else {
         cerr << directory << endl;
         throw InvalidDirectoryException(directory);
@@ -101,30 +99,50 @@ void Bootstrap::readNodes(Graph<Location> &graph, const std::string &fileName, c
     }
 
     std::string line;
+    std::getline(file, line); // reads the first, useless line
+
     while (std::getline(file, line)) {
         // example: (301415137, 546146.1558010778, 4601058.475980306, 41.5598669, -8.446596)
 
         // gets all elements
         std::vector<std::string> elements = util_string::split(line, DELIMITER);
+        bool isComplete = elements.size() == 5;
+
         std::string idStr = elements[0];    // (301415137
         std::string xStr = elements[1];     //  546146.1558010778
         std::string yStr = elements[2];     //  4601058.475980306
-        std::string latStr = elements[3];   //  41.5598669
-        std::string lonStr = elements[4];   //  -8.446596)
+        std::string latStr;
+        std::string lonStr;
+
+        if (isComplete) {
+            latStr = elements[3];   //  41.5598669
+            lonStr = elements[4];   //  -8.446596)
+        }
 
         // removes the clutter in the strings
         idStr = idStr.substr(1, idStr.size() - 1);  // 301415137
-        lonStr = lonStr.substr(0, lonStr.size() - 1); // -8.44659
+
+        if (isComplete)
+            lonStr = lonStr.substr(0, lonStr.size() - 1); // -8.44659
+        else
+            yStr = yStr.substr(0, yStr.size() - 1);
+
+        Location location;
 
         // casts to numbers
         long id = stol(idStr);
         double x = stod(xStr);
         double y = stod(yStr);
-        double lat = stod(latStr);
-        double lon = stod(lonStr);
 
-        // creates a location
-        Location location(id, city, x, y, lat, lon);
+        if (isComplete) {
+            double lat = stod(latStr);
+            double lon = stod(lonStr);
+
+            // creates a location
+            location = Location(id, city, x, y, lat, lon);
+        } else {
+            location = Location(id, city, x, y);
+        }
 
         // add to the graph
         if (mutex) mutex->lock();
