@@ -32,5 +32,6 @@ var searchData=
   ['getx',['getX',['../classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7',1,'Location']]],
   ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]],
   ['graph',['Graph',['../classGraph.html',1,'']]],
-  ['graph_3c_20location_20_3e',['Graph&lt; Location &gt;',['../classGraph.html',1,'']]]
+  ['graph_3c_20location_20_3e',['Graph&lt; Location &gt;',['../classGraph.html',1,'']]],
+  ['graph_5freduction',['graph_reduction',['../namespacealgorithm.html#ab54d53eddfe0f6731da17c1e7ff6af76',1,'algorithm']]]
 ];

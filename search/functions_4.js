@@ -30,5 +30,6 @@ var searchData=
   ['getvertices',['getVertices',['../classGraph.html#a441181b6c9540dc77721ec9c9f9eec81',1,'Graph']]],
   ['getweight',['getWeight',['../classEdge.html#a3df378e283d6c8be5be4170ac8d7f4e8',1,'Edge']]],
   ['getx',['getX',['../classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7',1,'Location']]],
-  ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]]
+  ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]],
+  ['graph_5freduction',['graph_reduction',['../namespacealgorithm.html#ab54d53eddfe0f6731da17c1e7ff6af76',1,'algorithm']]]
 ];

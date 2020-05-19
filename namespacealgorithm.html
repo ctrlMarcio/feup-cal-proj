@@ -103,6 +103,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a85aa3cf2e6f98c745bc9f864b3c63b7b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classTrio.html">Trio</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a85aa3cf2e6f98c745bc9f864b3c63b7b">getPath</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;simplifiedGraph, const T &amp;source, const T &amp;destination)</td></tr>
 <tr class="memdesc:a85aa3cf2e6f98c745bc9f864b3c63b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the path for a simplified graph, a garage and an headquarters location.  <a href="#a85aa3cf2e6f98c745bc9f864b3c63b7b">More...</a><br /></td></tr>
 <tr class="separator:a85aa3cf2e6f98c745bc9f864b3c63b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab54d53eddfe0f6731da17c1e7ff6af76"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ab54d53eddfe0f6731da17c1e7ff6af76"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classGraph.html">Graph</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#ab54d53eddfe0f6731da17c1e7ff6af76">graph_reduction</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; graph, const std::vector&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;locations)</td></tr>
+<tr class="memdesc:ab54d53eddfe0f6731da17c1e7ff6af76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the reduced graph from a given graph.  <a href="#ab54d53eddfe0f6731da17c1e7ff6af76">More...</a><br /></td></tr>
+<tr class="separator:ab54d53eddfe0f6731da17c1e7ff6af76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad897983fe3b451e895a20a1425069e18"><td class="memTemplParams" colspan="2"><a id="ad897983fe3b451e895a20a1425069e18"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad897983fe3b451e895a20a1425069e18"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>dijkstra</b> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;gra, const <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &amp;sourceVertex)</td></tr>
+<tr class="separator:ad897983fe3b451e895a20a1425069e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains useful and required graph-related algorithms. </p>
@@ -157,6 +165,46 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the path </dd></dl>
+
+</div>
+</div>
+<a id="ab54d53eddfe0f6731da17c1e7ff6af76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54d53eddfe0f6731da17c1e7ff6af76">&#9670;&nbsp;</a></span>graph_reduction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraph.html">Graph</a>&lt;T&gt; algorithm::graph_reduction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>locations</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the reduced graph from a given graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>graph to be reduced </td></tr>
+    <tr><td class="paramname">vector</td><td>vertexes of the reduced graph </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the reduced graph </dd></dl>
 
 </div>
 </div>
