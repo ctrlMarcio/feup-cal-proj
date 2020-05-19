@@ -98,12 +98,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0079757c631a1183723fcfd389d973c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a0079757c631a1183723fcfd389d973c0">Company</a> (std::string name, <a class="el" href="classLocation.html">Location</a> garageLocation, <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; graph, long vehicleNumber)</td></tr>
 <tr class="memdesc:a0079757c631a1183723fcfd389d973c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes an instance of a <a class="el" href="classCompany.html" title="Represents a company. ">Company</a> given a name and a number of vehicles.  <a href="#a0079757c631a1183723fcfd389d973c0">More...</a><br /></td></tr>
 <tr class="separator:a0079757c631a1183723fcfd389d973c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96d893970b44ae285bb7d2d356bbfcbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a96d893970b44ae285bb7d2d356bbfcbf">updateVehicleNumber</a> (long vehicleNumber)</td></tr>
+<tr class="memdesc:a96d893970b44ae285bb7d2d356bbfcbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies and updates the vehicle number.  <a href="#a96d893970b44ae285bb7d2d356bbfcbf">More...</a><br /></td></tr>
+<tr class="separator:a96d893970b44ae285bb7d2d356bbfcbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df439e6a9aa92a4042bcbf6fc3a34a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCompanyClientManager.html">CompanyClientManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a6df439e6a9aa92a4042bcbf6fc3a34a6">getCompanyClientManager</a> ()</td></tr>
+<tr class="memdesc:a6df439e6a9aa92a4042bcbf6fc3a34a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the company client manager.  <a href="#a6df439e6a9aa92a4042bcbf6fc3a34a6">More...</a><br /></td></tr>
+<tr class="separator:a6df439e6a9aa92a4042bcbf6fc3a34a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64f6c13dd059f834a0f35ed8faeded64"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a64f6c13dd059f834a0f35ed8faeded64">getName</a> () const</td></tr>
 <tr class="memdesc:a64f6c13dd059f834a0f35ed8faeded64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of the company.  <a href="#a64f6c13dd059f834a0f35ed8faeded64">More...</a><br /></td></tr>
 <tr class="separator:a64f6c13dd059f834a0f35ed8faeded64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab64bb76579224279daa80ac264850365"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#ab64bb76579224279daa80ac264850365">getVehicleNumber</a> () const</td></tr>
 <tr class="memdesc:ab64bb76579224279daa80ac264850365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of vehicles of the company.  <a href="#ab64bb76579224279daa80ac264850365">More...</a><br /></td></tr>
 <tr class="separator:ab64bb76579224279daa80ac264850365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b19ee22c11955bdf114d33ccd70371f"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a9b19ee22c11955bdf114d33ccd70371f">getUsedVehiclesNumber</a> () const</td></tr>
+<tr class="memdesc:a9b19ee22c11955bdf114d33ccd70371f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of vehicles already in use of the company.  <a href="#a9b19ee22c11955bdf114d33ccd70371f">More...</a><br /></td></tr>
+<tr class="separator:a9b19ee22c11955bdf114d33ccd70371f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41325b2fc0e371641aa3ab125f46ed98"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompany.html#a41325b2fc0e371641aa3ab125f46ed98">getGarageLocation</a> () const</td></tr>
 <tr class="memdesc:a41325b2fc0e371641aa3ab125f46ed98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the garage location of the company.  <a href="#a41325b2fc0e371641aa3ab125f46ed98">More...</a><br /></td></tr>
 <tr class="separator:a41325b2fc0e371641aa3ab125f46ed98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +176,26 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6df439e6a9aa92a4042bcbf6fc3a34a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df439e6a9aa92a4042bcbf6fc3a34a6">&#9670;&nbsp;</a></span>getCompanyClientManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCompanyClientManager.html">CompanyClientManager</a> &amp; Company::getCompanyClientManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the company client manager. </p>
+<dl class="section return"><dt>Returns</dt><dd>the company client manager </dd></dl>
+
+</div>
+</div>
 <a id="a41325b2fc0e371641aa3ab125f46ed98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41325b2fc0e371641aa3ab125f46ed98">&#9670;&nbsp;</a></span>getGarageLocation()</h2>
 
@@ -227,6 +256,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9b19ee22c11955bdf114d33ccd70371f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b19ee22c11955bdf114d33ccd70371f">&#9670;&nbsp;</a></span>getUsedVehiclesNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Company::getUsedVehiclesNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the number of vehicles already in use of the company. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of vehicles already in use of the company </dd></dl>
+
+</div>
+</div>
 <a id="ab64bb76579224279daa80ac264850365"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab64bb76579224279daa80ac264850365">&#9670;&nbsp;</a></span>getVehicleNumber()</h2>
 
@@ -244,6 +293,33 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the number of vehicles of the company. </p>
 <dl class="section return"><dt>Returns</dt><dd>the number of vehicles of the company </dd></dl>
+
+</div>
+</div>
+<a id="a96d893970b44ae285bb7d2d356bbfcbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96d893970b44ae285bb7d2d356bbfcbf">&#9670;&nbsp;</a></span>updateVehicleNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Company::updateVehicleNumber </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>vehicleNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies and updates the vehicle number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vehicleNumber</td><td>the new vehicle number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the vechile number was successful updated. false, otherwise </dd></dl>
 
 </div>
 </div>

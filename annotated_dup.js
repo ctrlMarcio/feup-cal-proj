@@ -26,6 +26,7 @@ var annotated_dup =
     [ "InvalidVertexException", "classInvalidVertexException.html", "classInvalidVertexException" ],
     [ "Location", "classLocation.html", "classLocation" ],
     [ "LoginUI", "classLoginUI.html", "classLoginUI" ],
+    [ "ModifyVehiclesUI", "classModifyVehiclesUI.html", "classModifyVehiclesUI" ],
     [ "MutablePriorityQueue", "classMutablePriorityQueue.html", "classMutablePriorityQueue" ],
     [ "Trio", "classTrio.html", "classTrio" ],
     [ "UI", "classUI.html", "classUI" ],
