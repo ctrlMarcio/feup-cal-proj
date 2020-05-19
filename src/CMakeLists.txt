@@ -5,7 +5,7 @@ add_library(feup-cal-proj main.cpp
         util/graph/mutable_priority_queue.h
         util/graph/cluster.cpp util/graph/cluster.h
         util/string/ui_util.h util/string/ui_util.cpp
-        util/string/util_string.cpp util/string/util_string.h
+        util/string/string_util.cpp util/string/string_util.h
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/algorithm/trio.h util/algorithm/trio.tpp
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h
@@ -37,7 +37,7 @@ add_executable(application main.cpp
         util/graph/mutable_priority_queue.h
         util/graph/cluster.cpp util/graph/cluster.h
         util/string/ui_util.h util/string/ui_util.cpp
-        util/string/util_string.cpp util/string/util_string.h
+        util/string/string_util.cpp util/string/string_util.h
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/algorithm/trio.h util/algorithm/trio.tpp
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h

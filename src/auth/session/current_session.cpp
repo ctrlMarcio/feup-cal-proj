@@ -26,12 +26,16 @@ bool CurrentSession::login(const std::string &email, const std::string &password
     return true;
 }
 
+bool CurrentSession::login(const AuthUser &user) {
+    return login(user.getEmail(), user.getPassword());
+}
+
 bool CurrentSession::logout() {
     if (!logged) return false;
     logged = false;
     return true;
 }
 
-bool CurrentSession::isLogged() {
+bool CurrentSession::isLogged() const {
     return logged;
 }

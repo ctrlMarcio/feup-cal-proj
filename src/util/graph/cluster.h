@@ -1,7 +1,6 @@
 #ifndef FEUP_CAL_PROJ_CLUSTER_H
 #define FEUP_CAL_PROJ_CLUSTER_H
 
-
 #include <vector>
 #include <unordered_set>
 

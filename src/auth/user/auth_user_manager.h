@@ -33,10 +33,10 @@ public:
     /*!
      * Adds a user to the list.
      *
-     * @param user  reference to a user
+     * @param user  to a user
      * @return true, if the user is successfully added. false, otherwise
      */
-    bool add(AuthUser &user);
+    bool add(AuthUser user);
 
     /*!
      * Removes a user from the list.

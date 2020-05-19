@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <utility>
 #include "ui_util.h"
+#include "string_util.h"
 
 std::string ui_util::getCurrentDate() {
     auto now = std::chrono::system_clock::now();
@@ -56,6 +57,20 @@ ui_util::Option ui_util::make_empty_line() {
 
 ui_util::Option ui_util::make_line(std::string desc) {
     return Option(std::move(desc));
+}
+
+std::string ui_util::getString(const std::string &description) {
+    std::cout << description;
+
+    std::string stringOption;
+    std::getline(std::cin, stringOption);
+
+    if (string_util::trim(stringOption).empty()) {
+        std::cout << std::endl << "The input is empty, try again..." << std::endl << std::endl;
+        stringOption = ui_util::getString(description);
+    }
+
+    return stringOption;
 }
 
 const short ui_util::Option::NEWLINE = 0;

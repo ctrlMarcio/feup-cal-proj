@@ -1,15 +1,14 @@
 #include "home_ui.h"
 #include "../login/login_ui.h"
 
-HomeUI::HomeUI(UIManager &uiManager) : uiManager(uiManager) {}
-
-void HomeUI::run() {
-    std::cout << std::endl;
-    std::cout << "Welcome to the " << uiManager.getCompany().getName() << " terminal interface!" << std::endl;
-
-    std::vector<ui_util::Option> options;
+HomeUI::HomeUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_option(1, "Login"));
     options.push_back(ui_util::make_option(0, "Quit"));
+}
+
+void HomeUI::run() {
+    std::cout << uiManager.getHeader();
+    std::cout << "Welcome to the " << uiManager.getCompany().getName() << " terminal interface!" << std::endl;
 
     int option = ui_util::getOption(options);
 
@@ -23,4 +22,8 @@ void HomeUI::run() {
         default:
             break;
     }
+
+    if (option != 0)
+        run();
+
 }

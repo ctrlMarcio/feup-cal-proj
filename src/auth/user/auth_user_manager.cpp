@@ -1,7 +1,7 @@
 #include <algorithm>
 #include "auth_user_manager.h"
 
-bool AuthUserManager::add(AuthUser &user) {
+bool AuthUserManager::add(AuthUser user) {
     if (has(user)) return false;
     return users.insert(user).second;
 }

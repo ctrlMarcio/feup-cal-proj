@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <util/string/util_string.h>
+#include <util/string/string_util.h>
 
 using testing::Eq;
 
@@ -8,7 +8,7 @@ TEST(util_string, split) {
     std::string backup(string);
     char delimiter = ' ';
 
-    std::vector<std::string> res = util_string::split(string, delimiter);
+    std::vector<std::string> res = string_util::split(string, delimiter);
     std::vector<std::string> expected = {"What", "to", "do?"};
 
     ASSERT_EQ(res.size(), 3);

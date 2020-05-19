@@ -105,7 +105,7 @@ void Bootstrap::readNodes(Graph<Location> &graph, const std::string &fileName, c
         // example: (301415137, 546146.1558010778, 4601058.475980306, 41.5598669, -8.446596)
 
         // gets all elements
-        std::vector<std::string> elements = util_string::split(line, DELIMITER);
+        std::vector<std::string> elements = string_util::split(line, DELIMITER);
         bool isComplete = elements.size() == 5;
 
         std::string idStr = elements[0];    // (301415137
@@ -170,7 +170,7 @@ bool Bootstrap::readEdges(Graph<Location> &graph, const string &fileName, std::m
         // example: (384994721, 384994722)
 
         // gets all elements
-        std::vector<std::string> elements = util_string::split(line, DELIMITER);
+        std::vector<std::string> elements = string_util::split(line, DELIMITER);
         std::string srcStr = elements[0];   // (384994721
         std::string dstStr = elements[1];   //  384994722)
 

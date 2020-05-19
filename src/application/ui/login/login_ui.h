@@ -11,6 +11,10 @@ public:
 
 private:
     UIManager &uiManager;
+
+    std::pair<std::string, bool> getEmail();
+
+    std::pair<AuthUser, bool> getPassword(const std::string &user);
 };
 
 #endif //FEUP_CAL_PROJ_LOGIN_UI_H

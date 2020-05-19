@@ -12,6 +12,8 @@ public:
 
 private:
     UIManager &uiManager;
+
+    std::vector<ui_util::Option> options;
 };
 
 #endif //FEUP_CAL_PROJ_HOME_UI_H

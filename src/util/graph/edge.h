@@ -5,8 +5,6 @@
 
 #define INF std::numeric_limits<double>::max()
 
-using namespace std;
-
 template<class T>
 class Vertex;
 

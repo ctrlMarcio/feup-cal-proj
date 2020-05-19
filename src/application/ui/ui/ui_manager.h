@@ -17,6 +17,8 @@ public:
 
     AuthUserManager &getAuthUserManager() const;
 
+    std::string getHeader();
+
     void set(UI *ui);
 
 private:

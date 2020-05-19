@@ -16,9 +16,15 @@ AuthUserManager &UIManager::getAuthUserManager() const {
 }
 
 void UIManager::set(UI *ui) {
-    std::cout << std::endl << company.getName() << TAB << TAB << TAB << TAB << TAB << TAB << TAB
-              << ui_util::getCurrentDate()
-              << std::endl;
     ui->run();
     free(ui);
+}
+
+std::string UIManager::getHeader() {
+    std::stringstream stream;
+    stream << std::endl << company.getName() << TAB << TAB << TAB << TAB << TAB << TAB << TAB
+           << ui_util::getCurrentDate()
+           << std::endl
+           << std::endl;
+    return stream.str();
 }

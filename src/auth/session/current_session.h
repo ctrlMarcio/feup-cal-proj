@@ -30,8 +30,17 @@ public:
      *
      * @param email     the email
      * @param password  the password
+     * @return  true, if the user is successfully logged. false, otherwise
      */
     bool login(const std::string &email, const std::string &password);
+
+    /*!
+     * @brief Tries to login a user given its information.
+     *
+     * @param email     the user
+     * @return  true, if the user is successfully logged. false, otherwise
+     */
+    bool login(const AuthUser &user);
 
     /*!
      * @brief Logs out a user.
@@ -43,7 +52,7 @@ public:
      *
      * @return true, if a user is logged. false, otherwise
      */
-    bool isLogged();
+    bool isLogged() const;
 
 private:
     /*!

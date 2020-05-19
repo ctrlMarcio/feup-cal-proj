@@ -4,7 +4,7 @@
 #include <iostream>
 #include <iomanip>
 #include <algorithm>
-#include "../string/util_string.h"
+#include "../string/string_util.h"
 #include "../../model/location/location.h"
 #include "../../exception/invalid_file_exception.h"
 #include "../../exception/invalid_vertex_exception.h"
