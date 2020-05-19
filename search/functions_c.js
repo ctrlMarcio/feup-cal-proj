@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['updatecentroid',['updateCentroid',['../classCluster.html#ac27ba45e3da4e9f150b1114abc1b342f',1,'Cluster']]]
+  ['setvehiclenumber',['setVehicleNumber',['../classCompanyClient.html#aae21eda7068020bf806f4f18baf46391',1,'CompanyClient']]],
+  ['split',['split',['../namespacestring__util.html#a82fbf5aa0c2027c285bb89f011e59a89',1,'string_util']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
   ['setvehiclenumber',['setVehicleNumber',['../classCompanyClient.html#aae21eda7068020bf806f4f18baf46391',1,'CompanyClient']]],
-  ['split',['split',['../namespaceutil__string.html#a2b17e2398ebf2c2fc86197ac24e62d36',1,'util_string']]]
+  ['split',['split',['../namespacestring__util.html#a82fbf5aa0c2027c285bb89f011e59a89',1,'string_util']]],
+  ['string_5futil',['string_util',['../namespacestring__util.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['util_5fstring',['util_string',['../namespaceutil__string.html',1,'']]]
+  ['string_5futil',['string_util',['../namespacestring__util.html',1,'']]]
 ];

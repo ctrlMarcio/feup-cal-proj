@@ -1,8 +1,6 @@
 var annotated_dup =
 [
-    [ "ui_util", null, [
-      [ "Option", "classui__util_1_1Option.html", "classui__util_1_1Option" ]
-    ] ],
+    [ "ui_util", "namespaceui__util.html", "namespaceui__util" ],
     [ "Administrator", "classAdministrator.html", "classAdministrator" ],
     [ "administrator_hash", "structadministrator__hash.html", "structadministrator__hash" ],
     [ "AdministratorManager", "classAdministratorManager.html", "classAdministratorManager" ],

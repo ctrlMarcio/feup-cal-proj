@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weightto',['weightTo',['../classVertex.html#a845daede1a422d1ac3109a1903efca3a',1,'Vertex']]]
+  ['updatecentroid',['updateCentroid',['../classCluster.html#ac27ba45e3da4e9f150b1114abc1b342f',1,'Cluster']]]
 ];

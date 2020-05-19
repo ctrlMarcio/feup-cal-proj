@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['vertex',['Vertex',['../classVertex.html#a932e5b1a1ac43d071025b654e4476113',1,'Vertex']]],
-  ['verticescount',['verticesCount',['../classGraph.html#a8c6816310fb5b3e349b7d62dfc47efd7',1,'Graph']]]
+  ['trim',['trim',['../namespacestring__util.html#af758bdf29f149036fdcf923ece7b0077',1,'string_util']]]
 ];

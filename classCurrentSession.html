@@ -104,13 +104,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a1fa14ed5f4040985dac212e71e92ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurrentSession.html#a2a1fa14ed5f4040985dac212e71e92ed">login</a> (const std::string &amp;email, const std::string &amp;password)</td></tr>
 <tr class="memdesc:a2a1fa14ed5f4040985dac212e71e92ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to login a user given its information.  <a href="#a2a1fa14ed5f4040985dac212e71e92ed">More...</a><br /></td></tr>
 <tr class="separator:a2a1fa14ed5f4040985dac212e71e92ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fba031dd5a95a02975d9a1c3c2fa159"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurrentSession.html#a2fba031dd5a95a02975d9a1c3c2fa159">login</a> (const <a class="el" href="classAuthUser.html">AuthUser</a> &amp;user)</td></tr>
+<tr class="memdesc:a2fba031dd5a95a02975d9a1c3c2fa159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to login a user given its information.  <a href="#a2fba031dd5a95a02975d9a1c3c2fa159">More...</a><br /></td></tr>
+<tr class="separator:a2fba031dd5a95a02975d9a1c3c2fa159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f5c52f1a5ef349a910eb9d76dfbf7bb"><td class="memItemLeft" align="right" valign="top"><a id="a7f5c52f1a5ef349a910eb9d76dfbf7bb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurrentSession.html#a7f5c52f1a5ef349a910eb9d76dfbf7bb">logout</a> ()</td></tr>
 <tr class="memdesc:a7f5c52f1a5ef349a910eb9d76dfbf7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs out a user. <br /></td></tr>
 <tr class="separator:a7f5c52f1a5ef349a910eb9d76dfbf7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8c9a46c464e2e51278625b7de0c9ed4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurrentSession.html#ae8c9a46c464e2e51278625b7de0c9ed4">isLogged</a> ()</td></tr>
-<tr class="memdesc:ae8c9a46c464e2e51278625b7de0c9ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the logged status.  <a href="#ae8c9a46c464e2e51278625b7de0c9ed4">More...</a><br /></td></tr>
-<tr class="separator:ae8c9a46c464e2e51278625b7de0c9ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636f8a91ed9ffa554ce9eeb98210ccdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurrentSession.html#a636f8a91ed9ffa554ce9eeb98210ccdb">isLogged</a> () const</td></tr>
+<tr class="memdesc:a636f8a91ed9ffa554ce9eeb98210ccdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the logged status.  <a href="#a636f8a91ed9ffa554ce9eeb98210ccdb">More...</a><br /></td></tr>
+<tr class="separator:a636f8a91ed9ffa554ce9eeb98210ccdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the current session. </p>
@@ -171,8 +174,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="ae8c9a46c464e2e51278625b7de0c9ed4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8c9a46c464e2e51278625b7de0c9ed4">&#9670;&nbsp;</a></span>isLogged()</h2>
+<a id="a636f8a91ed9ffa554ce9eeb98210ccdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636f8a91ed9ffa554ce9eeb98210ccdb">&#9670;&nbsp;</a></span>isLogged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +184,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">bool CurrentSession::isLogged </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -192,7 +195,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <a id="a2a1fa14ed5f4040985dac212e71e92ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a1fa14ed5f4040985dac212e71e92ed">&#9670;&nbsp;</a></span>login()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1fa14ed5f4040985dac212e71e92ed">&#9670;&nbsp;</a></span>login() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,6 +228,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the user is successfully logged. false, otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a2fba031dd5a95a02975d9a1c3c2fa159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fba031dd5a95a02975d9a1c3c2fa159">&#9670;&nbsp;</a></span>login() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CurrentSession::login </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAuthUser.html">AuthUser</a> &amp;&#160;</td>
+          <td class="paramname"><em>user</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tries to login a user given its information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>the user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the user is successfully logged. false, otherwise </dd></dl>
 
 </div>
 </div>
