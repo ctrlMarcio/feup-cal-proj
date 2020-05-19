@@ -1,4 +1,5 @@
 #include "login_ui.h"
+#include "../administrator/administrator_ui.h"
 
 LoginUI::LoginUI(UIManager &uiManager) : uiManager(uiManager) {}
 
@@ -20,7 +21,7 @@ void LoginUI::run() {
 
     // Select role, redirect to specific UI
     if (authUser.getUserRole() == AuthUser::ADMINISTRATOR) {
-        std::cout << std::endl << "THIS IS AN ADMINISTRATOR" << std::endl;
+        uiManager.set(new AdministratorUI(uiManager));
     } else if (authUser.getUserRole() == AuthUser::COMPANY_REPRESENTATIVE) {
         std::cout << std::endl << "THIS IS A COMPANY REPRESENTATIVE" << std::endl;
     } else

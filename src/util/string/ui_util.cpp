@@ -3,7 +3,6 @@
 #include <sstream>
 #include <iostream>
 #include <algorithm>
-#include <utility>
 #include "ui_util.h"
 #include "string_util.h"
 
@@ -33,14 +32,14 @@ int ui_util::getOption(const std::vector<Option> &options) {
     try {
         option = std::stoi(stringOption, nullptr, 10);
     } catch (std::invalid_argument &e) {
-        std::cout << "That is not a valid option, try again..." << std::endl;
+        std::cout << std::endl << "That is not a valid option, try again..." << std::endl;
         option = getOption(options);
     }
 
     if (std::find_if(options.begin(), options.end(), [option](const Option &lhs) {
         return lhs.getOption() == option;
     }) == options.end()) {
-        std::cout << "That is not a valid option, try again..." << std::endl;
+        std::cout << std::endl << "That is not a valid option, try again..." << std::endl;
         option = getOption(options);
     }
 
