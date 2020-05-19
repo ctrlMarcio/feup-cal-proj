@@ -1,9 +1,10 @@
 #include "company_client.h"
 
-#include <utility>
+long CompanyClient::NUMBER_OF_COMPANIES = 1;
 
 CompanyClient::CompanyClient(std::string name, CompanyRepresentative representative, Location headquarters)
-        : name(std::move(name)), representative(std::move(representative)), headquarters(std::move(headquarters)), vehicleNumber(0), uuid(1) {}
+        : name(std::move(name)), representative(std::move(representative)), headquarters(std::move(headquarters)),
+          vehicleNumber(0), uuid(NUMBER_OF_COMPANIES++) {}
 
 std::string CompanyClient::getName() const {
     return this->name;
@@ -21,23 +22,20 @@ std::vector<Location> CompanyClient::getPickupPoints() const {
     return this->pickupPoints;
 }
 
-bool CompanyClient::addPickupPoint(const Location& location) {
-    for (auto i: pickupPoints)
-    {
-        if (i.getId()==location.getId())
+bool CompanyClient::addPickupPoint(const Location &location) {
+    for (const auto &i: pickupPoints) {
+        if (i.getId() == location.getId())
             return false;
     }
     pickupPoints.push_back(location);
     return true;
 }
 
-bool CompanyClient::removePickupPoint(const Location& location) {
+bool CompanyClient::removePickupPoint(const Location &location) {
     std::vector<Location>::iterator it;
     it = pickupPoints.begin();
-    for (auto i: pickupPoints)
-    {
-        if (i.getId()==location.getId())
-        {
+    for (auto i: pickupPoints) {
+        if (i.getId() == location.getId()) {
             pickupPoints.erase(it);
             return true;
         }
@@ -46,8 +44,7 @@ bool CompanyClient::removePickupPoint(const Location& location) {
     return false;
 }
 
-int CompanyClient::getVehicleNumber() const
-{
+int CompanyClient::getVehicleNumber() const {
     return this->vehicleNumber;
 }
 
@@ -66,3 +63,4 @@ bool CompanyClient::operator==(const CompanyClient &rhs) const {
 bool CompanyClient::operator!=(const CompanyClient &rhs) const {
     return !(rhs == *this);
 }
+

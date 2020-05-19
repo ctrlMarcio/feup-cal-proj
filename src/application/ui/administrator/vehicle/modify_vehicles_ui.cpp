@@ -23,7 +23,7 @@ bool ModifyVehiclesUI::modifyVehicles(long usedVehicles) {
 		std::cout << "There are " << usedVehicles << " vehicles already in use, try again..." << std::endl << std::endl;
 		return false;
 	} else {
-		if (this->uiManager.getCompany().updateVehicleNumber(vehicles)) {
+		if (this->uiManager.getCompany().setVehicleNumber(vehicles)) {
 			std::cout << "Updated!" << std::endl;
 			return true;
 		} else {

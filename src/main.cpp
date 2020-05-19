@@ -10,6 +10,12 @@ int main() {
 
     Company company = bs.buildCompany("BosHBus", 0, 2);
 
+    CompanyRepresentative companyRepresentative("lol", "a");
+
+    CompanyClient companyClient("ai limão", companyRepresentative, company.getGraph().getVertices()[3].get());
+
+    company.getCompanyClientManager().add(companyClient);
+
     userManager.add(AuthUser("a", "a", AuthUser::ADMINISTRATOR));
     userManager.add(AuthUser("b", "b", AuthUser::COMPANY_REPRESENTATIVE));
 

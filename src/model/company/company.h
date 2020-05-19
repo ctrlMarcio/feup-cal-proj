@@ -22,15 +22,7 @@ public:
      * @param vehicleNumber     the number of vehicles
      * @param graph             the world graph
      */
-    Company(std::string name, Location garageLocation, Graph<Location> graph, long vehicleNumber);
-
-    /**
-     * @brief Verifies and updates the vehicle number.
-     *
-     * @param vehicleNumber	the new vehicle number
-     * @return	true, if the vechile number was successful updated. false, otherwise
-     */
-    bool updateVehicleNumber(long vehicleNumber);
+    Company(std::string name, const Location& garageLocation, Graph<Location> graph, long vehicleNumber);
 
     /**
      * @brief Gets the company client manager.
@@ -66,6 +58,23 @@ public:
      * @return  the garage location
      */
     const Location &getGarageLocation() const;
+
+    /**
+     * @brief Verifies and updates the vehicle number.
+     *
+     * @param vehicleNumber     the new vehicle number
+     * @return true, if the vehicle number was successful updated. false, otherwise
+     */
+    bool setVehicleNumber(long vehicleNumber);
+
+    /**
+     * @brief Verifies and updates the vehicle number for a specific company.
+     *
+     * @param companyClient             the company
+     * @param companyVehicleNumber      the new vehicle number
+     * @return true, if the vehicle number was successful updated. false, otherwise
+     */
+    bool setVehicleNumber(CompanyClient &companyClient, long companyVehicleNumber);
 
     /**
      * @brief Gets the world graph

@@ -16,7 +16,7 @@ TEST(company_client_manager, has_test) {
     CompanyClient companyClient = createCompanyClientToAdd();
     companyClientManager.add(companyClient);
 
-    EXPECT_EQ(companyClientManager.getCompaniesClient().size(), 1);
+    EXPECT_EQ(companyClientManager.getCompanies().size(), 1);
     EXPECT_TRUE(companyClientManager.has(companyClient));
 }
 
@@ -26,5 +26,5 @@ TEST(company_client_manager, remove_test) {
     companyClientManager.add(companyClient);
     companyClientManager.remove(companyClient);
 
-    EXPECT_EQ(companyClientManager.getCompaniesClient().size(), 0);
+    EXPECT_EQ(companyClientManager.getCompanies().size(), 0);
 }

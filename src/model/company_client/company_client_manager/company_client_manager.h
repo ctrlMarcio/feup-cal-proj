@@ -5,19 +5,6 @@
 #include "../company_client.h"
 
 /**
- * @brief Redefinition of the default hash and equal function for the CompanyClient class.
- */
-struct companies_client_hash {
-    int operator()(const CompanyClient &obj) const {
-        return 37 * obj.getUUID();
-    }
-
-    bool operator()(const CompanyClient &companyClient1, const CompanyClient &companyClient2) const {
-        return companyClient1 == companyClient2;
-    }
-};
-
-/**
  * @brief   Represents the Company Client's Manager.
  */
 class CompanyClientManager {
@@ -34,19 +21,19 @@ public:
      */
     bool add(CompanyClient companyClient);
 
-	/**
-	 * @brief Removes company from companyClientSet vector.
-	 *
-	 * @return          true upon success, false otherwise
-	 */
-	bool remove(CompanyClient companyClient);
+    /**
+     * @brief Removes company from companyClientSet vector.
+     *
+     * @return          true upon success, false otherwise
+     */
+    bool remove(CompanyClient companyClient);
 
-	/**
-	 * @brief Verifies if the company is valid.
-	 *
-	 * @return          true upon success, false otherwise
-	 */
-	bool isValid(const CompanyClient &companyClient) const;
+    /**
+     * @brief Verifies if the company is valid.
+     *
+     * @return          true upon success, false otherwise
+     */
+    bool isValid(const CompanyClient &companyClient) const;
 
     /*!
     * Verifies if a company client is in the set or not.
@@ -62,27 +49,29 @@ public:
      * @param email the uuid of the company client to verify
      * @return true, if the company client is in the set. false, otherwise
      */
-    bool has(const long uuid) const;
+    bool has(long uuid) const;
 
     /**
      * @brief Gets company client's set.
      *
      * @return          company client's set
      */
-    std::unordered_set<CompanyClient, companies_client_hash> getCompaniesClient() const;
+    std::vector<CompanyClient> getCompanies() const;
 
-	/**
-	 * @brief Gets the number of vehicles already in use.
-	 *
-	 * @return	the number of vehicles already in use
-	 */
+    /**
+     * @brief Gets the number of vehicles already in use.
+     *
+     * @return	the number of vehicles already in use
+     */
     long getUsedVehiclesNumber() const;
+
+    CompanyClient *getCompany(long uuid);
 
 private:
     /**
      * @brief Company Client's set.
      */
-    std::unordered_set<CompanyClient, companies_client_hash> companiesClient;
+    std::vector<CompanyClient> companies;
 };
 
 

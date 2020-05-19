@@ -2,15 +2,15 @@
 
 #include <utility>
 
-Company::Company(std::string name, Location garageLocation, Graph<Location> graph, long vehicleNumber = 0) : name(
+Company::Company(std::string name, const Location &garageLocation, Graph<Location> graph, long vehicleNumber = 0)
+        : name(
         std::move(name)),
-                                                                                                             garageLocation(
-                                                                                                                     std::move(
-                                                                                                                             garageLocation)),
-                                                                                                             graph(std::move(
-                                                                                                                     graph)),
-                                                                                                             vehicleNumber(
-                                                                                                                     vehicleNumber) {
+          garageLocation(
+                  garageLocation),
+          graph(std::move(
+                  graph)),
+          vehicleNumber(
+                  vehicleNumber) {
 }
 
 const std::string &Company::getName() const {
@@ -30,17 +30,24 @@ Graph<Location> &Company::getGraph() {
 }
 
 long Company::getUsedVehiclesNumber() const {
-	return companyClientManager.getUsedVehiclesNumber();
+    return companyClientManager.getUsedVehiclesNumber();
 }
 
 CompanyClientManager &Company::getCompanyClientManager() {
-	return companyClientManager;
+    return companyClientManager;
 }
 
-bool Company::updateVehicleNumber(long vehicleNumber) {
-	if (vehicleNumber < this->getUsedVehiclesNumber())
-		return false;
+bool Company::setVehicleNumber(long vehicleNumber) {
+    if (vehicleNumber < this->getUsedVehiclesNumber())
+        return false;
 
-	this->vehicleNumber = vehicleNumber;
-	return true;
+    this->vehicleNumber = vehicleNumber;
+    return true;
+}
+
+bool Company::setVehicleNumber(CompanyClient &companyClient, long companyVehicleNumber) {
+    if (getUsedVehiclesNumber() - companyClient.getVehicleNumber() + companyVehicleNumber > getVehicleNumber())
+        return false;
+    companyClient.setVehicleNumber(vehicleNumber);
+    return true;
 }

@@ -25,7 +25,7 @@ public:
      *
      * @return          the UUID
      */
-    //UUID getUuid()
+    long getUUID() const;
 
     /**
      * @brief Gets the company's name.
@@ -60,14 +60,14 @@ public:
      *
      * @param location              the location wanted to be added to the pickup points vector
      */
-    bool addPickupPoint(const Location& location);
+    bool addPickupPoint(const Location &location);
 
     /**
      * @brief Removes a location from the pickup points vector.
      *
      * @param location              the location wanted to be removed from the pickup points vector
      */
-    bool removePickupPoint(const Location& location);
+    bool removePickupPoint(const Location &location);
 
     /**
      * @brief Gets the number of used vehicles by the company.
@@ -83,14 +83,13 @@ public:
      */
     void setVehicleNumber(int vehicleNumber);
 
-    // TODO subst long
-    long getUUID() const;
-
     bool operator==(const CompanyClient &rhs) const;
 
     bool operator!=(const CompanyClient &rhs) const;
 
 private:
+    static long NUMBER_OF_COMPANIES;
+
     /**
 	 * @brief The company name.
 	 */
@@ -119,7 +118,7 @@ private:
     /**
      * @brief The Company's identifier.
      */
-    long uuid; // TODO UUID
+    long uuid;
 };
 
 
