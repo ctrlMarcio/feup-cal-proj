@@ -4,6 +4,7 @@ var annotated_dup =
     [ "Administrator", "classAdministrator.html", "classAdministrator" ],
     [ "administrator_hash", "structadministrator__hash.html", "structadministrator__hash" ],
     [ "AdministratorManager", "classAdministratorManager.html", "classAdministratorManager" ],
+    [ "AdministratorUI", "classAdministratorUI.html", "classAdministratorUI" ],
     [ "auth_users_hash", "structauth__users__hash.html", "structauth__users__hash" ],
     [ "AuthUser", "classAuthUser.html", "classAuthUser" ],
     [ "AuthUserManager", "classAuthUserManager.html", "classAuthUserManager" ],

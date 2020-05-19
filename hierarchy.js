@@ -31,6 +31,7 @@ var hierarchy =
     ] ],
     [ "Trio< T >", "classTrio.html", null ],
     [ "UI", "classUI.html", [
+      [ "AdministratorUI", "classAdministratorUI.html", null ],
       [ "HomeUI", "classHomeUI.html", null ],
       [ "LoginUI", "classLoginUI.html", null ]
     ] ],

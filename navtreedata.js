@@ -26,7 +26,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"administrator_8h_source.html"
+"administrator_8h_source.html",
+"ui__manager_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

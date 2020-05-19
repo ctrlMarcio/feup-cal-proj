@@ -6,6 +6,7 @@ var searchData=
   ['administrator',['Administrator',['../classAdministrator.html',1,'Administrator'],['../classAuthUser.html#a599b4ae52a2da2b46ac55a25c6970aea',1,'AuthUser::ADMINISTRATOR()'],['../classAdministrator.html#a5cdcf84fbb63ad2413a82a5a3ab0dd3d',1,'Administrator::Administrator()']]],
   ['administrator_5fhash',['administrator_hash',['../structadministrator__hash.html',1,'']]],
   ['administratormanager',['AdministratorManager',['../classAdministratorManager.html',1,'AdministratorManager'],['../classAdministratorManager.html#a172ee105335c3a95eae921f7b399190b',1,'AdministratorManager::AdministratorManager()']]],
+  ['administratorui',['AdministratorUI',['../classAdministratorUI.html',1,'']]],
   ['algorithm',['algorithm',['../namespacealgorithm.html',1,'']]],
   ['appendtograph',['appendToGraph',['../classBootstrap.html#a6195560df85d10fb45578dcae0cda13c',1,'Bootstrap']]],
   ['auth_5fusers_5fhash',['auth_users_hash',['../structauth__users__hash.html',1,'']]],

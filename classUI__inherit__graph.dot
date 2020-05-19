@@ -4,7 +4,9 @@ digraph "UI"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node0 [label="UI",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="HomeUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHomeUI.html"];
+  Node1 [label="AdministratorUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAdministratorUI.html"];
   Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="LoginUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLoginUI.html"];
+  Node2 [label="HomeUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHomeUI.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="LoginUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLoginUI.html"];
 }
