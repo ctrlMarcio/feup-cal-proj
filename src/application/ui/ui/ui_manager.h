@@ -5,6 +5,7 @@
 #include "../../../auth/user/auth_user_manager.h"
 #include "../../../model/company/company.h"
 #include "../../../auth/session/current_session.h"
+#include "../../../util/string/ui_util.h"
 
 class UIManager {
 public:

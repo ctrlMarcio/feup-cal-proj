@@ -16,6 +16,7 @@ namespace util_string {
      * @return          the created vector
      */
     std::vector<std::string> split(std::string &string, char delimiter);
+
 }
 
 #endif //FEUP_CAL_PROJ_UTIL_STRING_H

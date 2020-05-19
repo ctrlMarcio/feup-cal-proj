@@ -1,8 +1,5 @@
-#include <iostream>
 #include "application/ui/ui/ui_manager.h"
-#include "auth/session/current_session.h"
 #include "application/bootstrap/bootstrap.h"
-#include "model/company/company.h"
 #include "application/ui/home/home_ui.h"
 
 int main() {
@@ -11,7 +8,7 @@ int main() {
 
     Bootstrap bs("../../maps");
 
-    Company company = bs.buildCompany("BoshHBus", 90379359, 2);
+    Company company = bs.buildCompany("BosHBus", 90379359, 2);
 
     UIManager uiManager(userManager, session, company);
 
