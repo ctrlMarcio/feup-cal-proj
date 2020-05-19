@@ -132,6 +132,22 @@ namespace ui_util {
      * @return  the string
      */
     std::string getString(const std::string &description);
+
+    /**
+     * @brief Gets an integer from the standard input.
+     *
+     * @param description	the message to show
+     * @return	the integer
+     */
+    int getInteger(const std::string &description);
+
+	/**
+	 * @brief Gets a long from the standard input.
+	 *
+	 * @param description	the message to show
+	 * @return	the long
+	 */
+    long getLong(const std::string &description);
 };
 
 #endif //FEUP_CAL_PROJ_UI_UTIL_H

@@ -4,6 +4,7 @@
 #include <string>
 #include "../../model/location/location.h"
 #include "../../util/graph/graph.h"
+#include "../company_client/company_client_manager/company_client_manager.h"
 
 /**
  * @brief Represents a company.
@@ -24,6 +25,21 @@ public:
     Company(std::string name, Location garageLocation, Graph<Location> graph, long vehicleNumber);
 
     /**
+     * @brief Verifies and updates the vehicle number.
+     *
+     * @param vehicleNumber	the new vehicle number
+     * @return	true, if the vechile number was successful updated. false, otherwise
+     */
+    bool updateVehicleNumber(long vehicleNumber);
+
+    /**
+     * @brief Gets the company client manager.
+     *
+     * @return 	the company client manager
+     */
+    CompanyClientManager &getCompanyClientManager();
+
+    /**
      * @brief Gets the name of the company.
      *
      * @return  the name of the company
@@ -36,6 +52,13 @@ public:
      * @return  the number of vehicles of the company
      */
     long getVehicleNumber() const;
+
+    /**
+     * @brief Gets the number of vehicles already in use of the company.
+     *
+     * @return	the number of vehicles already in use of the company
+     */
+    long getUsedVehiclesNumber() const;
 
     /**
      * @brief Gets the garage location of the company.
@@ -71,6 +94,11 @@ private:
      * @brief The world graph
      */
     Graph<Location> graph{};
+
+    /**
+     * @brief The company client manager
+     */
+    CompanyClientManager companyClientManager;
 };
 
 #endif //FEUP_CAL_PROJ_COMPANY_H

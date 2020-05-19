@@ -104,3 +104,39 @@ std::string ui_util::Option::getLine() const {
 
     return stream.str();
 }
+
+int ui_util::getInteger(const std::string &description) {
+	std::string string = getString(description);
+
+	int number;
+
+	try {
+		number = std::stoi(string);
+	} catch (const std::out_of_range &e) {
+		std::cout << "The number is out of range, try again..." << std::endl;
+		number = getInteger(description);
+	} catch (const std::invalid_argument &e) {
+		std::cout << string << " is not a valid number, try again..." << std::endl;
+		number = getInteger(description);
+	}
+
+	return number;
+}
+
+long ui_util::getLong(const std::string &description) {
+	std::string string = getString(description);
+
+	long number;
+
+	try {
+		number = std::stol(string);
+	} catch (const std::out_of_range &e) {
+		std::cout << "The number is out of range, try again..." << std::endl;
+		number = getInteger(description);
+	} catch (const std::invalid_argument &e) {
+		std::cout << string << " is not a valid number, try again..." << std::endl;
+		number = getInteger(description);
+	}
+
+	return number;
+}

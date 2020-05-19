@@ -28,3 +28,19 @@ const Location &Company::getGarageLocation() const {
 Graph<Location> &Company::getGraph() {
     return graph;
 }
+
+long Company::getUsedVehiclesNumber() const {
+	return companyClientManager.getUsedVehiclesNumber();
+}
+
+CompanyClientManager &Company::getCompanyClientManager() {
+	return companyClientManager;
+}
+
+bool Company::updateVehicleNumber(long vehicleNumber) {
+	if (vehicleNumber < this->getUsedVehiclesNumber())
+		return false;
+
+	this->vehicleNumber = vehicleNumber;
+	return true;
+}

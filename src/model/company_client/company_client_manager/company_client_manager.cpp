@@ -32,3 +32,12 @@ std::unordered_set<CompanyClient, companies_client_hash> CompanyClientManager::g
     return companiesClient;
 }
 
+long CompanyClientManager::getUsedVehiclesNumber() const {
+	long total = 0;
+
+	for (const CompanyClient &companyClient : this->companiesClient)
+		total += companyClient.getVehicleNumber();
+
+	return total;
+}
+

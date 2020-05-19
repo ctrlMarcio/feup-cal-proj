@@ -3,7 +3,7 @@
 UIManager::UIManager(AuthUserManager &authUserManager, CurrentSession &currentSession, Company &company)
         : authUserManager(authUserManager), currentSession(currentSession), company(company) {}
 
-Company &UIManager::getCompany() const {
+Company &UIManager::getCompany() {
     return company;
 }
 

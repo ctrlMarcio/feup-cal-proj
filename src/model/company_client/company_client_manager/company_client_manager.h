@@ -28,18 +28,25 @@ public:
     CompanyClientManager();
 
     /**
-     * @brief Verifies if the company is valid.
-     *
-     * @return          true upon success, false otherwise
-     */
-    bool isValid(const CompanyClient &companyClient) const;
-
-    /**
      * @brief Adds company to companyClientSet vector.
      *
      * @return          true upon success, false otherwise
      */
     bool add(CompanyClient companyClient);
+
+	/**
+	 * @brief Removes company from companyClientSet vector.
+	 *
+	 * @return          true upon success, false otherwise
+	 */
+	bool remove(CompanyClient companyClient);
+
+	/**
+	 * @brief Verifies if the company is valid.
+	 *
+	 * @return          true upon success, false otherwise
+	 */
+	bool isValid(const CompanyClient &companyClient) const;
 
     /*!
     * Verifies if a company client is in the set or not.
@@ -58,18 +65,18 @@ public:
     bool has(const long uuid) const;
 
     /**
-     * @brief Removes company from companyClientSet vector.
-     *
-     * @return          true upon success, false otherwise
-     */
-    bool remove(CompanyClient companyClient);
-
-    /**
      * @brief Gets company client's set.
      *
      * @return          company client's set
      */
     std::unordered_set<CompanyClient, companies_client_hash> getCompaniesClient() const;
+
+	/**
+	 * @brief Gets the number of vehicles already in use.
+	 *
+	 * @return	the number of vehicles already in use
+	 */
+    long getUsedVehiclesNumber() const;
 
 private:
     /**

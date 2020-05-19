@@ -11,7 +11,7 @@ class UIManager {
 public:
     UIManager(AuthUserManager &authUserManager, CurrentSession &currentSession, Company &company);
 
-    Company &getCompany() const;
+    Company &getCompany();
 
     CurrentSession &getCurrentSession() const;
 

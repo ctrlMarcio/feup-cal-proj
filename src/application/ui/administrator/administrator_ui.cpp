@@ -1,4 +1,5 @@
 #include "administrator_ui.h"
+#include "vehicle/modify_vehicles_ui.h"
 
 AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_line("> Companies"));
@@ -22,6 +23,9 @@ void AdministratorUI::run() {
         case 0:
             cout << std::endl << "Logging out..." << std::endl;
             break;
+    	case 4:
+    		uiManager.set(new ModifyVehiclesUI(uiManager));
+    		break;
         default:
             break;
     }
