@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <model/company_client/company_client.h>
 #include <util/graph/graph.h>
-#include <util/algorithm/reduced_graph.h>
+#include <util/algorithm/algorithm.h>
 
 using testing::Eq;
 
@@ -28,15 +28,16 @@ Graph<Location> createGraph()
 
 TEST(reduced_graph, algorithm_reduced) {
     Graph<Location> graph = createGraph<Location>();
-    std::vector<Location> vetor;
+
     Location l1(1, "a", 1, 1);
     Location l3(3, "c", 3, 3);
-    vetor.push_back(l1);
-    vetor.push_back(l3);
-    //Graph<Location> simplified_graph2 = graph_reduction<Location>(graph,vetor);
-    graph.dijkstra(l1);
-    cout << graph.getVertex(l3).dist;
 
-    //EXPECT_EQ(simplified_graph2.getVertex(l1).weightTo(&simplified_graph2.getVertex(l3)), 2);
+    std::vector<Location> vector;
+    vector.push_back(l1);
+    vector.push_back(l3);
 
+    Graph<Location> simpleGraph = algorithm::graph_reduction<Location>(graph, vector);
+
+    EXPECT_EQ(simpleGraph.getVertex(l1).weightTo(&simpleGraph.getVertex(l3)), 2);
+    EXPECT_EQ(simpleGraph.getVertex(l3).weightTo(&simpleGraph.getVertex(l1)), INF);
 }

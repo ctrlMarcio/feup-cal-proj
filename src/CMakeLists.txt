@@ -18,10 +18,14 @@ add_library(feup-cal-proj main.cpp
         application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h
         exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h
         exception/invalid_location_exception.cpp exception/invalid_location_exception.h
-        util/algorithm/algorithm.cpp util/algorithm/algorithm.h
+        util/algorithm/algorithm.cpp util/algorithm/algorithm.h util/algorithm/algorithm.tpp
         util/graph/cluster.cpp util/graph/cluster.h
         util/algorithm/trio.h util/algorithm/trio.tpp
-        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp application/ui/ui/ui_manager.cpp application/ui/ui/ui_manager.h application/ui/ui/ui.h application/ui/home/home_ui.cpp application/ui/home/home_ui.h util/algorithm/algorithm.tpp)
+        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp
+        application/ui/ui/ui_manager.cpp application/ui/ui/ui_manager.h
+        application/ui/ui/ui.h
+        application/ui/home/home_ui.cpp application/ui/home/home_ui.h
+        util/graph/mutable_priority_queue.h)
 
 add_executable(application main.cpp
         model/company/company.cpp model/company/company.h
@@ -43,10 +47,14 @@ add_executable(application main.cpp
         application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h
         exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h
         exception/invalid_location_exception.cpp exception/invalid_location_exception.h
-        util/algorithm/algorithm.cpp util/algorithm/algorithm.h
+        util/algorithm/algorithm.cpp util/algorithm/algorithm.h util/algorithm/algorithm.tpp
         util/graph/cluster.cpp util/graph/cluster.h
         util/algorithm/trio.h util/algorithm/trio.tpp
-        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp application/ui/ui/ui_manager.cpp application/ui/ui/ui_manager.h application/ui/ui/ui.h application/ui/home/home_ui.cpp application/ui/home/home_ui.h util/algorithm/algorithm.tpp util/algorithm/reduced_graph.h util/graph/mutable_priority_queue.h)
+        exception/invalid_vertex_exception.h exception/invalid_vertex_exception.cpp
+        application/ui/ui/ui_manager.cpp application/ui/ui/ui_manager.h
+        application/ui/ui/ui.h
+        application/ui/home/home_ui.cpp application/ui/home/home_ui.h
+        util/graph/mutable_priority_queue.h)
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

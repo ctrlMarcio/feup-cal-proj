@@ -46,6 +46,18 @@ namespace algorithm {
     Trio<T> getPath(Graph<T> &simplifiedGraph, const T &source,
                     const T &destination);
 
+    /**
+     * @brief Gets the reduced graph from a given graph
+     *
+     * @param graph	    graph to be reduced
+     * @param vector	vertexes of the reduced graph
+     * @return			the reduced graph
+     */
+    template <class T>
+    Graph<T> graph_reduction(Graph<T> graph, const std::vector<Location>& locations);
+
+    template<class T>
+    void dijkstra(Graph<T> &gra, const Vertex<T> &sourceVertex);
 };
 
 #include "algorithm.tpp"

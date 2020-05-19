@@ -64,22 +64,14 @@ public:
      */
     const std::vector<Vertex<T>> &getVertices() const;
 
+    std::vector<Vertex<T>> &getVertices();
+
     /**
      * @brief Gets the number of nodes.
      *
      * @return the number of nodes
      */
     long verticesCount() const;
-
-    void dijkstra(const T &s);
-
-    Vertex<T> * initSingleSource(const T &orig);
-
-    bool relax(Vertex<T> *v, Vertex<T> *w, double weight);
-
-    double ** W = nullptr;   // dist
-
-    int **P = nullptr;   // path
 
 private:
     /**

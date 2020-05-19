@@ -95,7 +95,7 @@ public:
     /**
 	 * @brief The distance to the initial vertex in dijkstra algorithm
 	 */
-    double dist = 0;
+    double dist = INF;
 
     /**
 	 * @brief The following vertex in the path
