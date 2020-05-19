@@ -24,13 +24,15 @@ var hierarchy =
     ] ],
     [ "Location", "classLocation.html", null ],
     [ "MutablePriorityQueue< T >", "classMutablePriorityQueue.html", null ],
+    [ "ui_util::Option", "classui__util_1_1Option.html", null ],
     [ "runtime_error", null, [
       [ "InvalidDirectoryException", "classInvalidDirectoryException.html", null ],
       [ "InvalidFileException", "classInvalidFileException.html", null ]
     ] ],
     [ "Trio< T >", "classTrio.html", null ],
     [ "UI", "classUI.html", [
-      [ "HomeUI", "classHomeUI.html", null ]
+      [ "HomeUI", "classHomeUI.html", null ],
+      [ "LoginUI", "classLoginUI.html", null ]
     ] ],
     [ "UIManager", "classUIManager.html", null ],
     [ "Vertex< T >", "classVertex.html", null ],
