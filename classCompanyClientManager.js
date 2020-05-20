@@ -4,6 +4,7 @@ var classCompanyClientManager =
     [ "add", "classCompanyClientManager.html#aebc66a2763845de374825ab529a2e60d", null ],
     [ "getCompanies", "classCompanyClientManager.html#a0d23957b4baff8cac2b24d25267dc82d", null ],
     [ "getCompany", "classCompanyClientManager.html#ac5e39a1d8e55d4d3ab824f5dc31260cb", null ],
+    [ "getCompany", "classCompanyClientManager.html#a62f85105962303fe06248ddfcaf5a271", null ],
     [ "getUsedVehiclesNumber", "classCompanyClientManager.html#ae7d4525955925c7f42836bfb982289a9", null ],
     [ "has", "classCompanyClientManager.html#a9a4428f8a9b8d2e632596a14ecdf5ecc", null ],
     [ "has", "classCompanyClientManager.html#a8a0790cc37ec00dc5bc3a3141caf7edb", null ],

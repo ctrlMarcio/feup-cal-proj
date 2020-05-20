@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trio',['Trio',['../classTrio.html',1,'']]]
+  ['registercompanyui',['RegisterCompanyUI',['../classRegisterCompanyUI.html',1,'']]]
 ];

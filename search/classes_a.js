@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['registercompanyui',['RegisterCompanyUI',['../classRegisterCompanyUI.html',1,'']]]
+  ['pickuppoints',['PickUpPoints',['../classPickUpPoints.html',1,'']]]
 ];
