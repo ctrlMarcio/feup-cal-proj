@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ui',['UI',['../classUI.html',1,'']]],
-  ['uimanager',['UIManager',['../classUIManager.html',1,'']]]
+  ['trio',['Trio',['../classTrio.html',1,'']]]
 ];

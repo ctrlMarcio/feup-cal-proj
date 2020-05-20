@@ -95,9 +95,9 @@ $(document).ready(function(){initNavTree('classCompanyClient.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac7e08bfb605642b62f9ed1288ecbe0f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#ac7e08bfb605642b62f9ed1288ecbe0f1">CompanyClient</a> (std::string name, <a class="el" href="classCompanyRepresentative.html">CompanyRepresentative</a> representative, <a class="el" href="classLocation.html">Location</a> headquarters)</td></tr>
-<tr class="memdesc:ac7e08bfb605642b62f9ed1288ecbe0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the company with all its attributes.  <a href="#ac7e08bfb605642b62f9ed1288ecbe0f1">More...</a><br /></td></tr>
-<tr class="separator:ac7e08bfb605642b62f9ed1288ecbe0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57098002dc106a65974244d4b3382ffa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#a57098002dc106a65974244d4b3382ffa">CompanyClient</a> (std::string name, <a class="el" href="classCompanyRepresentative.html">CompanyRepresentative</a> representative, const <a class="el" href="classLocation.html">Location</a> &amp;headquarters)</td></tr>
+<tr class="memdesc:a57098002dc106a65974244d4b3382ffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the company with all its attributes.  <a href="#a57098002dc106a65974244d4b3382ffa">More...</a><br /></td></tr>
+<tr class="separator:a57098002dc106a65974244d4b3382ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0097f429b0c03ad83a56efc31f6b729"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#ad0097f429b0c03ad83a56efc31f6b729">getUUID</a> () const</td></tr>
 <tr class="memdesc:ad0097f429b0c03ad83a56efc31f6b729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the UUID.  <a href="#ad0097f429b0c03ad83a56efc31f6b729">More...</a><br /></td></tr>
 <tr class="separator:ad0097f429b0c03ad83a56efc31f6b729"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,6 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae21eda7068020bf806f4f18baf46391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#aae21eda7068020bf806f4f18baf46391">setVehicleNumber</a> (int vehicleNumber)</td></tr>
 <tr class="memdesc:aae21eda7068020bf806f4f18baf46391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of used vehicles by the company.  <a href="#aae21eda7068020bf806f4f18baf46391">More...</a><br /></td></tr>
 <tr class="separator:aae21eda7068020bf806f4f18baf46391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacf6286083fe09fc0c3580db35c27ea"><td class="memItemLeft" align="right" valign="top"><a id="aaacf6286083fe09fc0c3580db35c27ea"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasPickupPoint</b> (const <a class="el" href="classLocation.html">Location</a> &amp;location)</td></tr>
+<tr class="separator:aaacf6286083fe09fc0c3580db35c27ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37008f9275da11b15522162bd7114426"><td class="memItemLeft" align="right" valign="top"><a id="a37008f9275da11b15522162bd7114426"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;rhs) const</td></tr>
 <tr class="separator:a37008f9275da11b15522162bd7114426"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,8 +138,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a company that might benefit from BosHbus services. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac7e08bfb605642b62f9ed1288ecbe0f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7e08bfb605642b62f9ed1288ecbe0f1">&#9670;&nbsp;</a></span>CompanyClient()</h2>
+<a id="a57098002dc106a65974244d4b3382ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57098002dc106a65974244d4b3382ffa">&#9670;&nbsp;</a></span>CompanyClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,7 +159,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classLocation.html">Location</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
           <td class="paramname"><em>headquarters</em>&#160;</td>
         </tr>
         <tr>

@@ -22,6 +22,7 @@ var hierarchy =
       [ "InvalidVertexException", "classInvalidVertexException.html", null ]
     ] ],
     [ "Location", "classLocation.html", null ],
+    [ "LocationManager", "classLocationManager.html", null ],
     [ "MutablePriorityQueue< T >", "classMutablePriorityQueue.html", null ],
     [ "ui_util::Option", "classui__util_1_1Option.html", null ],
     [ "runtime_error", null, [
@@ -34,6 +35,7 @@ var hierarchy =
       [ "HomeUI", "classHomeUI.html", null ],
       [ "LoginUI", "classLoginUI.html", null ],
       [ "ModifyCompanyVehiclesUI", "classModifyCompanyVehiclesUI.html", null ],
+      [ "RegisterCompanyUI", "classRegisterCompanyUI.html", null ],
       [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", null ]
     ] ],
     [ "UIManager", "classUIManager.html", null ],
