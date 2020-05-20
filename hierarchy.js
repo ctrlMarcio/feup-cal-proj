@@ -22,9 +22,11 @@ var hierarchy =
       [ "InvalidVertexException", "classInvalidVertexException.html", null ]
     ] ],
     [ "Location", "classLocation.html", null ],
+    [ "location_hash", "structlocation__hash.html", null ],
     [ "LocationManager", "classLocationManager.html", null ],
     [ "MutablePriorityQueue< T >", "classMutablePriorityQueue.html", null ],
     [ "ui_util::Option", "classui__util_1_1Option.html", null ],
+    [ "Path< T >", "classPath.html", null ],
     [ "runtime_error", null, [
       [ "InvalidDirectoryException", "classInvalidDirectoryException.html", null ],
       [ "InvalidFileException", "classInvalidFileException.html", null ]
@@ -43,6 +45,5 @@ var hierarchy =
       [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", null ]
     ] ],
     [ "UIManager", "classUIManager.html", null ],
-    [ "Vertex< T >", "classVertex.html", null ],
-    [ "vertex_hash", "structvertex__hash.html", null ]
+    [ "Vertex< T >", "classVertex.html", null ]
 ];

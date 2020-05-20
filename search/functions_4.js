@@ -19,6 +19,7 @@ var searchData=
   ['getlatitude',['getLatitude',['../classLocation.html#ae84e2a75e0a29c625f38dd2ac9fe8117',1,'Location']]],
   ['getline',['getLine',['../classui__util_1_1Option.html#ad7e88469532f7881c2b9e4b8da218b83',1,'ui_util::Option']]],
   ['getlocationmanager',['getLocationManager',['../classCompany.html#a0817d549454e5fb8533f9bce581b7e98',1,'Company']]],
+  ['getlocations',['getLocations',['../classCluster.html#a6832c9c9f5884fcee0dc71e4850f91d2',1,'Cluster']]],
   ['getlong',['getLong',['../namespaceui__util.html#a4fca2b98010d67d7235f4a613e73d480',1,'ui_util']]],
   ['getlongitude',['getLongitude',['../classLocation.html#a4f6d4ef756b78d33b322fd83f3ed18fa',1,'Location']]],
   ['getmessage',['getMessage',['../classInvalidLoginException.html#ae7ebc1632926d553ebfe4a30c5e61741',1,'InvalidLoginException::getMessage()'],['../classInvalidVertexException.html#af43591a3422abf968cdba111098e6e32',1,'InvalidVertexException::getMessage()']]],
@@ -26,7 +27,7 @@ var searchData=
   ['getoption',['getOption',['../classui__util_1_1Option.html#ab85d4a9da08a87ba120194d5cebf5a6b',1,'ui_util::Option::getOption()'],['../namespaceui__util.html#a4afd8550ed63522705a516ad901310c3',1,'ui_util::getOption()']]],
   ['getoutgoing',['getOutgoing',['../classVertex.html#ac9e8b7454baffda3860384eb39b0c245',1,'Vertex']]],
   ['getpassword',['getPassword',['../classAuthUser.html#a8f3e829513009e1e1cc0111f9fd9f91f',1,'AuthUser']]],
-  ['getpath',['getPath',['../namespacealgorithm.html#a85aa3cf2e6f98c745bc9f864b3c63b7b',1,'algorithm']]],
+  ['getpath',['getPath',['../namespacealgorithm.html#a8d9dc658c49de917151c8b11a4d7b156',1,'algorithm']]],
   ['getpickuppoints',['getPickupPoints',['../classCompanyClient.html#a3fce923f3e183e7689f506e6157d3a48',1,'CompanyClient']]],
   ['getrepresentative',['getRepresentative',['../classCompanyClient.html#aefd0ec72d7695fc7ff19c5d43091f4dc',1,'CompanyClient']]],
   ['getsource',['getSource',['../classEdge.html#af838c04cba20ee06e6d42bee09530b50',1,'Edge']]],
@@ -38,10 +39,8 @@ var searchData=
   ['getvehiclenumber',['getVehicleNumber',['../classCompany.html#ab64bb76579224279daa80ac264850365',1,'Company::getVehicleNumber()'],['../classCompanyClient.html#a07208784406b3726b4f18a515c9fd68e',1,'CompanyClient::getVehicleNumber()']]],
   ['getvehiclesleft',['getVehiclesLeft',['../classCompany.html#aa0296ebc4f1b6892c1279384e7f98581',1,'Company']]],
   ['getvertex',['getVertex',['../classGraph.html#a29a92bdde91316921ce22532090f22e0',1,'Graph']]],
-  ['getvertexes',['getVertexes',['../classCluster.html#a4f46b63191195da2c5b64daf4fe2673f',1,'Cluster']]],
   ['getvertices',['getVertices',['../classGraph.html#a441181b6c9540dc77721ec9c9f9eec81',1,'Graph::getVertices() const'],['../classGraph.html#a720a438a1c3db4ad63a2c8453f249f2a',1,'Graph::getVertices()']]],
   ['getweight',['getWeight',['../classEdge.html#a3df378e283d6c8be5be4170ac8d7f4e8',1,'Edge']]],
   ['getx',['getX',['../classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7',1,'Location']]],
-  ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]],
-  ['graph_5freduction',['graph_reduction',['../namespacealgorithm.html#ab54d53eddfe0f6731da17c1e7ff6af76',1,'algorithm']]]
+  ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]]
 ];

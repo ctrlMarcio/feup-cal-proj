@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Route Planner: vertex_hash Struct Reference</title>
+<title>Route Planner: location_hash Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('structvertex__hash.html','');});
+$(document).ready(function(){initNavTree('structlocation__hash.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -82,30 +82,28 @@ $(document).ready(function(){initNavTree('structvertex__hash.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="structvertex__hash-members.html">List of all members</a>  </div>
+<a href="structlocation__hash-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">vertex_hash Struct Reference</div>  </div>
+<div class="title">location_hash Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Redefinition of the default hash and equal function for the <a class="el" href="classVertex.html" title="Represents a graph&#39;s vertex, holding its content and outgoing edges. ">Vertex</a> class.  
- <a href="structvertex__hash.html#details">More...</a></p>
+<p>Redefinition of the default hash and equal function for the <a class="el" href="classLocation.html" title="Represents a real world location. ">Location</a> class.  
+ <a href="structlocation__hash.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="cluster_8h_source.html">cluster.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab9c0197b559968849a12bbccb2518245"><td class="memTemplParams" colspan="2"><a id="ab9c0197b559968849a12bbccb2518245"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:ab9c0197b559968849a12bbccb2518245"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &amp;v) const</td></tr>
-<tr class="separator:ab9c0197b559968849a12bbccb2518245"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8dd6021c967e76362686753110d8325"><td class="memTemplParams" colspan="2"><a id="aa8dd6021c967e76362686753110d8325"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:aa8dd6021c967e76362686753110d8325"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &amp;v1, const <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &amp;v2) const</td></tr>
-<tr class="separator:aa8dd6021c967e76362686753110d8325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5882809de5a75fbae3e969c5144e3d"><td class="memItemLeft" align="right" valign="top"><a id="a8b5882809de5a75fbae3e969c5144e3d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="classLocation.html">Location</a> &amp;l) const</td></tr>
+<tr class="separator:a8b5882809de5a75fbae3e969c5144e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada0a3fd498125aea5250b30dd86efa29"><td class="memItemLeft" align="right" valign="top"><a id="ada0a3fd498125aea5250b30dd86efa29"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="classLocation.html">Location</a> &amp;lhs, const <a class="el" href="classLocation.html">Location</a> &amp;rhs) const</td></tr>
+<tr class="separator:ada0a3fd498125aea5250b30dd86efa29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Redefinition of the default hash and equal function for the <a class="el" href="classVertex.html" title="Represents a graph&#39;s vertex, holding its content and outgoing edges. ">Vertex</a> class. </p>
+<div class="textblock"><p>Redefinition of the default hash and equal function for the <a class="el" href="classLocation.html" title="Represents a real world location. ">Location</a> class. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/util/graph/<a class="el" href="cluster_8h_source.html">cluster.h</a></li>
 </ul>
@@ -114,7 +112,7 @@ template&lt;class T &gt; </td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="structvertex__hash.html">vertex_hash</a></li>
+    <li class="navelem"><a class="el" href="structlocation__hash.html">location_hash</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

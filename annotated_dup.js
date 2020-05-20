@@ -27,16 +27,17 @@ var annotated_dup =
     [ "InvalidLoginException", "classInvalidLoginException.html", "classInvalidLoginException" ],
     [ "InvalidVertexException", "classInvalidVertexException.html", "classInvalidVertexException" ],
     [ "Location", "classLocation.html", "classLocation" ],
+    [ "location_hash", "structlocation__hash.html", "structlocation__hash" ],
     [ "LocationManager", "classLocationManager.html", "classLocationManager" ],
     [ "LoginUI", "classLoginUI.html", "classLoginUI" ],
     [ "ModifyCompanyVehiclesUI", "classModifyCompanyVehiclesUI.html", "classModifyCompanyVehiclesUI" ],
     [ "MutablePriorityQueue", "classMutablePriorityQueue.html", "classMutablePriorityQueue" ],
+    [ "Path", "classPath.html", "classPath" ],
     [ "PickUpPoints", "classPickUpPoints.html", "classPickUpPoints" ],
     [ "RegisterCompanyUI", "classRegisterCompanyUI.html", "classRegisterCompanyUI" ],
     [ "Trio", "classTrio.html", "classTrio" ],
     [ "UI", "classUI.html", "classUI" ],
     [ "UIManager", "classUIManager.html", "classUIManager" ],
     [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", "classVerifyVehiclesUI" ],
-    [ "Vertex", "classVertex.html", "classVertex" ],
-    [ "vertex_hash", "structvertex__hash.html", "structvertex__hash" ]
+    [ "Vertex", "classVertex.html", "classVertex" ]
 ];
