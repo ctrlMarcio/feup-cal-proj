@@ -36,7 +36,7 @@ TEST(reduced_graph, algorithm_reduced) {
     vector.push_back(l1);
     vector.push_back(l3);
 
-    Graph<Location> simpleGraph = algorithm::graph_reduction<Location>(graph, vector);
+    Graph<Location> simpleGraph = algorithm::reduceGraph<Location>(graph, vector);
 
     EXPECT_EQ(simpleGraph.getVertex(l1).weightTo(&simpleGraph.getVertex(l3)), 2);
     EXPECT_EQ(simpleGraph.getVertex(l3).weightTo(&simpleGraph.getVertex(l1)), INF);

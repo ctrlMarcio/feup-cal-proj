@@ -5,7 +5,7 @@ long CompanyClient::NUMBER_OF_COMPANIES = 1;
 
 CompanyClient::CompanyClient(std::string name, CompanyRepresentative representative, const Location &headquarters)
         : name(std::move(name)), representative(std::move(representative)), headquarters(headquarters),
-          vehicleNumber(0), uuid(NUMBER_OF_COMPANIES++) {
+          vehicleNumber(1), uuid(NUMBER_OF_COMPANIES++) {
 }
 
 std::string CompanyClient::getName() const {

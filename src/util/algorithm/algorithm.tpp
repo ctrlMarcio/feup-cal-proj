@@ -16,7 +16,7 @@ bool algorithm::isComplete(Graph<T> &simplifiedGraph, const list<Vertex<T>> &pat
 }
 
 template<class T>
-Trio<T> algorithm::getPath(Graph<T> &simplifiedGraph, const T &source, const T &destination) {
+Path <T> algorithm::getPath(Graph<T> &simplifiedGraph, const T &source, const T &destination) {
     std::priority_queue<Trio<T>, std::vector<Trio<T >>, my_comparator> queue;
 
     const Vertex<T> &sourceVertex = simplifiedGraph.getVertex(source);
@@ -36,7 +36,7 @@ Trio<T> algorithm::getPath(Graph<T> &simplifiedGraph, const T &source, const T &
         current = min;
     }
 
-    return current;
+    return Path<T>(current.getPath(), current.getPathCost());
 }
 
 template<class T>
@@ -77,7 +77,7 @@ void algorithm::dijkstra(Graph<T> &graph, const Vertex<T> &sourceVertex) {
 }
 
 template<class T>
-Graph<T> algorithm::graph_reduction(Graph<T> graph, const std::vector<Location> &locations) {
+Graph<T> algorithm::reduceGraph(Graph<T> graph, const std::vector<Location> &locations) {
     Graph<T> simpleGraph;
 
     for (Location location: locations)

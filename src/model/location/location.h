@@ -42,7 +42,7 @@ public:
      * @param y the y of the point
      * @return  the euclidean distance
      */
-    double euclideanDistanceTo(double x, double  y);
+    double euclideanDistanceTo(double x, double  y) const;
 
     /**
      * @brief Gets the ID.

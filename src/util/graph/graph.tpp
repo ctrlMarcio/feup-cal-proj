@@ -1,15 +1,3 @@
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <iostream>
-#include <iomanip>
-#include <algorithm>
-#include "../string/string_util.h"
-#include "../../model/location/location.h"
-#include "../../exception/invalid_file_exception.h"
-#include "../../exception/invalid_vertex_exception.h"
-#include "mutable_priority_queue.h"
-
 template<class T>
 bool Graph<T>::add(const T &content) {
     if (has(content)) return false;

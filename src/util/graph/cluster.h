@@ -9,22 +9,20 @@
 #include "graph.h"
 
 /**
- * @brief Redefinition of the default hash and equal function for the Vertex class.
+ * @brief Redefinition of the default hash and equal function for the Location class.
  */
-struct vertex_hash {
-    template<class T>
-    int operator()(const Vertex<T> &v) const {
-        return v.hash();
+struct location_hash {
+    int operator()(const Location &l) const {
+        return l.hash();
     }
 
-    template<class T>
-    bool operator()(const Vertex<T> &v1, const Vertex<T> &v2) const {
-        return v1 == v2;
+    bool operator()(const Location &lhs, const Location &rhs) const {
+        return lhs == rhs;
     }
 };
 
 /**
- * @brief Represents a coherent agglomerate of a location graph's vertexes, given their position
+ * @brief Represents a coherent agglomerate of a location graph's locations, given their position
  */
 class Cluster {
 public:
@@ -38,13 +36,13 @@ public:
     /**
      * @brief Adds a vertex to the cluster
      *
-     * @param vertex    the pointer wrapper of the vertex to add
+     * @param location    the pointer wrapper of the vertex to add
      * @return          true if successful, false otherwise
      */
-    bool addVertex(const Vertex<Location> &vertex);
+    bool add(const Location &location);
 
     /**
-     * @brief Removes all the vertexes from the cluster
+     * @brief Removes all the locations from the cluster
      */
     void clear();
 
@@ -56,17 +54,17 @@ public:
     const pair<double, double> &getCentroid() const;
 
     /**
-     * @brief Gets the vertexes that the cluster holds
+     * @brief Gets the locations that the cluster holds
      *
-     * @return the vertexes
+     * @return the locations
      */
-    const unordered_set<Vertex<Location>, vertex_hash> &getVertexes() const;
+    const unordered_set<Location, location_hash> &getLocations() const;
 
 private:
     /**
      * @brief The set of vertex pointers
      */
-    std::unordered_set<Vertex<Location>, vertex_hash> vertexes;
+    std::unordered_set<Location, location_hash> locations;
 
     /**
      * @brief The centroid (or center of mass) of the cluster

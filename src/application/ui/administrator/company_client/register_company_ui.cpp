@@ -15,11 +15,20 @@ void RegisterCompanyUI::run() {
 
     std::cout << "Please fill the following form to register a company!" << std::endl << std::endl;
 
-    std::string name = ui_util::getString("Enter the name of the company representative: ");
-    std::string email = getEmail();
-    std::string password = ui_util::getString("Enter the password of the company representative: ");
+    std::string name = ui_util::getString("Enter the name of the company: ");
+    std::string representative_name = ui_util::getString("Enter the name of the company representative: ");
+    std::string representative_email = getEmail();
+    std::string representative_password = ui_util::getString("Enter the password of the company representative: ");
 
     long locationId = getHeadquarters();
+
+    const Location &loc = *(uiManager.getCompany().getLocationManager().get(locationId));
+
+    // TODO: improve this method
+    uiManager.getAuthUserManager().add(
+            AuthUser(representative_email, representative_password, AuthUser::COMPANY_REPRESENTATIVE));
+    uiManager.getCompany().getCompanyClientManager().add(
+            CompanyClient(name, CompanyRepresentative(representative_name, representative_email), loc));
 }
 
 std::string RegisterCompanyUI::getEmail() {
@@ -43,7 +52,8 @@ long RegisterCompanyUI::getHeadquarters() {
         std::cout << std::endl << "The list of available locations:" << std::endl;
 
         for (const Location &location : uiManager.getCompany().getLocationManager().getLocations()) {
-            std::cout << "\t- " << location.getId() << " at " << std::fixed << std::setprecision(2) << location.getX() << ", "
+            std::cout << "\t- " << location.getId() << " at " << std::fixed << std::setprecision(2) << location.getX()
+                      << ", "
                       << location.getY() << std::endl;
         }
 

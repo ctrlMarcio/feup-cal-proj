@@ -8,6 +8,7 @@ add_library(feup-cal-proj main.cpp
         util/string/string_util.cpp util/string/string_util.h
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/algorithm/trio.h util/algorithm/trio.tpp
+        util/algorithm/path.cpp util/algorithm/path.h
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h
         exception/invalid_file_exception.cpp exception/invalid_file_exception.h
         exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h
@@ -23,6 +24,7 @@ add_library(feup-cal-proj main.cpp
         model/company_client/company_representative/company_representative.cpp model/company_client/company_representative/company_representative.h
         model/company_client/company_client_manager/company_client_manager.cpp model/company_client/company_client_manager/company_client_manager.h
         model/company/administrator/administrator_manager.cpp model/company/administrator/administrator_manager.h
+        model/location/location_manager.cpp model/location/location_manager.h
         application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h
         application/ui/ui/ui_manager.cpp application/ui/ui/ui_manager.h
         application/ui/ui/ui.h
@@ -33,7 +35,6 @@ add_library(feup-cal-proj main.cpp
         application/ui/administrator/company_client/register_company_ui.cpp application/ui/administrator/company_client/register_company_ui.h
         application/ui/administrator/vehicle/verify_vehicles_ui.cpp application/ui/administrator/vehicle/verify_vehicles_ui.h
         application/ui/administrator/company_client/modify_company_vehicles_ui.cpp application/ui/administrator/company_client/modify_company_vehicles_ui.h
-        model/location/location_manager.cpp model/location/location_manager.h
         application/ui/administrator/company_information/company_information.cpp application/ui/administrator/company_information/company_information.h
         application/ui/client_company_representative/company_client_information/company_client_information.cpp application/ui/client_company_representative/company_client_information/company_client_information.h
         application/ui/client_company_representative/client_company_representative_ui.cpp application/ui/client_company_representative/client_company_representative_ui.h
@@ -50,6 +51,7 @@ add_executable(application main.cpp
         util/string/string_util.cpp util/string/string_util.h
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/algorithm/trio.h util/algorithm/trio.tpp
+        util/algorithm/path.cpp util/algorithm/path.h
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h
         exception/invalid_file_exception.cpp exception/invalid_file_exception.h
         exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h
@@ -65,6 +67,7 @@ add_executable(application main.cpp
         model/company_client/company_representative/company_representative.cpp model/company_client/company_representative/company_representative.h
         model/company_client/company_client_manager/company_client_manager.cpp model/company_client/company_client_manager/company_client_manager.h
         model/company/administrator/administrator_manager.cpp model/company/administrator/administrator_manager.h
+        model/location/location_manager.cpp model/location/location_manager.h
         application/bootstrap/bootstrap.cpp application/bootstrap/bootstrap.h
         application/ui/ui/ui_manager.cpp application/ui/ui/ui_manager.h
         application/ui/ui/ui.h
@@ -75,7 +78,6 @@ add_executable(application main.cpp
         application/ui/administrator/company_client/register_company_ui.cpp application/ui/administrator/company_client/register_company_ui.h
         application/ui/administrator/vehicle/verify_vehicles_ui.cpp application/ui/administrator/vehicle/verify_vehicles_ui.h
         application/ui/administrator/company_client/modify_company_vehicles_ui.cpp application/ui/administrator/company_client/modify_company_vehicles_ui.h
-        model/location/location_manager.cpp model/location/location_manager.h
         application/ui/administrator/company_information/company_information.cpp application/ui/administrator/company_information/company_information.h
         application/ui/client_company_representative/company_client_information/company_client_information.cpp application/ui/client_company_representative/company_client_information/company_client_information.h
         application/ui/client_company_representative/client_company_representative_ui.cpp application/ui/client_company_representative/client_company_representative_ui.h

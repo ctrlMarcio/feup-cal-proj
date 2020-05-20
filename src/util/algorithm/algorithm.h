@@ -5,22 +5,26 @@
 #include <tuple>
 #include <queue>
 #include "trio.h"
+#include "path.h"
+#include "../graph/mutable_priority_queue.h"
 #include "../graph/graph.h"
 #include "../graph/cluster.h"
+#include "../../model/company_client/company_client.h"
+#include "../../model/company/company.h"
 
 /**
  * @brief Contains useful and required graph-related algorithms
  */
 namespace algorithm {
     /**
-     * @brief Calculates clusters of vertexes in a graph of locations.
+     * @brief Calculates clusters of locations in a vector of locations.
      *
-     * @param graph         the graph
+     * @param locations     the locations
      * @param clusterAmount the number of clusters to calculate
      * @param iterations    the number of iterations to run, with 10 as default
      * @return              the vector of formed clusters
      */
-    std::vector<Cluster> kMeans(const Graph<Location> &graph, int clusterAmount, int iterations=10);
+    std::vector<Cluster> kMeans(const std::vector<Location> &locations, int clusterAmount, int iterations = 10);
 
     /**
      * @brief  Verifies if the path is complete.
@@ -43,21 +47,24 @@ namespace algorithm {
      * @return                  the path
      */
     template<class T>
-    Trio<T> getPath(Graph<T> &simplifiedGraph, const T &source,
+    Path<T> getPath(Graph<T> &simplifiedGraph, const T &source,
                     const T &destination);
 
     /**
      * @brief Gets the reduced graph from a given graph
      *
      * @param graph	    graph to be reduced
-     * @param vector	vertexes of the reduced graph
+     * @param vector	locations of the reduced graph
      * @return			the reduced graph
      */
-    template <class T>
-    Graph<T> graph_reduction(Graph<T> graph, const std::vector<Location>& locations);
+    template<class T>
+    Graph<T> reduceGraph(Graph<T> graph, const std::vector<Location> &locations);
 
     template<class T>
     void dijkstra(Graph<T> &gra, const Vertex<T> &sourceVertex);
+
+    std::list<Path<Location>>
+    getPaths(const Graph<Location> worldGraph, const CompanyClient &companyClient, const Company &company);
 };
 
 #include "algorithm.tpp"

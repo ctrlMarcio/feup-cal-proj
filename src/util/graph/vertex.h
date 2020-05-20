@@ -2,7 +2,7 @@
 #define FEUP_CAL_PROJ_VERTEX_H
 
 #include <memory>
-#include <set>
+#include <vector>
 
 #include "edge.h"
 

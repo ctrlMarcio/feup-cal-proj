@@ -52,6 +52,6 @@ int Location::hash() const {
     return id;
 }
 
-double Location::euclideanDistanceTo(double x, double y) {
+double Location::euclideanDistanceTo(double x, double y) const {
     return sqrt(pow(x - this->x, 2) + pow(y - this->y, 2));
 }

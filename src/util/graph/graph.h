@@ -6,14 +6,24 @@
 #include <memory>
 #include <unordered_set>
 #include <mutex>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <algorithm>
+#include "../string/string_util.h"
+#include "../../model/location/location.h"
+#include "../../exception/invalid_file_exception.h"
+#include "../../exception/invalid_vertex_exception.h"
 
 #include "vertex.h"
 
 /**
  * @brief Represents a graph.
  *
- * A graph is a structure that contains vertexes and their connections.
- * This graph has a container with all its vertexes, and their edges are managed by them.
+ * A graph is a structure that contains locations and their connections.
+ * This graph has a container with all its locations, and their edges are managed by them.
  *
  * @tparam T	the type that the vertex holds
  */
@@ -39,7 +49,7 @@ public:
     /**
      * @brief Adds an edge to the graph.
      *
-     * @warning			returns \e nullptr if one of the vertexes doesn't exist
+     * @warning			returns \e nullptr if one of the locations doesn't exist
      * @throws          InvalidVertexException
      * @param source	the content of the source vertex
      * @param dest		the content of the destination vertex
@@ -80,7 +90,7 @@ public:
 
 private:
     /**
-     * @brief The container of vertexes.
+     * @brief The container of locations.
      */
     std::vector<Vertex<T>> vertices;
 };
