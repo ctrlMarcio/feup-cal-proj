@@ -4,6 +4,5 @@ var searchData=
   ['make_5fline',['make_line',['../namespaceui__util.html#ae7ab9f56e6cb1c329453abdb14c91cfd',1,'ui_util']]],
   ['make_5foption',['make_option',['../namespaceui__util.html#ad4044d909bfb5dd9ab2b753fafd88b99',1,'ui_util']]],
   ['modifycompanyvehiclesui',['ModifyCompanyVehiclesUI',['../classModifyCompanyVehiclesUI.html',1,'']]],
-  ['modifyvehiclesui',['ModifyVehiclesUI',['../classModifyVehiclesUI.html',1,'']]],
   ['mutablepriorityqueue',['MutablePriorityQueue',['../classMutablePriorityQueue.html',1,'']]]
 ];

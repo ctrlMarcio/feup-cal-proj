@@ -34,7 +34,7 @@ var hierarchy =
       [ "HomeUI", "classHomeUI.html", null ],
       [ "LoginUI", "classLoginUI.html", null ],
       [ "ModifyCompanyVehiclesUI", "classModifyCompanyVehiclesUI.html", null ],
-      [ "ModifyVehiclesUI", "classModifyVehiclesUI.html", null ]
+      [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", null ]
     ] ],
     [ "UIManager", "classUIManager.html", null ],
     [ "Vertex< T >", "classVertex.html", null ],

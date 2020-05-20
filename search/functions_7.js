@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kmeans',['kMeans',['../namespacealgorithm.html#a36e37d4367c6ac7a126b18c036f3f2ac',1,'algorithm']]]
+  ['kmeans',['kMeans',['../namespacealgorithm.html#a666ee7d0d78f3b8eb866b52352b540fe',1,'algorithm']]]
 ];

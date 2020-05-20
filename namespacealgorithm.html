@@ -92,9 +92,9 @@ $(document).ready(function(){initNavTree('namespacealgorithm.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a36e37d4367c6ac7a126b18c036f3f2ac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a36e37d4367c6ac7a126b18c036f3f2ac">kMeans</a> (const <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, int clusterAmount, int iterations)</td></tr>
-<tr class="memdesc:a36e37d4367c6ac7a126b18c036f3f2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates clusters of vertexes in a graph of locations.  <a href="#a36e37d4367c6ac7a126b18c036f3f2ac">More...</a><br /></td></tr>
-<tr class="separator:a36e37d4367c6ac7a126b18c036f3f2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a666ee7d0d78f3b8eb866b52352b540fe"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a666ee7d0d78f3b8eb866b52352b540fe">kMeans</a> (const <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, int clusterAmount, int iterations=10)</td></tr>
+<tr class="memdesc:a666ee7d0d78f3b8eb866b52352b540fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates clusters of vertexes in a graph of locations.  <a href="#a666ee7d0d78f3b8eb866b52352b540fe">More...</a><br /></td></tr>
+<tr class="separator:a666ee7d0d78f3b8eb866b52352b540fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86c8a8b8872027ca48d7561b72b83408"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a86c8a8b8872027ca48d7561b72b83408"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a86c8a8b8872027ca48d7561b72b83408">isComplete</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;simplifiedGraph, const std::list&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt; &amp;path)</td></tr>
 <tr class="memdesc:a86c8a8b8872027ca48d7561b72b83408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if the path is complete.  <a href="#a86c8a8b8872027ca48d7561b72b83408">More...</a><br /></td></tr>
@@ -254,8 +254,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a36e37d4367c6ac7a126b18c036f3f2ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36e37d4367c6ac7a126b18c036f3f2ac">&#9670;&nbsp;</a></span>kMeans()</h2>
+<a id="a666ee7d0d78f3b8eb866b52352b540fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666ee7d0d78f3b8eb866b52352b540fe">&#9670;&nbsp;</a></span>kMeans()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +276,7 @@ template&lt;class T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iterations</em>&#160;</td>
+          <td class="paramname"><em>iterations</em> = <code>10</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -291,7 +291,7 @@ template&lt;class T &gt; </div>
   <table class="params">
     <tr><td class="paramname">graph</td><td>the graph </td></tr>
     <tr><td class="paramname">clusterAmount</td><td>the number of clusters to calculate </td></tr>
-    <tr><td class="paramname">iterations</td><td>the number of iterations to run </td></tr>
+    <tr><td class="paramname">iterations</td><td>the number of iterations to run, with 10 as default </td></tr>
   </table>
   </dd>
 </dl>

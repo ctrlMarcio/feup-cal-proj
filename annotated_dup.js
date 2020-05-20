@@ -26,11 +26,11 @@ var annotated_dup =
     [ "Location", "classLocation.html", "classLocation" ],
     [ "LoginUI", "classLoginUI.html", "classLoginUI" ],
     [ "ModifyCompanyVehiclesUI", "classModifyCompanyVehiclesUI.html", "classModifyCompanyVehiclesUI" ],
-    [ "ModifyVehiclesUI", "classModifyVehiclesUI.html", "classModifyVehiclesUI" ],
     [ "MutablePriorityQueue", "classMutablePriorityQueue.html", "classMutablePriorityQueue" ],
     [ "Trio", "classTrio.html", "classTrio" ],
     [ "UI", "classUI.html", "classUI" ],
     [ "UIManager", "classUIManager.html", "classUIManager" ],
+    [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", "classVerifyVehiclesUI" ],
     [ "Vertex", "classVertex.html", "classVertex" ],
     [ "vertex_hash", "structvertex__hash.html", "structvertex__hash" ]
 ];
