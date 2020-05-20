@@ -1,5 +1,6 @@
 #include "login_ui.h"
 #include "../administrator/administrator_ui.h"
+#include "../client_company_representative/client_company_representative_ui.h"
 
 LoginUI::LoginUI(UIManager &uiManager) : uiManager(uiManager) {}
 
@@ -23,7 +24,8 @@ void LoginUI::run() {
     if (authUser.getUserRole() == AuthUser::ADMINISTRATOR) {
         uiManager.set(new AdministratorUI(uiManager));
     } else if (authUser.getUserRole() == AuthUser::COMPANY_REPRESENTATIVE) {
-        std::cout << std::endl << "THIS IS A COMPANY REPRESENTATIVE" << std::endl;
+        uiManager.set(new ClientCompanyRepresentativeUI(uiManager));
+        //std::cout << std::endl << "THIS IS A COMPANY REPRESENTATIVE" << std::endl;
     } else
         std::cout << std::endl << "Something unexpected occurred!" << std::endl;
 }

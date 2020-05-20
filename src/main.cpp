@@ -10,7 +10,7 @@ int main() {
 
     Company company = bs.buildCompany("BosHBus", 0, 2);
 
-    CompanyRepresentative companyRepresentative("lol", "a");
+    CompanyRepresentative companyRepresentative("lol", "b");
 
     CompanyClient companyClient("ai limão", companyRepresentative, company.getGraph().getVertices()[3].get());
 

@@ -2,6 +2,7 @@
 #include "vehicle/verify_vehicles_ui.h"
 #include "company_client/modify_company_vehicles_ui.h"
 #include "company_client/register_company_ui.h"
+#include "company_information/company_information.h"
 
 AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_line("> Companies"));
@@ -30,6 +31,9 @@ void AdministratorUI::run() {
             break;
         case 2:
             uiManager.set(new ModifyCompanyVehiclesUI(uiManager));
+            break;
+        case 3:
+            uiManager.set(new CompanyInformation(uiManager));
             break;
         case 4:
             uiManager.set(new VerifyVehiclesUI(uiManager));

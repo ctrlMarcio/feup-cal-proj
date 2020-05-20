@@ -67,6 +67,8 @@ public:
 
     CompanyClient *getCompany(long uuid);
 
+    CompanyClient *getCompany(std::string email);
+
 private:
     /**
      * @brief Company Client's set.

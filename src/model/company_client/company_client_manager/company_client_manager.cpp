@@ -56,3 +56,16 @@ CompanyClient *CompanyClientManager::getCompany(long uuid) {
     return nullptr;
 }
 
+CompanyClient *CompanyClientManager::getCompany(std::string email) {
+    auto it = companies.begin();
+
+    while (it != companies.end()) {
+        if ((*it).getRepresentative().getEmail() == email) {
+            return &(*it);
+        }
+        it++;
+    }
+
+    return nullptr;
+}
+
