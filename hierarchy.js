@@ -42,6 +42,7 @@ var hierarchy =
       [ "ModifyCompanyVehiclesUI", "classModifyCompanyVehiclesUI.html", null ],
       [ "PickUpPoints", "classPickUpPoints.html", null ],
       [ "RegisterCompanyUI", "classRegisterCompanyUI.html", null ],
+      [ "RequestVehicleChangeUI", "classRequestVehicleChangeUI.html", null ],
       [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", null ]
     ] ],
     [ "UIManager", "classUIManager.html", null ],

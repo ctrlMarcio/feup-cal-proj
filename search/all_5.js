@@ -1,10 +1,12 @@
 var searchData=
 [
   ['get',['get',['../classAuthUserManager.html#acc5ed2d6b3ef0d0ce17c398d71d5354f',1,'AuthUserManager::get()'],['../classVertex.html#a3ab0256be37ad483f3a301c237b715c2',1,'Vertex::get()']]],
+  ['getadministratormanager',['getAdministratorManager',['../classCompany.html#aa396ac5d324ac81b7013e76db136b7a9',1,'Company']]],
   ['getadministrators',['getAdministrators',['../classAdministratorManager.html#a5eab8a83dcd7f27195419e1d96cf1c0b',1,'AdministratorManager']]],
   ['getcentroid',['getCentroid',['../classCluster.html#a5fb64fba5a5d9f71aa3a66ea9e32af16',1,'Cluster']]],
   ['getcity',['getCity',['../classLocation.html#a9df397894c42fae4c5297443e883efa6',1,'Location']]],
   ['getcompanies',['getCompanies',['../classCompanyClientManager.html#a0d23957b4baff8cac2b24d25267dc82d',1,'CompanyClientManager']]],
+  ['getcompany',['getCompany',['../classCompanyClientManager.html#a528dad9ca440f9e645bbccbdfc085e0d',1,'CompanyClientManager']]],
   ['getcompanyclientmanager',['getCompanyClientManager',['../classCompany.html#a6df439e6a9aa92a4042bcbf6fc3a34a6',1,'Company']]],
   ['getcurrentdate',['getCurrentDate',['../namespaceui__util.html#ab8d0acac77265485a5f77cf130510eda',1,'ui_util']]],
   ['getdescription',['getDescription',['../classui__util_1_1Option.html#a19483ccfc7c7734cba83123200900d06',1,'ui_util::Option']]],
@@ -24,6 +26,7 @@ var searchData=
   ['getlongitude',['getLongitude',['../classLocation.html#a4f6d4ef756b78d33b322fd83f3ed18fa',1,'Location']]],
   ['getmessage',['getMessage',['../classInvalidLoginException.html#ae7ebc1632926d553ebfe4a30c5e61741',1,'InvalidLoginException::getMessage()'],['../classInvalidVertexException.html#af43591a3422abf968cdba111098e6e32',1,'InvalidVertexException::getMessage()']]],
   ['getname',['getName',['../classAdministrator.html#a56b9c9a934ad4453dd6ee9218de0f9fa',1,'Administrator::getName()'],['../classCompany.html#a64f6c13dd059f834a0f35ed8faeded64',1,'Company::getName()'],['../classCompanyClient.html#a84f94c6f43feca7fbb73331d3fa21e1b',1,'CompanyClient::getName()'],['../classCompanyRepresentative.html#ad0e144e205435de7b1dc9c1129cbdd45',1,'CompanyRepresentative::getName()']]],
+  ['getnotifications',['getNotifications',['../classAdministratorManager.html#ae9efa1e1f0fb083ecef1f22d0500aa85',1,'AdministratorManager']]],
   ['getoption',['getOption',['../classui__util_1_1Option.html#ab85d4a9da08a87ba120194d5cebf5a6b',1,'ui_util::Option::getOption()'],['../namespaceui__util.html#a4afd8550ed63522705a516ad901310c3',1,'ui_util::getOption()']]],
   ['getoutgoing',['getOutgoing',['../classVertex.html#ac9e8b7454baffda3860384eb39b0c245',1,'Vertex']]],
   ['getpassword',['getPassword',['../classAuthUser.html#a8f3e829513009e1e1cc0111f9fd9f91f',1,'AuthUser']]],
@@ -32,6 +35,7 @@ var searchData=
   ['getrepresentative',['getRepresentative',['../classCompanyClient.html#aefd0ec72d7695fc7ff19c5d43091f4dc',1,'CompanyClient']]],
   ['getsource',['getSource',['../classEdge.html#af838c04cba20ee06e6d42bee09530b50',1,'Edge']]],
   ['getstring',['getString',['../namespaceui__util.html#a3ed4fd8151d960abcd13c4716331eeb7',1,'ui_util']]],
+  ['getunsigned',['getUnsigned',['../namespaceui__util.html#a181ae3de0826f942bbe16a00d0e104d9',1,'ui_util']]],
   ['getusedvehiclesnumber',['getUsedVehiclesNumber',['../classCompany.html#a9b19ee22c11955bdf114d33ccd70371f',1,'Company::getUsedVehiclesNumber()'],['../classCompanyClientManager.html#ae7d4525955925c7f42836bfb982289a9',1,'CompanyClientManager::getUsedVehiclesNumber()']]],
   ['getuser',['getUser',['../classCurrentSession.html#a2e473205432101890679f4ce34bd588b',1,'CurrentSession']]],
   ['getuserrole',['getUserRole',['../classAuthUser.html#a8d32b1a9a5905a85b91683c22dedbdbc',1,'AuthUser']]],

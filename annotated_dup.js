@@ -35,6 +35,7 @@ var annotated_dup =
     [ "Path", "classPath.html", "classPath" ],
     [ "PickUpPoints", "classPickUpPoints.html", "classPickUpPoints" ],
     [ "RegisterCompanyUI", "classRegisterCompanyUI.html", "classRegisterCompanyUI" ],
+    [ "RequestVehicleChangeUI", "classRequestVehicleChangeUI.html", "classRequestVehicleChangeUI" ],
     [ "Trio", "classTrio.html", "classTrio" ],
     [ "UI", "classUI.html", "classUI" ],
     [ "UIManager", "classUIManager.html", "classUIManager" ],

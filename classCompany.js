@@ -1,6 +1,7 @@
 var classCompany =
 [
     [ "Company", "classCompany.html#a5c73cdfbfc0eba73da6281d20138bfc6", null ],
+    [ "getAdministratorManager", "classCompany.html#aa396ac5d324ac81b7013e76db136b7a9", null ],
     [ "getCompanyClientManager", "classCompany.html#a6df439e6a9aa92a4042bcbf6fc3a34a6", null ],
     [ "getGarageLocation", "classCompany.html#a41325b2fc0e371641aa3ab125f46ed98", null ],
     [ "getGraph", "classCompany.html#a78ae1e1bcab98d79d8c9c7748c83ae4c", null ],

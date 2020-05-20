@@ -1,6 +1,7 @@
 var searchData=
 [
   ['clear',['clear',['../classCluster.html#a3dee8527d699a26165f7ca7d6913fe19',1,'Cluster']]],
+  ['clearnotifications',['clearNotifications',['../classAdministratorManager.html#ae8e89e7a24ec6c752883df95fa343dc4',1,'AdministratorManager']]],
   ['clientcompanyrepresentativeui',['ClientCompanyRepresentativeUI',['../classClientCompanyRepresentativeUI.html',1,'']]],
   ['cluster',['Cluster',['../classCluster.html',1,'']]],
   ['company',['Company',['../classCompany.html',1,'Company'],['../classCompany.html#a5c73cdfbfc0eba73da6281d20138bfc6',1,'Company::Company()']]],
