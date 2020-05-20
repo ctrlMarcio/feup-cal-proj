@@ -20,11 +20,15 @@ void AdministratorUI::run() {
     std::cout << uiManager.getHeader();
     std::cout << "Welcome to the administrator terminal interface!" << std::endl;
 
+    if (!uiManager.getCompany().getAdministratorManager().getNotifications().empty())
+        showNotifications();
+
     int option = ui_util::getOption(options);
 
     switch (option) {
         case 0:
             cout << std::endl << "Logging out..." << std::endl;
+            uiManager.getCurrentSession().logout();
             break;
         case 1:
             uiManager.set(new RegisterCompanyUI(uiManager));
@@ -44,4 +48,19 @@ void AdministratorUI::run() {
 
     if (option != 0)
         run();
+}
+
+void AdministratorUI::showNotifications() {
+    const std::vector<std::string> &notifications = uiManager.getCompany().getAdministratorManager().getNotifications();
+
+    std::cout << endl;
+    std::cout << "You have " << notifications.size() << " notification";
+    if (notifications.size() > 1)
+        std::cout << "s";
+    std::cout << ":" << std::endl;
+
+    for (const std::string &notification : notifications)
+        std::cout << " - " << notification << std::endl;
+
+    uiManager.getCompany().getAdministratorManager().clearNotifications();
 }

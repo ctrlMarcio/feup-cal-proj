@@ -56,7 +56,7 @@ CompanyClient *CompanyClientManager::getCompany(long uuid) {
     return nullptr;
 }
 
-CompanyClient *CompanyClientManager::getCompany(std::string email) {
+CompanyClient *CompanyClientManager::getCompany(const std::string &email) {
     auto it = companies.begin();
 
     while (it != companies.end()) {

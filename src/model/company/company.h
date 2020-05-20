@@ -6,6 +6,7 @@
 #include "../../util/graph/graph.h"
 #include "../company_client/company_client_manager/company_client_manager.h"
 #include "../location/location_manager.h"
+#include "administrator/administrator_manager.h"
 
 /**
  * @brief Represents a company.
@@ -98,6 +99,13 @@ public:
      */
     LocationManager &getLocationManager();
 
+    /**
+     * @brief Gets the administrator manager.
+     *
+     * @return  the administrator manager
+     */
+    AdministratorManager &getAdministratorManager();
+
 private:
     /**
      * @brief The name of the company.
@@ -128,6 +136,11 @@ private:
      * @brief The company location manager.
      */
     LocationManager locationManager;
+
+    /**
+     * @brief The company administrator manager.
+     */
+    AdministratorManager administratorManager;
 };
 
 #endif //FEUP_CAL_PROJ_COMPANY_H

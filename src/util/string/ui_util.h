@@ -141,13 +141,21 @@ namespace ui_util {
      */
     int getInteger(const std::string &description);
 
-	/**
-	 * @brief Gets a long from the standard input.
-	 *
-	 * @param description	the message to show
-	 * @return	the long
-	 */
+    /**
+     * @brief Gets a long from the standard input.
+     *
+     * @param description	the message to show
+     * @return	the long
+     */
     long getLong(const std::string &description);
+
+    /**
+     * @brief Gets an unsigned number from the standard input.
+     *
+     * @param description   the message to show
+     * @return  the unsigned number
+     */
+    unsigned long getUnsigned(const std::string &description);
 };
 
 #endif //FEUP_CAL_PROJ_UI_UTIL_H

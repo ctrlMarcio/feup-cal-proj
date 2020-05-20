@@ -59,3 +59,7 @@ LocationManager &Company::getLocationManager() {
 long Company::getVehiclesLeft() const {
     return vehicleNumber - getUsedVehiclesNumber();
 }
+
+AdministratorManager &Company::getAdministratorManager() {
+    return administratorManager;
+}

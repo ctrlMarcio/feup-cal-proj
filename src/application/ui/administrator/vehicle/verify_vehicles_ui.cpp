@@ -17,24 +17,21 @@ void VerifyVehiclesUI::run() {
 }
 
 bool VerifyVehiclesUI::modifyVehicles(long usedVehicles) {
-	long vehicles = ui_util::getLong("New number of vehicles (-1 to return): ");
+    unsigned long vehicles = ui_util::getUnsigned("New number of vehicles (0 to return): ");
 
-	if (vehicles == -1) {
-		std::cout << "Returning..." << std::endl;
-		return true;
-	} else if (vehicles < -1) {
-		std::cout << vehicles << " is an invalid vehicle number, try again..." << std::endl << std::endl;
-		return false;
-	} else if (vehicles < usedVehicles) {
-		std::cout << "There are " << usedVehicles << " vehicles already in use, try again..." << std::endl << std::endl;
-		return false;
-	} else {
-		if (this->uiManager.getCompany().setVehicleNumber(vehicles)) {
-			std::cout << "Vehicle number updated to " << vehicles << "!" << std::endl;
-			return true;
-		} else {
-			std::cout << "Unexpected error, value not updated, try again..." << std::endl << std::endl;
-			return false;
-		}
-	}
+    if (vehicles == 0) {
+        std::cout << "Returning..." << std::endl;
+        return true;
+    } else if (vehicles < usedVehicles) {
+        std::cout << "There are " << usedVehicles << " vehicles already in use, try again..." << std::endl << std::endl;
+        return false;
+    } else {
+        if (this->uiManager.getCompany().setVehicleNumber(vehicles)) {
+            std::cout << "Vehicle number updated to " << vehicles << "!" << std::endl;
+            return true;
+        } else {
+            std::cout << "Unexpected error, value not updated, try again..." << std::endl << std::endl;
+            return false;
+        }
+    }
 }

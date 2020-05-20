@@ -34,3 +34,15 @@ bool AdministratorManager::has(const std::string &email) const {
         return user.getEmail() == email;
     }) != administrators.end();
 }
+
+void AdministratorManager::sendNotification(const std::string &notification) {
+    this->notifications.push_back(notification);
+}
+
+void AdministratorManager::clearNotifications() {
+    this->notifications.clear();
+}
+
+const std::vector<std::string> &AdministratorManager::getNotifications() const {
+    return notifications;
+}

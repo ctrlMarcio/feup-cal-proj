@@ -67,7 +67,13 @@ public:
 
     CompanyClient *getCompany(long uuid);
 
-    CompanyClient *getCompany(std::string email);
+    /**
+     * @brief Gets the company of a representative given its email.
+     *
+     * @param email the email of the representative
+     * @return  a pointer to the company of the representative, null if the company does not exist
+     */
+    CompanyClient *getCompany(const std::string &email);
 
 private:
     /**
