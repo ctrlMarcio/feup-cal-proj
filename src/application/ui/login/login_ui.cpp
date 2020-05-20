@@ -40,7 +40,7 @@ std::pair<std::string, bool> LoginUI::getEmail() {
 }
 
 std::pair<AuthUser, bool> LoginUI::getPassword(const std::string &user) {
-    AuthUser authUser = *uiManager.getAuthUserManager().getUser(user);
+    AuthUser authUser = *uiManager.getAuthUserManager().get(user);
 
     std::string password = ui_util::getString("Enter your password: ");
     int tries = 3;

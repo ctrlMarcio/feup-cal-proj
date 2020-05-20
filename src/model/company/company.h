@@ -5,6 +5,7 @@
 #include "../../model/location/location.h"
 #include "../../util/graph/graph.h"
 #include "../company_client/company_client_manager/company_client_manager.h"
+#include "../location/location_manager.h"
 
 /**
  * @brief Represents a company.
@@ -53,6 +54,13 @@ public:
     long getUsedVehiclesNumber() const;
 
     /**
+     * @brief Gets the number of vehicles left of the company.
+     *
+     * @return	the number of vehicles left of the company
+     */
+    long getVehiclesLeft() const;
+
+    /**
      * @brief Gets the garage location of the company.
      *
      * @return  the garage location
@@ -77,11 +85,18 @@ public:
     bool setVehicleNumber(CompanyClient &companyClient, long companyVehicleNumber);
 
     /**
-     * @brief Gets the world graph
+     * @brief Gets the world graph.
      *
      * @return  the world graph
      */
     Graph<Location> &getGraph();
+
+    /**
+     * @brief Gets the location manager.
+     *
+     * @return  the location manager
+     */
+    LocationManager &getLocationManager();
 
 private:
     /**
@@ -100,14 +115,19 @@ private:
     Location garageLocation;
 
     /**
-     * @brief The world graph
+     * @brief The world graph.
      */
     Graph<Location> graph{};
 
     /**
-     * @brief The company client manager
+     * @brief The company client manager.
      */
     CompanyClientManager companyClientManager;
+
+    /**
+     * @brief The company location manager.
+     */
+    LocationManager locationManager;
 };
 
 #endif //FEUP_CAL_PROJ_COMPANY_H

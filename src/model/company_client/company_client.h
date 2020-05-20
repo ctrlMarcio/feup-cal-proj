@@ -18,7 +18,7 @@ public:
      * @param representative        the company_representative
      * @param headquarters          the company headquarters location
      */
-    CompanyClient(std::string name, CompanyRepresentative representative, Location headquarters);
+    CompanyClient(std::string name, CompanyRepresentative representative, const Location& headquarters);
 
     /**
      * @brief Gets the UUID.
@@ -82,6 +82,8 @@ public:
      * @param          the number of used vehicles by the company
      */
     void setVehicleNumber(int vehicleNumber);
+
+    bool hasPickupPoint(const Location &location);
 
     bool operator==(const CompanyClient &rhs) const;
 

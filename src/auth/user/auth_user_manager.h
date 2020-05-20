@@ -68,7 +68,7 @@ public:
      * @param email the email of the user to get
      * @return the user, if found
      */
-    const AuthUser *getUser(const std::string &email) const;
+    const AuthUser *get(const std::string &email) const;
 
 private:
     /*!

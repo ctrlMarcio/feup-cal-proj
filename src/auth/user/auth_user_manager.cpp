@@ -21,7 +21,7 @@ bool AuthUserManager::has(const std::string &email) const {
     }) != users.end();
 }
 
-const AuthUser *AuthUserManager::getUser(const std::string &email) const {
+const AuthUser *AuthUserManager::get(const std::string &email) const {
     auto it = users.begin();
 
     while (it != users.end()) {

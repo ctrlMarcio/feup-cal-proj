@@ -14,7 +14,7 @@ bool CurrentSession::login(const std::string &email, const std::string &password
     if (!auth_user_manager.has(email))
         throw InvalidLoginException("There is no user with that email");
 
-    AuthUser user = *auth_user_manager.getUser(email);
+    AuthUser user = *auth_user_manager.get(email);
 
     if (user.getPassword() != password)
         throw InvalidLoginException("The password is incorrect");

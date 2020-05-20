@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12.4)
+cmake_minimum_required(VERSION 3.10.2)
 
 SET(CMAKE_CXX_STANDARD 14)
 
@@ -41,13 +41,13 @@ add_executable(tests
         util/graph/vertex_test.cpp util/graph/edge_test.cpp
         util/graph/graph_test.cpp model/location/location_test.cpp
         util/string/util_string_test.cpp auth/session/current_session_test.cpp
-        model/companyClient/company_client_manager/company_client_manager_test.cpp
-        model/companyClient/company_client_test.cpp
-        model/companyClient/company_representative/company_representative_test.cpp
+        model/company_client/company_client_manager/company_client_manager_test.cpp
+        model/company_client/company_client_test.cpp
+        model/company_client/company_representative/company_representative_test.cpp
         model/company/administrator/administrator_test.cpp
         model/company/administrator/administrator_manager_test.cpp
         util/algorithm/algorithm_test.cpp
-        util/graph/cluster_test.cpp Algorithm/reduced_graph_test.cpp)
+        util/graph/cluster_test.cpp algorithm/reduced_graph_test.cpp)
 target_link_libraries(tests PRIVATE gtest_main feup-cal-proj)
 
 add_test(NAME tests COMMAND tests)

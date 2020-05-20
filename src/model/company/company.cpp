@@ -10,7 +10,7 @@ Company::Company(std::string name, const Location &garageLocation, Graph<Locatio
           graph(std::move(
                   graph)),
           vehicleNumber(
-                  vehicleNumber) {
+                  vehicleNumber), locationManager(LocationManager(this->graph)) {
 }
 
 const std::string &Company::getName() const {
@@ -50,4 +50,12 @@ bool Company::setVehicleNumber(CompanyClient &companyClient, long companyVehicle
         return false;
     companyClient.setVehicleNumber(companyVehicleNumber);
     return true;
+}
+
+LocationManager &Company::getLocationManager() {
+    return locationManager;
+}
+
+long Company::getVehiclesLeft() const {
+    return vehicleNumber - getUsedVehiclesNumber();
 }

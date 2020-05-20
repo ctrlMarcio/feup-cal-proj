@@ -1,10 +1,12 @@
+#include <algorithm>
 #include "company_client.h"
 
 long CompanyClient::NUMBER_OF_COMPANIES = 1;
 
-CompanyClient::CompanyClient(std::string name, CompanyRepresentative representative, Location headquarters)
-        : name(std::move(name)), representative(std::move(representative)), headquarters(std::move(headquarters)),
-          vehicleNumber(0), uuid(NUMBER_OF_COMPANIES++) {}
+CompanyClient::CompanyClient(std::string name, CompanyRepresentative representative, const Location &headquarters)
+        : name(std::move(name)), representative(std::move(representative)), headquarters(headquarters),
+          vehicleNumber(0), uuid(NUMBER_OF_COMPANIES++) {
+}
 
 std::string CompanyClient::getName() const {
     return this->name;
@@ -23,10 +25,7 @@ std::vector<Location> CompanyClient::getPickupPoints() const {
 }
 
 bool CompanyClient::addPickupPoint(const Location &location) {
-    for (const auto &i: pickupPoints) {
-        if (i.getId() == location.getId())
-            return false;
-    }
+    if (hasPickupPoint(location)) return false;
     pickupPoints.push_back(location);
     return true;
 }
@@ -62,5 +61,9 @@ bool CompanyClient::operator==(const CompanyClient &rhs) const {
 
 bool CompanyClient::operator!=(const CompanyClient &rhs) const {
     return !(rhs == *this);
+}
+
+bool CompanyClient::hasPickupPoint(const Location &location) {
+    return std::find(pickupPoints.begin(), pickupPoints.end(), location) != pickupPoints.end();
 }
 

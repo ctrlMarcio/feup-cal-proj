@@ -1,6 +1,7 @@
 #include "administrator_ui.h"
 #include "vehicle/verify_vehicles_ui.h"
 #include "company_client/modify_company_vehicles_ui.h"
+#include "company_client/register_company_ui.h"
 
 AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_line("> Companies"));
@@ -23,6 +24,9 @@ void AdministratorUI::run() {
     switch (option) {
         case 0:
             cout << std::endl << "Logging out..." << std::endl;
+            break;
+        case 1:
+            uiManager.set(new RegisterCompanyUI(uiManager));
             break;
         case 2:
             uiManager.set(new ModifyCompanyVehiclesUI(uiManager));

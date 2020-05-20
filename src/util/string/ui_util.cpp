@@ -108,7 +108,7 @@ std::string ui_util::Option::getLine() const {
 int ui_util::getInteger(const std::string &description) {
 	std::string string = getString(description);
 
-	int number;
+	int number ;
 
 	try {
 		number = std::stoi(string);

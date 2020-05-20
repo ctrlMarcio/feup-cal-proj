@@ -64,6 +64,11 @@ public:
      */
     const std::vector<Vertex<T>> &getVertices() const;
 
+    /**
+     * @brief Gets the vertex set
+     *
+     * @return  the vertex set
+     */
     std::vector<Vertex<T>> &getVertices();
 
     /**
