@@ -1,5 +1,5 @@
 #include "administrator_ui.h"
-#include "vehicle/modify_vehicles_ui.h"
+#include "vehicle/verify_vehicles_ui.h"
 #include "company_client/modify_company_vehicles_ui.h"
 
 AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
@@ -9,8 +9,8 @@ AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_option(3, "View company information"));
     options.push_back(ui_util::make_empty_line());
     options.push_back(ui_util::make_line("> Vehicles"));
-    options.push_back(ui_util::make_option(4, "Modify vehicle number"));
-    options.push_back(ui_util::make_option(5, "View vehicle number"));
+    options.push_back(ui_util::make_option(4, "Verify vehicle number"));
+    options.push_back(ui_util::make_empty_line());
     options.push_back(ui_util::make_option(0, "Logout"));
 }
 
@@ -28,7 +28,7 @@ void AdministratorUI::run() {
             uiManager.set(new ModifyCompanyVehiclesUI(uiManager));
             break;
         case 4:
-            uiManager.set(new ModifyVehiclesUI(uiManager));
+            uiManager.set(new VerifyVehiclesUI(uiManager));
             break;
         default:
             break;
@@ -36,5 +36,4 @@ void AdministratorUI::run() {
 
     if (option != 0)
         run();
-
 }

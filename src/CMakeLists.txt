@@ -29,8 +29,9 @@ add_library(feup-cal-proj main.cpp
         application/ui/home/home_ui.cpp application/ui/home/home_ui.h
         application/ui/login/login_ui.h application/ui/login/login_ui.cpp
         application/ui/administrator/administrator_ui.cpp application/ui/administrator/administrator_ui.h
-        application/ui/administrator/vehicle/modify_vehicles_ui.cpp application/ui/administrator/vehicle/modify_vehicles_ui.h
-        application/ui/administrator/company_client/modify_company_vehicles_ui.cpp application/ui/administrator/company_client/modify_company_vehicles_ui.h)
+        application/ui/administrator/vehicle/verify_vehicles_ui.cpp application/ui/administrator/vehicle/verify_vehicles_ui.h
+        application/ui/administrator/company_client/modify_company_vehicles_ui.cpp application/ui/administrator/company_client/modify_company_vehicles_ui.h
+        )
 
 add_executable(application main.cpp
         util/graph/graph.tpp util/graph/graph.h
@@ -63,8 +64,9 @@ add_executable(application main.cpp
         application/ui/home/home_ui.cpp application/ui/home/home_ui.h
         application/ui/login/login_ui.h application/ui/login/login_ui.cpp
         application/ui/administrator/administrator_ui.cpp application/ui/administrator/administrator_ui.h
-        application/ui/administrator/vehicle/modify_vehicles_ui.cpp application/ui/administrator/vehicle/modify_vehicles_ui.h
-        application/ui/administrator/company_client/modify_company_vehicles_ui.cpp application/ui/administrator/company_client/modify_company_vehicles_ui.h)
+        application/ui/administrator/vehicle/verify_vehicles_ui.cpp application/ui/administrator/vehicle/verify_vehicles_ui.h
+        application/ui/administrator/company_client/modify_company_vehicles_ui.cpp application/ui/administrator/company_client/modify_company_vehicles_ui.h
+        )
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

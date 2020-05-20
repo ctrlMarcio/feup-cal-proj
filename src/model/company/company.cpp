@@ -48,6 +48,6 @@ bool Company::setVehicleNumber(long vehicleNumber) {
 bool Company::setVehicleNumber(CompanyClient &companyClient, long companyVehicleNumber) {
     if (getUsedVehiclesNumber() - companyClient.getVehicleNumber() + companyVehicleNumber > getVehicleNumber())
         return false;
-    companyClient.setVehicleNumber(vehicleNumber);
+    companyClient.setVehicleNumber(companyVehicleNumber);
     return true;
 }

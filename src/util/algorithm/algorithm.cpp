@@ -44,5 +44,4 @@ std::vector<Cluster> algorithm::kMeans(const Graph<Location> &graph, int cluster
     }
 
     return clusters;
-
 }

@@ -14,7 +14,6 @@ private:
     UIManager &uiManager;
 
     std::vector<ui_util::Option> options;
-
 };
 
 #endif //FEUP_CAL_PROJ_MODIFY_COMPANY_VEHICLES_UI_H

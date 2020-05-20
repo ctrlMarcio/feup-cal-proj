@@ -25,5 +25,4 @@ void HomeUI::run() {
 
     if (option != 0)
         run();
-
 }

@@ -17,10 +17,10 @@ namespace algorithm {
      *
      * @param graph         the graph
      * @param clusterAmount the number of clusters to calculate
-     * @param iterations    the number of iterations to run
+     * @param iterations    the number of iterations to run, with 10 as default
      * @return              the vector of formed clusters
      */
-    std::vector<Cluster> kMeans(const Graph<Location> &graph, int clusterAmount, int iterations);
+    std::vector<Cluster> kMeans(const Graph<Location> &graph, int clusterAmount, int iterations=10);
 
     /**
      * @brief  Verifies if the path is complete.

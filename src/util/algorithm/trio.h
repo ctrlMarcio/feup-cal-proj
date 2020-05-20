@@ -31,7 +31,6 @@ private:
     std::list<Vertex<T>> path;
 
     double pathCost;
-
 };
 
 #include "trio.tpp"

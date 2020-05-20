@@ -27,7 +27,6 @@ private:
     CurrentSession &currentSession;
 
     AuthUserManager &authUserManager;
-
 };
 
 #endif //FEUP_CAL_PROJ_UI_MANAGER_H

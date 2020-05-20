@@ -1,16 +1,22 @@
-#include "modify_vehicles_ui.h"
+#include "verify_vehicles_ui.h"
 
-ModifyVehiclesUI::ModifyVehiclesUI(UIManager &uiManager) : uiManager(uiManager) {}
+VerifyVehiclesUI::VerifyVehiclesUI(UIManager &uiManager) : uiManager(uiManager) {}
 
-void ModifyVehiclesUI::run() {
+void VerifyVehiclesUI::run() {
 	std::cout << uiManager.getHeader();
 
-	long usedVehicles = uiManager.getCompany().getUsedVehiclesNumber();
+	long currentVehicles = uiManager.getCompany().getVehicleNumber();
+    long usedVehicles = uiManager.getCompany().getUsedVehiclesNumber();
+
+    std::cout << "Current vehicles: " << currentVehicles << std::endl;
+    std::cout << "Vehicles in use:  " << usedVehicles << std::endl;
+
+    std::cout << std::endl;
 
 	while (!modifyVehicles(usedVehicles));
 }
 
-bool ModifyVehiclesUI::modifyVehicles(long usedVehicles) {
+bool VerifyVehiclesUI::modifyVehicles(long usedVehicles) {
 	long vehicles = ui_util::getLong("New number of vehicles (-1 to return): ");
 
 	if (vehicles == -1) {
@@ -24,7 +30,7 @@ bool ModifyVehiclesUI::modifyVehicles(long usedVehicles) {
 		return false;
 	} else {
 		if (this->uiManager.getCompany().setVehicleNumber(vehicles)) {
-			std::cout << "Updated!" << std::endl;
+			std::cout << "Vehicle number updated to " << vehicles << "!" << std::endl;
 			return true;
 		} else {
 			std::cout << "Unexpected error, value not updated, try again..." << std::endl << std::endl;
