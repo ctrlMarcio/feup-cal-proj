@@ -1,14 +1,15 @@
 #include "pickup_points_ui.h"
 
-PickUpPoints::PickUpPoints(UIManager &uiManager) : uiManager(uiManager) {
+PickUpPoints::PickUpPoints(UIManager &uiManager) : uiManager(uiManager) {}
+
+void PickUpPoints::run() {
+    options.clear();
     options.push_back(ui_util::make_option(1, "Add new pickup-point"));
     options.push_back(ui_util::make_option(2, "Remove pickup-point"));
     options.push_back(ui_util::make_option(3, "View pickup-points"));
     options.push_back(ui_util::make_empty_line());
     options.push_back(ui_util::make_option(0, "Quit"));
-}
 
-void PickUpPoints::run() {
     std::cout << uiManager.getHeader();
 
     int option = ui_util::getOption(options);
@@ -32,38 +33,102 @@ void PickUpPoints::run() {
 }
 
 void PickUpPoints::addPickUpPoint() {
+    std::cout << uiManager.getHeader();
+    options.clear();
 
+    for (const Vertex<Location> &vertex : uiManager.getCompany().getGraph().getVertices())
+        options.push_back(ui_util::make_option(vertex.get().getId(), vertex.get().getCity() +
+                                                    " (" + std::to_string(vertex.get().getX()) +
+                                                    "/" + std::to_string(vertex.get().getY())));
+    options.push_back(ui_util::make_empty_line());
+    options.push_back(ui_util::make_option(0, "Quit"));
+
+    if (options.empty()) {
+        std::cout << "There are no locations available!" << std::endl;
+    }
+
+    std::cout << "Please select a location from the list..." << std::endl;
+    int option = ui_util::getOption(options);
+    if (option == 0) return;
+    std::cout << std::endl;
+    CompanyClient *companyClient = uiManager.getCompany().getCompanyClientManager().getCompany(uiManager.getCurrentSession().getUser().getEmail());
+
+    for (const Vertex<Location> &vertex : uiManager.getCompany().getGraph().getVertices())
+    {
+        if (vertex.get().getId()==option){
+            if (companyClient->addPickupPoint(vertex.get()))
+                cout << "Pickup-point successfully added" << endl;
+            else
+                cout << "Could not add Pickup-point" << endl;
+        }
+    }
+
+    std::vector<ui_util::Option> exit;
+    exit.push_back(ui_util::make_option(0, "Continue"));
+    option = ui_util::getOption(exit);
+    if (option != 0)
+        run();
 }
 
 void PickUpPoints::removePickUpPoint() {
+    std::cout << uiManager.getHeader();
+    options.clear();
+    CompanyClient *companyClient = uiManager.getCompany().getCompanyClientManager().getCompany(uiManager.getCurrentSession().getUser().getEmail());
 
-    int id = ui_util::getInteger("Choose pickup-point id");
+    for (const Location &location : companyClient->getPickupPoints())
+        options.push_back(ui_util::make_option(location.getId(), location.getCity() +
+                                                                     " (" + std::to_string(location.getX()) +
+                                                                     "/" + std::to_string(location.getY())));
 
-    //companyClient.removePickupPoint();
+    if (options.empty()) {
+        std::cout << "There are no locations to be removed!" << std::endl;
+        return;
+    }
+
+    options.push_back(ui_util::make_empty_line());
+    options.push_back(ui_util::make_option(0, "Quit"));
+    std::cout << "Please select a location from the list..." << std::endl;
+    int option = ui_util::getOption(options);
+    if (option == 0) return;
+    std::cout << std::endl;
+
+    for (const Vertex<Location> &vertex : uiManager.getCompany().getGraph().getVertices())
+    {
+        if (vertex.get().getId()==option){
+            if (companyClient->removePickupPoint(vertex.get()))
+                cout << "Pickup-point successfully removed" << endl;
+            else
+                cout << "Could not remove Pickup-point" << endl;
+        }
+    }
+
+    std::vector<ui_util::Option> exit;
+    exit.push_back(ui_util::make_option(0, "Continue"));
+    option = ui_util::getOption(exit);
+    if (option != 0)
+        run();
 }
 
 void PickUpPoints::viewPickUpPoint() {
     std::cout << uiManager.getHeader();
     std::vector<Location> pickupPoints;
-
     std::cout << "Company pickup-points: "<< endl << endl;
+    CompanyClient *companyClient = uiManager.getCompany().getCompanyClientManager().getCompany(uiManager.getCurrentSession().getUser().getEmail());
 
-    for (auto companyClient : uiManager.getCompany().getCompanyClientManager().getCompanies())
+    if (companyClient->getPickupPoints().size()==0)
     {
-        if (companyClient.getRepresentative().getEmail()==uiManager.getCurrentSession().getUser().getEmail())
+        std::cout << "No pickup-points to display" << endl;
+    } else
+    {
+        for (auto i: companyClient->getPickupPoints())
         {
-            for (auto i: companyClient.getPickupPoints())
-            {
-                std::cout << i.getId() << " - " << i.getCity() << " - " << i.getX() << " - " << i.getY() << i.getLatitude() << " - " << i.getLongitude() << endl;
-            }
+            std::cout << i.getId() << " - " << i.getCity() << " - " << i.getX() << " - " << i.getY() << i.getLatitude() << " - " << i.getLongitude() << endl;
         }
     }
 
     std::vector<ui_util::Option> exit;
     exit.push_back(ui_util::make_option(0, "Exit"));
-
     int option = ui_util::getOption(exit);
-
     if (option != 0)
         run();
 }
