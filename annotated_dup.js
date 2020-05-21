@@ -11,6 +11,7 @@ var annotated_dup =
     [ "Bootstrap", "classBootstrap.html", "classBootstrap" ],
     [ "ClientCompanyRepresentativeUI", "classClientCompanyRepresentativeUI.html", "classClientCompanyRepresentativeUI" ],
     [ "Cluster", "classCluster.html", "classCluster" ],
+    [ "CompaniesClientInformationUI", "classCompaniesClientInformationUI.html", "classCompaniesClientInformationUI" ],
     [ "Company", "classCompany.html", "classCompany" ],
     [ "CompanyClient", "classCompanyClient.html", "classCompanyClient" ],
     [ "CompanyClientInformationUI", "classCompanyClientInformationUI.html", "classCompanyClientInformationUI" ],
