@@ -28,7 +28,6 @@ void PickUpPointUI::run() {
         default:
             break;
     }
-
 }
 
 void PickUpPointUI::addPickUpPoint() {

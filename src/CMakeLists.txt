@@ -38,10 +38,11 @@ add_library(feup-cal-proj main.cpp
         model/location/location_manager.cpp model/location/location_manager.h
         application/ui/client_company_representative/vehicle/request_vehicle_change_ui.cpp application/ui/client_company_representative/vehicle/request_vehicle_change_ui.h
         model/location/location_manager.cpp model/location/location_manager.h
-        application/ui/administrator/company_information/company_information_ui.cpp application/ui/administrator/company_information/company_information_ui.h
+        application/ui/administrator/company/company_information_ui.cpp application/ui/administrator/company/company_information_ui.h
         application/ui/client_company_representative/company_client_information/company_client_information_ui.cpp application/ui/client_company_representative/company_client_information/company_client_information_ui.h
         application/ui/client_company_representative/client_company_representative_ui.cpp application/ui/client_company_representative/client_company_representative_ui.h
         application/ui/client_company_representative/pickup_point/pickup_point_ui.cpp application/ui/client_company_representative/pickup_point/pickup_point_ui.h
+        application/ui/administrator/company_client/companies_client_information_ui.cpp application/ui/administrator/company_client/companies_client_information_ui.h
         )
 
 add_executable(application main.cpp
@@ -84,10 +85,11 @@ add_executable(application main.cpp
         model/location/location_manager.cpp model/location/location_manager.h
         application/ui/client_company_representative/vehicle/request_vehicle_change_ui.cpp application/ui/client_company_representative/vehicle/request_vehicle_change_ui.h
         model/location/location_manager.cpp model/location/location_manager.h
-        application/ui/administrator/company_information/company_information_ui.cpp application/ui/administrator/company_information/company_information_ui.h
+        application/ui/administrator/company/company_information_ui.cpp application/ui/administrator/company/company_information_ui.h
         application/ui/client_company_representative/company_client_information/company_client_information_ui.cpp application/ui/client_company_representative/company_client_information/company_client_information_ui.h
         application/ui/client_company_representative/client_company_representative_ui.cpp application/ui/client_company_representative/client_company_representative_ui.h
         application/ui/client_company_representative/pickup_point/pickup_point_ui.cpp application/ui/client_company_representative/pickup_point/pickup_point_ui.h
+        application/ui/administrator/company_client/companies_client_information_ui.cpp application/ui/administrator/company_client/companies_client_information_ui.h
         )
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
