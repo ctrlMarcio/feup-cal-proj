@@ -5,22 +5,22 @@ Vertex<T>::Vertex(T content): info(content) {}
 
 template<class T>
 T Vertex<T>::get() const {
-	return this->info;
+    return this->info;
 }
 
 template<class T>
 std::shared_ptr<Edge<T>> Vertex<T>::add(Vertex<T> *dest, double w) {
-	std::shared_ptr<Edge<T>> edge = std::make_shared<Edge<T>>(this, dest, w);
+    std::shared_ptr<Edge<T>> edge = std::make_shared<Edge<T>>(this, dest, w);
 
-	this->outgoing.push_back(edge);
+    this->outgoing.push_back(edge);
     dest->incoming.push_back(edge);
 
-	return edge;
+    return edge;
 }
 
 template<class T>
 vector<std::shared_ptr<Edge<T>>> Vertex<T>::getOutgoing() const {
-	return outgoing;
+    return outgoing;
 }
 
 template<class T>
@@ -38,8 +38,8 @@ bool Vertex<T>::operator!=(const Vertex &rhs) const {
     return !(rhs == *this);
 }
 
-template <class T>
-bool Vertex<T>::operator<(Vertex<T> & vertex) const {
+template<class T>
+bool Vertex<T>::operator<(Vertex<T> &vertex) const {
     return this->dist < vertex.dist;
 }
 

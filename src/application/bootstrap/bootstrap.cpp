@@ -9,14 +9,14 @@ const std::string Bootstrap::NODES_FILE = "nodes.txt";
 
 const std::string Bootstrap::EDGES_FILE = "edges.txt";
 
-Bootstrap::Bootstrap(const std::string& directory) {
+Bootstrap::Bootstrap(const std::string &directory) {
     this->appendToGraph(directory, "Grid graphs");
 }
 
 void Bootstrap::appendToGraph(const std::string &directory, const std::string &country) {
     DIR *dir;
 
-    if ((dir = opendir (directory.c_str())) != nullptr) {
+    if ((dir = opendir(directory.c_str())) != nullptr) {
         struct dirent *ent;
         long before = graph.verticesCount();
 
@@ -32,7 +32,7 @@ void Bootstrap::appendToGraph(const std::string &directory, const std::string &c
 
             std::string path = directory + "/" + city;
 
-            if (opendir (path.c_str()) != nullptr) {
+            if (opendir(path.c_str()) != nullptr) {
                 std::thread t(&Bootstrap::readDir, this, city, path, &mutex);
                 threads.push_back(std::move(t));
 
@@ -47,7 +47,7 @@ void Bootstrap::appendToGraph(const std::string &directory, const std::string &c
 
         std::string countryDir = directory + "/" + country;
         // reads the country only in the end
-        if (opendir (countryDir.c_str()) != nullptr) {
+        if (opendir(countryDir.c_str()) != nullptr) {
             std::string nodesFile = countryDir + "/" + NODES_FILE;
             std::string edgesFile = countryDir + "/" + EDGES_FILE;
 
@@ -90,7 +90,8 @@ Company Bootstrap::buildCompany(const std::string &name, long locationId, long v
     }
 }
 
-void Bootstrap::readNodes(Graph<Location> &graph, const std::string &fileName, const std::string &city, std::mutex *mutex) {
+void
+Bootstrap::readNodes(Graph<Location> &graph, const std::string &fileName, const std::string &city, std::mutex *mutex) {
     std::ifstream file;
     file.open(fileName);
 
@@ -193,9 +194,9 @@ bool Bootstrap::readEdges(Graph<Location> &graph, const string &fileName, std::m
             auto dst = graph.getVertex(tmpDst);
 
             // adds the edge
-            if(mutex) mutex->lock();
+            if (mutex) mutex->lock();
             graph.add(src.get(), dst.get(), 1);
-            if(mutex) mutex->unlock();
+            if (mutex) mutex->unlock();
         } catch (InvalidVertexException &) {
             allOk = false;
         }
@@ -206,7 +207,8 @@ bool Bootstrap::readEdges(Graph<Location> &graph, const string &fileName, std::m
     return allOk;
 }
 
-void Bootstrap::append(Graph<Location> &graph, const std::string &nodesFile, const std::string &edgesFile, const std::string &city, std::mutex *mutex) {
+void Bootstrap::append(Graph<Location> &graph, const std::string &nodesFile, const std::string &edgesFile,
+                       const std::string &city, std::mutex *mutex) {
     try {
         this->readNodes(graph, nodesFile, city, mutex);
     } catch (InvalidFileException &e) {

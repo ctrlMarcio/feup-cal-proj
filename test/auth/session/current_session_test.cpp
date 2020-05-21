@@ -43,7 +43,7 @@ TEST_F(CurrentSessionTest, login) {
     EXPECT_TRUE(currentSession.isLogged());
 }
 
-TEST_F(CurrentSessionTest, login_excep){
+TEST_F(CurrentSessionTest, login_excep) {
     AuthUserManager &authUserManager = *CurrentSessionTest::authUserManager;
     CurrentSession &currentSession = *CurrentSessionTest::currentSession;
 

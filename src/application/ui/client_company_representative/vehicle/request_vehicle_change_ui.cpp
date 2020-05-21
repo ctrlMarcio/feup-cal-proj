@@ -26,6 +26,8 @@ void RequestVehicleChangeUI::run() {
             std::to_string(vehicleNumber) + ".");
 
     std::cout << std::endl << "Request sent successfully!" << std::endl;
+
+    ui_util::displayPlaceholder();
 }
 
 void RequestVehicleChangeUI::printCurrentVehicleNumber(long currentVehicleNumber) {

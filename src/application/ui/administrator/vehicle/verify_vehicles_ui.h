@@ -7,14 +7,14 @@
 
 class VerifyVehiclesUI : public UI {
 public:
-	explicit VerifyVehiclesUI(UIManager &uiManager);
+    explicit VerifyVehiclesUI(UIManager &uiManager);
 
-	void run() override;
+    void run() override;
 
 private:
-	UIManager &uiManager;
+    UIManager &uiManager;
 
-	bool modifyVehicles(long usedVehicles);
+    bool modifyVehicles(long usedVehicles);
 };
 
 

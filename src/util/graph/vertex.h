@@ -16,12 +16,12 @@ using namespace std;
 template<class T>
 class Vertex {
 public:
-	/**
-	 * @brief Constructs the vertex given only its content.
-	 *
-	 * @param content	the content
-	 */
-	explicit Vertex(T content);
+    /**
+     * @brief Constructs the vertex given only its content.
+     *
+     * @param content	the content
+     */
+    explicit Vertex(T content);
 
     /**
      * @brief Creates and adds an outgoing edge to the vertex.
@@ -39,12 +39,12 @@ public:
      */
     T get() const;
 
-	/**
-	 * @brief Gets the container for the outgoing edges.
-	 *
-	 * @return			the container for the outgoing edges
-	 */
-	vector<std::shared_ptr<Edge<T>>> getOutgoing() const;
+    /**
+     * @brief Gets the container for the outgoing edges.
+     *
+     * @return			the container for the outgoing edges
+     */
+    vector<std::shared_ptr<Edge<T>>> getOutgoing() const;
 
     /**
      * @brief Gets the container for the incoming edges.
@@ -58,14 +58,14 @@ public:
      *
      * @return      the hash
      */
-	int hash() const;
+    int hash() const;
 
-	/**
-	 * @brief Verifies if this vertex is equal to another one
-	 *
-	 * @param rhs   the other vertex
-	 * @return      true if they are equal, false otherwise
-	 */
+    /**
+     * @brief Verifies if this vertex is equal to another one
+     *
+     * @param rhs   the other vertex
+     * @return      true if they are equal, false otherwise
+     */
     bool operator==(const Vertex &rhs) const;
 
     /**
@@ -82,7 +82,7 @@ public:
      * @param rhs   the other vertex
      * @return      true if lower, false otherwise
      */
-    bool operator<(Vertex<T> & vertex) const;
+    bool operator<(Vertex<T> &vertex) const;
 
     /**
      * @brief Calculates the weight to a given vertex
@@ -108,15 +108,15 @@ public:
     int queueIndex = 0;
 
 private:
-	/**
-	 * @brief The content of the vertex
-	 */
-	T info;
+    /**
+     * @brief The content of the vertex
+     */
+    T info;
 
-	/**
-	 * @brief The container of outgoing edges
-	 */
-	vector<std::shared_ptr<Edge<T>>> outgoing;
+    /**
+     * @brief The container of outgoing edges
+     */
+    vector<std::shared_ptr<Edge<T>>> outgoing;
 
     /**
      * @brief The container of incoming edges

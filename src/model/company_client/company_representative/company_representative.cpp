@@ -2,7 +2,8 @@
 
 #include <utility>
 
-CompanyRepresentative::CompanyRepresentative(std::string name, std::string email) : name(std::move(name)), email(std::move(email)){}
+CompanyRepresentative::CompanyRepresentative(std::string name, std::string email) : name(std::move(name)),
+                                                                                    email(std::move(email)) {}
 
 std::string CompanyRepresentative::getName() const {
     return this->name;

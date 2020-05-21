@@ -2,7 +2,7 @@
 #include "vehicle/verify_vehicles_ui.h"
 #include "company_client/modify_company_vehicles_ui.h"
 #include "company_client/register_company_ui.h"
-#include "company_information/company_information.h"
+#include "company_information/company_information_ui.h"
 
 AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_line("> Companies"));
@@ -37,7 +37,7 @@ void AdministratorUI::run() {
             uiManager.set(new ModifyCompanyVehiclesUI(uiManager));
             break;
         case 3:
-            uiManager.set(new CompanyInformation(uiManager));
+            uiManager.set(new CompanyInformationUI(uiManager));
             break;
         case 4:
             uiManager.set(new VerifyVehiclesUI(uiManager));
@@ -54,7 +54,7 @@ void AdministratorUI::showNotifications() {
     const std::vector<std::string> &notifications = uiManager.getCompany().getAdministratorManager().getNotifications();
 
     std::cout << endl;
-    std::cout << "You have " << notifications.size() << " notification";
+    std::cout << "You have " << notifications.size() << " new notification";
     if (notifications.size() > 1)
         std::cout << "s";
     std::cout << ":" << std::endl;

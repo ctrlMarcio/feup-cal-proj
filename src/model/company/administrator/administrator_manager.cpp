@@ -3,20 +3,17 @@
 
 AdministratorManager::AdministratorManager() {}
 
-bool AdministratorManager::isValid(const Administrator &administrator) const
-{
+bool AdministratorManager::isValid(const Administrator &administrator) const {
     return !administrator.getName().empty() && !administrator.getEmail().empty();
 }
 
-bool AdministratorManager::add(Administrator administrator)
-{
+bool AdministratorManager::add(Administrator administrator) {
     if (!isValid(administrator)) return false;
     if (has(administrator)) return false;
     return administrators.insert(administrator).second;
 }
 
-bool AdministratorManager::remove(Administrator administrator)
-{
+bool AdministratorManager::remove(Administrator administrator) {
     if (!has(administrator)) return false;
     return administrators.erase(administrator) > 0;
 }

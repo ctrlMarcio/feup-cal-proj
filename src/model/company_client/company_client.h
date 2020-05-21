@@ -18,7 +18,7 @@ public:
      * @param representative        the company_representative
      * @param headquarters          the company headquarters location
      */
-    CompanyClient(std::string name, CompanyRepresentative representative, const Location& headquarters);
+    CompanyClient(std::string name, CompanyRepresentative representative, const Location &headquarters);
 
     /**
      * @brief Gets the UUID.

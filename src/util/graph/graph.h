@@ -56,7 +56,7 @@ public:
      * @param w			the weight of the edge
      * @return			the pointer to the created edge
      */
-     std::shared_ptr<Edge<T>> add(const T &source, const T &dest, double w);
+    std::shared_ptr<Edge<T>> add(const T &source, const T &dest, double w);
 
     /**
      * @brief Gets the pointer to a vertex, given its content.

@@ -21,7 +21,8 @@ public:
      * @param latitude  the latitude
      * @param longitude the longitude
      */
-    Location(long id, const std::string &city, double x, double y, double latitude=DBL_MAX, double longitude=DBL_MAX);
+    Location(long id, const std::string &city, double x, double y, double latitude = DBL_MAX,
+             double longitude = DBL_MAX);
 
     /**
      * @brief Copy constructor
@@ -42,7 +43,7 @@ public:
      * @param y the y of the point
      * @return  the euclidean distance
      */
-    double euclideanDistanceTo(double x, double  y) const;
+    double euclideanDistanceTo(double x, double y) const;
 
     /**
      * @brief Gets the ID.
@@ -110,35 +111,35 @@ public:
     int hash() const;
 
 private:
-	/**
-	 * @brief The location unique identifier.
-	 */
-	long id;
+    /**
+     * @brief The location unique identifier.
+     */
+    long id;
 
-	/**
-	 * @brief The string
-	 */
-	std::string city;
+    /**
+     * @brief The string
+     */
+    std::string city;
 
-	/**
-	 * @brief The \e x coordinate.
-	 */
-	double x;
+    /**
+     * @brief The \e x coordinate.
+     */
+    double x;
 
-	/**
-	 * @brief The \e y coordinate.
-	 */
-	double y;
+    /**
+     * @brief The \e y coordinate.
+     */
+    double y;
 
-	/**
-	 * @brief The latitude.
-	 */
-	double latitude;
+    /**
+     * @brief The latitude.
+     */
+    double latitude;
 
-	/**
-	 * @brief The longitude.
-	 */
-	double longitude;
+    /**
+     * @brief The longitude.
+     */
+    double longitude;
 };
 
 

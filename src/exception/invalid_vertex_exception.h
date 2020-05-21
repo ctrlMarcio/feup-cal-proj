@@ -13,7 +13,7 @@ public:
      *
      * @param arg the arguments
      */
-    explicit InvalidVertexException(const std::string &arg="The vertex does not exist.");
+    explicit InvalidVertexException(const std::string &arg = "The vertex does not exist.");
 
     /*!
      * Gets the error message.

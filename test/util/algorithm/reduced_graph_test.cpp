@@ -6,8 +6,7 @@
 using testing::Eq;
 
 template<class T>
-Graph<Location> createGraph()
-{
+Graph<Location> createGraph() {
     Graph<T> simplified_graph;
     Location l1(1, "a", 1, 1);
     Location l2(2, "b", 2, 2);
@@ -17,10 +16,10 @@ Graph<Location> createGraph()
     simplified_graph.add(l2);
     simplified_graph.add(l3);
     simplified_graph.add(l4);
-    simplified_graph.add(l1,l2,1);
-    simplified_graph.add(l2,l3,1);
-    simplified_graph.add(l1,l4,1);
-    simplified_graph.add(l4,l3,2);
+    simplified_graph.add(l1, l2, 1);
+    simplified_graph.add(l2, l3, 1);
+    simplified_graph.add(l1, l4, 1);
+    simplified_graph.add(l4, l3, 2);
 
     return simplified_graph;
 }

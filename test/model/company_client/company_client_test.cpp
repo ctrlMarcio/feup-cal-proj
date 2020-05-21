@@ -3,18 +3,17 @@
 
 using testing::Eq;
 
-CompanyClient createCompanyClient()
-{
+CompanyClient createCompanyClient() {
     CompanyRepresentative companyRepresentative("nome", "email@email.com");
     Location location(1, "a", 1, 1);
-    CompanyClient companyClient("company",companyRepresentative,location);
+    CompanyClient companyClient("company", companyRepresentative, location);
     return companyClient;
 }
 
 TEST(company_client, contructor_default_test) {
     CompanyRepresentative companyRepresentative("nome", "email@email.com");
     Location location(1, "a", 1, 1);
-    CompanyClient companyClient("company",companyRepresentative,location);
+    CompanyClient companyClient("company", companyRepresentative, location);
 
     EXPECT_EQ(companyClient.getName(), "company");
     EXPECT_EQ(companyClient.getHeadquarters(), location);

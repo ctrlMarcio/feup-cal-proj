@@ -19,14 +19,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-    # Building with cmake
-    - name: Bulding
-      run: |
-            mkdir build
-            cd build
-            cmake -DCODE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ..
-            cmake --build . --config Debug -- -j $(nproc)
-            ctest -j $(nproc) --output-on-failure
+      # Building with cmake
+      - name: Bulding
+        run: |
+          mkdir build
+          cd build
+          cmake -DCODE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ..
+          cmake --build . --config Debug -- -j $(nproc)
+          ctest -j $(nproc) --output-on-failure

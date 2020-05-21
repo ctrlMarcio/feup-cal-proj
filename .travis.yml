@@ -5,22 +5,22 @@ sudo: required
 compiler: gcc
 
 cache:
-- directories:
-  - $HOME/.cache
+  - directories:
+      - $HOME/.cache
 
 addons:
   artifacts: true
   apt:
     packages:
-    - lcov
+      - lcov
 
 branches:
   only:
     - master
 
 install:
-# (fake) install dependencies (usually involves wget, configure, make, ...)
-# install into cache folder (build binaries+headers only, no sources and do NOT build there)
+  # (fake) install dependencies (usually involves wget, configure, make, ...)
+  # install into cache folder (build binaries+headers only, no sources and do NOT build there)
   - mkdir -p $HOME/.cache
   - touch $HOME/.cache/mydependency.so
 

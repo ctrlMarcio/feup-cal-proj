@@ -16,7 +16,7 @@ bool algorithm::isComplete(Graph<T> &simplifiedGraph, const list<Vertex<T>> &pat
 }
 
 template<class T>
-Path <T> algorithm::getPath(Graph<T> &simplifiedGraph, const T &source, const T &destination) {
+Path<T> algorithm::getPath(Graph<T> &simplifiedGraph, const T &source, const T &destination) {
     std::priority_queue<Trio<T>, std::vector<Trio<T >>, my_comparator> queue;
 
     const Vertex<T> &sourceVertex = simplifiedGraph.getVertex(source);

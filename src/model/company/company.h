@@ -24,7 +24,7 @@ public:
      * @param vehicleNumber     the number of vehicles
      * @param graph             the world graph
      */
-    Company(std::string name, const Location& garageLocation, Graph<Location> graph, long vehicleNumber);
+    Company(std::string name, const Location &garageLocation, Graph<Location> graph, long vehicleNumber);
 
     /**
      * @brief Gets the company client manager.

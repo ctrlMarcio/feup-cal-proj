@@ -1,12 +1,12 @@
-#ifndef FEUP_CAL_PROJ_PICKUP_POINTS_UI_H
-#define FEUP_CAL_PROJ_PICKUP_POINTS_UI_H
+#ifndef FEUP_CAL_PROJ_PICKUP_POINT_UI_H
+#define FEUP_CAL_PROJ_PICKUP_POINT_UI_H
 
 #include <vector>
 #include "../../ui/ui_manager.h"
 
-class PickUpPoints : public UI {
+class PickUpPointUI : public UI {
 public:
-    explicit PickUpPoints(UIManager &uiManager);
+    explicit PickUpPointUI(UIManager &uiManager);
 
     void run() override;
 
@@ -22,4 +22,4 @@ private:
     std::vector<ui_util::Option> options;
 };
 
-#endif //FEUP_CAL_PROJ_PICKUP_POINTS_UI_H
+#endif //FEUP_CAL_PROJ_PICKUP_POINT_UI_H

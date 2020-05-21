@@ -2,7 +2,7 @@
 #define FEUP_CAL_PROJ_CLIENT_COMPANY_REPRESENTATIVE_UI_H
 
 #include "../ui/ui_manager.h"
-#include "pickup_points/pickup_points_ui.h"
+#include "pickup_point/pickup_point_ui.h"
 
 class ClientCompanyRepresentativeUI : public UI {
 public:

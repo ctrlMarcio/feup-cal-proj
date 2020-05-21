@@ -2,4 +2,5 @@
 
 #include <utility>
 
-InvalidFileException::InvalidFileException(std::string filePath, const std::string &arg) : runtime_error(arg), filePath(std::move(filePath)), message(arg) {}
+InvalidFileException::InvalidFileException(std::string filePath, const std::string &arg) : runtime_error(arg), filePath(
+        std::move(filePath)), message(arg) {}

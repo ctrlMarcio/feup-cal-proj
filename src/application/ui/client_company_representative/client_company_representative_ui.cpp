@@ -1,10 +1,9 @@
 #include "client_company_representative_ui.h"
-#include "company_client_information/company_client_information.h"
+#include "company_client_information/company_client_information_ui.h"
 #include "vehicle/request_vehicle_change_ui.h"
 
 ClientCompanyRepresentativeUI::ClientCompanyRepresentativeUI(UIManager &uiManager) : uiManager(uiManager) {
-    options.push_back(ui_util::make_line("> Client company representative"));
-    options.push_back(ui_util::make_option(1, "Pickup-points"));
+    options.push_back(ui_util::make_option(1, "Pick-up points"));
     options.push_back(ui_util::make_option(2, "Request vehicle number update"));
     options.push_back(ui_util::make_option(3, "View information"));
     options.push_back(ui_util::make_empty_line());
@@ -23,13 +22,13 @@ void ClientCompanyRepresentativeUI::run() {
             uiManager.getCurrentSession().logout();
             break;
         case 1:
-            uiManager.set(new PickUpPoints(uiManager));
+            uiManager.set(new PickUpPointUI(uiManager));
             break;
         case 2:
             uiManager.set(new RequestVehicleChangeUI(uiManager));
             break;
         case 3:
-            uiManager.set(new CompanyClientInformation(uiManager));
+            uiManager.set(new CompanyClientInformationUI(uiManager));
             break;
         default:
             break;
