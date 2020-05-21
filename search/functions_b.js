@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['random_5fpassword',['random_password',['../namespacestring__util.html#a2ac97fa63faec9c645f347abbcacacff',1,'string_util']]],
-  ['reducegraph',['reduceGraph',['../namespacealgorithm.html#a2fec9f87106b38398a7e37670de61550',1,'algorithm']]],
-  ['remove',['remove',['../classAuthUserManager.html#ae35bafcee2db176ceae693bfd4baeb08',1,'AuthUserManager::remove()'],['../classAdministratorManager.html#a9c1a97979dab0d729eccd801abbdcc78',1,'AdministratorManager::remove()'],['../classCompanyClientManager.html#a613d5b950cc2724326a5facb689a7f36',1,'CompanyClientManager::remove()']]],
-  ['removepickuppoint',['removePickupPoint',['../classCompanyClient.html#afb2a1ed717acc21678589a883f4ee268',1,'CompanyClient']]]
+  ['operator_21_3d',['operator!=',['../classAuthUser.html#a3c53caff203f9f7ab21faf6ac321d016',1,'AuthUser::operator!=()'],['../classLocation.html#a7b55f95a3e3d671089a206557fa2b202',1,'Location::operator!=()'],['../classVertex.html#aa9987a1eb63aadc990543b93ef0da656',1,'Vertex::operator!=()']]],
+  ['operator_3c',['operator&lt;',['../classVertex.html#a5a6670b842354232bac4dad2f551d66e',1,'Vertex']]],
+  ['operator_3d_3d',['operator==',['../classAuthUser.html#a580d31c02d0b2dc434229fa24d6d4456',1,'AuthUser::operator==()'],['../classLocation.html#afdb3b154b40c33188883b62abafb6343',1,'Location::operator==()'],['../classVertex.html#ac9ccb7420302655fb2680745094680cd',1,'Vertex::operator==()']]],
+  ['option',['Option',['../classui__util_1_1Option.html#aa3a3eb6ad96c67a7e147b174b53b719d',1,'ui_util::Option::Option()'],['../classui__util_1_1Option.html#ab1814b4fdeb50c3c8e22c5a3f8f31fd5',1,'ui_util::Option::Option(std::string desc)'],['../classui__util_1_1Option.html#aa85bf0b3ffa5eba54866ceef223a1884',1,'ui_util::Option::Option(int option, std::string desc)']]]
 ];
