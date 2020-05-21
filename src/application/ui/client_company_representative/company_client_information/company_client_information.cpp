@@ -8,6 +8,7 @@ void CompanyClientInformation::getCompanyClient()
     std::cout << "Company Name: " << companyClient->getName() << endl;
     std::cout << "Company Representative: " << companyClient->getRepresentative().getName() << " (" << companyClient->getRepresentative().getEmail() <<")" << endl;
     std::cout << "Company Headquarters Location: " << companyClient->getHeadquarters().getCity() << " - " << companyClient->getHeadquarters().getX() << " / " << companyClient->getHeadquarters().getY() << endl;
+    std::cout << "Number of vehicles assigned: " << companyClient->getVehicleNumber() << endl ;
     return;
 }
 
