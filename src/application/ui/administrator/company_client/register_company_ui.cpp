@@ -7,9 +7,11 @@ void RegisterCompanyUI::run() {
 
     if (uiManager.getCompany().getVehiclesLeft() == 0) {
         std::cout << "There are no vehicles available!" << std::endl;
+        ui_util::displayPlaceholder();
         return;
     } else if (uiManager.getCompany().getLocationManager().getLocations().empty()) {
         std::cout << "There are no locations registered!" << std::endl;
+        ui_util::displayPlaceholder();
         return;
     }
 
@@ -22,13 +24,28 @@ void RegisterCompanyUI::run() {
 
     long locationId = getHeadquarters();
 
-    const Location &loc = *(uiManager.getCompany().getLocationManager().get(locationId));
+    if (!registerCompany(name, representative_name, representative_email, representative_password, locationId)) {
+        ui_util::displayPlaceholder();
+        return;
+    }
 
-    // TODO: improve this method
-    uiManager.getAuthUserManager().add(
-            AuthUser(representative_email, representative_password, AuthUser::COMPANY_REPRESENTATIVE));
-    uiManager.getCompany().getCompanyClientManager().add(
-            CompanyClient(name, CompanyRepresentative(representative_name, representative_email), loc));
+    const CompanyClient &company = *uiManager.getCompany().getCompanyClientManager().getCompany(representative_email);
+
+    std::cout << std::endl;
+    std::cout << "Company successfully registered! The details are as follows:" << std::endl;
+    std::cout << TAB << "Company name: " << company.getName() << std::endl;
+    std::cout << TAB << "Company UUID: " << company.getUUID() << std::endl;
+    std::cout << TAB << "Company vehicles: " << company.getVehicleNumber() << std::endl;
+    std::cout << TAB << "Company headquarters: " << company.getHeadquarters().getId() << " at " << std::fixed
+              << std::setprecision(2) << company.getHeadquarters().getX()
+              << ", "
+              << company.getHeadquarters().getY() << std::endl;
+    std::cout << TAB << "Company pick-up points: " << company.getPickupPoints().size() << std::endl;
+    std::cout << std::endl;
+    std::cout << TAB << "Company representative name: " << company.getRepresentative().getName() << std::endl;
+    std::cout << TAB << "Company representative email: " << company.getRepresentative().getEmail() << std::endl;
+
+    ui_util::displayPlaceholder();
 }
 
 std::string RegisterCompanyUI::getEmail() {
@@ -57,6 +74,7 @@ long RegisterCompanyUI::getHeadquarters() {
                       << location.getY() << std::endl;
         }
 
+        ui_util::displayPlaceholder();
         std::cout << std::endl;
 
         return getHeadquarters();
@@ -71,4 +89,31 @@ long RegisterCompanyUI::getHeadquarters() {
     }
 
     return id;
+}
+
+bool RegisterCompanyUI::registerCompany(const string &name, const string &representative_name,
+                                        const string &representative_email, const string &representative_password,
+                                        long locationId) const {
+    const Location &loc = *(uiManager.getCompany().getLocationManager().get(locationId));
+
+    // TODO: improve this method
+    if (!uiManager.getAuthUserManager().add(
+            AuthUser(representative_email, representative_password, AuthUser::COMPANY_REPRESENTATIVE))) {
+        std::cout
+                << std::endl
+                << "Could not register the company representative, it may already exist..."
+                << std::endl;
+        return false;
+    }
+
+    if (!uiManager.getCompany().getCompanyClientManager().add(
+            CompanyClient(name, CompanyRepresentative(representative_name, representative_email), loc))) {
+        std::cout
+                << std::endl
+                << "Could not register the company, it may already exist or invalid..."
+                << std::endl;
+        return false;
+    }
+
+    return true;
 }

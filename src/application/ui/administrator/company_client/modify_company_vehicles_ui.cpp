@@ -15,6 +15,7 @@ void ModifyCompanyVehiclesUI::run() {
     std::cout << uiManager.getHeader();
     if (options.empty()) {
         std::cout << "There are no companies registered!" << std::endl;
+        ui_util::displayPlaceholder();
         return;
     }
 
@@ -37,17 +38,19 @@ void ModifyCompanyVehiclesUI::run() {
                 << std::endl
                 << "Could not update the vehicle number! The vehicle number cannot be 0 or less..."
                 << std::endl;
+        ui_util::displayPlaceholder();
         return;
     }
 
-    if (uiManager.getCompany().setVehicleNumber(companyClient, number)) {
-        std::cout << std::endl << "Vehicle number updated to " << number << "!" << std::endl;
-        return;
-    } else {
+    if (!uiManager.getCompany().setVehicleNumber(companyClient, number)) {
         std::cout
                 << std::endl
                 << "Could not update the vehicle number! The vehicle number exceeds the number of vehicles available..."
                 << std::endl;
+        ui_util::displayPlaceholder();
         return;
     }
+
+    std::cout << std::endl << "Vehicle number updated to " << number << "!" << std::endl;
+    ui_util::displayPlaceholder();
 }

@@ -151,3 +151,10 @@ unsigned long ui_util::getUnsigned(const std::string &description) {
 
     return (unsigned long) number;
 }
+
+void ui_util::displayPlaceholder() {
+    std::cout << std::endl<< "Press any key to continue...";
+
+    std::string stringOption;
+    std::getline(std::cin, stringOption);
+}

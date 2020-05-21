@@ -118,6 +118,11 @@ namespace ui_util {
     Option make_option(int option, std::string desc);
 
     /**
+     * @brief Prevents the user from continuing.
+     */
+    void displayPlaceholder();
+
+    /**
      * @brief Gets an option given a vector of options.
      *
      * @param options   the vector of options

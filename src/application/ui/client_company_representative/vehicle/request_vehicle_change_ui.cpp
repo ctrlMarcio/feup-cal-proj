@@ -29,13 +29,11 @@ void RequestVehicleChangeUI::run() {
 }
 
 void RequestVehicleChangeUI::printCurrentVehicleNumber(long currentVehicleNumber) {
-    string personOfTheVerbalTime = "are";  // xd
     string vehicleSpell = "vehicle";
-    if (currentVehicleNumber == 1) {
-        personOfTheVerbalTime = "is";
+    if (currentVehicleNumber > 1) {
         vehicleSpell += "s";
     }
-    cout << "There " << personOfTheVerbalTime << " currently " << currentVehicleNumber << " " << vehicleSpell
-         << " available."
+    cout << "The company is currently using " << currentVehicleNumber << " " << vehicleSpell
+         << "."
          << endl << endl;
 }

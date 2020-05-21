@@ -18,6 +18,8 @@ private:
 
     long getHeadquarters();
 
+    bool registerCompany(const string &name, const string &representative_name, const string &representative_email,
+                         const string &representative_password, long locationId) const;
 };
 
 #endif //FEUP_CAL_PROJ_REGISTER_COMPANY_UI_H
