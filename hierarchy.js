@@ -35,12 +35,12 @@ var hierarchy =
     [ "UI", "classUI.html", [
       [ "AdministratorUI", "classAdministratorUI.html", null ],
       [ "ClientCompanyRepresentativeUI", "classClientCompanyRepresentativeUI.html", null ],
-      [ "CompanyClientInformation", "classCompanyClientInformation.html", null ],
-      [ "CompanyInformation", "classCompanyInformation.html", null ],
+      [ "CompanyClientInformationUI", "classCompanyClientInformationUI.html", null ],
+      [ "CompanyInformationUI", "classCompanyInformationUI.html", null ],
       [ "HomeUI", "classHomeUI.html", null ],
       [ "LoginUI", "classLoginUI.html", null ],
       [ "ModifyCompanyVehiclesUI", "classModifyCompanyVehiclesUI.html", null ],
-      [ "PickUpPoints", "classPickUpPoints.html", null ],
+      [ "PickUpPointUI", "classPickUpPointUI.html", null ],
       [ "RegisterCompanyUI", "classRegisterCompanyUI.html", null ],
       [ "RequestVehicleChangeUI", "classRequestVehicleChangeUI.html", null ],
       [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", null ]
