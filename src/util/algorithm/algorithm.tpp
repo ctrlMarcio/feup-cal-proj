@@ -62,3 +62,40 @@ Graph<T> algorithm::reduceGraph(Graph<T> graph, const std::vector<Location> &loc
 
     return simpleGraph;
 }
+
+template<class T>
+bool algorithm::hasCycle(std::list<T> list, int lastElements) {
+    if (list.size() < lastElements)
+        lastElements = list.size() - list.size() % 2;
+
+    int half = lastElements / 2;
+
+    auto lhs = std::prev(list.end(), lastElements);
+    auto rhs = std::prev(list.end(), half);
+
+    while (rhs != list.end()) {
+        while (*lhs != *rhs) {
+            lhs = std::next(lhs, 2);
+            rhs = std::next(rhs, 1);
+
+            if (rhs == list.end())
+                return false;
+        }
+
+        auto ll = lhs;
+        auto rr = rhs;
+
+        while (*ll == *rr) {
+            ll = std::next(ll, 1);
+            rr = std::next(rr, 1);
+
+            if (rr == list.end())
+                return true;
+        }
+
+        lhs = std::next(lhs, 2);
+        rhs = std::next(rhs, 1);
+    }
+
+    return false;
+}

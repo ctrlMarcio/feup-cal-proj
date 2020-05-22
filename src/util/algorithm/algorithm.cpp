@@ -46,12 +46,12 @@ std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, i
 }
 
 std::list<Path<Location>>
-algorithm::getPaths(Graph<Location> worldGraph, const CompanyClient &companyClient, const Company &company) {
+algorithm::getPaths(const CompanyClient &companyClient, Company &company) {
     std::vector<Location> locations = companyClient.getPickupPoints();
 
     std::vector<Cluster> clusters = kMeans(locations, companyClient.getVehicleNumber());
 
-    return pathFinder(worldGraph, company.getGarageLocation(), companyClient.getHeadquarters(), clusters);
+    return pathFinder(company.getGraph(), company.getGarageLocation(), companyClient.getHeadquarters(), clusters);
 }
 
 std::list<Path<Location>>
@@ -71,6 +71,9 @@ algorithm::pathFinder(Graph<Location> &graph, const Location &source, const Loca
     while (!clustersCopy.empty()) {
         Trio<Location> min = queue.top();
         queue.pop();
+
+        if (hasCycle(min.getPath()))
+            continue;
 
         for (const std::shared_ptr<Edge<Location>> &child : min.getVertex().getOutgoing())
             queue.push(Trio<Location>(min, *child));

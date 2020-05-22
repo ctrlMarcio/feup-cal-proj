@@ -297,7 +297,7 @@ TEST(algorithm, paths_finder) {
     expectedPath.push_back(graph.getVertex(v5));
     expectedPath.push_back(graph.getVertex(h));
 
-    std::list<Path<Location>> paths = algorithm::getPaths(graph, companyClient, company);
+    std::list<Path<Location>> paths = algorithm::getPaths(companyClient, company);
 
     EXPECT_EQ(paths.size(), 1);
 }
@@ -374,7 +374,7 @@ TEST(algorithm, paths_finder2) {
     expectedPath.push_back(graph.getVertex(v5));
     expectedPath.push_back(graph.getVertex(h));
 
-    std::list<Path<Location>> paths = algorithm::getPaths(graph, companyClient, company);
+    std::list<Path<Location>> paths = algorithm::getPaths(companyClient, company);
 
     EXPECT_EQ(paths.size(), 2);
 }
@@ -418,7 +418,31 @@ TEST(algorithm, paths_finder3) {
     companyClient.addPickupPoint(v3);
     companyClient.addPickupPoint(v4);
 
-    std::list<Path<Location>> paths = algorithm::getPaths(graph, companyClient, company);
+    std::list<Path<Location>> paths = algorithm::getPaths(companyClient, company);
 
     EXPECT_EQ(paths.size(), 2);
+}
+
+TEST(algorithm, cycles_test) {
+    std::list<int> list;
+
+    list.push_back(0);
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(1);
+    list.push_back(2);
+
+    EXPECT_TRUE(algorithm::hasCycle(list));
+
+    list.push_back(3);
+
+    EXPECT_FALSE(algorithm::hasCycle(list));
+
+    list.push_back(0);
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(1);
+    list.push_back(2);
+
+    EXPECT_TRUE(algorithm::hasCycle(list));
 }

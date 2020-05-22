@@ -10,7 +10,7 @@ const std::string Bootstrap::NODES_FILE = "nodes.txt";
 const std::string Bootstrap::EDGES_FILE = "edges.txt";
 
 Bootstrap::Bootstrap(const std::string &directory) {
-    this->appendToGraph(directory, "Grid graphs");
+    this->appendToGraph(directory, "Portugal");
 }
 
 void Bootstrap::appendToGraph(const std::string &directory, const std::string &country) {
@@ -105,6 +105,8 @@ Bootstrap::readNodes(Graph<Location> &graph, const std::string &fileName, const 
     while (std::getline(file, line)) {
         // example: (301415137, 546146.1558010778, 4601058.475980306, 41.5598669, -8.446596)
 
+        if (line[0] == '#') continue;
+
         // gets all elements
         std::vector<std::string> elements = string_util::split(line, DELIMITER);
         bool isComplete = elements.size() == 5;
@@ -170,6 +172,8 @@ bool Bootstrap::readEdges(Graph<Location> &graph, const string &fileName, std::m
     while (std::getline(file, line)) {
         // example: (384994721, 384994722)
 
+        if (line[0] == '#') continue;
+
         // gets all elements
         std::vector<std::string> elements = string_util::split(line, DELIMITER);
         std::string srcStr = elements[0];   // (384994721
@@ -196,6 +200,7 @@ bool Bootstrap::readEdges(Graph<Location> &graph, const string &fileName, std::m
             // adds the edge
             if (mutex) mutex->lock();
             graph.add(src.get(), dst.get(), 1);
+            //graph.add(dst.get(), src.get(), 1);
             if (mutex) mutex->unlock();
         } catch (InvalidVertexException &) {
             allOk = false;

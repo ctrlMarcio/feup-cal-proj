@@ -47,6 +47,9 @@ namespace algorithm {
     std::list<Path<Location>> pathFinder(Graph<Location> &graph, const Location &source, const Location &destination,
                                          const std::vector<Cluster> &clusters);
 
+    std::list<Path<Location>>
+    getPaths(const CompanyClient &companyClient, Company &company);
+
     /**
      * @brief Gets the reduced graph from a given graph
      *
@@ -60,8 +63,8 @@ namespace algorithm {
     template<class T>
     void dijkstra(Graph<T> &gra, const Vertex<T> &sourceVertex);
 
-    std::list<Path<Location>>
-    getPaths(const Graph<Location> worldGraph, const CompanyClient &companyClient, const Company &company);
+    template<class T>
+    bool hasCycle(std::list<T> list, int lastElements = 10);
 };
 
 #include "algorithm.tpp"
