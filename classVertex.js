@@ -11,6 +11,6 @@ var classVertex =
     [ "operator==", "classVertex.html#ac9ccb7420302655fb2680745094680cd", null ],
     [ "weightTo", "classVertex.html#a845daede1a422d1ac3109a1903efca3a", null ],
     [ "dist", "classVertex.html#a08a2b813e77f97aa8b6c1d252e5417f7", null ],
-    [ "path", "classVertex.html#ab968bdd80f912a6f21f30e479bf735ce", null ],
+    [ "path", "classVertex.html#a61f2f3b1533d94ad3c3f5fee828a19bc", null ],
     [ "queueIndex", "classVertex.html#a721ab622207a73c5fae7b9abad6c07cc", null ]
 ];
