@@ -47,24 +47,60 @@ std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, i
 
 std::list<Path<Location>>
 algorithm::getPaths(Graph<Location> worldGraph, const CompanyClient &companyClient, const Company &company) {
-    std::list<Path<Location>> result;
-
     std::vector<Location> locations = companyClient.getPickupPoints();
 
     std::vector<Cluster> clusters = kMeans(locations, companyClient.getVehicleNumber());
 
-    for (const Cluster &cluster : clusters) {
-        std::vector<Location> clusterLocations;
-        clusterLocations.insert(clusterLocations.end(), cluster.getLocations().begin(), cluster.getLocations().end());
-        clusterLocations.push_back(companyClient.getHeadquarters());
-        clusterLocations.push_back(company.getGarageLocation());
+    return pathFinder(worldGraph, company.getGarageLocation(), companyClient.getHeadquarters(), clusters);
+}
 
-        Graph<Location> simplifiedGraph = reduceGraph(worldGraph, clusterLocations);
+std::list<Path<Location>>
+algorithm::pathFinder(Graph<Location> &graph, const Location &source, const Location &destination,
+                      const std::vector<Cluster> &clusters) {
+    std::list<Path<Location>> res;
+    std::vector<Cluster> clustersCopy(clusters);
+    std::priority_queue<Trio<Location>, std::vector<Trio<Location>>, my_comparator> queue;
 
-        Path<Location> path = getPath(simplifiedGraph, company.getGarageLocation(), companyClient.getHeadquarters());
+    const Vertex<Location> &sourceVertex = graph.getVertex(source);
+    const Vertex<Location> &destinationVertex = graph.getVertex(destination);
 
-        result.push_back(path);
+    Trio<Location> current(sourceVertex);
+
+    queue.push(current);
+
+    while (!clustersCopy.empty()) {
+        Trio<Location> min = queue.top();
+        queue.pop();
+
+        for (const std::shared_ptr<Edge<Location>> &child : min.getVertex().getOutgoing())
+            queue.push(Trio<Location>(min, *child));
+
+        current = min;
+
+        for (auto it = clustersCopy.begin(); it != clustersCopy.end(); ++it) {
+            Cluster cluster = *it;
+            std::vector<Location> locations;
+            locations.insert(locations.end(), cluster.getLocations().begin(), cluster.getLocations().end());
+
+            if (isComplete(locations, current.getPath()) && current.getVertex() == destinationVertex) {
+                Path<Location> path(current.getPath(), current.getPathCost());
+                res.push_back(path);
+                it = clustersCopy.erase(it);
+                it--;
+            }
+        }
     }
 
-    return result;
+    return res;
+}
+
+bool algorithm::isComplete(const std::vector<Location> &locations, const list<Vertex<Location>> &path) {
+    bool complete = true;
+
+    for (const Location &location : locations) {
+        Vertex<Location> elem(location);
+        if (find(path.begin(), path.end(), elem) == path.end()) return false;
+    }
+
+    return complete;
 }

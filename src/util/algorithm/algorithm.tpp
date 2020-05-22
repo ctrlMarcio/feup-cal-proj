@@ -6,44 +6,11 @@ struct my_comparator {
 };
 
 template<class T>
-bool algorithm::isComplete(Graph<T> &simplifiedGraph, const list<Vertex<T>> &path) {
-    bool complete = true;
-
-    for (const auto &elem : simplifiedGraph.getVertices())
-        if (find(path.begin(), path.end(), elem) == path.end()) return false;
-
-    return complete;
-}
-
-template<class T>
-Path<T> algorithm::getPath(Graph<T> &simplifiedGraph, const T &source, const T &destination) {
-    std::priority_queue<Trio<T>, std::vector<Trio<T >>, my_comparator> queue;
-
-    const Vertex<T> &sourceVertex = simplifiedGraph.getVertex(source);
-    const Vertex<T> &destinationVertex = simplifiedGraph.getVertex(destination);
-
-    Trio<T> current(sourceVertex);
-
-    queue.push(current);
-
-    while (!(current.getVertex() == destinationVertex && isComplete(simplifiedGraph, current.getPath()))) {
-        Trio<T> min = queue.top();
-        queue.pop();
-
-        for (const std::shared_ptr<Edge<T>> &child : min.getVertex().getOutgoing())
-            queue.push(Trio<T>(min, *child));
-
-        current = min;
-    }
-
-    return Path<T>(current.getPath(), current.getPathCost());
-}
-
-template<class T>
 inline bool relax(Vertex<T> *v, Vertex<T> *w, double weight) {
     if (v->dist + weight < w->dist) {
         w->dist = v->dist + weight;
-        w->path = v;
+        w->path = v->path;
+        w->path.push_back(v);
         return true;
     } else
         return false;
@@ -53,7 +20,7 @@ template<class T>
 void algorithm::dijkstra(Graph<T> &graph, const Vertex<T> &sourceVertex) {
     for (Vertex<T> &v : graph.getVertices()) {
         v.dist = INF;
-        v.path = nullptr;
+        v.path.clear();
     }
 
     Vertex<T> &s = graph.getVertex(sourceVertex.get());

@@ -83,6 +83,18 @@ TEST(algorithm, pathfinder_test) {
     Location v6(7, "None", 20, 20);
     Location h(8, "None", 10, 25);
 
+    Cluster cluster;
+    cluster.add(g);
+    cluster.add(v1);
+    cluster.add(v2);
+    cluster.add(v3);
+    cluster.add(v4);
+    cluster.add(v5);
+    cluster.add(v6);
+    cluster.add(h);
+    std::vector<Cluster> vector;
+    vector.push_back(cluster);
+
     graph.add(g);
     graph.add(v1);
     graph.add(v2);
@@ -117,9 +129,10 @@ TEST(algorithm, pathfinder_test) {
 
     graph.add(h, v5, 2);
 
-    Path<Location> path = algorithm::getPath(graph, g, h);
+    std::list<Path<Location>> list = algorithm::pathFinder(graph, g, h, vector);
+    Path<Location> path = *list.begin();
 
-    list<Vertex<Location>> expectedPath;
+    std::list<Vertex<Location>> expectedPath;
 
     expectedPath.push_back(graph.getVertex(g));
     expectedPath.push_back(graph.getVertex(v1));
@@ -146,6 +159,18 @@ TEST(algorithm, pathfinder_test2) {
     Location v5(6, "None", 0, -20);
     Location v6(7, "None", 20, 20);
     Location h(8, "None", 10, 25);
+
+    Cluster cluster;
+    cluster.add(g);
+    cluster.add(v1);
+    cluster.add(v2);
+    cluster.add(v3);
+    cluster.add(v4);
+    cluster.add(v5);
+    cluster.add(v6);
+    cluster.add(h);
+    std::vector<Cluster> vector;
+    vector.push_back(cluster);
 
     graph.add(g);
     graph.add(v1);
@@ -181,9 +206,10 @@ TEST(algorithm, pathfinder_test2) {
 
     graph.add(h, v5, 2);
 
-    Path<Location> path = algorithm::getPath(graph, g, h);
+    std::list<Path<Location>> list = algorithm::pathFinder(graph, g, h, vector);
+    Path<Location> path = *list.begin();
 
-    list<Vertex<Location>> expectedPath;
+    std::list<Vertex<Location>> expectedPath;
 
     expectedPath.push_back(graph.getVertex(g));
     expectedPath.push_back(graph.getVertex(v1));

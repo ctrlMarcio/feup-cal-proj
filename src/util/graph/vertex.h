@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <vector>
+#include <list>
 
 #include "edge.h"
 
@@ -16,6 +17,21 @@ using namespace std;
 template<class T>
 class Vertex {
 public:
+    /**
+	 * @brief The distance to the initial vertex in dijkstra algorithm
+	 */
+    double dist = INF;
+
+    /**
+	 * @brief The following vertex in the path
+	 */
+    std::list<Vertex<T> *> path;
+
+    /**
+	 * @brief The mutable queue index of the vertex
+	 */
+    int queueIndex = 0;
+
     /**
      * @brief Constructs the vertex given only its content.
      *
@@ -91,21 +107,6 @@ public:
      * @return      the weight to the vertex
      */
     double weightTo(Vertex<T> *dest);
-
-    /**
-	 * @brief The distance to the initial vertex in dijkstra algorithm
-	 */
-    double dist = INF;
-
-    /**
-	 * @brief The following vertex in the path
-	 */
-    Vertex<T> *path = nullptr;
-
-    /**
-	 * @brief The mutable queue index of the vertex
-	 */
-    int queueIndex = 0;
 
 private:
     /**

@@ -29,26 +29,23 @@ namespace algorithm {
     /**
      * @brief  Verifies if the path is complete.
      *
-     * @tparam T                the type of the vertices
-     * @param simplifiedGraph   the simplified graph
+     * @param locations         the locations that are required for the complete path
      * @param path              the hypothetical path
      * @return                  true, if the path is complete. false, otherwise
      */
-    template<class T>
-    bool isComplete(Graph<T> &simplifiedGraph, const std::list<Vertex<T>> &path);
+    bool isComplete(const std::vector<Location> &locations, const std::list<Vertex<Location>> &path);
 
     /**
-     * @brief Gets the path for a simplified graph, a garage and an headquarters location.
+     * @brief Gets the paths for a graph, a garage, a headquarters location and a group of clusters.
      *
-     * @tparam T                the type of the vertices
-     * @param simplifiedGraph   the simplified graph
-     * @param source            the source vertex
-     * @param destination       the destination vertex
+     * @param simplifiedGraph   the graph
+     * @param source            the source location
+     * @param destination       the destination location
+     * @param clusters          the clusters that contain the required locations
      * @return                  the path
      */
-    template<class T>
-    Path<T> getPath(Graph<T> &simplifiedGraph, const T &source,
-                    const T &destination);
+    std::list<Path<Location>> pathFinder(Graph<Location> &graph, const Location &source, const Location &destination,
+                                         const std::vector<Cluster> &clusters);
 
     /**
      * @brief Gets the reduced graph from a given graph
