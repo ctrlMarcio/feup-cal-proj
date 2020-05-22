@@ -2,29 +2,32 @@
 #include "application/bootstrap/bootstrap.h"
 #include "application/ui/home/home_ui.h"
 #include "util/algorithm/algorithm.h"
+#include "util/gmaps/google_map.h"
 
 int main() {
     AuthUserManager userManager;
     CurrentSession session(userManager);
 
-    Bootstrap bs("../../resources/GridGraphs");
+    Bootstrap bs("../../resources/Porto");
 
-    Company company = bs.buildCompany("BosHBus", 0, 2);
+    Company company = bs.buildCompany("BosHBus", 1, 4);
 
     Administrator administrator("lola", "a");
     CompanyRepresentative companyRepresentative("lol", "b");
 
-    CompanyClient companyClient("ai limão", companyRepresentative, *company.getLocationManager().get(288));
-    companyClient.setVehicleNumber(1);
-    companyClient.addPickupPoint(*company.getLocationManager().get(17));
+    CompanyClient companyClient("ai limão", companyRepresentative, *company.getLocationManager().get(35));
+    companyClient.setVehicleNumber(4);
+
+    srand(NULL);
+    for (int i = 0; i < 15; ++i){
+        int lol = rand() % 106;
+        companyClient.addPickupPoint(*company.getLocationManager().get(lol));
+    }
 
     std::list<Path<Location>> paths = algorithm::getPaths(companyClient, company);
 
-    for (const auto &vertex : (*paths.begin()).getPath()) {
-        Location l = vertex.get();
-        //std::cout << "{ lat: " << l.getLatitude() << ", lng: " << l.getLongitude() << " }," << std::endl;
-        std::cout << l.getId() << std::endl;
-    }
+    GoogleMap gmap(paths, company.getGarageLocation(), companyClient.getHeadquarters(),
+                   companyClient.getPickupPoints());
 
     company.getCompanyClientManager().add(companyClient);
     company.getAdministratorManager().add(administrator);

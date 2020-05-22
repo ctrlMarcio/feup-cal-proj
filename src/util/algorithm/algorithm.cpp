@@ -3,10 +3,10 @@
 std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, int clusterAmount, int iterations) {
     // initialize clusters
     std::vector<Cluster> clusters;
-    if (clusterAmount <= 0 || iterations <= 0)
+    if (clusterAmount <= 0 || iterations <= 0 || locations.empty())
         return clusters;
-    unsigned long increment = locations.size() / clusterAmount;
 
+    unsigned long increment = locations.size() / clusterAmount;
 
     auto iterator = locations.begin();
     for (int i = 0; i < clusterAmount; ++i) {
@@ -51,6 +51,9 @@ algorithm::getPaths(const CompanyClient &companyClient, Company &company) {
 
     std::vector<Cluster> clusters = kMeans(locations, companyClient.getVehicleNumber());
 
+    if (clusters.empty())
+        clusters.push_back(Cluster());
+
     return pathFinder(company.getGraph(), company.getGarageLocation(), companyClient.getHeadquarters(), clusters);
 }
 
@@ -72,7 +75,7 @@ algorithm::pathFinder(Graph<Location> &graph, const Location &source, const Loca
         Trio<Location> min = queue.top();
         queue.pop();
 
-        if (hasCycle(min.getPath()))
+        if (fazMarchaAtras(min.getPath()) || hasCycle(min.getPath()))
             continue;
 
         for (const std::shared_ptr<Edge<Location>> &child : min.getVertex().getOutgoing())

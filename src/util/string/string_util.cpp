@@ -49,3 +49,27 @@ std::string string_util::trim(const std::string &string) {
     int size = it_e + 1 - it_b;
     return string.substr(it_b - string.begin(), size < 0 ? 0 : size);
 }
+
+bool string_util::replace(std::string &str, const std::string &from, const std::string &to) {
+    size_t start_pos = str.find(from);
+    if (start_pos == std::string::npos)
+        return false;
+    str.replace(start_pos, from.length(), to);
+    return true;
+}
+
+std::string string_util::toJSONObject(std::vector<std::pair<std::string, std::string>> values) {
+    std::stringstream stream;
+
+    stream << "{";
+
+    for (int i = 0; i < values.size(); ++i) {
+        stream << values[i].first << ": " << values[i].second;
+
+        if (i != values.size() - 1) stream << ", ";
+    }
+
+    stream << "}";
+
+    return stream.str();
+}

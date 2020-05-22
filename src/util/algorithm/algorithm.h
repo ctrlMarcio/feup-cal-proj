@@ -65,6 +65,9 @@ namespace algorithm {
 
     template<class T>
     bool hasCycle(std::list<T> list, int lastElements = 10);
+
+    template<class T>
+    bool fazMarchaAtras(std::list<Vertex<T>> vertices);
 };
 
 #include "algorithm.tpp"

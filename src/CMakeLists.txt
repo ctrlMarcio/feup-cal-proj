@@ -43,6 +43,7 @@ add_library(feup-cal-proj main.cpp
         application/ui/client_company_representative/client_company_representative_ui.cpp application/ui/client_company_representative/client_company_representative_ui.h
         application/ui/client_company_representative/pickup_point/pickup_point_ui.cpp application/ui/client_company_representative/pickup_point/pickup_point_ui.h
         application/ui/administrator/company_client/companies_client_information_ui.cpp application/ui/administrator/company_client/companies_client_information_ui.h
+        util/gmaps/google_map.cpp util/gmaps/google_map.h
         )
 
 add_executable(application main.cpp
@@ -90,6 +91,7 @@ add_executable(application main.cpp
         application/ui/client_company_representative/client_company_representative_ui.cpp application/ui/client_company_representative/client_company_representative_ui.h
         application/ui/client_company_representative/pickup_point/pickup_point_ui.cpp application/ui/client_company_representative/pickup_point/pickup_point_ui.h
         application/ui/administrator/company_client/companies_client_information_ui.cpp application/ui/administrator/company_client/companies_client_information_ui.h
+        util/gmaps/google_map.cpp util/gmaps/google_map.h
         )
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

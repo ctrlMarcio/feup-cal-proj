@@ -43,6 +43,19 @@ namespace string_util {
      */
     std::string trim(const std::string &string);
 
+    /**
+     * @brief Replaces a given string in another string
+     *
+     * @link https://stackoverflow.com/questions/3418231/replace-part-of-a-string-with-another-string
+     *
+     * @param str   the string
+     * @param from  the text to be replace
+     * @param to    the text to replace
+     * @return  true, if the string is successfully replaced. false, otherwise
+     */
+    bool replace(std::string& str, const std::string& from, const std::string& to);
+
+    std::string toJSONObject(std::vector<std::pair<std::string, std::string>> values);
 }
 
 #endif //FEUP_CAL_PROJ_STRING_UTIL_H
