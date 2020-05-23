@@ -17,6 +17,8 @@ private:
     void calculatePaths(CompanyClient &company);
 
     void showGoogleMaps(CompanyClient &client);
+
+    void showGraphView(CompanyClient &client);
 };
 
 #endif //FEUP_CAL_PROJ_VIEW_PATHS_UI_H

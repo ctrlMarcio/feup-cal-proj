@@ -1,5 +1,6 @@
 #include "view_paths_ui.h"
 #include "../../../../util/gmaps/google_map.h"
+#include "../graph/company_client_graph_ui.h"
 
 ViewPathsUI::ViewPathsUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_option(1, "View using Google Maps Javascript API"));
@@ -26,6 +27,8 @@ void ViewPathsUI::run() {
             ui_util::displayPlaceholder();
             break;
         case 2:
+            showGraphView(companyClient);
+            ui_util::displayPlaceholder();
             break;
         default:
             break;
@@ -48,3 +51,9 @@ void ViewPathsUI::showGoogleMaps(CompanyClient &client) {
 
     std::cout << std::endl << "An html file was created in the root folder!" << std::endl;
 }
+
+void ViewPathsUI::showGraphView(CompanyClient &client) {
+    calculatePaths(client);
+    uiManager.set(new CompanyClientGraphUI(uiManager));
+}
+

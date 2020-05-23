@@ -2,6 +2,7 @@
 #include "company_client_information/company_client_information_ui.h"
 #include "vehicle/request_vehicle_change_ui.h"
 #include "route/view_paths_ui.h"
+#include "graph/company_client_graph_ui.h"
 
 ClientCompanyRepresentativeUI::ClientCompanyRepresentativeUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_line("> Company"));
