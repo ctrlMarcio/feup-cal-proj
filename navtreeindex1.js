@@ -1,8 +1,17 @@
 var NAVTREEINDEX1 =
 {
+"client__company__representative__ui_8h_source.html":[2,0,0,0,1,1,4],
+"cluster_8h_source.html":[2,0,0,4,2,0],
+"companies__client__information__ui_8h_source.html":[2,0,0,0,1,0,1,0],
+"company_8h_source.html":[2,0,0,3,0,1],
+"company__client_8h_source.html":[2,0,0,3,1,2],
+"company__client__information__ui_8h_source.html":[2,0,0,0,1,1,0,0],
+"company__client__manager_8h_source.html":[2,0,0,3,1,0,0],
+"company__information__ui_8h_source.html":[2,0,0,0,1,0,0,0],
 "company__representative_8h_source.html":[2,0,0,3,1,1,0],
 "current__session_8h_source.html":[2,0,0,1,0,0],
 "dir_03f4a28f75b8e23e1d457d2da09125b3.html":[2,0,0,2],
+"dir_0c27c8682538b68c3dad32dfbc1ae05e.html":[2,0,0,0,1,1,2],
 "dir_0f2b014d1967b3e14b488290514062d7.html":[2,0,0,0,1,0],
 "dir_109ed9041d9e366c7e778aa72930a02e.html":[2,0,0,0,1,0,3],
 "dir_15c7c5e1d9ed468d4eb576d6f793f29c.html":[2,0,0,4,0],
@@ -26,7 +35,7 @@ var NAVTREEINDEX1 =
 "dir_a9c08e9a5c0937584145d30d2255f463.html":[2,0,0,3,1],
 "dir_b55629b88864b543abbd12aa41629ddf.html":[2,0,0,0,1,4],
 "dir_b7878ad5ecbf2506f4125b9d34c97e45.html":[2,0,0,4],
-"dir_d8be856c0ace7a46ef51c7ed532b450b.html":[2,0,0,0,1,1,2],
+"dir_d8be856c0ace7a46ef51c7ed532b450b.html":[2,0,0,0,1,1,3],
 "dir_dbb11c237888a05378af67e4a2826101.html":[2,0,0,1,0],
 "dir_df398500ad2e2ccc0ce3d3c225600456.html":[2,0,0,0,1,3],
 "dir_e9ff7490434b612ba0d3e0210ff475bc.html":[2,0,0,3,2],
@@ -65,7 +74,7 @@ var NAVTREEINDEX1 =
 "path_8h_source.html":[2,0,0,4,0,1],
 "pickup__point__ui_8h_source.html":[2,0,0,0,1,1,1,0],
 "register__company__ui_8h_source.html":[2,0,0,0,1,0,1,2],
-"request__vehicle__change__ui_8h_source.html":[2,0,0,0,1,1,2,0],
+"request__vehicle__change__ui_8h_source.html":[2,0,0,0,1,1,3,0],
 "string__util_8h_source.html":[2,0,0,4,3,0],
 "structadministrator__hash.html":[1,0,2],
 "structadministrator__hash.html#ae386b1b9367039f036ad7dffaab6eedf":[1,0,2,0],
@@ -82,5 +91,6 @@ var NAVTREEINDEX1 =
 "ui__util_8h_source.html":[2,0,0,4,3,1],
 "verify__vehicles__ui_8h_source.html":[2,0,0,0,1,0,3,0],
 "vertex_8h_source.html":[2,0,0,4,2,4],
+"view__paths__ui_8h_source.html":[2,0,0,0,1,1,2,0],
 "view__world__graph__ui_8h_source.html":[2,0,0,0,1,0,2,0]
 };

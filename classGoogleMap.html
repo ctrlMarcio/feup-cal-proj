@@ -90,13 +90,57 @@ $(document).ready(function(){initNavTree('classGoogleMap.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a260c3dc2e260fd6b76259b22c47df67b"><td class="memItemLeft" align="right" valign="top"><a id="a260c3dc2e260fd6b76259b22c47df67b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GoogleMap</b> (const std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&gt; &amp;paths, const <a class="el" href="classLocation.html">Location</a> &amp;garage, const <a class="el" href="classLocation.html">Location</a> &amp;headquarters, const std::vector&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;pickupPoints)</td></tr>
-<tr class="separator:a260c3dc2e260fd6b76259b22c47df67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ab484092dae2706f6d1ab6737352c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGoogleMap.html#a67ab484092dae2706f6d1ab6737352c7">GoogleMap</a> (const std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&gt; &amp;paths, const <a class="el" href="classLocation.html">Location</a> &amp;garage, const <a class="el" href="classLocation.html">Location</a> &amp;headquarters, const std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &amp;clusters)</td></tr>
+<tr class="separator:a67ab484092dae2706f6d1ab6737352c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f6e715b9b43c83d7306df0b440ddd84"><td class="memItemLeft" align="right" valign="top"><a id="a3f6e715b9b43c83d7306df0b440ddd84"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>show</b> ()</td></tr>
 <tr class="separator:a3f6e715b9b43c83d7306df0b440ddd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a67ab484092dae2706f6d1ab6737352c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ab484092dae2706f6d1ab6737352c7">&#9670;&nbsp;</a></span>GoogleMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GoogleMap::GoogleMap </td>
+          <td>(</td>
+          <td class="paramtype">const std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>garage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>headquarters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>clusters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>std::stringstream pickupPointsArrayStream; for (const <a class="el" href="classLocation.html" title="Represents a real world location. ">Location</a> &amp;pickupPoint : pickupPoints) { values.clear(); values.emplace_back("lat", to_string(pickupPoint.getLatitude())); values.emplace_back("lng", to_string(pickupPoint.getLongitude()));</p>
+<p>std::string singleLocation = string_util::toJSONObject(values);</p>
+<p>pickupPointsArrayStream &lt;&lt; singleLocation &lt;&lt; ","; }</p>
+<p>std::string pickupPointsArray = pickupPointsArrayStream.str(); pickupPointsArray = pickupPointsArray.substr(0, pickupPointsArray.size() - 1); </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/util/gmaps/<a class="el" href="google__map_8h_source.html">google_map.h</a></li>
 <li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/util/gmaps/google_map.cpp</li>

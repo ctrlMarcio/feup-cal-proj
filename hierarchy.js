@@ -46,6 +46,7 @@ var hierarchy =
       [ "RegisterCompanyUI", "classRegisterCompanyUI.html", null ],
       [ "RequestVehicleChangeUI", "classRequestVehicleChangeUI.html", null ],
       [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", null ],
+      [ "ViewPathsUI", "classViewPathsUI.html", null ],
       [ "ViewWorldGraphUI", "classViewWorldGraphUI.html", null ]
     ] ],
     [ "UIManager", "classUIManager.html", null ],

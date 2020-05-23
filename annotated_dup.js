@@ -43,5 +43,6 @@ var annotated_dup =
     [ "UIManager", "classUIManager.html", "classUIManager" ],
     [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", "classVerifyVehiclesUI" ],
     [ "Vertex", "classVertex.html", "classVertex" ],
+    [ "ViewPathsUI", "classViewPathsUI.html", "classViewPathsUI" ],
     [ "ViewWorldGraphUI", "classViewWorldGraphUI.html", "classViewWorldGraphUI" ]
 ];
