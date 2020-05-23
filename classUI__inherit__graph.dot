@@ -28,4 +28,6 @@ digraph "UI"
   Node11 [label="RequestVehicleChangeUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRequestVehicleChangeUI.html"];
   Node0 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node12 [label="VerifyVehiclesUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVerifyVehiclesUI.html"];
+  Node0 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="ViewWorldGraphUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classViewWorldGraphUI.html"];
 }

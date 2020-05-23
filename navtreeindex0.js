@@ -2,7 +2,7 @@ var NAVTREEINDEX0 =
 {
 "administrator_8h_source.html":[2,0,0,3,0,0,0],
 "administrator__manager_8h_source.html":[2,0,0,3,0,0,1],
-"administrator__ui_8h_source.html":[2,0,0,0,1,0,3],
+"administrator__ui_8h_source.html":[2,0,0,0,1,0,4],
 "algorithm_8h_source.html":[2,0,0,4,0,0],
 "annotated.html":[1,0],
 "auth__user_8h_source.html":[2,0,0,1,1,0],
@@ -231,6 +231,9 @@ var NAVTREEINDEX0 =
 "classVertex.html#ac9ccb7420302655fb2680745094680cd":[1,0,42,8],
 "classVertex.html#ac9e8b7454baffda3860384eb39b0c245":[1,0,42,4],
 "classVertex.html#ae2a975acf7bd3fc21280d999254b075f":[1,0,42,3],
+"classViewWorldGraphUI.html":[1,0,43],
+"classViewWorldGraphUI.html#a0a12255b9b6be55f7495a434704fe38b":[1,0,43,0],
+"classViewWorldGraphUI.html#a2472114fd080f97ad884e811bd73935f":[1,0,43,1],
 "classes.html":[1,1],
 "classui__util_1_1Option.html":[1,0,0,0],
 "classui__util_1_1Option.html#a19483ccfc7c7734cba83123200900d06":[1,0,0,0,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "company__client_8h_source.html":[2,0,0,3,1,2],
 "company__client__information__ui_8h_source.html":[2,0,0,0,1,1,0,0],
 "company__client__manager_8h_source.html":[2,0,0,3,1,0,0],
-"company__information__ui_8h_source.html":[2,0,0,0,1,0,0,0],
-"company__representative_8h_source.html":[2,0,0,3,1,1,0],
-"current__session_8h_source.html":[2,0,0,1,0,0],
-"dir_03f4a28f75b8e23e1d457d2da09125b3.html":[2,0,0,2]
+"company__information__ui_8h_source.html":[2,0,0,0,1,0,0,0]
 };
