@@ -30,3 +30,7 @@ jobs:
           cmake -DCODE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ..
           cmake --build . --config Debug -- -j $(nproc)
           ctest -j $(nproc) --output-on-failure
+      - uses: actions/upload-artifact@v2
+        with:
+          name: application-linux
+          path: build/src/application
