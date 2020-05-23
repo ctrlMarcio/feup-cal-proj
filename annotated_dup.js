@@ -23,6 +23,7 @@ var annotated_dup =
     [ "Edge", "classEdge.html", "classEdge" ],
     [ "GoogleMap", "classGoogleMap.html", "classGoogleMap" ],
     [ "Graph", "classGraph.html", "classGraph" ],
+    [ "GraphViewBuilder", "classGraphViewBuilder.html", "classGraphViewBuilder" ],
     [ "HomeUI", "classHomeUI.html", "classHomeUI" ],
     [ "InvalidDirectoryException", "classInvalidDirectoryException.html", "classInvalidDirectoryException" ],
     [ "InvalidFileException", "classInvalidFileException.html", "classInvalidFileException" ],

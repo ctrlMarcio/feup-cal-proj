@@ -48,5 +48,6 @@ var searchData=
   ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]],
   ['googlemap',['GoogleMap',['../classGoogleMap.html',1,'']]],
   ['graph',['Graph',['../classGraph.html',1,'']]],
-  ['graph_3c_20location_20_3e',['Graph&lt; Location &gt;',['../classGraph.html',1,'']]]
+  ['graph_3c_20location_20_3e',['Graph&lt; Location &gt;',['../classGraph.html',1,'']]],
+  ['graphviewbuilder',['GraphViewBuilder',['../classGraphViewBuilder.html',1,'']]]
 ];

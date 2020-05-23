@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Route Planner: /home/runner/work/feup-cal-proj/feup-cal-proj/src/util/view_graph/view_graph_viewer.h Source File</title>
+<title>Route Planner: GraphViewBuilder Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('view__graph__viewer_8h_source.html','');});
+$(document).ready(function(){initNavTree('classGraphViewBuilder.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -80,18 +80,36 @@ $(document).ready(function(){initNavTree('view__graph__viewer_8h_source.html',''
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classGraphViewBuilder-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">view_graph_viewer.h</div>  </div>
+<div class="title">GraphViewBuilder Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FEUP_CAL_PROJ_VIEW_GRAPH_VIEWER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define FEUP_CAL_PROJ_VIEW_GRAPH_VIEWER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;graphviewer.h&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../model/location/location.h&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../graph/graph.h&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceview__GraphViewer.html">view_GraphViewer</a> {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    GraphViewer *buildGraphView(<span class="keyword">const</span> <a class="code" href="classGraph.html">Graph&lt;Location&gt;</a> &amp;graph, <span class="keywordtype">int</span> nodeSize=20);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif //FEUP_CAL_PROJ_VIEW_GRAPH_VIEWER_H</span></div><div class="ttc" id="classGraph_html"><div class="ttname"><a href="classGraph.html">Graph&lt; Location &gt;</a></div></div>
-<div class="ttc" id="namespaceview__GraphViewer_html"><div class="ttname"><a href="namespaceview__GraphViewer.html">view_GraphViewer</a></div><div class="ttdef"><b>Definition:</b> view_graph_viewer.h:9</div></div>
-</div><!-- fragment --></div><!-- contents -->
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a88ca6621a7e13fb43d6c682babca5978"><td class="memItemLeft" align="right" valign="top"><a id="a88ca6621a7e13fb43d6c682babca5978"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GraphViewBuilder</b> (const <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, const int nodeSize=20)</td></tr>
+<tr class="separator:a88ca6621a7e13fb43d6c682babca5978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa077486673df320416b665394f71323f"><td class="memItemLeft" align="right" valign="top"><a id="aa077486673df320416b665394f71323f"></a>
+GraphViewer *&#160;</td><td class="memItemRight" valign="bottom"><b>build</b> ()</td></tr>
+<tr class="separator:aa077486673df320416b665394f71323f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d95601ccc01812bab5db8320685639d"><td class="memItemLeft" align="right" valign="top"><a id="a6d95601ccc01812bab5db8320685639d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getEdgeCount</b> () const</td></tr>
+<tr class="separator:a6d95601ccc01812bab5db8320685639d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/util/view_graph/<a class="el" href="graph__view__builder_8h_source.html">graph_view_builder.h</a></li>
+<li>/home/runner/work/feup-cal-proj/feup-cal-proj/src/util/view_graph/graph_view_builder.cpp</li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_06c292da721468c0a8a71fb1ea2cab2b.html">view_graph</a></li><li class="navelem"><b>view_graph_viewer.h</b></li>
+    <li class="navelem"><a class="el" href="classGraphViewBuilder.html">GraphViewBuilder</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

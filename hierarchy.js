@@ -17,6 +17,7 @@ var hierarchy =
     [ "GoogleMap", "classGoogleMap.html", null ],
     [ "Graph< T >", "classGraph.html", null ],
     [ "Graph< Location >", "classGraph.html", null ],
+    [ "GraphViewBuilder", "classGraphViewBuilder.html", null ],
     [ "invalid_argument", null, [
       [ "InvalidLocationException", "classInvalidLocationException.html", null ],
       [ "InvalidLoginException", "classInvalidLoginException.html", null ],
