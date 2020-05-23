@@ -46,7 +46,7 @@ var searchData=
   ['getweight',['getWeight',['../classEdge.html#a3df378e283d6c8be5be4170ac8d7f4e8',1,'Edge']]],
   ['getx',['getX',['../classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7',1,'Location']]],
   ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]],
-  ['googlemap',['GoogleMap',['../classGoogleMap.html',1,'GoogleMap'],['../classGoogleMap.html#a67ab484092dae2706f6d1ab6737352c7',1,'GoogleMap::GoogleMap()']]],
+  ['googlemap',['GoogleMap',['../classGoogleMap.html',1,'']]],
   ['graph',['Graph',['../classGraph.html',1,'']]],
   ['graph_3c_20location_20_3e',['Graph&lt; Location &gt;',['../classGraph.html',1,'']]]
 ];

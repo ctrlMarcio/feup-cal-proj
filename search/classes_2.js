@@ -5,6 +5,7 @@ var searchData=
   ['companiesclientinformationui',['CompaniesClientInformationUI',['../classCompaniesClientInformationUI.html',1,'']]],
   ['company',['Company',['../classCompany.html',1,'']]],
   ['companyclient',['CompanyClient',['../classCompanyClient.html',1,'']]],
+  ['companyclientgraphui',['CompanyClientGraphUI',['../classCompanyClientGraphUI.html',1,'']]],
   ['companyclientinformationui',['CompanyClientInformationUI',['../classCompanyClientInformationUI.html',1,'']]],
   ['companyclientmanager',['CompanyClientManager',['../classCompanyClientManager.html',1,'']]],
   ['companyinformationui',['CompanyInformationUI',['../classCompanyInformationUI.html',1,'']]],
