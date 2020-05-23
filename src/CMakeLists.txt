@@ -97,7 +97,7 @@ add_executable(application main.cpp
         application/ui/client_company_representative/route/view_paths_ui.cpp application/ui/client_company_representative/route/view_paths_ui.h
         application/ui/administrator/graph/view_world_graph_ui.cpp application/ui/administrator/graph/view_world_graph_ui.h
         ../lib/connection.cpp ../lib/graphviewer.cpp
-        application/ui/client_company_representative/graph/company_client_graph_ui.cpp application/ui/client_company_representative/graph/company_client_graph_ui.h util/view_graph/view_graph_viewer.cpp util/view_graph/view_graph_viewer.h)
+        application/ui/client_company_representative/graph/company_client_graph_ui.cpp application/ui/client_company_representative/graph/company_client_graph_ui.h util/view_graph/graph_view_builder.cpp util/view_graph/graph_view_builder.h)
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
