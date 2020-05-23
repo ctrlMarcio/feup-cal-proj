@@ -16,6 +16,10 @@ public:
 
     void viewPickUpPoint();
 
+    long getLocation();
+
+    long getPickupPoint(const CompanyClient &companyClient);
+
 private:
     UIManager &uiManager;
 

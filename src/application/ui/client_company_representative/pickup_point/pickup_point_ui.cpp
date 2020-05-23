@@ -11,10 +11,14 @@ PickUpPointUI::PickUpPointUI(UIManager &uiManager) : uiManager(uiManager) {
 void PickUpPointUI::run() {
     std::cout << uiManager.getHeader();
 
+    std::cout << "Select an operation from the list..." << std::endl;
+
     int option = ui_util::getOption(options);
 
     switch (option) {
         case 0:
+            std::cout << std::endl << "Returning..." << std::endl;
+            ui_util::displayPlaceholder();
             return;
         case 1:
             addPickUpPoint();
@@ -32,100 +36,126 @@ void PickUpPointUI::run() {
 
 void PickUpPointUI::addPickUpPoint() {
     std::cout << uiManager.getHeader();
-    options.clear();
 
-    for (const Vertex<Location> &vertex : uiManager.getCompany().getGraph().getVertices())
-        options.push_back(ui_util::make_option(vertex.get().getId(), vertex.get().getCity() +
-                                                                     " (" + std::to_string(vertex.get().getX()) +
-                                                                     "/" + std::to_string(vertex.get().getY())));
-    options.push_back(ui_util::make_empty_line());
-    options.push_back(ui_util::make_option(0, "Quit"));
+    long locationId = getLocation();
 
-    if (options.empty()) {
-        std::cout << "There are no locations available!" << std::endl;
-    }
-
-    std::cout << "Please select a location from the list..." << std::endl;
-    int option = ui_util::getOption(options);
-    if (option == 0) return;
-    std::cout << std::endl;
-    CompanyClient *companyClient = uiManager.getCompany().getCompanyClientManager().getCompany(
+    CompanyClient &companyClient = *uiManager.getCompany().getCompanyClientManager().getCompany(
             uiManager.getCurrentSession().getUser().getEmail());
 
-    for (const Vertex<Location> &vertex : uiManager.getCompany().getGraph().getVertices()) {
-        if (vertex.get().getId() == option) {
-            if (companyClient->addPickupPoint(vertex.get()))
-                cout << "Pickup-point successfully added" << endl;
-            else
-                cout << "Could not add Pickup-point" << endl;
-        }
+    if (companyClient.addPickupPoint(*uiManager.getCompany().getLocationManager().get(locationId))) {
+        std::cout << std::endl << "Pick-up point successfully added!" << std::endl;
+        ui_util::displayPlaceholder();
+    } else {
+        std::cout << std::endl << "Something unexpected occurred, the pick-up point may already exist!" << std::endl;
+        ui_util::displayPlaceholder();
     }
-
-    std::vector<ui_util::Option> exit;
-    exit.push_back(ui_util::make_option(0, "Continue"));
-    option = ui_util::getOption(exit);
-    if (option != 0)
-        run();
 }
 
 void PickUpPointUI::removePickUpPoint() {
     std::cout << uiManager.getHeader();
-    options.clear();
-    CompanyClient *companyClient = uiManager.getCompany().getCompanyClientManager().getCompany(
+    CompanyClient &companyClient = *uiManager.getCompany().getCompanyClientManager().getCompany(
             uiManager.getCurrentSession().getUser().getEmail());
 
-    for (const Location &location : companyClient->getPickupPoints())
-        options.push_back(ui_util::make_option(location.getId(), location.getCity() +
-                                                                 " (" + std::to_string(location.getX()) +
-                                                                 "/" + std::to_string(location.getY())));
-
-    if (options.empty()) {
+    if (companyClient.getPickupPoints().empty()) {
         std::cout << "There are no locations to be removed!" << std::endl;
+        ui_util::displayPlaceholder();
         return;
     }
 
-    options.push_back(ui_util::make_empty_line());
-    options.push_back(ui_util::make_option(0, "Quit"));
-    std::cout << "Please select a location from the list..." << std::endl;
-    int option = ui_util::getOption(options);
-    if (option == 0) return;
-    std::cout << std::endl;
+    long locationId = getPickupPoint(companyClient);
 
-    for (const Vertex<Location> &vertex : uiManager.getCompany().getGraph().getVertices()) {
-        if (vertex.get().getId() == option) {
-            if (companyClient->removePickupPoint(vertex.get()))
-                cout << "Pickup-point successfully removed" << endl;
-            else
-                cout << "Could not remove Pickup-point" << endl;
-        }
+    if (companyClient.removePickupPoint(*uiManager.getCompany().getLocationManager().get(locationId))) {
+        std::cout << std::endl << "Pick-up point successfully removed!" << std::endl;
+        ui_util::displayPlaceholder();
+    } else {
+        std::cout << std::endl << "Something unexpected occurred, the pick-up point may not exist!" << std::endl;
+        ui_util::displayPlaceholder();
     }
-
-    std::vector<ui_util::Option> exit;
-    exit.push_back(ui_util::make_option(0, "Continue"));
-    option = ui_util::getOption(exit);
-    if (option != 0)
-        run();
 }
 
 void PickUpPointUI::viewPickUpPoint() {
     std::cout << uiManager.getHeader();
-    std::vector<Location> pickupPoints;
-    std::cout << "Company pick-up points: " << std::endl << std::endl;
+
     const CompanyClient &companyClient = *uiManager.getCompany().getCompanyClientManager().getCompany(
             uiManager.getCurrentSession().getUser().getEmail());
 
-    if (companyClient.getPickupPoints().size() == 0) {
-        std::cout << "No pick-up points to display" << endl;
-    } else {
-        for (auto i: companyClient.getPickupPoints()) {
-            std::cout << i.getId() << " - " << i.getCity() << " - " << i.getX() << " - " << i.getY() << i.getLatitude()
-                      << " - " << i.getLongitude() << endl;
-        }
+    if (companyClient.getPickupPoints().empty()) {
+        std::cout << "There are no pick-up points registered!" << std::endl;
+        ui_util::displayPlaceholder();
+        return;
     }
 
-    std::vector<ui_util::Option> exit;
-    exit.push_back(ui_util::make_option(0, "Exit"));
-    int option = ui_util::getOption(exit);
-    if (option != 0)
-        run();
+    std::cout << "The list of pick-up points:" << std::endl;
+
+    for (const Location &location : companyClient.getPickupPoints()) {
+        std::cout << "\t- " << location.getId() << " at " << std::fixed << std::setprecision(2) << location.getX()
+                  << ", "
+                  << location.getY() << std::endl;
+    }
+
+    ui_util::displayPlaceholder();
+}
+
+long PickUpPointUI::getLocation() {
+    long id = ui_util::getLong("Enter the pick-up point location ID (0 to view all): ");
+
+    if (id == 0) {
+        std::cout << std::endl << "The list of available locations:" << std::endl;
+
+        for (const Location &location : uiManager.getCompany().getLocationManager().getLocations()) {
+            std::cout << "\t- " << location.getId() << " at " << std::fixed << std::setprecision(2) << location.getX()
+                      << ", "
+                      << location.getY() << std::endl;
+        }
+
+        ui_util::displayPlaceholder();
+        std::cout << std::endl;
+
+        return getLocation();
+    }
+
+    if (!uiManager.getCompany().getLocationManager().has(id)) {
+        std::cout
+                << std::endl
+                << "That location does not exist, try again..."
+                << std::endl << std::endl;
+        return getLocation();
+    }
+
+    return id;
+}
+
+long PickUpPointUI::getPickupPoint(const CompanyClient &companyClient) {
+    long id = ui_util::getLong("Enter the pick-up point location ID (0 to view all): ");
+
+    if (id == 0) {
+        std::cout << std::endl << "The list of available locations:" << std::endl;
+
+        for (const Location &location : companyClient.getPickupPoints()) {
+            std::cout << "\t- " << location.getId() << " at " << std::fixed << std::setprecision(2) << location.getX()
+                      << ", "
+                      << location.getY() << std::endl;
+        }
+
+        ui_util::displayPlaceholder();
+        std::cout << std::endl;
+
+        return getPickupPoint(companyClient);
+    }
+
+    std::vector<Location> pickupPoints = companyClient.getPickupPoints();
+    auto it = std::find_if(pickupPoints.begin(), pickupPoints.end(),
+                           [&id](const Location &location) {
+                               return id == location.getId();
+                           });
+
+    if (it == pickupPoints.end()) {
+        std::cout
+                << std::endl
+                << "That location does not exist, try again..."
+                << std::endl << std::endl;
+        return getPickupPoint(companyClient);
+    }
+
+    return id;
 }

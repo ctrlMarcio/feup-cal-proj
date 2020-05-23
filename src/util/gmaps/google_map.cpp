@@ -3,13 +3,16 @@
 #include <sstream>
 #include <fstream>
 
-#include <Windows.h>
-#include <tchar.h>
 #include "../string/string_util.h"
 #include "../graph/cluster.h"
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
-#define WINDOWS true
+#include <Windows.h>
+#include <tchar.h>
+#define OPEN_HTML ShellExecute(NULL, _T("open"), _T(filename.c_str()), NULL, NULL, SW_SHOWNORMAL);
+#else
+#include <unistd.h>
+#define OPEN_HTML execlp("xdg-open", "xdg-open", filename.c_str(), NULL);
 #endif
 
 int GoogleMap::ID = 1;
@@ -30,8 +33,6 @@ GoogleMap::GoogleMap(const std::list<Path<Location>> &paths, const Location &gar
     values.emplace_back("lng", to_string(headquarters.getLongitude()));
 
     string_util::replace(HTML, "##HEADQUARTERS##", string_util::toJSONObject(values));
-
-    // Pick-up points
 
     std::stringstream clustersArrayStream;
 
@@ -58,23 +59,7 @@ GoogleMap::GoogleMap(const std::list<Path<Location>> &paths, const Location &gar
     std::string clustersArray = clustersArrayStream.str();
     clustersArray = clustersArray.substr(0, clustersArray.size() - 1);
 
-    /**std::stringstream pickupPointsArrayStream;
-    for (const Location &pickupPoint : pickupPoints) {
-        values.clear();
-        values.emplace_back("lat", to_string(pickupPoint.getLatitude()));
-        values.emplace_back("lng", to_string(pickupPoint.getLongitude()));
-
-        std::string singleLocation = string_util::toJSONObject(values);
-
-        pickupPointsArrayStream << singleLocation << ",";
-    }
-
-    std::string pickupPointsArray = pickupPointsArrayStream.str();
-    pickupPointsArray = pickupPointsArray.substr(0, pickupPointsArray.size() - 1);*/
-
     string_util::replace(HTML, "##PICK_UP_POINTS##", clustersArray);
-
-    // lololol
 
     std::stringstream verticesArrayStream;
 
@@ -114,9 +99,5 @@ void GoogleMap::show() {
     out << HTML;
     out.close();
 
-    if (WINDOWS) {
-        ShellExecute(NULL, _T("open"),
-                     _T(filename.c_str()), NULL, NULL, SW_SHOWNORMAL);
-    }
-
+    OPEN_HTML
 }
