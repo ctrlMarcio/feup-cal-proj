@@ -1,5 +1,5 @@
 #include "view_world_graph_ui.h"
-#include <graphviewer.h>
+#include "../../../../../lib/graphviewer.h"
 
 ViewWorldGraphUI::ViewWorldGraphUI(UIManager &uiManager) : uiManager(uiManager) {}
 
