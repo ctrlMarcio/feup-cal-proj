@@ -13,6 +13,11 @@ SET(CMAKE_CXX_FLAGS -pthread)
 # Code Coverage Configuration
 add_library(coverage_config INTERFACE)
 
+include_directories(lib)
+# The line below is necessary if you are under Windows only
+# Comment the line below if you are under Linux or Mac OS
+link_libraries(ws2_32 wsock32)
+
 option(CODE_COVERAGE "Enable coverage reporting" OFF)
 if (CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     # Add required flags (GCC & LLVM/Clang)

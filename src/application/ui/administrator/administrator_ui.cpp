@@ -4,6 +4,7 @@
 #include "company_client/register_company_ui.h"
 #include "company/company_information_ui.h"
 #include "company_client/companies_client_information_ui.h"
+#include "graph/view_world_graph_ui.h"
 
 AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_line("> Companies"));
@@ -16,6 +17,7 @@ AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_empty_line());
     options.push_back(ui_util::make_line("> Personal"));
     options.push_back(ui_util::make_option(5, "View company information"));
+    options.push_back(ui_util::make_option(6, "View world graph"));
     options.push_back(ui_util::make_empty_line());
     options.push_back(ui_util::make_option(0, "Logout"));
 }
@@ -48,6 +50,9 @@ void AdministratorUI::run() {
             break;
         case 5:
             uiManager.set(new CompanyInformationUI(uiManager));
+            break;
+        case 6:
+            uiManager.set(new ViewWorldGraphUI(uiManager));
             break;
         default:
             break;

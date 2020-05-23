@@ -147,7 +147,3 @@ fabric.properties
 
 # vscode
 .vscode/**
-
-# Portugal Maps
-**/PortugalMaps/**
-**/maps/**

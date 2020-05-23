@@ -8,7 +8,7 @@ int main() {
     AuthUserManager userManager;
     CurrentSession session(userManager);
 
-    Bootstrap bs("../../resources/Porto");
+    Bootstrap bs("resources/Porto");
 
     Company company = bs.buildCompany("BosHBus", 1, 4);
 
