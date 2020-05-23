@@ -14,6 +14,7 @@ var hierarchy =
     [ "CompanyRepresentative", "classCompanyRepresentative.html", null ],
     [ "CurrentSession", "classCurrentSession.html", null ],
     [ "Edge< T >", "classEdge.html", null ],
+    [ "GoogleMap", "classGoogleMap.html", null ],
     [ "Graph< T >", "classGraph.html", null ],
     [ "Graph< Location >", "classGraph.html", null ],
     [ "invalid_argument", null, [

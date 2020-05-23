@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="location_hash",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structlocation__hash.html",tooltip="Redefinition of the default hash and equal function for the Location class. "];
+  Node0 [label="Location",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLocation.html",tooltip="Represents a real world location. "];
 }

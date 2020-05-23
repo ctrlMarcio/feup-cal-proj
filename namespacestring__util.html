@@ -100,6 +100,12 @@ Functions</h2></td></tr>
 <tr class="separator:a080e511075f933895524bb407ae56bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af758bdf29f149036fdcf923ece7b0077"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__util.html#af758bdf29f149036fdcf923ece7b0077">trim</a> (const std::string &amp;string)</td></tr>
 <tr class="separator:af758bdf29f149036fdcf923ece7b0077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae728acc7b29bddc06c8dbd15fdd8c2fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__util.html#ae728acc7b29bddc06c8dbd15fdd8c2fc">replace</a> (std::string &amp;str, const std::string &amp;from, const std::string &amp;to)</td></tr>
+<tr class="memdesc:ae728acc7b29bddc06c8dbd15fdd8c2fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces a given string in another string.  <a href="#ae728acc7b29bddc06c8dbd15fdd8c2fc">More...</a><br /></td></tr>
+<tr class="separator:ae728acc7b29bddc06c8dbd15fdd8c2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426370c633fba71a2b98833898bf5319"><td class="memItemLeft" align="right" valign="top"><a id="a426370c633fba71a2b98833898bf5319"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toJSONObject</b> (std::vector&lt; std::pair&lt; std::string, std::string &gt;&gt; values)</td></tr>
+<tr class="separator:a426370c633fba71a2b98833898bf5319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains useful functions and utilities to deal with strings. </p>
@@ -153,6 +159,43 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the password </dd></dl>
+
+</div>
+</div>
+<a id="ae728acc7b29bddc06c8dbd15fdd8c2fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae728acc7b29bddc06c8dbd15fdd8c2fc">&#9670;&nbsp;</a></span>replace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool string_util::replace </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replaces a given string in another string. </p>
+<p><a class="el" href="">str the string  from the text to be replace  to the text to replace  true, if the string is successfully replaced. false, otherwise </a></p>
 
 </div>
 </div>

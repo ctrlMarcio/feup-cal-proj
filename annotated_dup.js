@@ -20,6 +20,7 @@ var annotated_dup =
     [ "CompanyRepresentative", "classCompanyRepresentative.html", "classCompanyRepresentative" ],
     [ "CurrentSession", "classCurrentSession.html", "classCurrentSession" ],
     [ "Edge", "classEdge.html", "classEdge" ],
+    [ "GoogleMap", "classGoogleMap.html", "classGoogleMap" ],
     [ "Graph", "classGraph.html", "classGraph" ],
     [ "HomeUI", "classHomeUI.html", "classHomeUI" ],
     [ "InvalidDirectoryException", "classInvalidDirectoryException.html", "classInvalidDirectoryException" ],
