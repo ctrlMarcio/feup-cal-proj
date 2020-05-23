@@ -27,6 +27,7 @@ std::vector<Location> CompanyClient::getPickupPoints() const {
 bool CompanyClient::addPickupPoint(const Location &location) {
     if (hasPickupPoint(location)) return false;
     pickupPoints.push_back(location);
+    calculated = false;
     return true;
 }
 
@@ -65,5 +66,18 @@ bool CompanyClient::operator!=(const CompanyClient &rhs) const {
 
 bool CompanyClient::hasPickupPoint(const Location &location) {
     return std::find(pickupPoints.begin(), pickupPoints.end(), location) != pickupPoints.end();
+}
+
+bool CompanyClient::isCalculated() const {
+    return calculated;
+}
+
+const pair<std::list<Path<Location>>, std::vector<Cluster>> &CompanyClient::getRoutes() const {
+    return routes;
+}
+
+void CompanyClient::setRoutes(const pair<std::list<Path<Location>>, std::vector<Cluster>> &pair) {
+    routes = pair;
+    calculated = true;
 }
 

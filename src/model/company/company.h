@@ -106,6 +106,8 @@ public:
      */
     AdministratorManager &getAdministratorManager();
 
+    void getPaths(CompanyClient &companyClient);
+
 private:
     /**
      * @brief The name of the company.

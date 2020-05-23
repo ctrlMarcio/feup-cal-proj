@@ -45,16 +45,26 @@ std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, i
     return clusters;
 }
 
-std::list<Path<Location>>
+std::pair<std::list<Path<Location>>, std::vector<Cluster>>
 algorithm::getPaths(const CompanyClient &companyClient, Company &company) {
     std::vector<Location> locations = companyClient.getPickupPoints();
 
     std::vector<Cluster> clusters = kMeans(locations, companyClient.getVehicleNumber());
 
     if (clusters.empty())
-        clusters.push_back(Cluster());
+        clusters.emplace_back();
 
-    return pathFinder(company.getGraph(), company.getGarageLocation(), companyClient.getHeadquarters(), clusters);
+    std::list<Path<Location>> paths = pathFinder(company.getGraph(), company.getGarageLocation(),
+                                                 companyClient.getHeadquarters(), clusters);
+
+    std::vector<Cluster> orderedClusters;
+
+    for (Path<Location> &path : paths)
+        orderedClusters.push_back(path.getCluster());
+
+    return make_pair(
+            paths,
+            orderedClusters);
 }
 
 std::list<Path<Location>>
@@ -89,7 +99,7 @@ algorithm::pathFinder(Graph<Location> &graph, const Location &source, const Loca
             locations.insert(locations.end(), cluster.getLocations().begin(), cluster.getLocations().end());
 
             if (isComplete(locations, current.getPath()) && current.getVertex() == destinationVertex) {
-                Path<Location> path(current.getPath(), current.getPathCost());
+                Path<Location> path(current.getPath(), current.getPathCost(), *it);
                 res.push_back(path);
                 it = clustersCopy.erase(it);
                 it--;

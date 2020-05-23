@@ -1,4 +1,5 @@
 #include "company.h"
+#include "../../util/algorithm/algorithm.h"
 
 #include <utility>
 
@@ -62,4 +63,9 @@ long Company::getVehiclesLeft() const {
 
 AdministratorManager &Company::getAdministratorManager() {
     return administratorManager;
+}
+
+void Company::getPaths(CompanyClient &companyClient) {
+    std::pair<std::list<Path<Location>>, std::vector<Cluster>> routes = algorithm::getPaths(companyClient, *this);
+    companyClient.setRoutes(routes);
 }

@@ -1,5 +1,6 @@
 template<typename T>
-Path<T>::Path(const list<Vertex<T>> &path, double pathCost) : path(path), pathCost(pathCost) {}
+Path<T>::Path(const list<Vertex<T>> &path, double pathCost, Cluster &cluster) : path(path), pathCost(pathCost),
+                                                                                cluster(cluster) {}
 
 template<typename T>
 const list<Vertex<T>> &Path<T>::getPath() const {
@@ -9,4 +10,9 @@ const list<Vertex<T>> &Path<T>::getPath() const {
 template<typename T>
 double Path<T>::getPathCost() {
     return pathCost;
+}
+
+template<typename T>
+const Cluster &Path<T>::getCluster() const {
+    return cluster;
 }

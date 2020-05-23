@@ -2,7 +2,6 @@
 #include "application/bootstrap/bootstrap.h"
 #include "application/ui/home/home_ui.h"
 #include "util/algorithm/algorithm.h"
-#include "util/gmaps/google_map.h"
 
 int main() {
     AuthUserManager userManager;
@@ -10,24 +9,20 @@ int main() {
 
     Bootstrap bs("resources/Porto");
 
-    Company company = bs.buildCompany("BosHBus", 1, 4);
+    Company company = bs.buildCompany("BosHBus", 6, 4);
 
     Administrator administrator("lola", "a");
     CompanyRepresentative companyRepresentative("lol", "b");
 
     CompanyClient companyClient("ai limão", companyRepresentative, *company.getLocationManager().get(35));
-    companyClient.setVehicleNumber(4);
+    companyClient.setVehicleNumber(3);
 
-    srand(NULL);
-    for (int i = 0; i < 15; ++i){
-        int lol = rand() % 106;
-        companyClient.addPickupPoint(*company.getLocationManager().get(lol));
-    }
-
-    std::list<Path<Location>> paths = algorithm::getPaths(companyClient, company);
-
-    GoogleMap gmap(paths, company.getGarageLocation(), companyClient.getHeadquarters(),
-                   companyClient.getPickupPoints());
+    companyClient.addPickupPoint(*company.getLocationManager().get(91));
+    companyClient.addPickupPoint(*company.getLocationManager().get(85));
+    companyClient.addPickupPoint(*company.getLocationManager().get(13));
+    companyClient.addPickupPoint(*company.getLocationManager().get(24));
+    companyClient.addPickupPoint(*company.getLocationManager().get(49));
+    companyClient.addPickupPoint(*company.getLocationManager().get(67));
 
     company.getCompanyClientManager().add(companyClient);
     company.getAdministratorManager().add(administrator);

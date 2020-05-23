@@ -47,7 +47,7 @@ namespace algorithm {
     std::list<Path<Location>> pathFinder(Graph<Location> &graph, const Location &source, const Location &destination,
                                          const std::vector<Cluster> &clusters);
 
-    std::list<Path<Location>>
+    std::pair<std::list<Path<Location>>, std::vector<Cluster>>
     getPaths(const CompanyClient &companyClient, Company &company);
 
     /**

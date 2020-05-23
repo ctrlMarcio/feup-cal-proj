@@ -3,8 +3,11 @@
 
 #include <string>
 #include <vector>
+#include <list>
+#include "../../util/algorithm/path.h"
 #include "../../model/location/location.h"
 #include "../../model/company_client/company_representative/company_representative.h"
+#include "../../util/graph/cluster.h"
 
 /**
  * @brief   Represents a company that might benefit from BosHbus services.
@@ -83,6 +86,12 @@ public:
      */
     void setVehicleNumber(int vehicleNumber);
 
+    bool isCalculated() const;
+
+    const pair<std::list<Path<Location>>, std::vector<Cluster>> &getRoutes() const;
+
+    void setRoutes(const pair<std::list<Path<Location>>, std::vector<Cluster>> &pair);
+
     bool hasPickupPoint(const Location &location);
 
     bool operator==(const CompanyClient &rhs) const;
@@ -121,6 +130,16 @@ private:
      * @brief The Company's identifier.
      */
     long uuid;
+
+    /**
+     * @brief Flag to identify if the paths have been calculated or not.
+     */
+    bool calculated = false;
+
+    /**
+     * @brief The routes of the company.
+     */
+    std::pair<std::list<Path<Location>>, std::vector<Cluster>> routes;
 };
 
 

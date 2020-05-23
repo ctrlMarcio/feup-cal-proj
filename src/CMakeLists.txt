@@ -44,7 +44,9 @@ add_library(feup-cal-proj main.cpp
         application/ui/client_company_representative/pickup_point/pickup_point_ui.cpp application/ui/client_company_representative/pickup_point/pickup_point_ui.h
         application/ui/administrator/company_client/companies_client_information_ui.cpp application/ui/administrator/company_client/companies_client_information_ui.h
         util/gmaps/google_map.cpp util/gmaps/google_map.h
-        application/ui/administrator/graph/view_world_graph_ui.cpp application/ui/administrator/graph/view_world_graph_ui.h)
+        application/ui/client_company_representative/route/view_paths_ui.cpp application/ui/client_company_representative/route/view_paths_ui.h
+        application/ui/administrator/graph/view_world_graph_ui.cpp application/ui/administrator/graph/view_world_graph_ui.h
+        )
 
 add_executable(application main.cpp
         util/graph/graph.tpp util/graph/graph.h
@@ -92,6 +94,7 @@ add_executable(application main.cpp
         application/ui/client_company_representative/pickup_point/pickup_point_ui.cpp application/ui/client_company_representative/pickup_point/pickup_point_ui.h
         application/ui/administrator/company_client/companies_client_information_ui.cpp application/ui/administrator/company_client/companies_client_information_ui.h
         util/gmaps/google_map.cpp util/gmaps/google_map.h
+        application/ui/client_company_representative/route/view_paths_ui.cpp application/ui/client_company_representative/route/view_paths_ui.h
         application/ui/administrator/graph/view_world_graph_ui.cpp application/ui/administrator/graph/view_world_graph_ui.h
         ../lib/connection.cpp ../lib/graphviewer.cpp
         )

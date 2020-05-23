@@ -3,17 +3,22 @@
 
 #include <list>
 #include "../graph/vertex.h"
+#include "../graph/cluster.h"
 
 template<typename T>
 class Path {
 public:
-    Path(const std::list<Vertex<T>> &path, double pathCost);
+    Path(const std::list<Vertex<T>> &path, double pathCost, Cluster &cluster);
 
     const list<Vertex<T>> &getPath() const;
 
     double getPathCost();
 
+    const Cluster &getCluster() const;
+
 private:
+    Cluster cluster;
+
     std::list<Vertex<T>> path;
 
     double pathCost;
