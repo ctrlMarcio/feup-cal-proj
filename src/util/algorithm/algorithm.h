@@ -90,7 +90,8 @@ namespace algorithm {
 
     /**
      * @brief Verifies if the last elements of a list have a reversion.
-     * Won't apply if the vertex that reverts has only one outgoing edge.
+     *
+     * @description Won't apply if the vertex that reverts has only one outgoing edge.
      * For example, 1,2,3,2,1 has a reversion.
      *
      * @tparam T        the content of the vertices
@@ -99,6 +100,29 @@ namespace algorithm {
      */
     template<class T>
     bool reverts(std::list<Vertex<T>> vertices);
+
+    /**
+     * @brief Calculates a matrix of distances between every vertex of a graph
+     * using the Floyd-Warshall algorithm.
+     *
+     * @tparam T        the content of the vertices
+     * @param graph     the graph
+     * @param output    the flag that indicates if a progress output should be sent to the stdout
+     * @return          the matrix of distances
+     */
+    template<class T>
+    std::vector<std::vector<double>> floydWarshall(Graph<T> &graph, bool output = false);
+
+    /**
+     * @brief Verifies if a directed graph is densely connected.
+     *
+     * @tparam T        the content of the vertices
+     * @param graph     the graph
+     * @param output    the flag that indicates if a progress output should be sent to the stdout
+     * @return          true, of the graph is densely connected. false, otherwise
+     */
+    template<class T>
+    bool isDenselyConnected(Graph<T> &graph, bool output = false);
 };
 
 #include "algorithm.tpp"

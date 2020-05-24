@@ -446,3 +446,23 @@ TEST(algorithm, cycles_test) {
 
     EXPECT_TRUE(algorithm::hasCycle(list));
 }
+
+TEST(algorithm, floyd_warshall_test) {
+    Graph<Location> graph;
+    Location a(0, "", 0, 0);
+    Location b(1, "", 0, 0);
+    Location c(2, "", 0, 0);
+    Location d(3, "", 0, 0);
+
+    graph.add(a);
+    graph.add(b);
+    graph.add(c);
+    graph.add(d);
+    graph.add(a, b, 1);
+    graph.add(b, c, 1);
+    graph.add(c, d, 1);
+    graph.add(d, a, 1);
+    graph.add(a, b, 1);
+
+    EXPECT_TRUE(algorithm::isDenselyConnected(graph));
+}

@@ -5,6 +5,7 @@
 #include "company/company_information_ui.h"
 #include "company_client/companies_client_information_ui.h"
 #include "graph/view_world_graph_ui.h"
+#include "graph/verify_connectivity_ui.h"
 
 AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_line("> Companies"));
@@ -18,6 +19,7 @@ AdministratorUI::AdministratorUI(UIManager &uiManager) : uiManager(uiManager) {
     options.push_back(ui_util::make_line("> Personal"));
     options.push_back(ui_util::make_option(5, "View company information"));
     options.push_back(ui_util::make_option(6, "View world graph"));
+    options.push_back(ui_util::make_option(7, "Verify graph connectivity"));
     options.push_back(ui_util::make_empty_line());
     options.push_back(ui_util::make_option(0, "Logout"));
 }
@@ -54,6 +56,8 @@ void AdministratorUI::run() {
         case 6:
             uiManager.set(new ViewWorldGraphUI(uiManager));
             break;
+        case 7:
+            uiManager.set(new VerifyConnectivityUI(uiManager));
         default:
             break;
     }

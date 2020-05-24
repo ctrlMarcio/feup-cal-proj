@@ -112,3 +112,64 @@ bool algorithm::reverts(std::list<Vertex<T>> vertices) {
 
     return (*(last) == *(check));
 }
+
+template<class T>
+std::vector<std::vector<double>> algorithm::floydWarshall(Graph<T> &graph, bool output) {
+    // prepares the matrices, k = 0 if you will
+    std::vector<std::vector<double>> distancesMatrix;
+    std::vector<std::vector<int>> pathMatrix;
+
+    distancesMatrix.clear();
+    pathMatrix.clear();
+
+    for (int i = 0; i < graph.verticesCount(); ++i) {
+        vector<double> distances;
+        vector<int> paths;
+
+        for (Vertex<T> &dst : graph.getVertices()) {
+            double weight = (graph.getVertices()[i].weightTo(&dst));
+            distances.push_back(weight);
+
+            if (weight != INF)
+                paths.push_back(i);
+            else
+                paths.push_back(-1);
+        }
+
+        distancesMatrix.push_back(distances);
+        pathMatrix.push_back(paths);
+    }
+
+    for (int k = 0; k < graph.verticesCount(); ++k) {
+        for (int i = 0; i < graph.verticesCount(); ++i) { // for each line
+
+            if (distancesMatrix[i][k] == INF)
+                continue;
+
+            for (int j = 0; j < graph.verticesCount(); ++j) { // for each column
+                if (distancesMatrix[k][j] != INF &&
+                    distancesMatrix[i][k] + distancesMatrix[k][j] < distancesMatrix[i][j]) {
+                    distancesMatrix[i][j] = distancesMatrix[i][k] + distancesMatrix[k][j];
+                    pathMatrix[i][j] = pathMatrix[k][j];
+                }
+            }
+        }
+
+        if (output)
+            std::cout << "\r" << (double) k / graph.verticesCount() * 100 << "%" << std::endl;
+    }
+
+    return distancesMatrix;
+}
+
+template<class T>
+bool algorithm::isDenselyConnected(Graph<T> &graph, bool output) {
+    std::vector<std::vector<double>> distances = algorithm::floydWarshall(graph, output);
+
+    for (auto line : distances)
+        for (double distance : line)
+            if (distance == INF)
+                return false;
+
+    return true;
+}
