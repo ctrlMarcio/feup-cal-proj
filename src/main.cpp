@@ -7,22 +7,23 @@ int main() {
     AuthUserManager userManager;
     CurrentSession session(userManager);
 
-    Bootstrap bs("resources/Porto");
+    Bootstrap bs("resources/Portugal");
 
-    Company company = bs.buildCompany("BosHBus", 6, 4);
+    Company company = bs.buildCompany("BosHBus", 12366, 6);
 
     Administrator administrator("lola", "a");
     CompanyRepresentative companyRepresentative("lol", "b");
 
-    CompanyClient companyClient("ai limão", companyRepresentative, *company.getLocationManager().get(35));
-    companyClient.setVehicleNumber(3);
+    CompanyClient companyClient("ai limão", companyRepresentative, *company.getLocationManager().get(46604));
+    companyClient.setVehicleNumber(4);
 
-    companyClient.addPickupPoint(*company.getLocationManager().get(91));
-    companyClient.addPickupPoint(*company.getLocationManager().get(85));
-    companyClient.addPickupPoint(*company.getLocationManager().get(13));
-    companyClient.addPickupPoint(*company.getLocationManager().get(24));
-    companyClient.addPickupPoint(*company.getLocationManager().get(49));
-    companyClient.addPickupPoint(*company.getLocationManager().get(67));
+    companyClient.addPickupPoint(*company.getLocationManager().get(28617));
+    companyClient.addPickupPoint(*company.getLocationManager().get(8371));
+    companyClient.addPickupPoint(*company.getLocationManager().get(28830));
+    companyClient.addPickupPoint(*company.getLocationManager().get(32766));
+    companyClient.addPickupPoint(*company.getLocationManager().get(4850));
+    companyClient.addPickupPoint(*company.getLocationManager().get(49603));
+    companyClient.addPickupPoint(*company.getLocationManager().get(23657));
 
     company.getCompanyClientManager().add(companyClient);
     company.getAdministratorManager().add(administrator);

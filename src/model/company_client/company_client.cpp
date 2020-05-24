@@ -32,6 +32,8 @@ bool CompanyClient::addPickupPoint(const Location &location) {
 }
 
 bool CompanyClient::removePickupPoint(const Location &location) {
+    calculated = false;
+
     std::vector<Location>::iterator it;
     it = pickupPoints.begin();
     for (auto i: pickupPoints) {
@@ -50,6 +52,7 @@ int CompanyClient::getVehicleNumber() const {
 
 void CompanyClient::setVehicleNumber(int vehicleNumber) {
     this->vehicleNumber = vehicleNumber;
+    calculated = false;
 }
 
 long CompanyClient::getUUID() const {

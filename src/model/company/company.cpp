@@ -66,6 +66,8 @@ AdministratorManager &Company::getAdministratorManager() {
 }
 
 void Company::getPaths(CompanyClient &companyClient) {
+    if (companyClient.isCalculated())
+        return;
     std::pair<std::list<Path<Location>>, std::vector<Cluster>> routes = algorithm::getPaths(companyClient, *this);
     companyClient.setRoutes(routes);
 }

@@ -74,13 +74,12 @@ private:
     /**
      * @brief Appends nodes and edges from files to the graph
      *
-     * @param nodesFile         the name of the nodes' file
      * @param edgesFile         the name of the edges' file
      * @param city              the name of the city to append
      * @param mutex     the mutex to ensure thread safety
      */
     void
-    append(Graph<Location> &graph, const std::string &nodesFile, const std::string &edgesFile, const std::string &city,
+    append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city,
            std::mutex *mutex = nullptr);
 
     /**
@@ -92,7 +91,7 @@ private:
      * @param city      the name of the city described in the files
      * @param mutex     the mutex to assure safety
      */
-    void readNodes(Graph<Location> &graph, const std::string &fileName, const std::string &city,
+    void readNodes(const std::string &fileName, const std::string &city,
                    std::mutex *mutex = nullptr);
 
     /**
@@ -106,7 +105,7 @@ private:
      * @param mutex     the mutex to assure safety
      * @return          true if the edges were successfully read, false otherwise
      */
-    bool readEdges(Graph<Location> &graph, const std::string &fileName, std::mutex *mutex = nullptr);
+    bool readEdges(const std::string &fileName, std::mutex *mutex = nullptr);
 };
 
 

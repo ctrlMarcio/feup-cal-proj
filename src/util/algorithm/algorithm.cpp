@@ -1,15 +1,21 @@
 #include "algorithm.h"
+#include <algorithm>
 
-std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, int clusterAmount, int iterations) {
+std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, int vehicleCount, int iterations) {
     // initialize clusters
     std::vector<Cluster> clusters;
-    if (clusterAmount <= 0 || iterations <= 0 || locations.empty())
+    if (vehicleCount <= 0 || iterations <= 0 || locations.empty())
         return clusters;
 
+    int clusterAmount = std::min(vehicleCount, (int) locations.size());
+
     unsigned long increment = locations.size() / clusterAmount;
+    if (!increment)
+        increment = 1;
 
     auto iterator = locations.begin();
-    for (int i = 0; i < clusterAmount; ++i) {
+    int i = 0;
+    for (; i < clusterAmount; ++i) {
         Cluster cluster;
         cluster.add(*iterator);
         clusters.push_back(cluster);
@@ -17,7 +23,10 @@ std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, i
         iterator = std::next(iterator, increment);
     }
 
-    for (int i = 0; i < iterations; ++i) {
+    for (; i < vehicleCount; ++i)
+        clusters.emplace_back();
+
+    for (int j = 0; j < iterations; ++j) {
         // compute centroids and clear the clusters
         for (Cluster &cluster : clusters) {
             cluster.updateCentroid();
@@ -85,7 +94,7 @@ algorithm::pathFinder(Graph<Location> &graph, const Location &source, const Loca
         Trio<Location> min = queue.top();
         queue.pop();
 
-        if (fazMarchaAtras(min.getPath()) || hasCycle(min.getPath()))
+        if (reverts(min.getPath()) || hasCycle(min.getPath()))
             continue;
 
         for (const std::shared_ptr<Edge<Location>> &child : min.getVertex().getOutgoing())

@@ -101,7 +101,7 @@ bool algorithm::hasCycle(std::list<T> list, int lastElements) {
 }
 
 template<class T>
-bool algorithm::fazMarchaAtras(std::list<Vertex<T>> vertices) {
+bool algorithm::reverts(std::list<Vertex<T>> vertices) {
     if (vertices.size() < 3) return false;
 
     auto last = std::prev(vertices.end(), 1);

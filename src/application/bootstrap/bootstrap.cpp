@@ -53,7 +53,7 @@ void Bootstrap::appendToGraph(const std::string &directory, const std::string &c
 
             long old = graph.verticesCount();
             cout << "Reading remaining from " << country << "." << endl;
-            this->append(this->graph, nodesFile, edgesFile, country);
+            this->append(nodesFile, edgesFile, country);
             cout << "Read remaining " << graph.verticesCount() - old << " nodes from " << country << "." << endl;
         }
 
@@ -71,7 +71,7 @@ void Bootstrap::readDir(const string &city, const string &path, std::mutex *mute
     string edgesFile = path + "/" + EDGES_FILE;
 
     cout << "Reading " << city << "." << endl;
-    this->append(this->graph, nodesFile, edgesFile, city, mutex);
+    this->append(nodesFile, edgesFile, city, mutex);
     cout << "Read " << city << "." << endl;
 }
 
@@ -82,7 +82,7 @@ Company Bootstrap::buildCompany(const std::string &name, long locationId, long v
 
         Location location = vertex.get();
 
-        Company company(name, location, this->graph, vehicleNumber);
+        Company company(name, location, std::move(this->graph), vehicleNumber);
         return company;
     } catch (InvalidVertexException &) {
         cerr << locationId << endl;
@@ -91,7 +91,7 @@ Company Bootstrap::buildCompany(const std::string &name, long locationId, long v
 }
 
 void
-Bootstrap::readNodes(Graph<Location> &graph, const std::string &fileName, const std::string &city, std::mutex *mutex) {
+Bootstrap::readNodes(const std::string &fileName, const std::string &city, std::mutex *mutex) {
     std::ifstream file;
     file.open(fileName);
 
@@ -118,8 +118,9 @@ Bootstrap::readNodes(Graph<Location> &graph, const std::string &fileName, const 
         std::string lonStr;
 
         if (isComplete) {
-            latStr = elements[3];   //  41.5598669
-            lonStr = elements[4];   //  -8.446596)
+            // TODO
+            latStr = elements[4];   //  41.5598669
+            lonStr = elements[3];   //  -8.446596)
         }
 
         // removes the clutter in the strings
@@ -156,7 +157,7 @@ Bootstrap::readNodes(Graph<Location> &graph, const std::string &fileName, const 
     file.close();
 }
 
-bool Bootstrap::readEdges(Graph<Location> &graph, const string &fileName, std::mutex *mutex) {
+bool Bootstrap::readEdges(const string &fileName, std::mutex *mutex) {
     bool allOk = true;
 
     std::ifstream file;
@@ -204,6 +205,7 @@ bool Bootstrap::readEdges(Graph<Location> &graph, const string &fileName, std::m
             if (mutex) mutex->unlock();
         } catch (InvalidVertexException &) {
             allOk = false;
+            cout << "bro" << endl;
         }
     }
 
@@ -212,16 +214,16 @@ bool Bootstrap::readEdges(Graph<Location> &graph, const string &fileName, std::m
     return allOk;
 }
 
-void Bootstrap::append(Graph<Location> &graph, const std::string &nodesFile, const std::string &edgesFile,
+void Bootstrap::append(const std::string &nodesFile, const std::string &edgesFile,
                        const std::string &city, std::mutex *mutex) {
     try {
-        this->readNodes(graph, nodesFile, city, mutex);
+        this->readNodes(nodesFile, city, mutex);
     } catch (InvalidFileException &e) {
         cout << "Can't append from " << city << "." << endl;
         return;
     }
     try {
-        this->readEdges(graph, edgesFile, mutex);
+        this->readEdges(edgesFile, mutex);
     } catch (InvalidFileException &e) {
         cerr << "Invalid edges file " << edgesFile << " after reading the nodes. Aborting." << endl;
         throw e;
