@@ -101,29 +101,158 @@ Functions</h2></td></tr>
 <tr class="memitem:a9b775a95355892f91b45a09359ce436b"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a9b775a95355892f91b45a09359ce436b">pathFinder</a> (<a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, const <a class="el" href="classLocation.html">Location</a> &amp;source, const <a class="el" href="classLocation.html">Location</a> &amp;destination, const std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &amp;clusters)</td></tr>
 <tr class="memdesc:a9b775a95355892f91b45a09359ce436b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the paths for a graph, a garage, a headquarters location and a group of clusters.  <a href="#a9b775a95355892f91b45a09359ce436b">More...</a><br /></td></tr>
 <tr class="separator:a9b775a95355892f91b45a09359ce436b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c8a5ef7f63682791914809c65bd2aef"><td class="memItemLeft" align="right" valign="top"><a id="a6c8a5ef7f63682791914809c65bd2aef"></a>
-std::pair&lt; std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;, std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getPaths</b> (const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;companyClient, <a class="el" href="classCompany.html">Company</a> &amp;company)</td></tr>
+<tr class="memitem:a6c8a5ef7f63682791914809c65bd2aef"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;, std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a6c8a5ef7f63682791914809c65bd2aef">getPaths</a> (const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;companyClient, <a class="el" href="classCompany.html">Company</a> &amp;company)</td></tr>
+<tr class="memdesc:a6c8a5ef7f63682791914809c65bd2aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the paths for a given company client.  <a href="#a6c8a5ef7f63682791914809c65bd2aef">More...</a><br /></td></tr>
 <tr class="separator:a6c8a5ef7f63682791914809c65bd2aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fec9f87106b38398a7e37670de61550"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a2fec9f87106b38398a7e37670de61550"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classGraph.html">Graph</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a2fec9f87106b38398a7e37670de61550">reduceGraph</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; graph, const std::vector&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;locations)</td></tr>
 <tr class="memdesc:a2fec9f87106b38398a7e37670de61550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the reduced graph from a given graph.  <a href="#a2fec9f87106b38398a7e37670de61550">More...</a><br /></td></tr>
 <tr class="separator:a2fec9f87106b38398a7e37670de61550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad897983fe3b451e895a20a1425069e18"><td class="memTemplParams" colspan="2"><a id="ad897983fe3b451e895a20a1425069e18"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:ad897983fe3b451e895a20a1425069e18"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>dijkstra</b> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;gra, const <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &amp;sourceVertex)</td></tr>
+<tr class="memitem:ad897983fe3b451e895a20a1425069e18"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad897983fe3b451e895a20a1425069e18"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#ad897983fe3b451e895a20a1425069e18">dijkstra</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;gra, const <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &amp;sourceVertex)</td></tr>
+<tr class="memdesc:ad897983fe3b451e895a20a1425069e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the minimal distance between a vertex and all the others.  <a href="#ad897983fe3b451e895a20a1425069e18">More...</a><br /></td></tr>
 <tr class="separator:ad897983fe3b451e895a20a1425069e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89811c8f8302abccc224ed6766b2bac1"><td class="memTemplParams" colspan="2"><a id="a89811c8f8302abccc224ed6766b2bac1"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a89811c8f8302abccc224ed6766b2bac1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hasCycle</b> (std::list&lt; T &gt; list, int lastElements=10)</td></tr>
+<tr class="memitem:a89811c8f8302abccc224ed6766b2bac1"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a89811c8f8302abccc224ed6766b2bac1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a89811c8f8302abccc224ed6766b2bac1">hasCycle</a> (std::list&lt; T &gt; list, int lastElements=10)</td></tr>
+<tr class="memdesc:a89811c8f8302abccc224ed6766b2bac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if a list has cycles in it.  <a href="#a89811c8f8302abccc224ed6766b2bac1">More...</a><br /></td></tr>
 <tr class="separator:a89811c8f8302abccc224ed6766b2bac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72d914a46352362f690b0488a6d562dd"><td class="memTemplParams" colspan="2"><a id="a72d914a46352362f690b0488a6d562dd"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a72d914a46352362f690b0488a6d562dd"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fazMarchaAtras</b> (std::list&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt; vertices)</td></tr>
-<tr class="separator:a72d914a46352362f690b0488a6d562dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56fa5786138181dbb60ff181a9456ff2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a56fa5786138181dbb60ff181a9456ff2"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a56fa5786138181dbb60ff181a9456ff2">reverts</a> (std::list&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt; vertices)</td></tr>
+<tr class="memdesc:a56fa5786138181dbb60ff181a9456ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if the last elements of a list have a reversion. Won't apply if the vertex that reverts has only one outgoing edge. For example, 1,2,3,2,1 has a reversion.  <a href="#a56fa5786138181dbb60ff181a9456ff2">More...</a><br /></td></tr>
+<tr class="separator:a56fa5786138181dbb60ff181a9456ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains useful and required graph-related algorithms. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ad897983fe3b451e895a20a1425069e18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad897983fe3b451e895a20a1425069e18">&#9670;&nbsp;</a></span>dijkstra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void algorithm::dijkstra </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>gra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sourceVertex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the minimal distance between a vertex and all the others. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the content of the vertex </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gra</td><td>the graph </td></tr>
+    <tr><td class="paramname">sourceVertex</td><td>the source vertex </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c8a5ef7f63682791914809c65bd2aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c8a5ef7f63682791914809c65bd2aef">&#9670;&nbsp;</a></span>getPaths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;, std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &gt; algorithm::getPaths </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;&#160;</td>
+          <td class="paramname"><em>companyClient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCompany.html">Company</a> &amp;&#160;</td>
+          <td class="paramname"><em>company</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds the paths for a given company client. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">companyClient</td><td>the company client </td></tr>
+    <tr><td class="paramname">company</td><td>the company </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the optimal paths </dd></dl>
+
+</div>
+</div>
+<a id="a89811c8f8302abccc224ed6766b2bac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89811c8f8302abccc224ed6766b2bac1">&#9670;&nbsp;</a></span>hasCycle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algorithm::hasCycle </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lastElements</em> = <code>10</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies if a list has cycles in it. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the content of the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>the list </td></tr>
+    <tr><td class="paramname">lastElements</td><td>the number of elements to verify </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the list has cycles in it. false, otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a297315c06d9635be2f9fef94576990e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a297315c06d9635be2f9fef94576990e4">&#9670;&nbsp;</a></span>isComplete()</h2>
 
@@ -296,6 +425,41 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the reduced graph </dd></dl>
+
+</div>
+</div>
+<a id="a56fa5786138181dbb60ff181a9456ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56fa5786138181dbb60ff181a9456ff2">&#9670;&nbsp;</a></span>reverts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algorithm::reverts </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies if the last elements of a list have a reversion. Won't apply if the vertex that reverts has only one outgoing edge. For example, 1,2,3,2,1 has a reversion. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the content of the vertices </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>the vertices </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if the list reverts. false, otherwise </dd></dl>
 
 </div>
 </div>

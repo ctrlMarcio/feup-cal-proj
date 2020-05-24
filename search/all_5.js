@@ -30,6 +30,7 @@ var searchData=
   ['getoption',['getOption',['../classui__util_1_1Option.html#ab85d4a9da08a87ba120194d5cebf5a6b',1,'ui_util::Option::getOption()'],['../namespaceui__util.html#a4afd8550ed63522705a516ad901310c3',1,'ui_util::getOption()']]],
   ['getoutgoing',['getOutgoing',['../classVertex.html#ac9e8b7454baffda3860384eb39b0c245',1,'Vertex']]],
   ['getpassword',['getPassword',['../classAuthUser.html#a8f3e829513009e1e1cc0111f9fd9f91f',1,'AuthUser']]],
+  ['getpaths',['getPaths',['../namespacealgorithm.html#a6c8a5ef7f63682791914809c65bd2aef',1,'algorithm']]],
   ['getpickuppoints',['getPickupPoints',['../classCompanyClient.html#a3fce923f3e183e7689f506e6157d3a48',1,'CompanyClient']]],
   ['getrepresentative',['getRepresentative',['../classCompanyClient.html#aefd0ec72d7695fc7ff19c5d43091f4dc',1,'CompanyClient']]],
   ['getsource',['getSource',['../classEdge.html#af838c04cba20ee06e6d42bee09530b50',1,'Edge']]],
