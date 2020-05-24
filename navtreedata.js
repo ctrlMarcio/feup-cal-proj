@@ -27,7 +27,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "administrator_8h_source.html",
-"classViewWorldGraphUI.html#a2472114fd080f97ad884e811bd73935f"
+"classViewPathsUI.html#a202d06a12dd80cb5e9bd0a790daa0550"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

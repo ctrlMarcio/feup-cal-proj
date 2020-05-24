@@ -118,8 +118,16 @@ Functions</h2></td></tr>
 <tr class="separator:a89811c8f8302abccc224ed6766b2bac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56fa5786138181dbb60ff181a9456ff2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a56fa5786138181dbb60ff181a9456ff2"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a56fa5786138181dbb60ff181a9456ff2">reverts</a> (std::list&lt; <a class="el" href="classVertex.html">Vertex</a>&lt; T &gt;&gt; vertices)</td></tr>
-<tr class="memdesc:a56fa5786138181dbb60ff181a9456ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if the last elements of a list have a reversion. Won't apply if the vertex that reverts has only one outgoing edge. For example, 1,2,3,2,1 has a reversion.  <a href="#a56fa5786138181dbb60ff181a9456ff2">More...</a><br /></td></tr>
+<tr class="memdesc:a56fa5786138181dbb60ff181a9456ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if the last elements of a list have a reversion.  <a href="#a56fa5786138181dbb60ff181a9456ff2">More...</a><br /></td></tr>
 <tr class="separator:a56fa5786138181dbb60ff181a9456ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ff2c79419946efed3848c75484ef45"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad3ff2c79419946efed3848c75484ef45"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#ad3ff2c79419946efed3848c75484ef45">floydWarshall</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;graph, bool output=false)</td></tr>
+<tr class="memdesc:ad3ff2c79419946efed3848c75484ef45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates a matrix of distances between every vertex of a graph using the Floyd-Warshall algorithm.  <a href="#ad3ff2c79419946efed3848c75484ef45">More...</a><br /></td></tr>
+<tr class="separator:ad3ff2c79419946efed3848c75484ef45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e7981eeec1a931ea7c74b0840230b4"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a15e7981eeec1a931ea7c74b0840230b4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a15e7981eeec1a931ea7c74b0840230b4">isDenselyConnected</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;graph, bool output=false)</td></tr>
+<tr class="memdesc:a15e7981eeec1a931ea7c74b0840230b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies if a directed graph is densely connected.  <a href="#a15e7981eeec1a931ea7c74b0840230b4">More...</a><br /></td></tr>
+<tr class="separator:a15e7981eeec1a931ea7c74b0840230b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains useful and required graph-related algorithms. </p>
@@ -166,6 +174,52 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad3ff2c79419946efed3848c75484ef45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ff2c79419946efed3848c75484ef45">&#9670;&nbsp;</a></span>floydWarshall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;double&gt; &gt; algorithm::floydWarshall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>output</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates a matrix of distances between every vertex of a graph using the Floyd-Warshall algorithm. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the content of the vertices </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the graph </td></tr>
+    <tr><td class="paramname">output</td><td>the flag that indicates if a progress output should be sent to the stdout </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the matrix of distances </dd></dl>
 
 </div>
 </div>
@@ -288,6 +342,52 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true, if the path is complete. false, otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a15e7981eeec1a931ea7c74b0840230b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e7981eeec1a931ea7c74b0840230b4">&#9670;&nbsp;</a></span>isDenselyConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algorithm::isDenselyConnected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>output</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies if a directed graph is densely connected. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the content of the vertices </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>the graph </td></tr>
+    <tr><td class="paramname">output</td><td>the flag that indicates if a progress output should be sent to the stdout </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, of the graph is densely connected. false, otherwise </dd></dl>
 
 </div>
 </div>
@@ -446,7 +546,8 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Verifies if the last elements of a list have a reversion. Won't apply if the vertex that reverts has only one outgoing edge. For example, 1,2,3,2,1 has a reversion. </p>
+<p>Verifies if the last elements of a list have a reversion. </p>
+<p>Won't apply if the vertex that reverts has only one outgoing edge. For example, 1,2,3,2,1 has a reversion.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>the content of the vertices </td></tr>

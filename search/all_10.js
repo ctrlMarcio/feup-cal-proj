@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['sendnotification',['sendNotification',['../classAdministratorManager.html#a73b5c9e7d7b309998eccc8f523c5af1b',1,'AdministratorManager']]],
-  ['setvehiclenumber',['setVehicleNumber',['../classCompany.html#a604b3cd7c6b73ccb6833387f88fe4d93',1,'Company::setVehicleNumber(long vehicleNumber)'],['../classCompany.html#ab2139ddee925f0c83925c3ce18274d91',1,'Company::setVehicleNumber(CompanyClient &amp;companyClient, long companyVehicleNumber)'],['../classCompanyClient.html#aae21eda7068020bf806f4f18baf46391',1,'CompanyClient::setVehicleNumber()']]],
-  ['split',['split',['../namespacestring__util.html#a82fbf5aa0c2027c285bb89f011e59a89',1,'string_util']]],
-  ['string_5futil',['string_util',['../namespacestring__util.html',1,'']]]
+  ['random_5fpassword',['random_password',['../namespacestring__util.html#a2ac97fa63faec9c645f347abbcacacff',1,'string_util']]],
+  ['reducegraph',['reduceGraph',['../namespacealgorithm.html#a2fec9f87106b38398a7e37670de61550',1,'algorithm']]],
+  ['registercompanyui',['RegisterCompanyUI',['../classRegisterCompanyUI.html',1,'']]],
+  ['remove',['remove',['../classAuthUserManager.html#ae35bafcee2db176ceae693bfd4baeb08',1,'AuthUserManager::remove()'],['../classAdministratorManager.html#a9c1a97979dab0d729eccd801abbdcc78',1,'AdministratorManager::remove()'],['../classCompanyClientManager.html#a613d5b950cc2724326a5facb689a7f36',1,'CompanyClientManager::remove()']]],
+  ['removepickuppoint',['removePickupPoint',['../classCompanyClient.html#afb2a1ed717acc21678589a883f4ee268',1,'CompanyClient']]],
+  ['replace',['replace',['../namespacestring__util.html#ae728acc7b29bddc06c8dbd15fdd8c2fc',1,'string_util']]],
+  ['requestvehiclechangeui',['RequestVehicleChangeUI',['../classRequestVehicleChangeUI.html',1,'']]],
+  ['reverts',['reverts',['../namespacealgorithm.html#a56fa5786138181dbb60ff181a9456ff2',1,'algorithm']]]
 ];

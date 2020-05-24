@@ -1,6 +1,9 @@
 var NAVTREEINDEX1 =
 {
-"classViewWorldGraphUI.html#a2472114fd080f97ad884e811bd73935f":[1,0,46,1],
+"classViewPathsUI.html#a202d06a12dd80cb5e9bd0a790daa0550":[1,0,46,0],
+"classViewWorldGraphUI.html":[1,0,47],
+"classViewWorldGraphUI.html#a0a12255b9b6be55f7495a434704fe38b":[1,0,47,0],
+"classViewWorldGraphUI.html#a2472114fd080f97ad884e811bd73935f":[1,0,47,1],
 "classes.html":[1,1],
 "classui__util_1_1Option.html":[1,0,0,0],
 "classui__util_1_1Option.html#a19483ccfc7c7734cba83123200900d06":[1,0,0,0,3],
@@ -102,8 +105,9 @@ var NAVTREEINDEX1 =
 "ui_8h_source.html":[2,0,0,0,1,4,0],
 "ui__manager_8h_source.html":[2,0,0,0,1,4,1],
 "ui__util_8h_source.html":[2,0,0,4,3,1],
+"verify__connectivity__ui_8h_source.html":[2,0,0,0,1,0,2,0],
 "verify__vehicles__ui_8h_source.html":[2,0,0,0,1,0,3,0],
 "vertex_8h_source.html":[2,0,0,4,2,4],
 "view__paths__ui_8h_source.html":[2,0,0,0,1,1,3,0],
-"view__world__graph__ui_8h_source.html":[2,0,0,0,1,0,2,0]
+"view__world__graph__ui_8h_source.html":[2,0,0,0,1,0,2,1]
 };

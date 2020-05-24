@@ -43,6 +43,7 @@ var annotated_dup =
     [ "Trio", "classTrio.html", "classTrio" ],
     [ "UI", "classUI.html", "classUI" ],
     [ "UIManager", "classUIManager.html", "classUIManager" ],
+    [ "VerifyConnectivityUI", "classVerifyConnectivityUI.html", "classVerifyConnectivityUI" ],
     [ "VerifyVehiclesUI", "classVerifyVehiclesUI.html", "classVerifyVehiclesUI" ],
     [ "Vertex", "classVertex.html", "classVertex" ],
     [ "ViewPathsUI", "classViewPathsUI.html", "classViewPathsUI" ],

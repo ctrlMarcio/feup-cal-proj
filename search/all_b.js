@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['newline',['NEWLINE',['../classui__util_1_1Option.html#abc172be0fc5ef50e8e7eef81cfe3043c',1,'ui_util::Option']]],
-  ['nodes_5ffile',['NODES_FILE',['../classBootstrap.html#af91a1e26a04349fcae84de04e6fe5d0d',1,'Bootstrap']]]
+  ['make_5fempty_5fline',['make_empty_line',['../namespaceui__util.html#a7fe15be0f897de9516ec0419a22ffb3c',1,'ui_util']]],
+  ['make_5fline',['make_line',['../namespaceui__util.html#ae7ab9f56e6cb1c329453abdb14c91cfd',1,'ui_util']]],
+  ['make_5foption',['make_option',['../namespaceui__util.html#ad4044d909bfb5dd9ab2b753fafd88b99',1,'ui_util']]],
+  ['modifycompanyvehiclesui',['ModifyCompanyVehiclesUI',['../classModifyCompanyVehiclesUI.html',1,'']]],
+  ['mutablepriorityqueue',['MutablePriorityQueue',['../classMutablePriorityQueue.html',1,'']]]
 ];

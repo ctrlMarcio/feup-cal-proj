@@ -3,11 +3,11 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node28 [label="invalid_argument",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node28 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="invalid_argument",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node29 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node0 [label="InvalidLocationException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInvalidLocationException.html"];
-  Node28 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node30 [label="InvalidLoginException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInvalidLoginException.html",tooltip="Represents an exception thrown then a bad login is executed. "];
-  Node28 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node31 [label="InvalidVertexException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInvalidVertexException.html",tooltip="Represents an exception thrown whenever an invalid graph&#39;s vertex is required. "];
+  Node29 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="InvalidLoginException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInvalidLoginException.html",tooltip="Represents an exception thrown then a bad login is executed. "];
+  Node29 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="InvalidVertexException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInvalidVertexException.html",tooltip="Represents an exception thrown whenever an invalid graph&#39;s vertex is required. "];
 }
