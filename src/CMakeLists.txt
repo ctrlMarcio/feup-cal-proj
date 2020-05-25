@@ -1,6 +1,5 @@
 if (WIN32)
     link_libraries(wsock32 ws2_32)
-    target_link_libraries(wsock32 ws2_32)
     SET(CMAKE_CXX_FLAGS -Wcpp)
 endif (WIN32)
 

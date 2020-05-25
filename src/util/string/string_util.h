@@ -53,7 +53,7 @@ namespace string_util {
      * @param to    the text to replace
      * @return  true, if the string is successfully replaced. false, otherwise
      */
-    bool replace(std::string& str, const std::string& from, const std::string& to);
+    bool replace(std::string &str, const std::string &from, const std::string &to);
 
     std::string toJSONObject(std::vector<std::pair<std::string, std::string>> values);
 }

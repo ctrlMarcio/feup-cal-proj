@@ -7,8 +7,10 @@
 #include "../graph/cluster.h"
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
+
 #include <Windows.h>
 #include <tchar.h>
+
 #define OPEN_HTML ShellExecute(NULL, _T("open"), _T(filename.c_str()), NULL, NULL, SW_SHOWNORMAL);
 #else
 #include <unistd.h>

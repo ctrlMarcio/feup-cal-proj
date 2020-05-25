@@ -34,3 +34,7 @@ jobs:
         with:
           name: application-linux
           path: build/src/application
+      - uses: actions/upload-artifact@v2
+        with:
+          name: resources
+          path: resources
