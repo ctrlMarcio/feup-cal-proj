@@ -69,7 +69,7 @@ private:
      * @param path  the directory
      * @param mutex     the mutex to ensure thread safety
      */
-    void readDir(const string &city, const string &path, std::mutex *mutex);
+    void readDir(const string &city, const string &path);
 
     /**
      * @brief Appends nodes and edges from files to the graph
@@ -79,8 +79,7 @@ private:
      * @param mutex     the mutex to ensure thread safety
      */
     void
-    append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city,
-           std::mutex *mutex = nullptr);
+    append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city);
 
     /**
      * @brief Appends locations to the graph from a file.
@@ -91,8 +90,7 @@ private:
      * @param city      the name of the city described in the files
      * @param mutex     the mutex to assure safety
      */
-    void readNodes(const std::string &fileName, const std::string &city,
-                   std::mutex *mutex = nullptr);
+    void readNodes(const std::string &fileName, const std::string &city);
 
     /**
      * @brief Reads the edges between locations to the graph from a file.
@@ -105,7 +103,7 @@ private:
      * @param mutex     the mutex to assure safety
      * @return          true if the edges were successfully read, false otherwise
      */
-    bool readEdges(const std::string &fileName, std::mutex *mutex = nullptr);
+    bool readEdges(const string &fileName);
 };
 
 

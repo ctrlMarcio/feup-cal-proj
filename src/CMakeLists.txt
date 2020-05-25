@@ -1,9 +1,15 @@
+# Use C++11
+set(CMAKE_CXX_STANDARD 11)
+# Require (at least) it
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Don't use e.g. GNU extension (like -std=gnu++11) for portability
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 if (WIN32)
     link_libraries(wsock32 ws2_32)
+    set(CMAKE_CXX_STANDARD_LIBRARIES "-static-libgcc -static-libstdc++ -lwsock32 -lws2_32")
     SET(CMAKE_CXX_FLAGS -Wcpp)
 endif (WIN32)
-
-SET(CMAKE_CXX_FLAGS -pthread)
 
 add_library(feup-cal-proj main.cpp
         util/graph/graph.tpp util/graph/graph.h

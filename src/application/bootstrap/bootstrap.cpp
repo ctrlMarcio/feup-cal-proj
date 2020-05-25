@@ -1,5 +1,4 @@
 #include <dirent.h>
-#include <thread>
 
 #include "../../exception/invalid_location_exception.h"
 #include "../../exception/invalid_directory_exception.h"
@@ -20,9 +19,6 @@ void Bootstrap::appendToGraph(const std::string &directory, const std::string &c
         struct dirent *ent;
         long before = graph.verticesCount();
 
-        std::vector<std::thread> threads;
-        std::mutex mutex;
-
         while ((ent = readdir(dir)) != nullptr) {
             // enters in each of the cities
             std::string city(ent->d_name);
@@ -33,17 +29,12 @@ void Bootstrap::appendToGraph(const std::string &directory, const std::string &c
             std::string path = directory + "/" + city;
 
             if (opendir(path.c_str()) != nullptr) {
-                std::thread t(&Bootstrap::readDir, this, city, path, &mutex);
-                threads.push_back(std::move(t));
-
+                readDir(city, path);
             } else {
                 cerr << path << endl;
                 throw InvalidDirectoryException(path);
             }
         }
-
-        for (std::thread &thread : threads)
-            thread.join();
 
         std::string countryDir = directory + "/" + country;
         // reads the country only in the end
@@ -66,12 +57,12 @@ void Bootstrap::appendToGraph(const std::string &directory, const std::string &c
     }
 }
 
-void Bootstrap::readDir(const string &city, const string &path, std::mutex *mutex) {
+void Bootstrap::readDir(const string &city, const string &path) {
     string nodesFile = path + "/" + NODES_FILE;
     string edgesFile = path + "/" + EDGES_FILE;
 
     cout << "Reading " << city << "." << endl;
-    this->append(nodesFile, edgesFile, city, mutex);
+    this->append(nodesFile, edgesFile, city);
     cout << "Read " << city << "." << endl;
 }
 
@@ -91,7 +82,7 @@ Company Bootstrap::buildCompany(const std::string &name, long locationId, long v
 }
 
 void
-Bootstrap::readNodes(const std::string &fileName, const std::string &city, std::mutex *mutex) {
+Bootstrap::readNodes(const std::string &fileName, const std::string &city) {
     std::ifstream file;
     file.open(fileName);
 
@@ -148,15 +139,13 @@ Bootstrap::readNodes(const std::string &fileName, const std::string &city, std::
         }
 
         // add to the graph
-        if (mutex) mutex->lock();
         graph.add(location);
-        if (mutex) mutex->unlock();
     }
 
     file.close();
 }
 
-bool Bootstrap::readEdges(const string &fileName, std::mutex *mutex) {
+bool Bootstrap::readEdges(const string &fileName) {
     bool allOk = true;
 
     std::ifstream file;
@@ -198,10 +187,8 @@ bool Bootstrap::readEdges(const string &fileName, std::mutex *mutex) {
             auto dst = graph.getVertex(tmpDst);
 
             // adds the edge
-            if (mutex) mutex->lock();
             graph.add(src.get(), dst.get(), 1);
             //graph.add(dst.get(), src.get(), 1);
-            if (mutex) mutex->unlock();
         } catch (InvalidVertexException &) {
             allOk = false;
         }
@@ -212,16 +199,15 @@ bool Bootstrap::readEdges(const string &fileName, std::mutex *mutex) {
     return allOk;
 }
 
-void Bootstrap::append(const std::string &nodesFile, const std::string &edgesFile,
-                       const std::string &city, std::mutex *mutex) {
+void Bootstrap::append(const std::string &nodesFile, const std::string &edgesFile, const std::string &city) {
     try {
-        this->readNodes(nodesFile, city, mutex);
+        this->readNodes(nodesFile, city);
     } catch (InvalidFileException &e) {
         cout << "Can't append from " << city << "." << endl;
         return;
     }
     try {
-        this->readEdges(edgesFile, mutex);
+        this->readEdges(edgesFile);
     } catch (InvalidFileException &e) {
         cerr << "Invalid edges file " << edgesFile << " after reading the nodes. Aborting." << endl;
         throw e;
