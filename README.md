@@ -27,7 +27,7 @@ A more theoretical study of the problem can accessed [here](https://drive.google
 
 #### Google Test
 
-[Google](https://github.com/google/googletest) Test is a unit testing library for the C++ programming language, based on the xUnit architecture.
+[Google Test](https://github.com/google/googletest) is a unit testing library for the C++ programming language, based on the xUnit architecture.
 
 ### Requirements
 
