@@ -8,16 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Don't use e.g. GNU extension (like -std=gnu++11) for portability
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-SET(CMAKE_CXX_FLAGS -pthread)
-
 # Code Coverage Configuration
 add_library(coverage_config INTERFACE)
-
-include_directories(lib)
-
-if (WIN32)
-    link_libraries(ws2_32 wsock32)
-endif (WIN32)
 
 option(CODE_COVERAGE "Enable coverage reporting" OFF)
 if (CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")

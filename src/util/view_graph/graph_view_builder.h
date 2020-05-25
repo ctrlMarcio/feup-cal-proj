@@ -2,7 +2,7 @@
 #define FEUP_CAL_PROJ_GRAPH_VIEW_BUILDER_H
 
 
-#include "graphviewer.h"
+#include "../../../lib/graphviewer.h"
 #include "../../model/location/location.h"
 #include "../graph/graph.h"
 

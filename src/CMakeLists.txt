@@ -1,3 +1,11 @@
+if (WIN32)
+    link_libraries(wsock32 ws2_32)
+    target_link_libraries(wsock32 ws2_32)
+    SET(CMAKE_CXX_FLAGS -Wcpp)
+endif (WIN32)
+
+SET(CMAKE_CXX_FLAGS -pthread)
+
 add_library(feup-cal-proj main.cpp
         util/graph/graph.tpp util/graph/graph.h
         util/graph/vertex.tpp util/graph/vertex.h
@@ -96,8 +104,11 @@ add_executable(application main.cpp
         util/gmaps/google_map.cpp util/gmaps/google_map.h
         application/ui/client_company_representative/route/view_paths_ui.cpp application/ui/client_company_representative/route/view_paths_ui.h
         application/ui/administrator/graph/view_world_graph_ui.cpp application/ui/administrator/graph/view_world_graph_ui.h
-        ../lib/connection.cpp ../lib/graphviewer.cpp
-        application/ui/client_company_representative/graph/company_client_graph_ui.cpp application/ui/client_company_representative/graph/company_client_graph_ui.h util/view_graph/graph_view_builder.cpp util/view_graph/graph_view_builder.h application/ui/administrator/graph/verify_connectivity_ui.cpp application/ui/administrator/graph/verify_connectivity_ui.h)
+        ../lib/connection.cpp ../lib/graphviewer.cpp ../lib/connection.h ../lib/edgetype.h ../lib/graphviewer.h
+        application/ui/client_company_representative/graph/company_client_graph_ui.cpp application/ui/client_company_representative/graph/company_client_graph_ui.h
+        util/view_graph/graph_view_builder.cpp util/view_graph/graph_view_builder.h
+        application/ui/administrator/graph/verify_connectivity_ui.cpp application/ui/administrator/graph/verify_connectivity_ui.h
+        )
 
 target_include_directories(feup-cal-proj PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 

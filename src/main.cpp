@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 void initDemo(char *const *argv, bool demo, AuthUserManager &userManager, Company &company,
               const CompanyRepresentative &companyRepresentative) {
     if (demo) {
-        if (string(argv[1]) == "Portugal") {
+        if (string(argv[1]) == "Porto_strong") {
             CompanyClient companyClient("cpn1", companyRepresentative, *company.getLocationManager().get(46604));
             companyClient.setVehicleNumber(4);
 
