@@ -118,9 +118,8 @@ Bootstrap::readNodes(const std::string &fileName, const std::string &city, std::
         std::string lonStr;
 
         if (isComplete) {
-            // TODO
-            latStr = elements[4];   //  41.5598669
-            lonStr = elements[3];   //  -8.446596)
+            latStr = elements[3];   //  41.5598669
+            lonStr = elements[4];   //  -8.446596)
         }
 
         // removes the clutter in the strings
@@ -205,7 +204,6 @@ bool Bootstrap::readEdges(const string &fileName, std::mutex *mutex) {
             if (mutex) mutex->unlock();
         } catch (InvalidVertexException &) {
             allOk = false;
-            cout << "bro" << endl;
         }
     }
 
