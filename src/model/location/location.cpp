@@ -55,3 +55,10 @@ int Location::hash() const {
 double Location::euclideanDistanceTo(double x, double y) const {
     return sqrt(pow(x - this->x, 2) + pow(y - this->y, 2));
 }
+
+double Location::manhattanHeuristic(const Location &rhs) const {
+    double xChange = abs(this->x - rhs.getX());
+    double yChange = abs(this->y - rhs.getY());
+
+    return xChange + yChange;
+}

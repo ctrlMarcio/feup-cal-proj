@@ -49,17 +49,22 @@ void initDemo(char *const *argv, bool demo, AuthUserManager &userManager, Compan
               const CompanyRepresentative &companyRepresentative) {
     if (demo) {
         if (string(argv[1]) == "Porto_strong") {
-            CompanyClient companyClient("cpn1", companyRepresentative, *company.getLocationManager().get(46604));
-            companyClient.setVehicleNumber(5);
+            CompanyClient companyClient("Juventude do Ouro", companyRepresentative, *company.getLocationManager().get(49723));
+            companyClient.setVehicleNumber(4);
 
-            companyClient.addPickupPoint(*company.getLocationManager().get(1665));
-            companyClient.addPickupPoint(*company.getLocationManager().get(28490));
-            companyClient.addPickupPoint(*company.getLocationManager().get(1879));
-            companyClient.addPickupPoint(*company.getLocationManager().get(2007));
-            companyClient.addPickupPoint(*company.getLocationManager().get(2126));
-            companyClient.addPickupPoint(*company.getLocationManager().get(28994));
-            companyClient.addPickupPoint(*company.getLocationManager().get(2441));
-            companyClient.addPickupPoint(*company.getLocationManager().get(2641));
+            companyClient.addPickupPoint(*company.getLocationManager().get(53207));
+            companyClient.addPickupPoint(*company.getLocationManager().get(20716));
+            companyClient.addPickupPoint(*company.getLocationManager().get(17456));
+
+            companyClient.addPickupPoint(*company.getLocationManager().get(12335));
+            companyClient.addPickupPoint(*company.getLocationManager().get(22583));
+            companyClient.addPickupPoint(*company.getLocationManager().get(43517));
+            companyClient.addPickupPoint(*company.getLocationManager().get(46332));
+
+            companyClient.addPickupPoint(*company.getLocationManager().get(26956));
+            companyClient.addPickupPoint(*company.getLocationManager().get(337));
+
+            companyClient.addPickupPoint(*company.getLocationManager().get(18519));
 
             company.getCompanyClientManager().add(companyClient);
         } else if (string(argv[1]) == "Porto") {

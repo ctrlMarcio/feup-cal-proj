@@ -9,6 +9,8 @@ class GoogleMap {
 public:
     explicit GoogleMap(const std::vector<std::vector<Location>> &bounds);
 
+    explicit GoogleMap(const std::vector<Location> &locations);
+
     GoogleMap(const std::list<Path<Location>> &paths, const Location &garage, const Location &headquarters);
 
     void show();

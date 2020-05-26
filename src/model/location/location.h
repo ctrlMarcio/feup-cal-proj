@@ -110,6 +110,14 @@ public:
      */
     int hash() const;
 
+    /**
+     * @brief Computes the Manhattan distance heuristic value for a location.
+     *
+     * @param rhs the other location
+     * @return the Manhattan distance heuristic value
+     */
+    double manhattanHeuristic(const Location &rhs) const;
+
 private:
     /**
      * @brief The location unique identifier.

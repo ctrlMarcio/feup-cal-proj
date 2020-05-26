@@ -56,7 +56,7 @@ std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, i
 
 std::list<Path<Location>>
 algorithm::getPaths(Graph<Location> &graph, const Location &garageLocation, const Location &headquartersLocation,
-                    const std::vector<Location>& pickupPoints, int vehicleNumber, bool approximate) {
+                    const std::vector<Location> &pickupPoints, int vehicleNumber, bool approximate) {
 
     std::vector<Cluster> clusters = kMeans(pickupPoints, vehicleNumber);
 
@@ -151,7 +151,15 @@ Path<Location> algorithm::nearestNeighbourFirst(Graph<Location> &graph, Location
 
     // goes to the destination
     path = aStar(path, graph, source, destination);
-    return path;
+
+    std::list<Vertex<Location>> resLocations(path.getPath());
+    resLocations.push_back(graph.getVertex(destination));
+    Path<Location> res(resLocations, path.getPathCost() +
+                                     destination.euclideanDistanceTo(path.getPath().back().get().getX(),
+                                                                     path.getPath().back().get().getY()),
+                       path.getCluster());
+
+    return res;
 }
 
 Path<Location>
@@ -182,6 +190,9 @@ algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &s
             double newDist = v->dist - v->get().euclideanDistanceTo(d.get().getX(), d.get().getY()) + out->getWeight() +
                              destinationVertex.get().euclideanDistanceTo(d.get().getX(), d.get().getY());
 
+            //double newDist = v->dist - v->get().manhattanHeuristic(d.get()) + out->getWeight() +
+            //                destinationVertex.get().manhattanHeuristic(d.get());
+
             if (oldDist > newDist) {
                 destinationVertex.dist = newDist;
                 destinationVertex.path = v->path;
@@ -198,9 +209,8 @@ algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &s
     std::list<Vertex<Location>> newList = path.getPath();
     for (Vertex<Location> *vertex : d.path)
         newList.push_back(*vertex);
-    newList.push_back(d);
 
-    double newCost = d.path.size(); // because all edges are unit
+    double newCost = d.dist;
     newCost += path.getPathCost();
 
     Path<Location> newPath(newList, newCost, path.getCluster());

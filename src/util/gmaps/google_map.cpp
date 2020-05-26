@@ -90,6 +90,36 @@ GoogleMap::GoogleMap(const std::list<Path<Location>> &paths, const Location &gar
     string_util::replace(HTML, "##LOCATIONS##", verticesArray);
 }
 
+GoogleMap::GoogleMap(const vector<Location> &locations) {
+    this->HTML = R"(<!DOCTYPE html><html><head> <title>CAL 2019/20 G6</title> <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb1l2d5UJ3wJ7DmMb1DhF3iWPE7aMqVQk&callback=initMap&libraries=&v=weekly" defer></script> <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/google-maps.png"> <style> #map { height: 100%; } html, body { height: 100%; margin: 0; padding: 0; } </style> <script> var map; function initMap() { map = new google.maps.Map(document.getElementById("map"), { center: { lat: 41.177331426373925, lng: -8.598700761795044 }, zoom: 16, mapTypeId: 'roadmap' }); var locations = [##LOCATIONS##];var ids = [##IDS##];var bounds = new google.maps.LatLngBounds(); for (var point in locations) { new google.maps.Marker({ map: map, position: locations[point],title: ids[point],icon: 'https://img.icons8.com/color/10/000000/hand-up.png' });bounds.extend(locations[point]); } map.fitBounds(bounds); } </script></head><body> <div id="map"></div></body></html>)";
+    std::vector<std::pair<std::string, std::string>> values;
+
+    std::stringstream pickupPointsIdStrean;
+
+    std::stringstream pickupPointsStream;
+
+    for (const Location &pickupPoint : locations) {
+        values.clear();
+        values.emplace_back("lat", to_string(pickupPoint.getLatitude()));
+        values.emplace_back("lng", to_string(pickupPoint.getLongitude()));
+
+        std::string singleLocation = string_util::toJSONObject(values);
+
+        pickupPointsStream << singleLocation << ",";
+
+        pickupPointsIdStrean << "'" << pickupPoint.getId() << "',";
+    }
+
+    std::string pickupPoints = pickupPointsStream.str();
+    pickupPoints = pickupPoints.substr(0, pickupPoints.size() - 1);
+
+    std::string pickupPointIds = pickupPointsIdStrean.str();
+    pickupPointIds = pickupPointIds.substr(0, pickupPointIds.size() - 1);
+
+    string_util::replace(HTML, "##LOCATIONS##", pickupPoints);
+    string_util::replace(HTML, "##IDS##", pickupPointIds);
+}
+
 GoogleMap::GoogleMap(const std::vector<std::vector<Location>> &bounds) {
     this->HTML = R"(<!DOCTYPE html><html><head> <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> <meta charset="utf-8"> <title>CAL 2019/20 G6 - Connectivity</title> <style> #map { height: 100%; } html, body { height: 100%; margin: 0; padding: 0; } </style></head><body> <div id="map"></div> <script> function initMap() { var map = new google.maps.Map(document.getElementById('map'), { center: { lat: 41.177331426373925, lng: -8.598700761795044 }, zoom: 16, mapTypeId: 'roadmap' }); var boundCoords = [##BOUNDS##]; for (var area in boundCoords) { var connectivityBounds = new google.maps.Polygon({ paths: boundCoords[area], strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 2, fillColor: '#FF0000', fillOpacity: 0.35 }); connectivityBounds.setMap(map); } var bounds = new google.maps.LatLngBounds(); for (var area in boundCoords) { for (var coord in boundCoords[area]) { bounds.extend(boundCoords[area][coord]); } } map.fitBounds(bounds); } </script> <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb1l2d5UJ3wJ7DmMb1DhF3iWPE7aMqVQk&callback=initMap"> </script></body></html>)";
 
