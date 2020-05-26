@@ -7,7 +7,7 @@ var classCompany =
     [ "getGraph", "classCompany.html#a78ae1e1bcab98d79d8c9c7748c83ae4c", null ],
     [ "getLocationManager", "classCompany.html#a0817d549454e5fb8533f9bce581b7e98", null ],
     [ "getName", "classCompany.html#a64f6c13dd059f834a0f35ed8faeded64", null ],
-    [ "getPaths", "classCompany.html#a37f19f7abc71532b8676cf102a1205a3", null ],
+    [ "getPaths", "classCompany.html#afbdfa539097a056beed5496212fc4d59", null ],
     [ "getUsedVehiclesNumber", "classCompany.html#a9b19ee22c11955bdf114d33ccd70371f", null ],
     [ "getVehicleNumber", "classCompany.html#ab64bb76579224279daa80ac264850365", null ],
     [ "getVehiclesLeft", "classCompany.html#aa0296ebc4f1b6892c1279384e7f98581", null ],
