@@ -55,8 +55,9 @@ namespace algorithm {
      * @param company           the company
      * @return                  the optimal paths
      */
-    std::pair<std::list<Path<Location>>, std::vector<Cluster>>
-    getPaths(const CompanyClient &companyClient, Company &company, bool approximate);
+    std::list<Path<Location>>
+    getPaths(Graph<Location> &graph, const Location &garageLocation, const Location &headquartersLocation,
+             const std::vector<Location>& pickupPoints, int vehicleNumber, bool approximate);
 
     /**
      * @brief Gets the reduced graph from a given graph.

@@ -65,9 +65,24 @@ AdministratorManager &Company::getAdministratorManager() {
     return administratorManager;
 }
 
-void Company::getPaths(CompanyClient &companyClient, bool approximate) {
-    if (companyClient.isCalculated())
+void Company::calculatePaths(CompanyClient &companyClient, bool approximate, bool returning) {
+    (returning) ? calculateReturningPaths(companyClient, approximate) : calculateMainPaths(companyClient, approximate);
+}
+
+void Company::calculateMainPaths(CompanyClient &companyClient, bool approximate) {
+    if (companyClient.isRouteCalculated())
         return;
-    std::pair<std::list<Path<Location>>, std::vector<Cluster>> routes = algorithm::getPaths(companyClient, *this, approximate);
+
+    std::list<Path<Location>> routes = algorithm::getPaths(graph, garageLocation, companyClient.getHeadquarters(),
+            companyClient.getPickupPoints(), companyClient.getVehicleNumber(), approximate);
     companyClient.setRoutes(routes);
+}
+
+void Company::calculateReturningPaths(CompanyClient &companyClient, bool approximate) {
+    if (companyClient.isReturnRouteCalculated())
+        return;
+
+    std::list<Path<Location>> returnRoutes = algorithm::getPaths(graph, companyClient.getHeadquarters(), garageLocation,
+                                                                 companyClient.getPickupPoints(), companyClient.getVehicleNumber(), approximate);
+    companyClient.setReturnRoutes(returnRoutes);
 }

@@ -7,12 +7,14 @@
 
 class CompanyClientGraphUI : public UI {
 public:
-    explicit CompanyClientGraphUI(const UIManager &uiManager);
+    explicit CompanyClientGraphUI(const UIManager &uiManager, bool returning);
 
     void run() override;
 
 private:
     UIManager uiManager;
+
+    bool returning;
 
     void buildGraph();
 };

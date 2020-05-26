@@ -40,11 +40,11 @@ void ViewPathsUI::run() {
             cout << std::endl << "Returning..." << std::endl;
             break;
         case 1:
-            showGoogleMaps(companyClient, algorithm == 1);
+            showGoogleMaps(companyClient, algorithm == 1, pathType == 2);
             ui_util::displayPlaceholder();
             break;
         case 2:
-            showGraphView(companyClient, algorithm == 1);
+            showGraphView(companyClient, algorithm == 1, pathType == 2);
             ui_util::displayPlaceholder();
             break;
         default:
@@ -52,19 +52,18 @@ void ViewPathsUI::run() {
     }
 }
 
-void ViewPathsUI::showGoogleMaps(CompanyClient &client, bool approximate) {
-    uiManager.getCompany().getPaths(client, approximate);
+void ViewPathsUI::showGoogleMaps(CompanyClient &client, bool approximate, bool returning) {
+    uiManager.getCompany().calculatePaths(client, approximate, returning);
 
-    GoogleMap gMap(client.getRoutes().first, uiManager.getCompany().getGarageLocation(), client.getHeadquarters(),
-                   client.getRoutes().second);
+    GoogleMap gMap(client.getRoutes(returning), uiManager.getCompany().getGarageLocation(), client.getHeadquarters());
 
     gMap.show();
 
     std::cout << std::endl << "An html file was created in the root folder!" << std::endl;
 }
 
-void ViewPathsUI::showGraphView(CompanyClient &client, bool approximate) {
-    uiManager.getCompany().getPaths(client, approximate);
-    uiManager.set(new CompanyClientGraphUI(uiManager));
+void ViewPathsUI::showGraphView(CompanyClient &client, bool approximate, bool returning) {
+    uiManager.getCompany().calculatePaths(client, approximate, returning);
+    uiManager.set(new CompanyClientGraphUI(uiManager, returning));
 }
 

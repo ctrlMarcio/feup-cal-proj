@@ -54,11 +54,11 @@ std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, i
     return clusters;
 }
 
-std::pair<std::list<Path<Location>>, std::vector<Cluster>>
-algorithm::getPaths(const CompanyClient &companyClient, Company &company, bool approximate) {
-    std::vector<Location> locations = companyClient.getPickupPoints();
+std::list<Path<Location>>
+algorithm::getPaths(Graph<Location> &graph, const Location &garageLocation, const Location &headquartersLocation,
+                    const std::vector<Location>& pickupPoints, int vehicleNumber, bool approximate) {
 
-    std::vector<Cluster> clusters = kMeans(locations, companyClient.getVehicleNumber());
+    std::vector<Cluster> clusters = kMeans(pickupPoints, vehicleNumber);
 
     if (clusters.empty())
         clusters.emplace_back();
@@ -67,19 +67,11 @@ algorithm::getPaths(const CompanyClient &companyClient, Company &company, bool a
 
     if (approximate)
         for (Cluster &cluster : clusters)
-            paths.push_back(nearestNeighbourFirst(company.getGraph(), company.getGarageLocation(),
-                                                  companyClient.getHeadquarters(), cluster));
+            paths.push_back(nearestNeighbourFirst(graph, garageLocation, headquartersLocation, cluster));
     else
-        paths = pathFinder(company.getGraph(), company.getGarageLocation(), companyClient.getHeadquarters(), clusters);
+        paths = pathFinder(graph, garageLocation, headquartersLocation, clusters);
 
-    std::vector<Cluster> orderedClusters;
-
-    for (Path<Location> &path : paths)
-        orderedClusters.push_back(path.getCluster());
-
-    return make_pair(
-            paths,
-            orderedClusters);
+    return paths;
 }
 
 std::list<Path<Location>>
@@ -150,17 +142,6 @@ Path<Location> algorithm::nearestNeighbourFirst(Graph<Location> &graph, Location
     while (!locations.empty()) {
         // get nearest
         double nd = INF;
-        //auto nit = locations.begin();
-
-        // TODO could put in priority queue
-        /**for (auto it = locations.begin(); it != locations.end(); ++it) {
-            double euclidean = source.euclideanDistanceTo(it->getX(), it->getY());
-
-            if (euclidean < nd) {
-                nd = euclidean;
-                nit = it;
-            }
-        }*/
 
         // append
         path = aStar(path, graph, source, *locations.begin());
@@ -246,7 +227,10 @@ std::vector<Location> algorithm::getBounds(std::vector<Vertex<Location> *> verti
         minHeight = std::min(minHeight, v->get().getY());
     }
 
-    double offset = 100.0f;
+    if (maxHeight == minHeight)
+        return leftSide;
+
+    double offset = (maxHeight - minHeight) / 3.0;
 
     auto max = vertices.back();
 

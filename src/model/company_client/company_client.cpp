@@ -6,6 +6,7 @@ long CompanyClient::NUMBER_OF_COMPANIES = 1;
 CompanyClient::CompanyClient(std::string name, CompanyRepresentative representative, const Location &headquarters)
         : name(std::move(name)), representative(std::move(representative)), headquarters(headquarters),
           vehicleNumber(1), uuid(NUMBER_OF_COMPANIES++) {
+    resetRoutes();
 }
 
 std::string CompanyClient::getName() const {
@@ -27,12 +28,12 @@ std::vector<Location> CompanyClient::getPickupPoints() const {
 bool CompanyClient::addPickupPoint(const Location &location) {
     if (hasPickupPoint(location)) return false;
     pickupPoints.push_back(location);
-    calculated = false;
+    resetRoutes();
     return true;
 }
 
 bool CompanyClient::removePickupPoint(const Location &location) {
-    calculated = false;
+    resetRoutes();
 
     std::vector<Location>::iterator it;
     it = pickupPoints.begin();
@@ -52,7 +53,7 @@ int CompanyClient::getVehicleNumber() const {
 
 void CompanyClient::setVehicleNumber(int vehicleNumber) {
     this->vehicleNumber = vehicleNumber;
-    calculated = false;
+    resetRoutes();
 }
 
 long CompanyClient::getUUID() const {
@@ -71,16 +72,37 @@ bool CompanyClient::hasPickupPoint(const Location &location) {
     return std::find(pickupPoints.begin(), pickupPoints.end(), location) != pickupPoints.end();
 }
 
-bool CompanyClient::isCalculated() const {
-    return calculated;
+const std::list<Path<Location>> &CompanyClient::getRoutes(bool returning) const {
+    return (returning) ? getReturnRoutes() : getMainRoutes();
 }
 
-const pair<std::list<Path<Location>>, std::vector<Cluster>> &CompanyClient::getRoutes() const {
-    return routes;
+const std::list<Path<Location>> &CompanyClient::getMainRoutes() const {
+    return routes.first;
 }
 
-void CompanyClient::setRoutes(const pair<std::list<Path<Location>>, std::vector<Cluster>> &pair) {
-    routes = pair;
-    calculated = true;
+const std::list<Path<Location>> &CompanyClient::getReturnRoutes() const {
+    return returnRoutes.first;
 }
 
+void CompanyClient::setRoutes(const std::list<Path<Location>> &path) {
+    routes.first = path;
+    routes.second = true;
+}
+
+void CompanyClient::setReturnRoutes(const std::list<Path<Location>> &path) {
+    returnRoutes.first = path;
+    returnRoutes.second = true;
+}
+
+void CompanyClient::resetRoutes() {
+    routes.second = false;
+    returnRoutes.second = false;
+}
+
+bool CompanyClient::isRouteCalculated() const {
+    return routes.second;
+}
+
+bool CompanyClient::isReturnRouteCalculated() const {
+    return returnRoutes.second;
+}

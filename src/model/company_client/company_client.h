@@ -86,13 +86,23 @@ public:
      */
     void setVehicleNumber(int vehicleNumber);
 
-    bool isCalculated() const;
+    const std::list<Path<Location>> &getRoutes(bool returning) const;
 
-    const pair<std::list<Path<Location>>, std::vector<Cluster>> &getRoutes() const;
+    const std::list<Path<Location>> &getMainRoutes() const;
 
-    void setRoutes(const pair<std::list<Path<Location>>, std::vector<Cluster>> &pair);
+    const std::list<Path<Location>> &getReturnRoutes() const;
+
+    void setRoutes(const std::list<Path<Location>> &path);
+
+    void setReturnRoutes(const std::list<Path<Location>> &path);
+
+    void resetRoutes();
 
     bool hasPickupPoint(const Location &location);
+
+    bool isRouteCalculated() const;
+
+    bool isReturnRouteCalculated() const;
 
     bool operator==(const CompanyClient &rhs) const;
 
@@ -132,14 +142,12 @@ private:
     long uuid;
 
     /**
-     * @brief Flag to identify if the paths have been calculated or not.
-     */
-    bool calculated = false;
-
-    /**
      * @brief The routes of the company.
+     * @brief second is the flag that verifies if the route is already calculated
      */
-    std::pair<std::list<Path<Location>>, std::vector<Cluster>> routes;
+    std::pair<std::list<Path<Location>>, bool> routes;
+
+    std::pair<std::list<Path<Location>>, bool> returnRoutes;
 };
 
 

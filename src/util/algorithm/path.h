@@ -10,12 +10,13 @@ class Path {
 public:
     Path(const std::list<Vertex<T>> &path, double pathCost, Cluster &cluster);
 
-    const list<Vertex<T>> &getPath() const;
-
     double getPathCost();
 
     Cluster &getCluster();
 
+    const list<Vertex<T>> &getPath() const;
+
+    const Cluster &getCluster() const;
 private:
     Cluster cluster;
 

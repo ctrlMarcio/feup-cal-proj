@@ -16,3 +16,8 @@ template<typename T>
 Cluster &Path<T>::getCluster() {
     return cluster;
 }
+
+template<typename T>
+const Cluster &Path<T>::getCluster() const{
+    return cluster;
+}

@@ -106,7 +106,11 @@ public:
      */
     AdministratorManager &getAdministratorManager();
 
-    void getPaths(CompanyClient &companyClient, bool approximate);
+    void calculatePaths(CompanyClient &companyClient, bool approximate, bool returning);
+
+    void calculateMainPaths(CompanyClient &companyClient, bool approximate);
+
+    void calculateReturningPaths(CompanyClient &companyClient, bool approximate);
 
 private:
     /**
