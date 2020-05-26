@@ -169,10 +169,10 @@ Path<Location> algorithm::newPathFinder(Graph<Location> &graph, Location source,
 }
 
 Path<Location> algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest) {
-    for (Vertex<Location> &vert: graph.getVertices()) {
-        vert.dist = INF;
-        vert.path.clear();
-        vert.queueIndex = 0;
+    for (auto &vert: graph.getVertices()) {
+        vert.second.dist = INF;
+        vert.second.path.clear();
+        vert.second.queueIndex = 0;
     }
 
     Vertex<Location> &s = graph.getVertex(source);
@@ -210,6 +210,7 @@ Path<Location> algorithm::aStar(Path<Location> &path, Graph<Location> &graph, co
     std::list<Vertex<Location>> newList = path.getPath();
     for (Vertex<Location> *vertex : d.path)
         newList.push_back(*vertex);
+    newList.push_back(d);
 
     double newCost = d.path.size(); // because all edges are unit
     newCost += path.getPathCost();

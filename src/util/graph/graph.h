@@ -12,6 +12,7 @@
 #include <iostream>
 #include <iomanip>
 #include <algorithm>
+#include <map>
 #include "../string/string_util.h"
 #include "../../model/location/location.h"
 #include "../../exception/invalid_file_exception.h"
@@ -72,14 +73,14 @@ public:
      *
      * @return  the vertex set
      */
-    const std::vector<Vertex<T>> &getVertices() const;
+    const std::map<int, Vertex<T>> &getVertices() const;
 
     /**
      * @brief Gets the vertex set
      *
      * @return  the vertex set
      */
-    std::vector<Vertex<T>> &getVertices();
+    std::map<int, Vertex<T>> &getVertices();
 
     /**
      * @brief Gets the number of nodes.
@@ -90,9 +91,9 @@ public:
 
 private:
     /**
-     * @brief The container of locations.
+     * @brief The vertices container.
      */
-    std::vector<Vertex<T>> vertices;
+    std::map<int, Vertex<T>> vertices;
 };
 
 #include "graph.tpp"

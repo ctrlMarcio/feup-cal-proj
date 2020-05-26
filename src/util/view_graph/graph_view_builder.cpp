@@ -11,16 +11,16 @@ GraphViewer *GraphViewBuilder::build() {
     gv->defineEdgeColor("black");
     gv->defineEdgeCurved(false);
 
-    for (const Vertex<Location> &vertex : graph.getVertices()) {
-        gv->addNode(vertex.get().getId(), vertex.get().getX(), vertex.get().getY());
-        gv->setVertexLabel(vertex.get().getId(), std::to_string(vertex.get().getId()));
-        gv->setVertexSize(vertex.get().getId(), nodeSize);
+    for (const auto &vertex : graph.getVertices()) {
+        gv->addNode(vertex.second.get().getId(), vertex.second.get().getX(), vertex.second.get().getY());
+        gv->setVertexLabel(vertex.second.get().getId(), std::to_string(vertex.second.get().getId()));
+        gv->setVertexSize(vertex.second.get().getId(), nodeSize);
     }
 
     int edgeId = 0;
-    for (const Vertex<Location> &vertex : graph.getVertices())
-        for (const auto &edge : vertex.getOutgoing())
-            gv->addEdge(edgeId++, vertex.get().getId(), edge->getDestination()->get().getId(), EdgeType::DIRECTED);
+    for (const auto &vertex : graph.getVertices())
+        for (const auto &edge : vertex.second.getOutgoing())
+            gv->addEdge(edgeId++, vertex.second.get().getId(), edge->getDestination()->get().getId(), EdgeType::DIRECTED);
 
     edgeCount = edgeId - 1;
     gv->rearrange();

@@ -9,7 +9,7 @@ TEST(graph, add_vertex_test) {
     Location a(20, "", 0, 0);
     graph.add(a);
 
-    EXPECT_EQ(graph.getVertices()[0].get(), Location(20, "", 0, 0));
+    EXPECT_EQ(graph.getVertices().begin()->second.get(), Location(20, "", 0, 0));
 
     //graph.add(a);
 

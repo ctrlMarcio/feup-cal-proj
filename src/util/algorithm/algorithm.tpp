@@ -18,9 +18,9 @@ inline bool relax(Vertex<T> *v, Vertex<T> *w, double weight) {
 
 template<class T>
 void algorithm::dijkstra(Graph<T> &graph, const Vertex<T> &sourceVertex) {
-    for (Vertex<T> &v : graph.getVertices()) {
-        v.dist = INF;
-        v.path.clear();
+    for (auto &v : graph.getVertices()) {
+        v.second.dist = INF;
+        v.second.path.clear();
     }
 
     Vertex<T> &s = graph.getVertex(sourceVertex.get());
@@ -50,12 +50,12 @@ Graph<T> algorithm::reduceGraph(Graph<T> graph, const std::vector<Location> &loc
     for (Location location: locations)
         simpleGraph.add(location);
 
-    for (Vertex<T> &source : simpleGraph.getVertices()) {
-        dijkstra(graph, source);
+    for (auto &source : simpleGraph.getVertices()) {
+        dijkstra(graph, source.second);
 
-        for (Vertex<T> &destination : simpleGraph.getVertices()) {
-            if (source != destination) {
-                source.add(&destination, graph.getVertex(destination.get()).dist);
+        for (auto &destination : simpleGraph.getVertices()) {
+            if (source.second != destination.second) {
+                source.second.add(&destination.second, graph.getVertex(destination.second.get()).dist);
             }
         }
     }
@@ -122,16 +122,16 @@ std::vector<std::vector<double>> algorithm::floydWarshall(Graph<T> &graph, bool 
     distancesMatrix.clear();
     pathMatrix.clear();
 
-    for (int i = 0; i < graph.verticesCount(); ++i) {
+    for (auto it = graph.getVertices().begin(); it != graph.getVertices().end(); ++it) {
         vector<double> distances;
         vector<int> paths;
 
-        for (Vertex<T> &dst : graph.getVertices()) {
-            double weight = (graph.getVertices()[i].weightTo(&dst));
+        for (auto &dst : graph.getVertices()) {
+            double weight = (it->second.weightTo(&dst.second));
             distances.push_back(weight);
 
             if (weight != INF)
-                paths.push_back(i);
+                paths.push_back(it->first);
             else
                 paths.push_back(-1);
         }

@@ -1,8 +1,8 @@
 #include "location_manager.h"
 
 LocationManager::LocationManager(const Graph<Location> &graph) {
-    for (const Vertex<Location> &vertex : graph.getVertices())
-        locations.push_back(vertex.get());
+    for (const auto &vertex : graph.getVertices())
+        locations.push_back(vertex.second.get());
 }
 
 bool LocationManager::has(Location &location) {

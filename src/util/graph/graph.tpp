@@ -2,7 +2,7 @@ template<class T>
 bool Graph<T>::add(const T &content) {
     //if (has(content)) return false;
     Vertex<T> vertex(content);
-    vertices.push_back(vertex);
+    vertices.insert(std::pair<int, Vertex<T>>(content.getId(), vertex));
     return true;
 }
 
@@ -18,11 +18,12 @@ template<class T>
 Vertex<T> &Graph<T>::getVertex(const T &content) {
     Vertex<T> tmp(content);
 
-    auto it = std::find(vertices.begin(), vertices.end(), tmp);
-    if (it == vertices.end())
+    auto it = vertices.find(content.getId());
+    if (it == vertices.end()) {
         throw InvalidVertexException();
+    }
 
-    return *it;
+    return it->second;
 }
 
 template<class T>
@@ -31,12 +32,12 @@ long Graph<T>::verticesCount() const {
 }
 
 template<class T>
-const std::vector<Vertex<T>> &Graph<T>::getVertices() const {
+const std::map<int, Vertex<T>> &Graph<T>::getVertices() const {
     return this->vertices;
 }
 
 template<class T>
-std::vector<Vertex<T>> &Graph<T>::getVertices() {
+std::map<int, Vertex<T>> &Graph<T>::getVertices() {
     return this->vertices;
 }
 
