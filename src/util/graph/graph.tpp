@@ -1,6 +1,6 @@
 template<class T>
 bool Graph<T>::add(const T &content) {
-    if (has(content)) return false;
+    //if (has(content)) return false;
     Vertex<T> vertex(content);
     vertices.push_back(vertex);
     return true;

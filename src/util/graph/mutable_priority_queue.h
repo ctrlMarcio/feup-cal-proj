@@ -65,7 +65,8 @@ void MutablePriorityQueue<T>::insert(T *x) {
 
 template<class T>
 void MutablePriorityQueue<T>::decreaseKey(T *x) {
-    heapifyUp(x->queueIndex);
+    if (x->queueIndex)
+        heapifyUp(x->queueIndex);
 }
 
 template<class T>

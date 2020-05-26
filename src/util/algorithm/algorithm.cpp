@@ -63,8 +63,12 @@ algorithm::getPaths(const CompanyClient &companyClient, Company &company) {
     if (clusters.empty())
         clusters.emplace_back();
 
-    std::list<Path<Location>> paths = pathFinder(company.getGraph(), company.getGarageLocation(),
-                                                 companyClient.getHeadquarters(), clusters);
+    //std::list<Path<Location>> paths = pathFinder(company.getGraph(), company.getGarageLocation(),
+    //                                             companyClient.getHeadquarters(), clusters);
+
+    std::list<Path<Location>> paths;
+    for (Cluster &cluster : clusters)
+        paths.push_back(newPathFinder(company.getGraph(), company.getGarageLocation(), companyClient.getHeadquarters(), cluster));
 
     std::vector<Cluster> orderedClusters;
 
@@ -128,4 +132,89 @@ bool algorithm::isComplete(const std::vector<Location> &locations, const list<Ve
     }
 
     return complete;
+}
+
+Path<Location> algorithm::newPathFinder(Graph<Location> &graph, Location source, const Location &destination,
+                                        Cluster &cluster) {
+    auto locations = cluster.getLocations();
+
+    std::list<Vertex<Location>> list;
+    Path<Location> path(list, 0, cluster);
+
+    while (!locations.empty()) {
+        // get nearest
+        double nd = INF;
+        auto nit = locations.begin();
+
+        // TODO could put in priority queue
+        for (auto it = locations.begin(); it != locations.end(); ++it) {
+            double euclidean = source.euclideanDistanceTo(it->getX(), it->getY());
+
+            if (euclidean < nd) {
+                nd = euclidean;
+                nit = it;
+            }
+        }
+
+        // append
+        path = aStar(path, graph, source, *nit);
+        source = *nit;
+        locations.erase(nit);
+    }
+
+    // goes to the destination
+    locations.insert(destination);
+    path = aStar(path, graph, source, destination);
+    return path;
+}
+
+Path<Location> algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest) {
+    for (Vertex<Location> &vert: graph.getVertices()) {
+        vert.dist = INF;
+        vert.path.clear();
+        vert.queueIndex = 0;
+    }
+
+    Vertex<Location> &s = graph.getVertex(source);
+    Vertex<Location> &d = graph.getVertex(dest);
+
+    s.dist = source.euclideanDistanceTo(dest.getX(), dest.getY());
+    MutablePriorityQueue<Vertex<Location>> queue;
+    queue.insert(&s);
+
+    while (!queue.empty()){
+        Vertex<Location> *v = queue.extractMin();
+
+        if (*v == d) // reach destination
+            break;
+
+        for (std::shared_ptr<Edge<Location>> &out : v->getOutgoing()){
+            Vertex<Location> &destinationVertex = graph.getVertex(out->getDestination()->get());
+
+            double oldDist = destinationVertex.dist;
+            double newDist = v->dist - v->get().euclideanDistanceTo(d.get().getX(), d.get().getY()) + out->getWeight() + destinationVertex.get().euclideanDistanceTo(d.get().getX(), d.get().getY());
+
+            if (oldDist > newDist){
+                destinationVertex.dist = newDist;
+                destinationVertex.path = v->path;
+                destinationVertex.path.push_back(v);
+
+                if (oldDist == INF)
+                    queue.insert(&destinationVertex);
+                else
+                    queue.decreaseKey(&destinationVertex);
+            }
+        }
+    }
+
+    std::list<Vertex<Location>> newList = path.getPath();
+    for (Vertex<Location> *vertex : d.path)
+        newList.push_back(*vertex);
+
+    double newCost = d.path.size(); // because all edges are unit
+    newCost += path.getPathCost();
+
+    Path<Location> newPath(newList, newCost, path.getCluster());
+
+    return newPath;
 }

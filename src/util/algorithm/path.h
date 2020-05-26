@@ -14,7 +14,7 @@ public:
 
     double getPathCost();
 
-    const Cluster &getCluster() const;
+    Cluster &getCluster();
 
 private:
     Cluster cluster;

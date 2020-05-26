@@ -123,6 +123,11 @@ namespace algorithm {
      */
     template<class T>
     bool isDenselyConnected(Graph<T> &graph, bool output = false);
+
+    Path<Location> aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest);
+
+    Path<Location> newPathFinder(Graph<Location> &graph, Location source, const Location &destination,
+                                 Cluster &cluster);
 };
 
 #include "algorithm.tpp"

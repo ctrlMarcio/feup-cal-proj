@@ -13,6 +13,6 @@ double Path<T>::getPathCost() {
 }
 
 template<typename T>
-const Cluster &Path<T>::getCluster() const {
+Cluster &Path<T>::getCluster() {
     return cluster;
 }
