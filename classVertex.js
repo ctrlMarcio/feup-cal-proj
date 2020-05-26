@@ -12,5 +12,8 @@ var classVertex =
     [ "weightTo", "classVertex.html#a845daede1a422d1ac3109a1903efca3a", null ],
     [ "dist", "classVertex.html#a08a2b813e77f97aa8b6c1d252e5417f7", null ],
     [ "path", "classVertex.html#a61f2f3b1533d94ad3c3f5fee828a19bc", null ],
-    [ "queueIndex", "classVertex.html#a721ab622207a73c5fae7b9abad6c07cc", null ]
+    [ "queueIndex", "classVertex.html#a721ab622207a73c5fae7b9abad6c07cc", null ],
+    [ "tarjanIndex", "classVertex.html#af763774bf3667d30670fe087ef5a53b5", null ],
+    [ "tarjanLowLink", "classVertex.html#a9142521e2b9c417e10cd265327054741", null ],
+    [ "tarjanOnStack", "classVertex.html#a750c8fc794672de9cae1a2f3afd4bc9d", null ]
 ];
