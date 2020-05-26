@@ -43,7 +43,7 @@ var searchData=
   ['getvehiclenumber',['getVehicleNumber',['../classCompany.html#ab64bb76579224279daa80ac264850365',1,'Company::getVehicleNumber()'],['../classCompanyClient.html#a07208784406b3726b4f18a515c9fd68e',1,'CompanyClient::getVehicleNumber()']]],
   ['getvehiclesleft',['getVehiclesLeft',['../classCompany.html#aa0296ebc4f1b6892c1279384e7f98581',1,'Company']]],
   ['getvertex',['getVertex',['../classGraph.html#a29a92bdde91316921ce22532090f22e0',1,'Graph']]],
-  ['getvertices',['getVertices',['../classGraph.html#a441181b6c9540dc77721ec9c9f9eec81',1,'Graph::getVertices() const'],['../classGraph.html#a720a438a1c3db4ad63a2c8453f249f2a',1,'Graph::getVertices()']]],
+  ['getvertices',['getVertices',['../classGraph.html#a0dd555c29e9792b8d530e52405f2babc',1,'Graph::getVertices() const'],['../classGraph.html#abc6d9b20842b0b8c8928c0ce1fe126e8',1,'Graph::getVertices()']]],
   ['getweight',['getWeight',['../classEdge.html#a3df378e283d6c8be5be4170ac8d7f4e8',1,'Edge']]],
   ['getx',['getX',['../classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7',1,'Location']]],
   ['gety',['getY',['../classLocation.html#a2223613f9dee0209c7f0378ce79045de',1,'Location']]]
