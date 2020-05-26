@@ -11,6 +11,7 @@ var classLocation =
     [ "getX", "classLocation.html#a62ecaddd690504df2a1eaa7c2435bcc7", null ],
     [ "getY", "classLocation.html#a2223613f9dee0209c7f0378ce79045de", null ],
     [ "hash", "classLocation.html#a2f3f9468ba66c9d0117e0228158d4711", null ],
+    [ "manhattanHeuristic", "classLocation.html#a74296aad4debf8aad080f91807803a1b", null ],
     [ "operator!=", "classLocation.html#a7b55f95a3e3d671089a206557fa2b202", null ],
     [ "operator==", "classLocation.html#afdb3b154b40c33188883b62abafb6343", null ]
 ];
