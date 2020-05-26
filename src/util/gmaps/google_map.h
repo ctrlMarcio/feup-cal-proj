@@ -7,6 +7,8 @@
 
 class GoogleMap {
 public:
+    explicit GoogleMap(const std::vector<std::vector<Location>> &bounds);
+
     GoogleMap(const std::list<Path<Location>> &paths, const Location &garage, const Location &headquarters,
               const std::vector<Cluster> &clusters);
 

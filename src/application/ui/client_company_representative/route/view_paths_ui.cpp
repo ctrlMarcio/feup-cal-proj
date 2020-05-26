@@ -19,6 +19,13 @@ void ViewPathsUI::run() {
 
     options.clear();
 
+    options.push_back(ui_util::make_option(1, "Paths from garage to company headquarters"));
+    options.push_back(ui_util::make_option(2, "Path from company headquarters to garage"));
+
+    int pathType = ui_util::getOption(options);
+
+    options.clear();
+
     options.push_back(ui_util::make_option(1, "View using Google Maps Javascript API"));
     options.push_back(ui_util::make_option(2, "View using GraphViewer"));
     options.push_back(ui_util::make_empty_line());

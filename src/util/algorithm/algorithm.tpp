@@ -1,5 +1,4 @@
-
-#include "algorithm.h"
+#include "../gmaps/google_map.h"
 
 struct my_comparator {
     template<typename T>
@@ -167,25 +166,26 @@ std::vector<std::vector<double>> algorithm::floydWarshall(Graph<T> &graph, bool 
 
 template<class T>
 bool algorithm::isDenselyConnected(Graph<T> &graph, bool output) {
-/*    std::vector<std::vector<double>> distances = algorithm::floydWarshall(graph, output);
-
-    for (const auto& line : distances)
-        for (double distance : line)
-            if (distance == INF)
-                return false;
-
-    return true;*/
-
     auto vectors = algorithm::tarjan(graph);
     int size = vectors.size();
-    if (output)
-        std::cout << "Number of strongly connected components: " << size << std::endl;
+    if (output){
+        std::cout << std::endl << "Number of strongly connected components: " << size << std::endl;
+        GoogleMap gmap(algorithm::getBoundAreas(vectors));
+
+        gmap.show();
+    }
     return size == 1;
 }
 
 template<class T>
 std::vector<std::vector<Vertex<T> *>> algorithm::tarjan(Graph<T> &graph) {
     std::vector<std::vector<Vertex<T> *>> res;
+
+    for (auto &v : graph.getVertices()){
+        v.second.tarjanIndex = -1;
+        v.second.tarjanLowLink = -1;
+        v.second.tarjanOnStack = false;
+    }
 
     long index = 0;
     std::stack<Vertex<T> *> stack;
@@ -198,7 +198,8 @@ std::vector<std::vector<Vertex<T> *>> algorithm::tarjan(Graph<T> &graph) {
 }
 
 template<class T>
-vector<Vertex<T> *> algorithm::tarjanStrongConnect(Graph<T> &graph, stack<Vertex<T> *> &tarjanStack, Vertex<T> &v, long &index) {
+vector<Vertex<T> *>
+algorithm::tarjanStrongConnect(Graph<T> &graph, stack<Vertex<T> *> &tarjanStack, Vertex<T> &v, long &index) {
     v.tarjanIndex = index;
     v.tarjanLowLink = index;
     index++;

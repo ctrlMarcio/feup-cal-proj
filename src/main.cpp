@@ -2,6 +2,7 @@
 #include "application/bootstrap/bootstrap.h"
 #include "application/ui/home/home_ui.h"
 #include "util/algorithm/algorithm.h"
+#include "util/gmaps/google_map.h"
 
 void initDemo(char *const *argv, bool demo, AuthUserManager &userManager, Company &company,
               const CompanyRepresentative &companyRepresentative);

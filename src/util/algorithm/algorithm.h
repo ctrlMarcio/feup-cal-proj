@@ -134,7 +134,12 @@ namespace algorithm {
     std::vector<std::vector<Vertex<T> *>> tarjan(Graph<T> &graph);
 
     template<class T>
-            std::vector<Vertex<T> *> tarjanStrongConnect(Graph<T> &graph, std::stack<Vertex<T> *> &tarjanStack, Vertex<T> &v, long &index);
+    std::vector<Vertex<T> *>
+    tarjanStrongConnect(Graph<T> &graph, std::stack<Vertex<T> *> &tarjanStack, Vertex<T> &v, long &index);
+
+    std::vector<Location> getBounds(std::vector<Vertex<Location> *> vertices);
+
+    std::vector<std::vector<Location>> getBoundAreas(std::vector<std::vector<Vertex<Location> *>> vertices);
 };
 
 #include "algorithm.tpp"

@@ -138,7 +138,11 @@ bool algorithm::isComplete(const std::vector<Location> &locations, const list<Ve
 
 Path<Location> algorithm::nearestNeighbourFirst(Graph<Location> &graph, Location source, const Location &destination,
                                                 Cluster &cluster) {
-    auto locations = cluster.getLocations();
+    std::vector<Location> locations(cluster.getLocations().begin(), cluster.getLocations().end());
+
+    std::sort(locations.begin(), locations.end(), [&source](const Location &lhs, const Location &rhs) {
+        return source.euclideanDistanceTo(lhs.getX(), lhs.getY()) < source.euclideanDistanceTo(rhs.getX(), rhs.getY());
+    });
 
     std::list<Vertex<Location>> list;
     Path<Location> path(list, 0, cluster);
@@ -146,26 +150,25 @@ Path<Location> algorithm::nearestNeighbourFirst(Graph<Location> &graph, Location
     while (!locations.empty()) {
         // get nearest
         double nd = INF;
-        auto nit = locations.begin();
+        //auto nit = locations.begin();
 
         // TODO could put in priority queue
-        for (auto it = locations.begin(); it != locations.end(); ++it) {
+        /**for (auto it = locations.begin(); it != locations.end(); ++it) {
             double euclidean = source.euclideanDistanceTo(it->getX(), it->getY());
 
             if (euclidean < nd) {
                 nd = euclidean;
                 nit = it;
             }
-        }
+        }*/
 
         // append
-        path = aStar(path, graph, source, *nit);
-        source = *nit;
-        locations.erase(nit);
+        path = aStar(path, graph, source, *locations.begin());
+        source = *locations.begin();
+        locations.erase(locations.begin());
     }
 
     // goes to the destination
-    locations.insert(destination);
     path = aStar(path, graph, source, destination);
     return path;
 }
@@ -222,4 +225,79 @@ algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &s
     Path<Location> newPath(newList, newCost, path.getCluster());
 
     return newPath;
+}
+
+std::vector<Location> algorithm::getBounds(std::vector<Vertex<Location> *> vertices) {
+    std::sort(vertices.begin(), vertices.end(), [](const Vertex<Location> *v1, const Vertex<Location> *v2) {
+        return v1->get().getY() < v2->get().getY();
+    });
+
+    std::vector<Location> leftSide;
+    std::vector<Location> rightSide;
+
+    if (vertices.empty())
+        return leftSide;
+
+    double maxHeight = -1;
+    double minHeight = INF;
+
+    for (const Vertex<Location> *v : vertices) {
+        maxHeight = std::max(maxHeight, v->get().getY());
+        minHeight = std::min(minHeight, v->get().getY());
+    }
+
+    double offset = 100.0f;
+
+    auto max = vertices.back();
+
+    for (double currentHeight = minHeight - offset / 2;
+         currentHeight <= maxHeight + offset / 2; currentHeight += offset) {
+        Location leftLocation;
+        Location rightLocation;
+
+        auto it = vertices.begin();
+
+        Vertex<Location> *current = *it;
+
+        double leftmost = INF;
+        double rightmost = -INF;
+
+        while (!vertices.empty() && current->get().getY() < currentHeight + offset) {
+            if (current->get().getX() < leftmost) {
+                leftmost = current->get().getX();
+                leftLocation = current->get();
+            }
+
+            if (current->get().getX() > rightmost) {
+                rightmost = current->get().getX();
+                rightLocation = current->get();
+            }
+
+            vertices.erase(vertices.begin());
+            current = *vertices.begin();
+        }
+
+        if (leftmost != INF)
+            leftSide.push_back(leftLocation);
+        if (rightmost != -INF)
+            rightSide.push_back(rightLocation);
+    }
+
+    leftSide.push_back((*max).get());
+
+    std::reverse(rightSide.begin(), rightSide.end());
+
+    leftSide.insert(leftSide.end(), rightSide.begin(), rightSide.end());
+
+    return leftSide;
+}
+
+std::vector<std::vector<Location>> algorithm::getBoundAreas(std::vector<std::vector<Vertex<Location> *>> vertices) {
+    std::vector<std::vector<Location>> res;
+
+    res.reserve(vertices.size());
+    for (const auto &vector : vertices)
+        res.push_back(getBounds(vector));
+
+    return res;
 }

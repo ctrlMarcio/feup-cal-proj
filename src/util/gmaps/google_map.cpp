@@ -91,6 +91,39 @@ GoogleMap::GoogleMap(const std::list<Path<Location>> &paths, const Location &gar
     string_util::replace(HTML, "##LOCATIONS##", verticesArray);
 }
 
+GoogleMap::GoogleMap(const std::vector<std::vector<Location>> &bounds) {
+    this->HTML = R"(<!DOCTYPE html><html><head> <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> <meta charset="utf-8"> <title>CAL 2019/20 G6 - Connectivity</title> <style> #map { height: 100%; } html, body { height: 100%; margin: 0; padding: 0; } </style></head><body> <div id="map"></div> <script> function initMap() { var map = new google.maps.Map(document.getElementById('map'), { center: { lat: 41.177331426373925, lng: -8.598700761795044 }, zoom: 16, mapTypeId: 'roadmap' }); var boundCoords = [##BOUNDS##]; for (var area in boundCoords) { var connectivityBounds = new google.maps.Polygon({ paths: boundCoords[area], strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 2, fillColor: '#FF0000', fillOpacity: 0.35 }); connectivityBounds.setMap(map); } var bounds = new google.maps.LatLngBounds(); for (var area in boundCoords) { for (var coord in boundCoords[area]) { bounds.extend(boundCoords[area][coord]); } } map.fitBounds(bounds); } </script> <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb1l2d5UJ3wJ7DmMb1DhF3iWPE7aMqVQk&callback=initMap"> </script></body></html>)";
+
+    std::vector<std::pair<std::string, std::string>> values;
+
+    std::stringstream boundsArrayStream;
+
+    for (const std::vector<Location> &area : bounds) {
+        boundsArrayStream << "[";
+
+        std::stringstream singleAreaArrayStream;
+
+        for (const Location &location : area) {
+            values.clear();
+            values.emplace_back("lat", to_string(location.getLatitude()));
+            values.emplace_back("lng", to_string(location.getLongitude()));
+
+            std::string singleLocation = string_util::toJSONObject(values);
+
+            singleAreaArrayStream << singleLocation << ",";
+        }
+
+        std::string singleAreaArray = singleAreaArrayStream.str();
+        singleAreaArray = singleAreaArray.substr(0, singleAreaArray.size() - 1);
+        boundsArrayStream << singleAreaArray << "],";
+    }
+
+    std::string boundsArray = boundsArrayStream.str();
+    boundsArray = boundsArray.substr(0, boundsArray.size() - 1);
+
+    string_util::replace(HTML, "##BOUNDS##", boundsArray);
+}
+
 void GoogleMap::show() {
     std::ofstream out;
 
