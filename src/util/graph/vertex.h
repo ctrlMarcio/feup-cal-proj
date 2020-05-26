@@ -32,6 +32,12 @@ public:
 	 */
     int queueIndex = 0;
 
+    long tarjanIndex = -1;
+
+    long tarjanLowLink = -1;
+
+    bool tarjanOnStack = false;
+
     /**
      * @brief Constructs the vertex given only its content.
      *

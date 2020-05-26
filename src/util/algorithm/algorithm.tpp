@@ -1,3 +1,6 @@
+
+#include "algorithm.h"
+
 struct my_comparator {
     template<typename T>
     int operator()(const Trio<T> &p1, const Trio<T> &p2) {
@@ -164,12 +167,70 @@ std::vector<std::vector<double>> algorithm::floydWarshall(Graph<T> &graph, bool 
 
 template<class T>
 bool algorithm::isDenselyConnected(Graph<T> &graph, bool output) {
-    std::vector<std::vector<double>> distances = algorithm::floydWarshall(graph, output);
+/*    std::vector<std::vector<double>> distances = algorithm::floydWarshall(graph, output);
 
     for (const auto& line : distances)
         for (double distance : line)
             if (distance == INF)
                 return false;
 
-    return true;
+    return true;*/
+
+    auto vectors = algorithm::tarjan(graph);
+    int size = vectors.size();
+    if (output)
+        std::cout << "Number of strongly connected components: " << size << std::endl;
+    return size == 1;
+}
+
+template<class T>
+std::vector<std::vector<Vertex<T> *>> algorithm::tarjan(Graph<T> &graph) {
+    std::vector<std::vector<Vertex<T> *>> res;
+
+    long index = 0;
+    std::stack<Vertex<T> *> stack;
+
+    for (auto &v : graph.getVertices())
+        if (v.second.tarjanIndex == -1)
+            res.push_back(tarjanStrongConnect(graph, stack, v.second, index));
+
+    return res;
+}
+
+template<class T>
+vector<Vertex<T> *> algorithm::tarjanStrongConnect(Graph<T> &graph, stack<Vertex<T> *> &tarjanStack, Vertex<T> &v, long &index) {
+    v.tarjanIndex = index;
+    v.tarjanLowLink = index;
+    index++;
+
+    tarjanStack.push(&v);
+    v.tarjanOnStack = true;
+
+    for (std::shared_ptr<Edge<T>> &e : v.getOutgoing()) {
+        Vertex<T> &w = *(e->getDestination());
+
+        if (w.tarjanIndex == -1) {
+            algorithm::tarjanStrongConnect(graph, tarjanStack, w, index);
+
+            v.tarjanLowLink = std::min(v.tarjanLowLink, w.tarjanLowLink);
+        } else if (w.tarjanOnStack) {
+            v.tarjanLowLink = std::min(v.tarjanLowLink, w.tarjanIndex);
+        }
+    }
+
+    std::vector<Vertex<T> *> connectedComponent;
+
+    if (v.tarjanLowLink == v.tarjanIndex) {
+        Vertex<T> *w;
+
+        do {
+            w = tarjanStack.top();
+            tarjanStack.pop();
+
+            w->tarjanOnStack = false;
+            connectedComponent.push_back(w);
+        } while (*w != v);
+    }
+
+    return connectedComponent;
 }

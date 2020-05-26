@@ -4,6 +4,7 @@
 #include <list>
 #include <tuple>
 #include <queue>
+#include <stack>
 #include "trio.h"
 #include "path.h"
 #include "../graph/mutable_priority_queue.h"
@@ -128,6 +129,12 @@ namespace algorithm {
 
     Path<Location> nearestNeighbourFirst(Graph<Location> &graph, Location source, const Location &destination,
                                          Cluster &cluster);
+
+    template<class T>
+    std::vector<std::vector<Vertex<T> *>> tarjan(Graph<T> &graph);
+
+    template<class T>
+            std::vector<Vertex<T> *> tarjanStrongConnect(Graph<T> &graph, std::stack<Vertex<T> *> &tarjanStack, Vertex<T> &v, long &index);
 };
 
 #include "algorithm.tpp"
