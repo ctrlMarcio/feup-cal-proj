@@ -106,7 +106,7 @@ public:
      */
     AdministratorManager &getAdministratorManager();
 
-    void getPaths(CompanyClient &companyClient);
+    void getPaths(CompanyClient &companyClient, bool approximate);
 
 private:
     /**

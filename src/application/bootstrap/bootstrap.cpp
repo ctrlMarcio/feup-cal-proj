@@ -187,7 +187,7 @@ bool Bootstrap::readEdges(const string &fileName) {
             auto dst = graph.getVertex(tmpDst);
 
             // adds the edge
-            graph.add(src.get(), dst.get(), 1);
+            graph.add(src.get(), dst.get(), src.get().euclideanDistanceTo(dst.get().getX(), dst.get().getY()));
             //graph.add(dst.get(), src.get(), 1);
         } catch (InvalidVertexException &) {
             allOk = false;

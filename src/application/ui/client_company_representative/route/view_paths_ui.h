@@ -14,11 +14,9 @@ private:
 
     std::vector<ui_util::Option> options;
 
-    void calculatePaths(CompanyClient &company);
+    void showGoogleMaps(CompanyClient &client, bool approximate);
 
-    void showGoogleMaps(CompanyClient &client);
-
-    void showGraphView(CompanyClient &client);
+    void showGraphView(CompanyClient &client, bool approximate);
 };
 
 #endif //FEUP_CAL_PROJ_VIEW_PATHS_UI_H

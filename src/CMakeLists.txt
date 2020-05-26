@@ -21,7 +21,7 @@ add_library(feup-cal-proj main.cpp
         util/string/string_util.cpp util/string/string_util.h
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/algorithm/trio.h util/algorithm/trio.tpp
-        util/algorithm/path.cpp util/algorithm/path.h
+        util/algorithm/path.h
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h
         exception/invalid_file_exception.cpp exception/invalid_file_exception.h
         exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h
@@ -71,7 +71,7 @@ add_executable(application main.cpp
         util/string/string_util.cpp util/string/string_util.h
         util/algorithm/algorithm.cpp util/algorithm/algorithm.h
         util/algorithm/trio.h util/algorithm/trio.tpp
-        util/algorithm/path.cpp util/algorithm/path.h
+        util/algorithm/path.h
         exception/invalid_login_exception.cpp exception/invalid_login_exception.h
         exception/invalid_file_exception.cpp exception/invalid_file_exception.h
         exception/invalid_directory_exception.cpp exception/invalid_directory_exception.h

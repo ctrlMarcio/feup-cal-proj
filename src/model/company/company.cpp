@@ -65,9 +65,9 @@ AdministratorManager &Company::getAdministratorManager() {
     return administratorManager;
 }
 
-void Company::getPaths(CompanyClient &companyClient) {
+void Company::getPaths(CompanyClient &companyClient, bool approximate) {
     if (companyClient.isCalculated())
         return;
-    std::pair<std::list<Path<Location>>, std::vector<Cluster>> routes = algorithm::getPaths(companyClient, *this);
+    std::pair<std::list<Path<Location>>, std::vector<Cluster>> routes = algorithm::getPaths(companyClient, *this, approximate);
     companyClient.setRoutes(routes);
 }

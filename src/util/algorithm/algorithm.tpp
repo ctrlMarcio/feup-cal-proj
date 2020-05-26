@@ -166,7 +166,7 @@ template<class T>
 bool algorithm::isDenselyConnected(Graph<T> &graph, bool output) {
     std::vector<std::vector<double>> distances = algorithm::floydWarshall(graph, output);
 
-    for (auto line : distances)
+    for (const auto& line : distances)
         for (double distance : line)
             if (distance == INF)
                 return false;

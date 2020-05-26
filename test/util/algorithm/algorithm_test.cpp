@@ -297,7 +297,8 @@ TEST(algorithm, paths_finder) {
     expectedPath.push_back(graph.getVertex(v5));
     expectedPath.push_back(graph.getVertex(h));
 
-    std::pair<std::list<Path<Location>>, std::vector<Cluster>> paths = algorithm::getPaths(companyClient, company);
+    std::pair<std::list<Path<Location>>, std::vector<Cluster>> paths = algorithm::getPaths(companyClient, company,
+                                                                                           true);
 
     EXPECT_EQ(paths.first.size(), 1);
 }
@@ -374,7 +375,8 @@ TEST(algorithm, paths_finder2) {
     expectedPath.push_back(graph.getVertex(v5));
     expectedPath.push_back(graph.getVertex(h));
 
-    std::pair<std::list<Path<Location>>, std::vector<Cluster>> paths = algorithm::getPaths(companyClient, company);
+    std::pair<std::list<Path<Location>>, std::vector<Cluster>> paths = algorithm::getPaths(companyClient, company,
+                                                                                           true);
 
     EXPECT_EQ(paths.first.size(), 2);
 }
@@ -418,7 +420,8 @@ TEST(algorithm, paths_finder3) {
     companyClient.addPickupPoint(v3);
     companyClient.addPickupPoint(v4);
 
-    std::pair<std::list<Path<Location>>, std::vector<Cluster>> paths = algorithm::getPaths(companyClient, company);
+    std::pair<std::list<Path<Location>>, std::vector<Cluster>> paths = algorithm::getPaths(companyClient, company,
+                                                                                           true);
 
     EXPECT_EQ(paths.first.size(), 2);
 }

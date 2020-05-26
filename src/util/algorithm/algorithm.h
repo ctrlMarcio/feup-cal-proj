@@ -55,7 +55,7 @@ namespace algorithm {
      * @return                  the optimal paths
      */
     std::pair<std::list<Path<Location>>, std::vector<Cluster>>
-    getPaths(const CompanyClient &companyClient, Company &company);
+    getPaths(const CompanyClient &companyClient, Company &company, bool approximate);
 
     /**
      * @brief Gets the reduced graph from a given graph.
@@ -126,8 +126,8 @@ namespace algorithm {
 
     Path<Location> aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest);
 
-    Path<Location> newPathFinder(Graph<Location> &graph, Location source, const Location &destination,
-                                 Cluster &cluster);
+    Path<Location> nearestNeighbourFirst(Graph<Location> &graph, Location source, const Location &destination,
+                                         Cluster &cluster);
 };
 
 #include "algorithm.tpp"

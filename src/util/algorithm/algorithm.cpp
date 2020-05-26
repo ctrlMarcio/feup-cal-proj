@@ -55,7 +55,7 @@ std::vector<Cluster> algorithm::kMeans(const std::vector<Location> &locations, i
 }
 
 std::pair<std::list<Path<Location>>, std::vector<Cluster>>
-algorithm::getPaths(const CompanyClient &companyClient, Company &company) {
+algorithm::getPaths(const CompanyClient &companyClient, Company &company, bool approximate) {
     std::vector<Location> locations = companyClient.getPickupPoints();
 
     std::vector<Cluster> clusters = kMeans(locations, companyClient.getVehicleNumber());
@@ -63,12 +63,14 @@ algorithm::getPaths(const CompanyClient &companyClient, Company &company) {
     if (clusters.empty())
         clusters.emplace_back();
 
-    //std::list<Path<Location>> paths = pathFinder(company.getGraph(), company.getGarageLocation(),
-    //                                             companyClient.getHeadquarters(), clusters);
-
     std::list<Path<Location>> paths;
-    for (Cluster &cluster : clusters)
-        paths.push_back(newPathFinder(company.getGraph(), company.getGarageLocation(), companyClient.getHeadquarters(), cluster));
+
+    if (approximate)
+        for (Cluster &cluster : clusters)
+            paths.push_back(nearestNeighbourFirst(company.getGraph(), company.getGarageLocation(),
+                                                  companyClient.getHeadquarters(), cluster));
+    else
+        paths = pathFinder(company.getGraph(), company.getGarageLocation(), companyClient.getHeadquarters(), clusters);
 
     std::vector<Cluster> orderedClusters;
 
@@ -134,8 +136,8 @@ bool algorithm::isComplete(const std::vector<Location> &locations, const list<Ve
     return complete;
 }
 
-Path<Location> algorithm::newPathFinder(Graph<Location> &graph, Location source, const Location &destination,
-                                        Cluster &cluster) {
+Path<Location> algorithm::nearestNeighbourFirst(Graph<Location> &graph, Location source, const Location &destination,
+                                                Cluster &cluster) {
     auto locations = cluster.getLocations();
 
     std::list<Vertex<Location>> list;
@@ -168,7 +170,8 @@ Path<Location> algorithm::newPathFinder(Graph<Location> &graph, Location source,
     return path;
 }
 
-Path<Location> algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest) {
+Path<Location>
+algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest) {
     for (auto &vert: graph.getVertices()) {
         vert.second.dist = INF;
         vert.second.path.clear();
@@ -182,19 +185,20 @@ Path<Location> algorithm::aStar(Path<Location> &path, Graph<Location> &graph, co
     MutablePriorityQueue<Vertex<Location>> queue;
     queue.insert(&s);
 
-    while (!queue.empty()){
+    while (!queue.empty()) {
         Vertex<Location> *v = queue.extractMin();
 
         if (*v == d) // reach destination
             break;
 
-        for (std::shared_ptr<Edge<Location>> &out : v->getOutgoing()){
+        for (std::shared_ptr<Edge<Location>> &out : v->getOutgoing()) {
             Vertex<Location> &destinationVertex = graph.getVertex(out->getDestination()->get());
 
             double oldDist = destinationVertex.dist;
-            double newDist = v->dist - v->get().euclideanDistanceTo(d.get().getX(), d.get().getY()) + out->getWeight() + destinationVertex.get().euclideanDistanceTo(d.get().getX(), d.get().getY());
+            double newDist = v->dist - v->get().euclideanDistanceTo(d.get().getX(), d.get().getY()) + out->getWeight() +
+                             destinationVertex.get().euclideanDistanceTo(d.get().getX(), d.get().getY());
 
-            if (oldDist > newDist){
+            if (oldDist > newDist) {
                 destinationVertex.dist = newDist;
                 destinationVertex.path = v->path;
                 destinationVertex.path.push_back(v);
