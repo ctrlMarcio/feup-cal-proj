@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trim',['trim',['../namespacestring__util.html#af758bdf29f149036fdcf923ece7b0077',1,'string_util']]]
+  ['updatecentroid',['updateCentroid',['../classCluster.html#ac27ba45e3da4e9f150b1114abc1b342f',1,'Cluster']]]
 ];

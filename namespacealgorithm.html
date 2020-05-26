@@ -101,9 +101,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9b775a95355892f91b45a09359ce436b"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a9b775a95355892f91b45a09359ce436b">pathFinder</a> (<a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, const <a class="el" href="classLocation.html">Location</a> &amp;source, const <a class="el" href="classLocation.html">Location</a> &amp;destination, const std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &amp;clusters)</td></tr>
 <tr class="memdesc:a9b775a95355892f91b45a09359ce436b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the paths for a graph, a garage, a headquarters location and a group of clusters.  <a href="#a9b775a95355892f91b45a09359ce436b">More...</a><br /></td></tr>
 <tr class="separator:a9b775a95355892f91b45a09359ce436b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4630d000d6137a1f436270dde7c0f5ee"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;, std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a4630d000d6137a1f436270dde7c0f5ee">getPaths</a> (const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;companyClient, <a class="el" href="classCompany.html">Company</a> &amp;company, bool approximate)</td></tr>
-<tr class="memdesc:a4630d000d6137a1f436270dde7c0f5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the paths for a given company client.  <a href="#a4630d000d6137a1f436270dde7c0f5ee">More...</a><br /></td></tr>
-<tr class="separator:a4630d000d6137a1f436270dde7c0f5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8186447b34eb45470a416cb38b54baac"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a8186447b34eb45470a416cb38b54baac">getPaths</a> (<a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, const <a class="el" href="classLocation.html">Location</a> &amp;garageLocation, const <a class="el" href="classLocation.html">Location</a> &amp;headquartersLocation, const std::vector&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;pickupPoints, int vehicleNumber, bool approximate)</td></tr>
+<tr class="memdesc:a8186447b34eb45470a416cb38b54baac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the paths for a given company client.  <a href="#a8186447b34eb45470a416cb38b54baac">More...</a><br /></td></tr>
+<tr class="separator:a8186447b34eb45470a416cb38b54baac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fec9f87106b38398a7e37670de61550"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a2fec9f87106b38398a7e37670de61550"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classGraph.html">Graph</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a2fec9f87106b38398a7e37670de61550">reduceGraph</a> (<a class="el" href="classGraph.html">Graph</a>&lt; T &gt; graph, const std::vector&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;locations)</td></tr>
 <tr class="memdesc:a2fec9f87106b38398a7e37670de61550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the reduced graph from a given graph.  <a href="#a2fec9f87106b38398a7e37670de61550">More...</a><br /></td></tr>
@@ -131,7 +131,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a566a47dcab50b016204d4e13dd5410be"><td class="memItemLeft" align="right" valign="top"><a id="a566a47dcab50b016204d4e13dd5410be"></a>
 <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>aStar</b> (<a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;path, <a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, const <a class="el" href="classLocation.html">Location</a> &amp;source, const <a class="el" href="classLocation.html">Location</a> &amp;dest)</td></tr>
 <tr class="separator:a566a47dcab50b016204d4e13dd5410be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97a220495d3c9cbcaea1cfb82aaf8792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacealgorithm.html#a97a220495d3c9cbcaea1cfb82aaf8792">nearestNeighbourFirst</a> (<a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, <a class="el" href="classLocation.html">Location</a> source, const <a class="el" href="classLocation.html">Location</a> &amp;destination, <a class="el" href="classCluster.html">Cluster</a> &amp;cluster)</td></tr>
+<tr class="memitem:a97a220495d3c9cbcaea1cfb82aaf8792"><td class="memItemLeft" align="right" valign="top"><a id="a97a220495d3c9cbcaea1cfb82aaf8792"></a>
+<a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nearestNeighbourFirst</b> (<a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;graph, <a class="el" href="classLocation.html">Location</a> source, const <a class="el" href="classLocation.html">Location</a> &amp;destination, <a class="el" href="classCluster.html">Cluster</a> &amp;cluster)</td></tr>
 <tr class="separator:a97a220495d3c9cbcaea1cfb82aaf8792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75d963c027c940547367aa149cccfcee"><td class="memTemplParams" colspan="2"><a id="a75d963c027c940547367aa149cccfcee"></a>
 template&lt;class T &gt; </td></tr>
@@ -242,23 +243,41 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a4630d000d6137a1f436270dde7c0f5ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4630d000d6137a1f436270dde7c0f5ee">&#9670;&nbsp;</a></span>getPaths()</h2>
+<a id="a8186447b34eb45470a416cb38b54baac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8186447b34eb45470a416cb38b54baac">&#9670;&nbsp;</a></span>getPaths()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;, std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &gt; algorithm::getPaths </td>
+          <td class="memname">std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt; algorithm::getPaths </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;&#160;</td>
-          <td class="paramname"><em>companyClient</em>, </td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classCompany.html">Company</a> &amp;&#160;</td>
-          <td class="paramname"><em>company</em>, </td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>garageLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>headquartersLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pickupPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vehicleNumber</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -458,48 +477,6 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the vector of formed clusters </dd></dl>
-
-</div>
-</div>
-<a id="a97a220495d3c9cbcaea1cfb82aaf8792"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97a220495d3c9cbcaea1cfb82aaf8792">&#9670;&nbsp;</a></span>nearestNeighbourFirst()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; algorithm::nearestNeighbourFirst </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>graph</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classLocation.html">Location</a>&#160;</td>
-          <td class="paramname"><em>source</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classLocation.html">Location</a> &amp;&#160;</td>
-          <td class="paramname"><em>destination</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classCluster.html">Cluster</a> &amp;&#160;</td>
-          <td class="paramname"><em>cluster</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>for (auto it = locations.begin(); it != locations.end(); ++it) { double euclidean = source.euclideanDistanceTo(it-&gt;getX(), it-&gt;getY());</p>
-<p>if (euclidean &lt; nd) { nd = euclidean; nit = it; } } </p>
 
 </div>
 </div>

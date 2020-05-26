@@ -1,13 +1,15 @@
 var classCompany =
 [
     [ "Company", "classCompany.html#a5c73cdfbfc0eba73da6281d20138bfc6", null ],
+    [ "calculateMainPaths", "classCompany.html#a412a340374115e1fc9997672a52d5c08", null ],
+    [ "calculatePaths", "classCompany.html#aa768b7cde140a0c3d3761443eb2cb169", null ],
+    [ "calculateReturningPaths", "classCompany.html#a44b6795dd2b3eb6d0bd7d646e1cefe2b", null ],
     [ "getAdministratorManager", "classCompany.html#aa396ac5d324ac81b7013e76db136b7a9", null ],
     [ "getCompanyClientManager", "classCompany.html#a6df439e6a9aa92a4042bcbf6fc3a34a6", null ],
     [ "getGarageLocation", "classCompany.html#a41325b2fc0e371641aa3ab125f46ed98", null ],
     [ "getGraph", "classCompany.html#a78ae1e1bcab98d79d8c9c7748c83ae4c", null ],
     [ "getLocationManager", "classCompany.html#a0817d549454e5fb8533f9bce581b7e98", null ],
     [ "getName", "classCompany.html#a64f6c13dd059f834a0f35ed8faeded64", null ],
-    [ "getPaths", "classCompany.html#afbdfa539097a056beed5496212fc4d59", null ],
     [ "getUsedVehiclesNumber", "classCompany.html#a9b19ee22c11955bdf114d33ccd70371f", null ],
     [ "getVehicleNumber", "classCompany.html#ab64bb76579224279daa80ac264850365", null ],
     [ "getVehiclesLeft", "classCompany.html#aa0296ebc4f1b6892c1279384e7f98581", null ],

@@ -125,18 +125,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae21eda7068020bf806f4f18baf46391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCompanyClient.html#aae21eda7068020bf806f4f18baf46391">setVehicleNumber</a> (int vehicleNumber)</td></tr>
 <tr class="memdesc:aae21eda7068020bf806f4f18baf46391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of used vehicles by the company.  <a href="#aae21eda7068020bf806f4f18baf46391">More...</a><br /></td></tr>
 <tr class="separator:aae21eda7068020bf806f4f18baf46391"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75106041fb2558868a34e53248acab3b"><td class="memItemLeft" align="right" valign="top"><a id="a75106041fb2558868a34e53248acab3b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCalculated</b> () const</td></tr>
-<tr class="separator:a75106041fb2558868a34e53248acab3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35604d74790491fe94af6c2d10954bb9"><td class="memItemLeft" align="right" valign="top"><a id="a35604d74790491fe94af6c2d10954bb9"></a>
-const pair&lt; std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt;, std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getRoutes</b> () const</td></tr>
-<tr class="separator:a35604d74790491fe94af6c2d10954bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a277ef400c63c30cf9dad480524d6e7"><td class="memItemLeft" align="right" valign="top"><a id="a8a277ef400c63c30cf9dad480524d6e7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setRoutes</b> (const pair&lt; std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&gt;, std::vector&lt; <a class="el" href="classCluster.html">Cluster</a> &gt;&gt; &amp;pair)</td></tr>
-<tr class="separator:a8a277ef400c63c30cf9dad480524d6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c079e76d0ab50f8e638ec36ad28076b"><td class="memItemLeft" align="right" valign="top"><a id="a8c079e76d0ab50f8e638ec36ad28076b"></a>
+const std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getRoutes</b> (bool returning) const</td></tr>
+<tr class="separator:a8c079e76d0ab50f8e638ec36ad28076b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0baeff22243261e0ad693636b71236da"><td class="memItemLeft" align="right" valign="top"><a id="a0baeff22243261e0ad693636b71236da"></a>
+const std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getMainRoutes</b> () const</td></tr>
+<tr class="separator:a0baeff22243261e0ad693636b71236da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1514f695d463ab720ecc9ea7179b35"><td class="memItemLeft" align="right" valign="top"><a id="a0e1514f695d463ab720ecc9ea7179b35"></a>
+const std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getReturnRoutes</b> () const</td></tr>
+<tr class="separator:a0e1514f695d463ab720ecc9ea7179b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf54e085664d7995dc87fadde5effe1"><td class="memItemLeft" align="right" valign="top"><a id="a6bf54e085664d7995dc87fadde5effe1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setRoutes</b> (const std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&gt; &amp;path)</td></tr>
+<tr class="separator:a6bf54e085664d7995dc87fadde5effe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e3319959bb13c83f45411797152295b"><td class="memItemLeft" align="right" valign="top"><a id="a4e3319959bb13c83f45411797152295b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setReturnRoutes</b> (const std::list&lt; <a class="el" href="classPath.html">Path</a>&lt; <a class="el" href="classLocation.html">Location</a> &gt;&gt; &amp;path)</td></tr>
+<tr class="separator:a4e3319959bb13c83f45411797152295b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ebac463032d3b68fcb15fe77baefdb"><td class="memItemLeft" align="right" valign="top"><a id="a61ebac463032d3b68fcb15fe77baefdb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resetRoutes</b> ()</td></tr>
+<tr class="separator:a61ebac463032d3b68fcb15fe77baefdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaacf6286083fe09fc0c3580db35c27ea"><td class="memItemLeft" align="right" valign="top"><a id="aaacf6286083fe09fc0c3580db35c27ea"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasPickupPoint</b> (const <a class="el" href="classLocation.html">Location</a> &amp;location)</td></tr>
 <tr class="separator:aaacf6286083fe09fc0c3580db35c27ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08604c6f34ce2a70fbf51504a731748c"><td class="memItemLeft" align="right" valign="top"><a id="a08604c6f34ce2a70fbf51504a731748c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRouteCalculated</b> () const</td></tr>
+<tr class="separator:a08604c6f34ce2a70fbf51504a731748c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0253429d45fa8fb45f11de34e90a7029"><td class="memItemLeft" align="right" valign="top"><a id="a0253429d45fa8fb45f11de34e90a7029"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isReturnRouteCalculated</b> () const</td></tr>
+<tr class="separator:a0253429d45fa8fb45f11de34e90a7029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37008f9275da11b15522162bd7114426"><td class="memItemLeft" align="right" valign="top"><a id="a37008f9275da11b15522162bd7114426"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classCompanyClient.html">CompanyClient</a> &amp;rhs) const</td></tr>
 <tr class="separator:a37008f9275da11b15522162bd7114426"><td class="memSeparator" colspan="2">&#160;</td></tr>
