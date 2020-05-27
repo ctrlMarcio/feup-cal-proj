@@ -202,7 +202,6 @@ var NAVTREEINDEX0 =
 "classMutablePriorityQueue.html#aba8ebedcbe659f2680bac229cfaca526":[1,0,35,0],
 "classPath.html":[1,0,36],
 "classPath.html#a5d96eeedfbd8c78e5b5fc819733e4266":[1,0,36,3],
-"classPath.html#a5eb839f3e136d5d537b5d5155563ebd5":[1,0,36,5],
 "classPath.html#aa83a561cce4702299b7363be183e5cac":[1,0,36,2],
 "classPath.html#aca7003eefdcee53f80c228f05f34e3b7":[1,0,36,1],
 "classPath.html#acb7d074effb7c9b139bc6beafd95d8aa":[1,0,36,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "classVertex.html":[1,0,45],
 "classVertex.html#a08a2b813e77f97aa8b6c1d252e5417f7":[1,0,45,10],
 "classVertex.html#a37aa079342a46a23de1de85b7713886e":[1,0,45,1],
-"classVertex.html#a3ab0256be37ad483f3a301c237b715c2":[1,0,45,2]
+"classVertex.html#a3ab0256be37ad483f3a301c237b715c2":[1,0,45,2],
+"classVertex.html#a4d789748292f3abeca8d6e9e37ca7752":[1,0,45,5]
 };
