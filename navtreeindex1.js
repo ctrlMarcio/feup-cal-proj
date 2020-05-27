@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classVertex.html#a4d789748292f3abeca8d6e9e37ca7752":[1,0,45,5],
 "classVertex.html#a5a6670b842354232bac4dad2f551d66e":[1,0,45,7],
 "classVertex.html#a61f2f3b1533d94ad3c3f5fee828a19bc":[1,0,45,11],
 "classVertex.html#a721ab622207a73c5fae7b9abad6c07cc":[1,0,45,12],
