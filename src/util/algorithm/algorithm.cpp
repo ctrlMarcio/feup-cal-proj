@@ -132,25 +132,24 @@ Path<Location> algorithm::nearestNeighbourFirst(Graph<Location> &graph, Location
                                                 Cluster &cluster) {
     std::vector<Location> locations(cluster.getLocations().begin(), cluster.getLocations().end());
 
-    std::sort(locations.begin(), locations.end(), [&source](const Location &lhs, const Location &rhs) {
-        return source.euclideanDistanceTo(lhs.getX(), lhs.getY()) < source.euclideanDistanceTo(rhs.getX(), rhs.getY());
-    });
-
     std::list<Vertex<Location>> list;
     Path<Location> path(list, 0, cluster);
 
     while (!locations.empty()) {
         // get nearest
-        double nd = INF;
+        std::sort(locations.begin(), locations.end(), [&source](const Location &lhs, const Location &rhs) {
+            return source.euclideanDistanceTo(lhs.getX(), lhs.getY()) < source.euclideanDistanceTo(rhs.getX(), rhs.getY());
+        });
 
         // append
-        path = aStar(path, graph, source, *locations.begin());
+        path = aStar(path, graph, source, *locations.begin(), locations);
         source = *locations.begin();
         locations.erase(locations.begin());
     }
 
     // goes to the destination
-    path = aStar(path, graph, source, destination);
+    locations.push_back(destination);
+    path = aStar(path, graph, source, destination, locations);
 
     std::list<Vertex<Location>> resLocations(path.getPath());
     resLocations.push_back(graph.getVertex(destination));
@@ -158,12 +157,11 @@ Path<Location> algorithm::nearestNeighbourFirst(Graph<Location> &graph, Location
                                      destination.euclideanDistanceTo(path.getPath().back().get().getX(),
                                                                      path.getPath().back().get().getY()),
                        path.getCluster());
-
     return res;
 }
 
 Path<Location>
-algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest) {
+algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest, std::vector<Location> &locations) {
     for (auto &vert: graph.getVertices()) {
         vert.second.dist = INF;
         vert.second.path.clear();
@@ -182,6 +180,18 @@ algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &s
 
         if (*v == d) // reach destination
             break;
+
+        // copy this one
+        auto first = *locations.begin();
+        auto it = std::find_if(locations.begin() + 1, locations.end(), [&first, &v](const Location &l){
+            return v->get().euclideanDistanceTo(l.getX(), l.getY()) < 20 &&
+            v->get().euclideanDistanceTo(l.getX(), l.getY()) < v->get().euclideanDistanceTo(first.getX(), first.getY());
+        });
+
+        if (it != locations.end()) {
+            locations.insert(locations.begin(), *it);
+            break;
+        }
 
         for (std::shared_ptr<Edge<Location>> &out : v->getOutgoing()) {
             Vertex<Location> &destinationVertex = graph.getVertex(out->getDestination()->get());
