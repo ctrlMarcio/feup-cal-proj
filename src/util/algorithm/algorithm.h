@@ -126,7 +126,8 @@ namespace algorithm {
     template<class T>
     bool isDenselyConnected(Graph<T> &graph, bool output = false);
 
-    Path<Location> aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest, std::vector<Location> &locations);
+    Path<Location> aStar(const Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest,
+                         std::vector<Location> &locations, bool dynamic);
 
     Path<Location> nearestNeighbourFirst(Graph<Location> &graph, const Location source, const Location &destination,
                                          Cluster &cluster);

@@ -14,6 +14,8 @@ public:
 
     Cluster &getCluster();
 
+    void update(const Vertex<T> *v);
+
     const list<Vertex<T>> &getPath() const;
 
     const Cluster &getCluster() const;

@@ -100,9 +100,9 @@ The code coverage can be consulted by clicking the coverage badge in the header.
 
 ## Examples
 
-### 1. Company with 4 available vehicles and 7 pick-up points
+### 1. Company with 4 available vehicles and 10 pick-up points
 
-![Company with 4 available vehicles and 7 pick-up points](https://i.imgur.com/4oy8kE0.gif)
+![Company with 4 available vehicles and 10 pick-up points](https://i.imgur.com/d3rbis5.gif)
 
 ### 2. Company with 3 available vehicles and 6 pick-up points
 

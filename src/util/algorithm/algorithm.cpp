@@ -142,14 +142,14 @@ Path<Location> algorithm::nearestNeighbourFirst(Graph<Location> &graph, Location
         });
 
         // append
-        path = aStar(path, graph, source, *locations.begin(), locations);
+        path = aStar(path, graph, source, *locations.begin(), locations, true);
         source = *locations.begin();
         locations.erase(locations.begin());
     }
 
     // goes to the destination
     locations.push_back(destination);
-    path = aStar(path, graph, source, destination, locations);
+    path = aStar(path, graph, source, destination, locations, false);
 
     std::list<Vertex<Location>> resLocations(path.getPath());
     resLocations.push_back(graph.getVertex(destination));
@@ -161,7 +161,8 @@ Path<Location> algorithm::nearestNeighbourFirst(Graph<Location> &graph, Location
 }
 
 Path<Location>
-algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest, std::vector<Location> &locations) {
+algorithm::aStar(const Path<Location> &path, Graph<Location> &graph, const Location &source, const Location &dest,
+                 std::vector<Location> &locations, bool dynamic) {
     for (auto &vert: graph.getVertices()) {
         vert.second.dist = INF;
         vert.second.path.clear();
@@ -181,16 +182,27 @@ algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &s
         if (*v == d) // reach destination
             break;
 
-        // copy this one
-        auto first = *locations.begin();
-        auto it = std::find_if(locations.begin() + 1, locations.end(), [&first, &v](const Location &l){
-            return v->get().euclideanDistanceTo(l.getX(), l.getY()) < 20 &&
-            v->get().euclideanDistanceTo(l.getX(), l.getY()) < v->get().euclideanDistanceTo(first.getX(), first.getY());
-        });
+        // verifies if there's another important location nearby, and goes there
+        if (dynamic) {
+            // verifies if there's a closest point
+            auto it = std::min_element(locations.begin(), locations.end(), [&v](const Location &lhs, const Location &rhs) {
+                return v->get().euclideanDistanceTo(lhs.getX(), lhs.getY()) < v->get().euclideanDistanceTo(rhs.getX(), rhs.getY());
+            });
 
-        if (it != locations.end()) {
-            locations.insert(locations.begin(), *it);
-            break;
+            if (it != locations.begin() && it != locations.end()) {
+                // calculates the new path
+                Path<Location> newPath(path);
+                newPath.update(v);
+
+                newPath = aStar(newPath, graph, v->get(), *it, locations, false);
+
+                // puts the new destination in the front
+                Location newD = *it;
+                locations.erase(it);
+                locations.insert(locations.begin(), newD);
+
+                return newPath;
+            }
         }
 
         for (std::shared_ptr<Edge<Location>> &out : v->getOutgoing()) {
@@ -216,14 +228,8 @@ algorithm::aStar(Path<Location> &path, Graph<Location> &graph, const Location &s
         }
     }
 
-    std::list<Vertex<Location>> newList = path.getPath();
-    for (Vertex<Location> *vertex : d.path)
-        newList.push_back(*vertex);
-
-    double newCost = d.dist;
-    newCost += path.getPathCost();
-
-    Path<Location> newPath(newList, newCost, path.getCluster());
+    Path<Location> newPath(path);
+    newPath.update(&d);
 
     return newPath;
 }
